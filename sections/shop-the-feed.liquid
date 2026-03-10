@@ -1,0 +1,326 @@
+{{- 'section-shop-the-feed.css' | asset_url | stylesheet_tag -}}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --section-spacing-top: calc(var(--section-spacing-unit-size) * {{ section.settings.spacing_top }});
+    --section-spacing-bottom: calc(var(--section-spacing-unit-size) * {{ section.settings.spacing_bottom }});
+  }
+{%- endstyle -%}
+
+<div class="container max-w-fluid shop-the-feed color-{{ section.settings.color_scheme }} gradient">
+  <div class="shop-the-feed__container container {{ section.settings.section_width }}">
+    
+    {%- comment -%} Header Section {%- endcomment -%}
+    {%- if section.settings.heading != blank or section.settings.hashtag != blank -%}
+      <div class="shop-the-feed__header">
+        {%- if section.settings.heading != blank -%}
+          <h5 class="shop-the-feed__heading">
+            {%- if section.settings.heading_link != blank -%}
+              <a href="{{ section.settings.heading_link }}" class="shop-the-feed__heading-link">
+                {{ section.settings.heading }}
+              </a>
+            {%- else -%}
+              {{ section.settings.heading }}
+            {%- endif -%}
+          </h5> 
+        {%- endif -%}
+        
+        {%- if section.settings.hashtag != blank -%}
+          <a href="{{ section.settings.hashtag_link | default: '#' }}" class="shop-the-feed__hashtag">
+            {{ section.settings.hashtag }}
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Bento Box Layout {%- endcomment -%}
+    {%- if section.blocks.size > 0 -%}
+      <div class="shop-the-feed__bento">
+        {%- comment -%} Left side: Large images {%- endcomment -%}
+        <div class="shop-the-feed__left">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'image' and block.settings.grid_size == 'large' -%}
+              <div 
+                class="shop-the-feed__item shop-the-feed__item--large{% if block.settings.hide_on_mobile %} small-hide{% endif %}{% if block.settings.hide_on_desktop %} small-up-hide{% endif %}"
+                {{ block.shopify_attributes }}
+              >
+                {%- if block.settings.image != blank -%}
+                  <div class="shop-the-feed__image-wrapper">
+                    {%- if block.settings.image_link != blank -%}
+                      <a href="{{ block.settings.image_link }}" class="shop-the-feed__image-link">
+                    {%- endif -%}
+                    <div class="shop-the-feed__image-inner">
+                      {%- render 'image', 
+                        image: block.settings.image, 
+                        width: 1200, 
+                        alt: block.settings.image.alt | default: 'Shop the feed image'
+                      -%}
+                    </div>
+                    {%- if block.settings.image_link != blank -%}
+                      </a>
+                    {%- endif -%}
+                  </div>
+                {%- else -%}
+                  <div class="shop-the-feed__image-placeholder">
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+
+        {%- comment -%} Right side: Small images grid {%- endcomment -%}
+        <div class="shop-the-feed__right">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'image' and block.settings.grid_size == 'small' -%}
+              <div 
+                class="shop-the-feed__item shop-the-feed__item--small{% if block.settings.hide_on_mobile %} small-hide{% endif %}{% if block.settings.hide_on_desktop %} small-up-hide{% endif %}"
+                {{ block.shopify_attributes }}
+              >
+                {%- if block.settings.image != blank -%}
+                  <div class="shop-the-feed__image-wrapper">
+                    {%- if block.settings.image_link != blank -%}
+                      <a href="{{ block.settings.image_link }}" class="shop-the-feed__image-link">
+                    {%- endif -%}
+                    <div class="shop-the-feed__image-inner">
+                      {%- render 'image', 
+                        image: block.settings.image, 
+                        width: 1200, 
+                        alt: block.settings.image.alt | default: 'Shop the feed image'
+                      -%}
+                    </div>
+                    {%- if block.settings.image_link != blank -%}
+                      </a>
+                    {%- endif -%}
+                  </div>
+                {%- else -%}
+                  <div class="shop-the-feed__image-placeholder">
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Shop the Feed",
+  "tag": "section",
+  "class": "section-shop-the-feed",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "SHOP THE FEED"
+    },
+    {
+      "type": "url",
+      "id": "heading_link",
+      "label": "Heading link",
+      "info": "Optional link for the heading"
+    },
+    {
+      "type": "text",
+      "id": "hashtag",
+      "label": "Hashtag",
+      "default": "@FANSEHAIR",
+      "info": "Display text for the hashtag (include @ symbol)"
+    },
+    {
+      "type": "url",
+      "id": "hashtag_link",
+      "label": "Hashtag link",
+      "info": "Link URL for the hashtag"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "grid_layout",
+      "label": "Grid layout",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Auto (based on image sizes)"
+        },
+        {
+          "value": "uniform",
+          "label": "Uniform (equal sizes)"
+        }
+      ],
+      "default": "auto",
+      "info": "Auto layout adapts to individual image grid sizes, Uniform makes all images equal size"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "options": [
+        {
+          "value": "container--sm",
+          "label": "Small"
+        },
+        {
+          "value": "container--md",
+          "label": "Medium"
+        },
+        {
+          "value": "container--lg",
+          "label": "Large"
+        },
+        {
+          "value": "container--full",
+          "label": "Full width"
+        }
+      ],
+      "default": "container--full"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.global.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section Layout"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "default": 2,
+      "label": "t:sections.global.spacing.top.label"
+    },
+    {
+      "type": "range",
+      "id": "spacing_bottom",
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "default": 2,
+      "label": "t:sections.global.spacing.bottom.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "image_link",
+          "label": "Image link",
+          "info": "Optional link when clicking the image"
+        },
+        {
+          "type": "header",
+          "content": "Grid Size"
+        },
+        {
+          "type": "select",
+          "id": "grid_size",
+          "label": "Grid size",
+          "options": [
+            {
+              "value": "large",
+              "label": "Large (full height, spans 2 rows)"
+            },
+            {
+              "value": "small",
+              "label": "Small (single cell)"
+            }
+          ],
+          "default": "small",
+          "info": "Large spans full height (2 rows), Small fits in a single grid cell"
+        },
+        {
+          "type": "header",
+          "content": "Display Options"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_on_mobile",
+          "label": "Hide on mobile",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_on_desktop",
+          "label": "Hide on desktop",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shop the Feed",
+      "blocks": [
+        {
+          "type": "image",
+          "settings": {
+            "grid_size": "large"
+          }
+        },
+        {
+          "type": "image",
+          "settings": {
+            "grid_size": "small"
+          }
+        },
+        {
+          "type": "image",
+          "settings": {
+            "grid_size": "small"
+          }
+        },
+        {
+          "type": "image",
+          "settings": {
+            "grid_size": "small"
+          }
+        },
+        {
+          "type": "image",
+          "settings": {
+            "grid_size": "small"
+          }
+        },
+        {
+          "type": "image",
+          "settings": {
+            "grid_size": "small"
+          }
+        },
+        {
+          "type": "image",
+          "settings": {
+            "grid_size": "small"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

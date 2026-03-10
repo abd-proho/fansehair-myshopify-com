@@ -1,0 +1,720 @@
+{{- 'section-personal-note.css' | asset_url | stylesheet_tag -}}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --section-spacing-top: calc(var(--section-spacing-unit-size) * {{ section.settings.spacing_top }});
+    --section-spacing-bottom: calc(var(--section-spacing-unit-size) * {{ section.settings.spacing_bottom }});
+    --section-min-height: {{ section.settings.section_min_height }}vh;
+    --content-max-width: {{ section.settings.content_max_width }}px;
+    --content-position-x: {{ section.settings.content_position_horizontal }}%;
+    --content-position-y: {{ section.settings.content_position_vertical }}%;
+  }
+
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'floating_image' -%}
+      #Block-{{ block.id }} {
+        --floating-image-x: {{ block.settings.position_horizontal }}%;
+        --floating-image-y: {{ block.settings.position_vertical }}%;
+        --floating-image-x-mobile: {{ block.settings.position_horizontal_mobile }}%;
+        --floating-image-y-mobile: {{ block.settings.position_vertical_mobile }}%;
+        --floating-image-width: {{ block.settings.image_width }}px;
+        --floating-image-width-mobile: {{ block.settings.image_width_mobile }}px;
+        --floating-image-rotation: {{ block.settings.image_rotation }}deg;
+        --floating-image-rotation-mobile: {{ block.settings.image_rotation_mobile }}deg;
+      }
+    {%- endif -%}
+  {%- endfor -%}
+{%- endstyle -%}
+
+<div class="container max-w-fluid personal-note color-{{ section.settings.color_scheme }} gradient">
+  {%- comment -%} Background Images {%- endcomment -%}
+  <div class="personal-note__background{% if section.settings.background_overlay %} personal-note__background--overlay{% endif %}">
+    {%- if section.settings.background_image_desktop != blank -%}
+      <div class="personal-note__background-media personal-note__background-media--desktop{% if section.settings.background_image_mobile != blank %} small-hide{% endif %}">
+        {%- assign desktop_image = section.settings.background_image_desktop -%}
+        <img
+          src="{{ desktop_image | image_url: width: 2400 }}"
+          srcset="{{ desktop_image | image_url: width: 1200 }} 1200w,
+                  {{ desktop_image | image_url: width: 1800 }} 1800w,
+                  {{ desktop_image | image_url: width: 2400 }} 2400w"
+          sizes="100vw"
+          alt="{{ desktop_image.alt | default: 'Background image' | escape }}"
+          loading="lazy"
+          width="{{ desktop_image.width }}"
+          height="{{ desktop_image.height }}"
+          class="personal-note__background-image"
+        >
+      </div>
+    {%- else -%}
+      <div class="personal-note__background-placeholder{% if section.settings.background_image_mobile != blank %} small-hide{% endif %}"></div>
+    {%- endif -%}
+
+    {%- if section.settings.background_image_mobile != blank -%}
+      <div class="personal-note__background-media personal-note__background-media--mobile small-up-hide">
+        {%- assign mobile_image = section.settings.background_image_mobile -%}
+        <img
+          src="{{ mobile_image | image_url: width: 800 }}"
+          srcset="{{ mobile_image | image_url: width: 400 }} 400w,
+                  {{ mobile_image | image_url: width: 600 }} 600w,
+                  {{ mobile_image | image_url: width: 800 }} 800w"
+          sizes="100vw"
+          alt="{{ mobile_image.alt | default: 'Background image' | escape }}"
+          loading="lazy"
+          width="{{ mobile_image.width }}"
+          height="{{ mobile_image.height }}"
+          class="personal-note__background-image"
+        >
+      </div>
+    {%- endif -%}
+  </div>
+
+  {%- comment -%} Floating Images {%- endcomment -%}
+  <div class="personal-note__floating-images">
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'floating_image' -%}
+        <div 
+          id="Block-{{ block.id }}"
+          class="personal-note__floating-image{% if block.settings.enable_animation %} personal-note__floating-image--animated{% endif %}{% if block.settings.hide_on_mobile %} small-hide{% endif %}{% if block.settings.hide_on_desktop %} small-up-hide{% endif %}"
+          {{ block.shopify_attributes }}
+        >
+          {%- if block.settings.image != blank -%}
+            {%- render 'image', image: block.settings.image, width: 600, alt: block.settings.image.alt | default: 'Decorative image' -%}
+          {%- else -%}
+            <div class="personal-note__floating-image-placeholder">
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  {%- comment -%} Content {%- endcomment -%}
+  <div class="personal-note__container container {{ section.settings.section_width }}">
+    <div class="personal-note__content text-{{ section.settings.content_alignment }}">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'subheading' -%}
+            {%- if block.settings.text != blank -%}
+              <p class="personal-note__subheading {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+                {{ block.settings.text }}
+              </p>
+            {%- endif -%}
+
+          {%- when 'heading' -%}
+            {%- if block.settings.heading != blank -%}
+              <{{ block.settings.heading_tag }} class="personal-note__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+                {{ block.settings.heading }}
+              </{{ block.settings.heading_tag }}>
+            {%- endif -%}
+
+          {%- when 'richtext' -%}
+            {%- if block.settings.text != blank -%}
+              <div class="personal-note__richtext entry {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+                {{ block.settings.text }}
+              </div>
+            {%- endif -%}
+
+          {%- when 'signature' -%}
+            <div class="personal-note__signature" {{ block.shopify_attributes }}>
+              {%- if block.settings.signature_image != blank -%}
+                <div class="personal-note__signature-image" style="max-width: {{ block.settings.signature_width }}px;">
+                  {%- render 'image', image: block.settings.signature_image, width: 400, alt: block.settings.signature_image.alt | default: 'Signature' -%}
+                </div>
+              {%- endif -%}
+              {%- if block.settings.signature_text != blank -%}
+                <span class="personal-note__signature-text {{ block.settings.signature_style }}">
+                  {{ block.settings.signature_text }}
+                </span>
+              {%- endif -%}
+            </div>
+
+          {%- when 'button' -%}
+            {%- if block.settings.button_label != blank -%}
+              <div class="personal-note__button" {{ block.shopify_attributes }}>
+                {%- render 'button',
+                  type: 'link',
+                  class: 'button',
+                  button_style: block.settings.button_style,
+                  value: block.settings.button_label,
+                  href: block.settings.button_link
+                -%}
+              </div>
+            {%- endif -%}
+
+          {%- when 'spacer' -%}
+            <div class="personal-note__spacer" style="height: {{ block.settings.spacing_height }}px;" {{ block.shopify_attributes }}></div>
+
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Personal Note",
+  "tag": "section",
+  "class": "section-personal-note",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background - Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_desktop",
+      "label": "Desktop background image",
+      "info": "Recommended: 2400 x 1200px"
+    },
+    {
+      "type": "header",
+      "content": "Background - Mobile"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "Mobile background image",
+      "info": "Recommended: 800 x 1200px. If not set, desktop image will be used."
+    },
+    {
+      "type": "checkbox",
+      "id": "background_overlay",
+      "label": "Enable subtle overlay",
+      "default": false,
+      "info": "Adds a light overlay to improve text readability"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.global.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Content Layout"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "label": "Content maximum width",
+      "min": 400,
+      "max": 1000,
+      "step": 20,
+      "unit": "px",
+      "default": 700
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "Content text alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "content_position_horizontal",
+      "label": "Content horizontal position",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 50,
+      "info": "0% = Left, 50% = Center, 100% = Right"
+    },
+    {
+      "type": "range",
+      "id": "content_position_vertical",
+      "label": "Content vertical position",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 50,
+      "info": "0% = Top, 50% = Center, 100% = Bottom"
+    },
+    {
+      "type": "header",
+      "content": "Section Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "options": [
+        {
+          "value": "container--sm",
+          "label": "Small"
+        },
+        {
+          "value": "container--md",
+          "label": "Medium"
+        },
+        {
+          "value": "container--lg",
+          "label": "Large"
+        },
+        {
+          "value": "container--full",
+          "label": "Full width"
+        }
+      ],
+      "default": "container--lg"
+    },
+    {
+      "type": "range",
+      "id": "section_min_height",
+      "label": "Minimum section height",
+      "min": 40,
+      "max": 100,
+      "step": 5,
+      "unit": "vh",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "default": 2,
+      "label": "t:sections.global.spacing.top.label"
+    },
+    {
+      "type": "range",
+      "id": "spacing_bottom",
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "default": 2,
+      "label": "t:sections.global.spacing.bottom.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "subheading",
+      "name": "Subheading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "We'll put a personal note directly from Tori here in this section."
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "label": "Text style",
+          "options": [
+            {
+              "value": "text-style--body",
+              "label": "Body"
+            },
+            {
+              "value": "text-style--caption",
+              "label": "Caption"
+            },
+            {
+              "value": "text-style--uppercase",
+              "label": "Uppercase"
+            }
+          ],
+          "default": "text-style--caption"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Heading",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Personal Note"
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "Heading tag",
+          "options": [
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            }
+          ],
+          "default": "h2"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "Heading size",
+          "options": [
+            {
+              "value": "h5",
+              "label": "Extra Small"
+            },
+            {
+              "value": "h4",
+              "label": "Small"
+            },
+            {
+              "value": "h3",
+              "label": "Medium"
+            },
+            {
+              "value": "h2",
+              "label": "Large"
+            },
+            {
+              "value": "h1",
+              "label": "Extra Large"
+            }
+          ],
+          "default": "h2"
+        }
+      ]
+    },
+    {
+      "type": "richtext",
+      "name": "Rich text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "label": "Text style",
+          "options": [
+            {
+              "value": "text-style--body",
+              "label": "Body"
+            },
+            {
+              "value": "text-style--small",
+              "label": "Small"
+            },
+            {
+              "value": "text-style--large",
+              "label": "Large"
+            }
+          ],
+          "default": "text-style--body"
+        }
+      ]
+    },
+    {
+      "type": "signature",
+      "name": "Signature",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "signature_image",
+          "label": "Signature image",
+          "info": "Upload a signature image (PNG with transparency recommended)"
+        },
+        {
+          "type": "range",
+          "id": "signature_width",
+          "label": "Signature image width",
+          "min": 80,
+          "max": 300,
+          "step": 10,
+          "unit": "px",
+          "default": 150
+        },
+        {
+          "type": "text",
+          "id": "signature_text",
+          "label": "Signature text",
+          "default": "Tori"
+        },
+        {
+          "type": "select",
+          "id": "signature_style",
+          "label": "Signature text style",
+          "options": [
+            {
+              "value": "signature-style--script",
+              "label": "Script / Elegant"
+            },
+            {
+              "value": "signature-style--handwritten",
+              "label": "Handwritten"
+            },
+            {
+              "value": "signature-style--modern",
+              "label": "Modern"
+            }
+          ],
+          "default": "signature-style--script"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Read More"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button style",
+          "options": [
+            {
+              "value": "button--filled",
+              "label": "Filled"
+            },
+            {
+              "value": "button--outlined",
+              "label": "Outlined"
+            },
+            {
+              "value": "button--text",
+              "label": "Text"
+            }
+          ],
+          "default": "button--outlined"
+        }
+      ]
+    },
+    {
+      "type": "spacer",
+      "name": "Spacer",
+      "settings": [
+        {
+          "type": "range",
+          "id": "spacing_height",
+          "label": "Spacing height",
+          "min": 8,
+          "max": 80,
+          "step": 4,
+          "unit": "px",
+          "default": 24
+        }
+      ]
+    },
+    {
+      "type": "floating_image",
+      "name": "Floating Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "header",
+          "content": "Desktop Position"
+        },
+        {
+          "type": "range",
+          "id": "position_horizontal",
+          "label": "Horizontal position",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 80,
+          "info": "0% = Left edge, 100% = Right edge"
+        },
+        {
+          "type": "range",
+          "id": "position_vertical",
+          "label": "Vertical position",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 70,
+          "info": "0% = Top, 100% = Bottom"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "label": "Image width",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "default": 120
+        },
+        {
+          "type": "range",
+          "id": "image_rotation",
+          "label": "Rotation angle",
+          "min": -45,
+          "max": 45,
+          "step": 1,
+          "unit": "°",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Mobile Position"
+        },
+        {
+          "type": "range",
+          "id": "position_horizontal_mobile",
+          "label": "Horizontal position (mobile)",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 80,
+          "info": "Adapted for mobile screen. 0% = Left, 100% = Right"
+        },
+        {
+          "type": "range",
+          "id": "position_vertical_mobile",
+          "label": "Vertical position (mobile)",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 85,
+          "info": "0% = Top, 100% = Bottom"
+        },
+        {
+          "type": "range",
+          "id": "image_width_mobile",
+          "label": "Image width (mobile)",
+          "min": 40,
+          "max": 200,
+          "step": 5,
+          "unit": "px",
+          "default": 80
+        },
+        {
+          "type": "range",
+          "id": "image_rotation_mobile",
+          "label": "Rotation angle (mobile)",
+          "min": -45,
+          "max": 45,
+          "step": 1,
+          "unit": "°",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Display Options"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_animation",
+          "label": "Enable floating animation",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_on_mobile",
+          "label": "Hide on mobile",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_on_desktop",
+          "label": "Hide on desktop",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Personal Note",
+      "blocks": [
+        {
+          "type": "subheading",
+          "settings": {
+            "text": "We'll put a personal note directly from Tori here in this section."
+          }
+        },
+        {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>"
+          }
+        },
+        {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>"
+          }
+        },
+        {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>",
+            "text_style": "text-style--small"
+          }
+        },
+        {
+          "type": "spacer",
+          "settings": {
+            "spacing_height": 24
+          }
+        },
+        {
+          "type": "signature",
+          "settings": {
+            "signature_text": "Tori",
+            "signature_width": 150
+          }
+        },
+        {
+          "type": "floating_image",
+          "settings": {
+            "position_horizontal": 85,
+            "position_vertical": 75,
+            "image_width": 100,
+            "position_horizontal_mobile": 80,
+            "position_vertical_mobile": 90,
+            "image_width_mobile": 60
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

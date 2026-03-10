@@ -1,0 +1,322 @@
+{{- 'section-image-text-signature.css' | asset_url | stylesheet_tag -}}
+
+{%- style -%}
+  @font-face {
+    font-family: 'CitadelScript';
+    src: url('{{ 'CitadelScriptStd.otf' | asset_url }}') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  #shopify-section-{{ section.id }} {
+    --section-spacing-top: calc(var(--section-spacing-unit-size) * {{ section.settings.spacing_top }});
+    --section-spacing-bottom: calc(var(--section-spacing-unit-size) * {{ section.settings.spacing_bottom }});
+    --image-width: {{ section.settings.image_width }}%;
+    --content-width: {{ section.settings.content_width }}%;
+    --signature-name-size: {{ section.settings.signature_name_size }}px;
+    --signature-icon-size: {{ section.settings.signature_icon_size }}px;
+  }
+{%- endstyle -%}
+
+<div class="container max-w-fluid image-text-signature color-{{ section.settings.color_scheme }} gradient">
+  <div class="image-text-signature__wrapper {{ section.settings.section_width }}">
+    
+    {%- comment -%} Main Image Section {%- endcomment -%}
+    <div class="image-text-signature__image-container{% if section.settings.image_position == 'right' %} image-text-signature__image-container--right{% endif %}">
+      {%- if section.settings.main_image != blank -%}
+        <div class="image-text-signature__image">
+          {%- assign main_image = section.settings.main_image -%}
+          <img
+            src="{{ main_image | image_url: width: 1200 }}"
+            srcset="{{ main_image | image_url: width: 400 }} 400w,
+                    {{ main_image | image_url: width: 600 }} 600w,
+                    {{ main_image | image_url: width: 800 }} 800w,
+                    {{ main_image | image_url: width: 1000 }} 1000w,
+                    {{ main_image | image_url: width: 1200 }} 1200w"
+            sizes="(max-width: 749px) 100vw, 50vw"
+            alt="{{ main_image.alt | default: 'Featured image' | escape }}"
+            loading="lazy"
+            width="{{ main_image.width }}"
+            height="{{ main_image.height }}"
+            class="image-text-signature__main-image"
+          >
+        </div>
+      {%- else -%}
+        <div class="image-text-signature__image-placeholder">
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} Content Section {%- endcomment -%}
+    <div class="image-text-signature__content text-{{ section.settings.content_alignment }}">
+      
+      {%- comment -%} Fancy Header {%- endcomment -%}
+      {%- if section.settings.heading != blank -%}
+        <{{ section.settings.heading_tag }} class="image-text-signature__heading">
+          {{ section.settings.heading }}
+        </{{ section.settings.heading_tag }}>
+      {%- endif -%}
+
+      {%- comment -%} Rich Text {%- endcomment -%}
+      {%- if section.settings.richtext != blank -%}
+        <div class="image-text-signature__richtext entry">
+          {{ section.settings.richtext }}
+        </div>
+      {%- endif -%}
+
+      {%- comment -%} Signature Section {%- endcomment -%}
+      <div class="image-text-signature__signature">
+        {%- if section.settings.signature_name != blank -%}
+          <span class="image-text-signature__signature-name">
+            {{ section.settings.signature_name }}
+          </span>
+        {%- endif -%}
+        
+        {%- if section.settings.signature_icon != blank -%}
+          <div class="image-text-signature__signature-icon">
+            {%- assign icon_image = section.settings.signature_icon -%}
+            <img
+              src="{{ icon_image | image_url: width: 200 }}"
+              srcset="{{ icon_image | image_url: width: 80 }} 80w,
+                      {{ icon_image | image_url: width: 120 }} 120w,
+                      {{ icon_image | image_url: width: 200 }} 200w"
+              sizes="80px"
+              alt="{{ icon_image.alt | default: 'Signature icon' | escape }}"
+              loading="lazy"
+              width="{{ icon_image.width }}"
+              height="{{ icon_image.height }}"
+              class="image-text-signature__icon-image"
+            >
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image + Text Signature",
+  "tag": "section",
+  "class": "section-image-text-signature",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Main Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main image",
+      "info": "Recommended: 800 x 600px or larger"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "label": "Image width",
+      "min": 30,
+      "max": 60,
+      "step": 5,
+      "unit": "%",
+      "default": 45
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "label": "Content width",
+      "min": 40,
+      "max": 70,
+      "step": 5,
+      "unit": "%",
+      "default": 55
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "Content text alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        }
+      ],
+      "default": "end"
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "\"First line of a quote from Tori here...",
+      "info": "Uses Citadel Script font for elegant styling"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "header",
+      "content": "Rich Text"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext",
+      "label": "Rich text content",
+      "default": "<p>and the rest of the quote will go here. Lorem ipsum dolor sit, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi a minim veniam, quis nostrud exerci tation ullamcorper suscipit lo is nisl ut aliquip ex ea commodo consequat. Duis autem vel.\"</p>"
+    },
+    {
+      "type": "header",
+      "content": "Signature"
+    },
+    {
+      "type": "text",
+      "id": "signature_name",
+      "label": "Signature name",
+      "default": "Tori"
+    },
+    {
+      "type": "range",
+      "id": "signature_name_size",
+      "label": "Signature name size",
+      "min": 18,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "image_picker",
+      "id": "signature_icon",
+      "label": "Signature icon image (xx)",
+      "info": "Upload the handwritten 'xx' or similar icon. Recommended: PNG with transparency"
+    },
+    {
+      "type": "range",
+      "id": "signature_icon_size",
+      "label": "Signature icon size",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Section Layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "options": [
+        {
+          "value": "container--sm",
+          "label": "Small"
+        },
+        {
+          "value": "container--md",
+          "label": "Medium"
+        },
+        {
+          "value": "container--lg",
+          "label": "Large"
+        },
+        {
+          "value": "container--full",
+          "label": "Full width"
+        }
+      ],
+      "default": "container--lg"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.global.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "default": 2,
+      "label": "t:sections.global.spacing.top.label"
+    },
+    {
+      "type": "range",
+      "id": "spacing_bottom",
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "default": 2,
+      "label": "t:sections.global.spacing.bottom.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image + Text Signature",
+      "settings": {
+        "heading": "\"First line of a quote from Tori here...",
+        "richtext": "<p>and the rest of the quote will go here. Lorem ipsum dolor sit, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi a minim veniam, quis nostrud exerci tation ullamcorper suscipit lo is nisl ut aliquip ex ea commodo consequat. Duis autem vel.\"</p>",
+        "signature_name": "Tori"
+      }
+    }
+  ]
+}
+{% endschema %}
+

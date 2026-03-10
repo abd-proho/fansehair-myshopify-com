@@ -1,0 +1,331 @@
+{%- render 'css', css: 'section-footer-minimal.css', section_index: section.index -%}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    padding-block-start: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-block-end: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      padding-block-start: {{ section.settings.padding_top }}px;
+      padding-block-end: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #shopify-section-{{ section.id }} .footer-minimal__logo {
+    width: {{ section.settings.logo_width_mobile }}px;
+    max-width: 100%;
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .footer-minimal__logo {
+      width: {{ section.settings.logo_width }}px;
+    }
+  }
+
+  #shopify-section-{{ section.id }} .footer-minimal__social-heading {
+    font-size: {{ section.settings.social_heading_size_mobile }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .footer-minimal__social-heading {
+      font-size: {{ section.settings.social_heading_size }}px;
+    }
+  }
+
+  #shopify-section-{{ section.id }} .footer-minimal__social-icons svg {
+    width: {{ section.settings.social_icon_size }}px;
+    height: {{ section.settings.social_icon_size }}px;
+  }
+
+  #shopify-section-{{ section.id }} .footer-minimal__image {
+    max-width: {{ section.settings.footer_image_width }}px;
+  }
+{%- endstyle -%}
+
+<footer class="footer-minimal color-{{ section.settings.color_scheme }}">
+  <div class="footer-minimal__container">
+    <div class="footer-minimal__inner">
+
+      {%- comment -%} Top Section: Logo & Newsletter {%- endcomment -%}
+      <div class="footer-minimal__top">
+        {%- if section.settings.logo != blank -%}
+          <a href="{{ routes.root_url }}" class="footer-minimal__logo" title="{{ shop.name | escape }}">
+            {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+            {{ section.settings.logo | image_url: width: section.settings.logo_width | image_tag: alt: logo_alt, loading: 'lazy' }}
+          </a>
+        {%- elsif section.settings.logo_svg != blank -%}
+          <a href="{{ routes.root_url }}" class="footer-minimal__logo" title="{{ shop.name | escape }}">
+            {{ section.settings.logo_svg }}
+          </a>
+        {%- endif -%}
+
+        {%- if section.settings.show_newsletter -%}
+          <div class="footer-minimal__newsletter">
+            {%- if section.settings.newsletter_heading != blank -%}
+              <h3 class="footer-minimal__newsletter-heading">{{ section.settings.newsletter_heading }}</h3>
+            {%- endif -%}
+            {%- if section.settings.newsletter_text != blank -%}
+              <p class="footer-minimal__newsletter-text">{{ section.settings.newsletter_text }}</p>
+            {%- endif -%}
+            {%- render 'newsletter-form', namespace: section.id, js_class: 'js-form' -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- comment -%} Middle Section: Menu & Social {%- endcomment -%}
+      <div class="footer-minimal__middle">
+        {%- if section.settings.menu != blank -%}
+          <nav class="footer-minimal__menu">
+            {%- if section.settings.menu_title != blank -%}
+              <h4 class="footer-minimal__menu-title">{{ section.settings.menu_title }}</h4>
+            {%- endif -%}
+            <ul class="footer-minimal__menu-list">
+              {%- for link in section.settings.menu.links -%}
+                <li>
+                  <a href="{{ link.url }}" title="{{ link.title | escape }}">{{ link.title }}</a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </nav>
+        {%- endif -%}
+
+        {%- if section.settings.show_social -%}
+          <div class="footer-minimal__social">
+            {%- if section.settings.social_heading != blank -%}
+              <h3 class="footer-minimal__social-heading">{{ section.settings.social_heading }}</h3>
+            {%- endif -%}
+            <ul class="footer-minimal__social-icons">
+              {%- render 'social-media', item_tag: 'li', in_new_tab: section.settings.social_links_new_tab, item_icon: true -%}
+            </ul>
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- comment -%} Bottom Section: Image & Copyright {%- endcomment -%}
+      <div class="footer-minimal__bottom">
+        {%- if section.settings.footer_image != blank -%}
+          <div class="footer-minimal__image">
+            {%- assign image_alt = section.settings.footer_image.alt | default: shop.name | escape -%}
+            {{ section.settings.footer_image | image_url: width: section.settings.footer_image_width | image_tag: alt: image_alt, loading: 'lazy' }}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.copyright_text != blank -%}
+          {%- assign current_year = 'now' | date: '%Y' -%}
+          <div class="footer-minimal__copyright">
+            {{ section.settings.copyright_text | replace: '[year]', current_year }}
+          </div>
+        {%- endif -%}
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "SS - Footer Minimal",
+  "tag": "section",
+  "class": "section-footer-minimal",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image"
+    },
+    {
+      "type": "html",
+      "id": "logo_svg",
+      "label": "Logo SVG code",
+      "info": "Paste SVG code if you prefer vector logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 50,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "label": "Logo width",
+      "default": 180
+    },
+    {
+      "type": "range",
+      "id": "logo_width_mobile",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Logo width (mobile)",
+      "default": 140
+    },
+    {
+      "type": "header",
+      "content": "Newsletter"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_newsletter",
+      "label": "Show newsletter",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "newsletter_heading",
+      "label": "Heading",
+      "default": "Stay Connected"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_text",
+      "label": "Description",
+      "default": "Subscribe for exclusive offers and updates"
+    },
+    {
+      "type": "header",
+      "content": "Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu",
+      "default": "footer"
+    },
+    {
+      "type": "text",
+      "id": "menu_title",
+      "label": "Menu title"
+    },
+    {
+      "type": "header",
+      "content": "Social"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social",
+      "label": "Show social icons",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "social_heading",
+      "label": "Social heading",
+      "default": "Let's get social",
+      "info": "Uses Citadel Script Std font"
+    },
+    {
+      "type": "range",
+      "id": "social_heading_size",
+      "min": 24,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "social_heading_size_mobile",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size (mobile)",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "social_icon_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 24
+    },
+    {
+      "type": "checkbox",
+      "id": "social_links_new_tab",
+      "label": "Open links in new tab",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Footer Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "footer_image",
+      "label": "Image",
+      "info": "Optional decorative image"
+    },
+    {
+      "type": "range",
+      "id": "footer_image_width",
+      "min": 100,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "label": "Image width",
+      "default": 200
+    },
+    {
+      "type": "header",
+      "content": "Copyright"
+    },
+    {
+      "type": "richtext",
+      "id": "copyright_text",
+      "label": "Copyright text",
+      "default": "<p>© [year] Your Store. All rights reserved.</p>",
+      "info": "Use [year] to auto-update year"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "SS - Footer Minimal"
+    }
+  ]
+}
+{% endschema %}
+

@@ -1,0 +1,302 @@
+/* Footer Minimal Styles */
+
+@font-face {
+  font-family: 'Citadel Script Std';
+  src: url('CitadelScriptStd.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.footer-minimal {
+  width: 100%;
+}
+
+.footer-minimal__container {
+  max-width: var(--page-width, 1400px);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-minimal__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Top Section - Logo & Newsletter */
+.footer-minimal__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  text-align: center;
+}
+
+.footer-minimal__logo {
+  display: block;
+}
+
+.footer-minimal__logo img,
+.footer-minimal__logo svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-minimal__logo svg {
+  background-color: #dedede;
+}
+
+/* Newsletter */
+.footer-minimal__newsletter {
+  width: 100%;
+  max-width: 480px;
+}
+
+.footer-minimal__newsletter-heading {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer-minimal__newsletter-text {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.footer-minimal__newsletter .newsletter-form {
+  width: 100%;
+}
+
+.footer-minimal__newsletter .field__input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-minimal__newsletter .field__input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 1px solid currentColor;
+  border-radius: 0;
+  background: transparent;
+  font-size: 0.95rem;
+  color: inherit;
+}
+
+.footer-minimal__newsletter .field__input::placeholder {
+  color: inherit;
+  opacity: 0.6;
+}
+
+.footer-minimal__newsletter .button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0;
+  background: #0017e4;
+  color: #ffffff;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-minimal__newsletter .button:hover {
+  background: #0012b8;
+  color: #ffffff;
+}
+
+/* Middle Section - Menu */
+.footer-minimal__middle {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(var(--color-foreground), 0.15);
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.15);
+}
+
+.footer-minimal__menu {
+  text-align: center;
+}
+
+.footer-minimal__menu-title {
+  margin: 0 0 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.footer-minimal__menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem 2rem;
+}
+
+.footer-minimal__menu-list a {
+  font-size: 0.95rem;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.footer-minimal__menu-list a:hover {
+  opacity: 0.6;
+}
+
+/* Social Section */
+.footer-minimal__social {
+  text-align: center;
+}
+
+.footer-minimal__social-heading {
+  margin: 0 0 1.5rem;
+  font-family: 'Citadel Script Std', cursive;
+  font-size: 2.5rem;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+}
+
+.footer-minimal__social-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-minimal__social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.footer-minimal__social-icons a:hover {
+  opacity: 0.7;
+  transform: translateY(-2px);
+}
+
+.footer-minimal__social-icons svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Bottom Section - Image & Copyright */
+.footer-minimal__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.footer-minimal__image {
+  width: 100%;
+  max-width: 300px;
+}
+
+.footer-minimal__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-minimal__copyright {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  letter-spacing: 0.03em;
+}
+
+.footer-minimal__copyright p {
+  margin: 0;
+}
+
+/* Responsive */
+@media screen and (min-width: 750px) {
+  .footer-minimal__container {
+    padding: 0 4rem;
+  }
+
+  .footer-minimal__inner {
+    gap: 4rem;
+  }
+
+  .footer-minimal__top {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .footer-minimal__newsletter {
+    max-width: 400px;
+  }
+
+  .footer-minimal__newsletter .field__input-wrapper {
+    flex-direction: row;
+  }
+
+  .footer-minimal__newsletter .field__input {
+    flex: 1;
+  }
+
+  .footer-minimal__newsletter .button {
+    white-space: nowrap;
+  }
+
+  .footer-minimal__middle {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-minimal__menu {
+    text-align: left;
+  }
+
+  .footer-minimal__menu-list {
+    justify-content: flex-start;
+  }
+
+  .footer-minimal__social {
+    text-align: right;
+  }
+
+  .footer-minimal__social-heading {
+    font-size: 3rem;
+  }
+
+  .footer-minimal__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-minimal__image {
+    max-width: 200px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .footer-minimal__newsletter {
+    max-width: 450px;
+  }
+
+  .footer-minimal__social-heading {
+    font-size: 3.5rem;
+  }
+}
+

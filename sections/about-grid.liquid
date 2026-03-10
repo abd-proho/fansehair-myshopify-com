@@ -1,0 +1,216 @@
+{{- 'section-about-grid.css' | asset_url | stylesheet_tag -}}
+
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --section-spacing-top: calc(var(--section-spacing-unit-size) * {{ section.settings.spacing_top }});
+    --section-spacing-bottom: calc(var(--section-spacing-unit-size) * {{ section.settings.spacing_bottom }});
+  }
+{%- endstyle -%}
+
+<div class="container max-w-fluid about-grid color-{{ section.settings.color_scheme }} gradient">
+  <div class="about-grid__container container {{ section.settings.section_width }}">
+    
+    {%- comment -%} Header Section {%- endcomment -%}
+    {%- if section.settings.heading != blank -%}
+      <div class="about-grid__header">
+        <h5 class="about-grid__heading">
+          {{ section.settings.heading }}
+        </h5>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Main Content - Images + Text {%- endcomment -%}
+    <div class="about-grid__content about-grid__content--{{ section.settings.layout_position }}">
+      
+      {%- comment -%} Images Grid {%- endcomment -%}
+      <div class="about-grid__images">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'image' -%}
+            <div 
+              class="about-grid__image-item about-grid__image-item--{{ forloop.index }}"
+              {{ block.shopify_attributes }}
+            >
+              {%- if block.settings.image != blank -%}
+                <div class="about-grid__image-wrapper">
+                  {%- if block.settings.image_link != blank -%}
+                    <a href="{{ block.settings.image_link }}" class="about-grid__image-link">
+                  {%- endif -%}
+                  <div class="about-grid__image-inner">
+                    {%- render 'image', 
+                      image: block.settings.image, 
+                      width: 800, 
+                      alt: block.settings.image.alt | default: 'About us image'
+                    -%}
+                  </div>
+                  {%- if block.settings.image_link != blank -%}
+                    </a>
+                  {%- endif -%}
+                </div>
+              {%- else -%}
+                <div class="about-grid__image-placeholder">
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      {%- comment -%} Text Content {%- endcomment -%}
+      <div class="about-grid__text">
+        {%- if section.settings.text_content != blank -%}
+          <div class="about-grid__text-content rte">
+            {{ section.settings.text_content }}
+          </div>
+        {%- endif -%}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "About Grid",
+  "tag": "section",
+  "class": "section-about-grid",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "ABOUT US"
+    },
+    {
+      "type": "header",
+      "content": "Text Content"
+    },
+    {
+      "type": "richtext",
+      "id": "text_content",
+      "label": "Text content",
+      "default": "<p>Fansē a good story? Ours started in a salon.</p><p>With a pulse for the finer things in life, we create professional-driven formulas to make you look and feel like you just left your favorite stylist's chair. We've captured that \"just-got-my-hair-done\" confidence and bottled it for everyday use.</p><p>Because a great hair day shouldn't always require an appointment, just a few products you'll actually want to reach for.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "layout_position",
+      "label": "Layout position",
+      "options": [
+        {
+          "value": "images-left",
+          "label": "Images left, Text right"
+        },
+        {
+          "value": "images-right",
+          "label": "Images right, Text left"
+        }
+      ],
+      "default": "images-right",
+      "info": "Choose which side the images appear on. The heading always stays above the content."
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Section width",
+      "options": [
+        {
+          "value": "container--sm",
+          "label": "Small"
+        },
+        {
+          "value": "container--md",
+          "label": "Medium"
+        },
+        {
+          "value": "container--lg",
+          "label": "Large"
+        },
+        {
+          "value": "container--full",
+          "label": "Full width"
+        }
+      ],
+      "default": "container--full"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.global.color_scheme.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "default": 2,
+      "label": "t:sections.global.spacing.top.label"
+    },
+    {
+      "type": "range",
+      "id": "spacing_bottom",
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "default": 2,
+      "label": "t:sections.global.spacing.bottom.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "image_link",
+          "label": "Image link",
+          "info": "Optional link when clicking the image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Grid",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
