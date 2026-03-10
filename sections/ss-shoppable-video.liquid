@@ -1336,8 +1336,8 @@
   }
 </style>
 
-<div class="container max-w-fluid"
-  class="section-{{ section.id }} video-{{ section.id }}"
+<div
+  class="container max-w-fluid section-{{ section.id }} video-{{ section.id }}"
   style="background-color:{{ background_color }}; background-image: {{ background_gradient }};"
 >
   <div class="section-{{ section.id }}-settings">
@@ -2300,7 +2300,7 @@
   function initializeAllShoppableVideoSections() {
     const sections = document.querySelectorAll('[id^="shopify-section-"]');
     sections.forEach(section => {
-      if (section.querySelector('.video-{{ section.id }}')) {
+      if (section.querySelector('.video-slider-{{ section.id }}')) {
         const sectionId = section.id.replace('shopify-section-', '');
         loadSwiper(() => initShoppableVideo(sectionId));
       }
@@ -2316,7 +2316,7 @@
   if (Shopify.designMode) {
     document.addEventListener('shopify:section:load', (event) => {
       const sectionId = event.detail.sectionId;
-      if (event.target.querySelector('.video-{{ section.id }}')) {
+      if (event.target.querySelector('.video-slider-{{ section.id }}')) {
         loadSwiper(() => initShoppableVideo(sectionId));
       }
     });

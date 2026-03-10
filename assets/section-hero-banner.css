@@ -251,15 +251,59 @@ html.no-js .hero__swiper-slide {
   margin-block: 0;
 }
 
+.hero__animation--copy {
+  display: flex;
+  width: 100%;
+}
+
+.text-center .hero__animation--copy {
+  justify-content: center;
+}
+
+.text-start .hero__animation--copy {
+  justify-content: flex-start;
+}
+
+.text-end .hero__animation--copy {
+  justify-content: flex-end;
+}
+
+.hero__copy {
+  display: inline-flex;
+  flex-direction: column;
+  width: max-content;
+  max-width: 100%;
+}
+
 .hero__button {
   display: inline-flex;
   flex-flow: row wrap;
   gap: var(--spacing-2);
 }
 
+.hero__heading,
 .hero__entry {
+  max-width: 100%;
+  align-self: flex-start;
   margin-block-end: 2.4rem;
 }
+
+.hero__heading {
+  margin-block-end: 1.6rem;
+}
+
+.hero__entry {
+  inline-size: auto;
+}
+
+.text-center .hero__entry {
+  text-align: start;
+}
+
+.text-end .hero__entry {
+  text-align: end;
+}
+
 .hero__entry p {
   margin-block-start: 0;
 }

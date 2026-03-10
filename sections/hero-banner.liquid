@@ -224,18 +224,20 @@
             </div>
           {%- endif -%}
 
-          {%- if block.settings.heading != blank -%}
-            <div class="hero__animation{% unless section.blocks.size == 1 %} in-delay{% endunless %}">
-              <div class="hero__heading">
-                {{- block.settings.heading -}}
-              </div>
-            </div>
-          {%- endif -%}
+          {%- if block.settings.heading != blank or block.settings.text != blank -%}
+            <div class="hero__animation hero__animation--copy{% unless section.blocks.size == 1 %} in-delay{% endunless %}">
+              <div class="hero__copy">
+                {%- if block.settings.heading != blank -%}
+                  <div class="hero__heading">
+                    {{- block.settings.heading -}}
+                  </div>
+                {%- endif -%}
 
-          {%- if block.settings.text != blank -%}
-            <div class="hero__animation{% unless section.blocks.size == 1 %} in-delay{% endunless %}">
-              <div class="hero__entry entry{% unless block.settings.content_position contains 'start' %} entry--list-padding-none{% endunless %}">
-                {{- block.settings.text -}}
+                {%- if block.settings.text != blank -%}
+                  <div class="hero__entry entry{% unless block.settings.content_position contains 'start' %} entry--list-padding-none{% endunless %}">
+                    {{- block.settings.text -}}
+                  </div>
+                {%- endif -%}
               </div>
             </div>
           {%- endif -%}

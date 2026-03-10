@@ -8,6 +8,7 @@
     --section-spacing-bottom: calc(var(--section-spacing-unit-size) * {{ section.settings.spacing_bottom }});
     --floating-card-position-x: {{ section.settings.card_position_horizontal }}%;
     --floating-card-position-y: {{ section.settings.card_position_vertical }}%;
+    --floating-card-position-ratio: {{ section.settings.card_position_horizontal | divided_by: 100.0 }};
     --floating-card-max-width: {{ section.settings.card_max_width }}px;
     --section-min-height: {{ section.settings.section_min_height }}vh;
   }
@@ -50,30 +51,32 @@
       </div>
     {% endif %}
 
-    {% if product != blank %}
-      <div class="floating-product-section__card-wrapper floating-product-section__card--{{ section.settings.card_position }}{% if section.settings.card_float_animation %} floating-product-section__card--animated{% endif %}">
-        {%- render 'card-product', 
-          product_ref: product, 
-          section_id: section.id,
-          show_variants: section.settings.show_variants,
-          show_short_description: section.settings.show_description
-        -%}
-      </div>
-    {% else %}
-      <div class="floating-product-section__card-wrapper floating-product-section__card--{{ section.settings.card_position }}{% if section.settings.card_float_animation %} floating-product-section__card--animated{% endif %}">
-        <div class="floating-product-section__placeholder">
-          <div class="placeholder-card">
-            <div class="placeholder-card__media">
-              {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
-            </div>
-            <div class="placeholder-card__content">
-              <span class="placeholder-card__title">Product Title</span>
-              <span class="placeholder-card__price">$0.00</span>
+    <div class="floating-product-section__card-track floating-product-section__card-track--{{ section.settings.card_position }}">
+      {% if product != blank %}
+        <div class="floating-product-section__card-wrapper{% if section.settings.card_float_animation %} floating-product-section__card--animated{% endif %}">
+          {%- render 'card-product', 
+            product_ref: product, 
+            section_id: section.id,
+            show_variants: section.settings.show_variants,
+            show_short_description: section.settings.show_description
+          -%}
+        </div>
+      {% else %}
+        <div class="floating-product-section__card-wrapper{% if section.settings.card_float_animation %} floating-product-section__card--animated{% endif %}">
+          <div class="floating-product-section__placeholder">
+            <div class="placeholder-card">
+              <div class="placeholder-card__media">
+                {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+              <div class="placeholder-card__content">
+                <span class="placeholder-card__title">Product Title</span>
+                <span class="placeholder-card__price">$0.00</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    {% endif %}
+      {% endif %}
+    </div>
   </div>
 </div>
 

@@ -7,7 +7,7 @@
   min-height: var(--section-min-height, 70vh);
   padding-block-start: var(--section-spacing-top);
   padding-block-end: var(--section-spacing-bottom);
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   align-items: center;
 }
@@ -55,9 +55,7 @@
   z-index: 1;
   width: 100%;
   min-height: var(--section-min-height, 70vh);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: block;
 }
 
 /* Heading Styles */
@@ -97,100 +95,56 @@
   color: rgba(var(--color-foreground), 0.75);
 }
 
-/* Card Wrapper & Position Presets */
-.floating-product-section__card-wrapper {
-  position: absolute;
+/* Card Track & Sticky Card */
+.floating-product-section__card-track {
+  position: relative;
   z-index: 3;
-  max-width: var(--floating-card-max-width, 320px);
+  min-height: var(--section-min-height, 70vh);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
   width: 100%;
+}
+
+.floating-product-section__card-track--top-left,
+.floating-product-section__card-track--center-left,
+.floating-product-section__card-track--bottom-left {
+  justify-content: flex-start;
+}
+
+.floating-product-section__card-track--top-center,
+.floating-product-section__card-track--center,
+.floating-product-section__card-track--bottom-center {
+  justify-content: center;
+}
+
+.floating-product-section__card-track--top-right,
+.floating-product-section__card-track--center-right,
+.floating-product-section__card-track--bottom-right {
+  justify-content: flex-end;
+}
+
+.floating-product-section__card-track--custom {
+  justify-content: flex-start;
+  padding-inline-start: clamp(
+    0px,
+    calc((100% - var(--floating-card-max-width, 320px)) * var(--floating-card-position-ratio, 0.1)),
+    calc(100% - var(--floating-card-max-width, 320px))
+  );
+}
+
+.floating-product-section__card-wrapper {
+  position: sticky;
+  inset-block-start: calc(var(--header-height, 0px) + var(--announcement-bars-before-header-visible-heights, 0px) + var(--spacing-4));
+  z-index: 3;
+  width: min(100%, var(--floating-card-max-width, 320px));
+  max-width: var(--floating-card-max-width, 320px);
   filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.15));
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .floating-product-section__card-wrapper:hover {
   transform: translateY(-8px) scale(1.02);
-}
-
-/* Position Presets */
-.floating-product-section__card--top-left {
-  top: var(--spacing-10);
-  left: var(--spacing-6);
-}
-
-.floating-product-section__card--top-center {
-  top: var(--spacing-10);
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.floating-product-section__card--top-center:hover {
-  transform: translateX(-50%) translateY(-8px) scale(1.02);
-}
-
-.floating-product-section__card--top-right {
-  top: var(--spacing-10);
-  right: var(--spacing-6);
-}
-
-.floating-product-section__card--center-left {
-  top: 50%;
-  left: var(--spacing-6);
-  transform: translateY(-50%);
-}
-
-.floating-product-section__card--center-left:hover {
-  transform: translateY(-50%) translateY(-8px) scale(1.02);
-}
-
-.floating-product-section__card--center {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.floating-product-section__card--center:hover {
-  transform: translate(-50%, -50%) translateY(-8px) scale(1.02);
-}
-
-.floating-product-section__card--center-right {
-  top: 50%;
-  right: var(--spacing-6);
-  transform: translateY(-50%);
-}
-
-.floating-product-section__card--center-right:hover {
-  transform: translateY(-50%) translateY(-8px) scale(1.02);
-}
-
-.floating-product-section__card--bottom-left {
-  bottom: var(--spacing-10);
-  left: var(--spacing-6);
-}
-
-.floating-product-section__card--bottom-center {
-  bottom: var(--spacing-10);
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.floating-product-section__card--bottom-center:hover {
-  transform: translateX(-50%) translateY(-8px) scale(1.02);
-}
-
-.floating-product-section__card--bottom-right {
-  bottom: var(--spacing-10);
-  right: var(--spacing-6);
-}
-
-/* Custom Position */
-.floating-product-section__card--custom {
-  top: var(--floating-card-position-y);
-  left: var(--floating-card-position-x);
-  transform: translate(-50%, -50%);
-}
-
-.floating-product-section__card--custom:hover {
-  transform: translate(-50%, -50%) translateY(-8px) scale(1.02);
 }
 
 /* Floating Animation */
@@ -210,61 +164,6 @@
 /* Pause animation on hover for better interaction */
 .floating-product-section__card--animated:hover {
   animation-play-state: paused;
-}
-
-/* Override transforms for animated cards with position presets */
-.floating-product-section__card--animated.floating-product-section__card--top-center,
-.floating-product-section__card--animated.floating-product-section__card--bottom-center {
-  animation: floatAnimationCenterX 4s ease-in-out infinite;
-}
-
-@keyframes floatAnimationCenterX {
-  0%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  50% {
-    transform: translateX(-50%) translateY(-12px);
-  }
-}
-
-.floating-product-section__card--animated.floating-product-section__card--center-left,
-.floating-product-section__card--animated.floating-product-section__card--center-right {
-  animation: floatAnimationCenterY 4s ease-in-out infinite;
-}
-
-@keyframes floatAnimationCenterY {
-  0%, 100% {
-    transform: translateY(-50%);
-  }
-  50% {
-    transform: translateY(calc(-50% - 12px));
-  }
-}
-
-.floating-product-section__card--animated.floating-product-section__card--center {
-  animation: floatAnimationCenterXY 4s ease-in-out infinite;
-}
-
-@keyframes floatAnimationCenterXY {
-  0%, 100% {
-    transform: translate(-50%, -50%);
-  }
-  50% {
-    transform: translate(-50%, calc(-50% - 12px));
-  }
-}
-
-.floating-product-section__card--animated.floating-product-section__card--custom {
-  animation: floatAnimationCustom 4s ease-in-out infinite;
-}
-
-@keyframes floatAnimationCustom {
-  0%, 100% {
-    transform: translate(-50%, -50%);
-  }
-  50% {
-    transform: translate(-50%, calc(-50% - 12px));
-  }
 }
 
 /* Product Card Override Styles */
@@ -323,6 +222,7 @@
   .floating-product-section {
     min-height: auto;
     padding-block: var(--spacing-10);
+    overflow: hidden;
   }
 
   .floating-product-section__content {
@@ -354,6 +254,13 @@
     transform: none !important;
     max-width: 100%;
     width: 100%;
+  }
+
+  .floating-product-section__card-track {
+    min-height: auto;
+    width: 100%;
+    padding-inline-start: 0;
+    justify-content: center !important;
   }
 
   .floating-product-section__card--animated {
