@@ -1,1 +1,770 @@
-{"sections":{"1658995208ad05f95f":{"type":"hero-banner","blocks":{"slide_gAjkFT":{"type":"slide","settings":{"banner_layout":"hero-banner--full","color_scheme":"scheme-5","header_menu_text_color":"#ffffff","heading":"<p>FANSĒ SEEING YOU HERE!<\/p>","subheading":"","subheading_link":"","text":"<p>Professional-quality haircare and tools, inspired by the salon, designed for your daily routine. Everything you need to feel a little Fansē, every day.<\/p>","button_link_1":"\/collections\/all","button_link_1_type":"button","button_label_1":"SHOP FANSĒ","button_style_1":"button--filled","button_link_2":"","button_label_2":"","button_style_2":"button--outlined","content_position":"center","content_alignment":"center","image":"shopify:\/\/shop_images\/de31cc066b939532cb628a9e657ae9ed_3522b361-5eee-4805-bf94-5bd13ce8f2ec.jpg","video_external":"","show_controls_on_video":false,"enable_media_overlay_desktop":false,"content_position_mobile":"center","content_alignment_mobile":"center","image_mobile":"shopify:\/\/shop_images\/de31cc066b939532cb628a9e657ae9ed.jpg","video_external_mobile":"","show_controls_on_video_mobile":false,"enable_media_overlay_mobile":true}}},"block_order":["slide_gAjkFT"],"custom_css":[".hero__entry p {font-size: 2rem; color: #000000;}",".button--filled {font-size: 25px;}"],"settings":{"enable_transparent_header":true,"slider_height_auto":false,"slider_height":100,"slideshow_autoplay_interval":0,"show_slideshow_navigation":false,"slideshow_navigation_position":"hero__swiper-buttons--sides","color_scheme_arrows":"scheme-6","show_slideshow_pagination":false,"slideshow_pagination_style":"style-2","floating_bar":false}},"featured_products_rdFmR9":{"type":"featured-products","blocks":{"collection_xzXajx":{"type":"collection","settings":{"title":"BEST SELLERS","collection":"","products":["fanse-potion","the-sleek-styled-kit"],"vendor":"","collection_of_products":"","show_unavailable_products":true,"show_product_groups":true,"show_short_description":true,"card_text_heading":"","card_text_button_label":"","card_text_button_style":"button--filled","card_text_button_link":"","content_position":"center","content_alignment":"center"}},"collection_46h9EQ":{"type":"collection","disabled":true,"settings":{"title":"NEW ARRIVALS","collection":"","products":[],"vendor":"","collection_of_products":"","show_unavailable_products":false,"show_product_groups":true,"show_short_description":true,"card_text_heading":"","card_text_button_label":"","card_text_button_style":"button--filled","card_text_button_link":"","content_position":"center","content_alignment":"center"}}},"block_order":["collection_xzXajx","collection_46h9EQ"],"custom_css":["div.section-w-swiper {background: #e6f6ff;}",".product-card__variants--info {display: none;}"],"settings":{"layout":"layout-1","heading":"BEST SELLERS","heading_size":"h5","subheading":"","button_label":"","button_link":"","button_style":"button--text","max_products":6,"product_card_width":500,"enable_slideshow_overflow":false,"show_navigation_arrows":true,"slideshow_autoplay_interval":0,"tab_button_style":"button button--filled","section_width":"max-w-fluid","color_scheme":"scheme-1","product_card_title_font":"body","product_card_title_transform":"uppercase","spacing_top":"0","spacing_bottom":"0"}},"ss_shoppable_video_LyrC4K":{"type":"ss-shoppable-video","blocks":{"item_7wKb3R":{"type":"item","settings":{"video_url":"","autoplay":false,"poster":"shopify:\/\/shop_images\/swatch.png","product":"fanse-potion","use_variants":true,"modal_heading":"<h4>Soothe & smooth<\/h4>","modal_text":"<p>Cooling finish after a clean shave.<\/p>"}},"item_zbPfVY":{"type":"item","settings":{"video_url":"","autoplay":false,"poster":"shopify:\/\/shop_images\/swatch.png","product":"fanse-potion","use_variants":true,"modal_heading":"<h4>Soothe & smooth<\/h4>","modal_text":"<p>Cooling finish after a clean shave.<\/p>"}},"item_ediBWh":{"type":"item","settings":{"video_url":"","autoplay":false,"poster":"shopify:\/\/shop_images\/swatch.png","product":"fanse-potion","use_variants":true,"modal_heading":"<h4>Soothe & smooth<\/h4>","modal_text":"<p>Cooling finish after a clean shave.<\/p>"}},"item_6U6NWr":{"type":"item","settings":{"video_url":"","autoplay":false,"poster":"shopify:\/\/shop_images\/swatch.png","product":"fanse-potion","use_variants":true,"modal_heading":"<h4>Soothe & smooth<\/h4>","modal_text":"<p>Cooling finish after a clean shave.<\/p>"}}},"block_order":["item_7wKb3R","item_zbPfVY","item_ediBWh","item_6U6NWr"],"name":"SS - Shoppable video","settings":{"heading":"<h2>REAL RESULTS<\/h2>","heading_custom":false,"heading_font":"josefin_sans_n4","heading_size":26,"heading_size_mobile":26,"heading_height":130,"heading_align":"left","heading_align_mobile":"center","slider_gap":12,"slider_gap_mobile":12,"slider_mt":20,"card_radius":10,"card_border_thickness":0,"card_shadow":true,"video_ratio":"portrait","video_ratio_mobile":"portrait","video_overlay":0.2,"image_width":44,"image_width_mobile":44,"image_radius":6,"image_border_thickness":0,"title_custom":false,"title_font":"josefin_sans_n4","title_size":14,"title_size_mobile":14,"title_height":130,"title_uppercase":false,"price_custom":false,"price_font":"josefin_sans_n4","price_size":14,"price_size_mobile":14,"price_height":130,"button":"Add To Cart","button_soldout":"Sold Out","button_custom":false,"button_font":"josefin_sans_n4","button_size":16,"button_size_mobile":16,"button_padding_vertical":10,"button_padding_vertical_mobile":10,"button_padding_horizontal":10,"button_padding_horizontal_mobile":10,"reload_after_adding":false,"redirect_after_adding":false,"option_custom":false,"option_font":"josefin_sans_n4","option_size":12,"option_size_mobile":12,"option_height":100,"option_mt":24,"variants_price_custom":false,"variants_price_font":"josefin_sans_n4","variants_price_size":14,"variants_price_size_mobile":14,"variants_price_height":130,"variants_price_mt":10,"variants_price_align":"center","variants_price_align_mobile":"center","modal_width":740,"modal_width_mobile":100,"modal_radius":16,"modal_border_thickness":0,"modal_overlay":50,"close_size":42,"close_size_mobile":42,"close_radius":8,"close_border_thickness":0,"buttons_size":48,"buttons_size_mobile":48,"buttons_radius":8,"buttons_border_thickness":0,"modal_video_radius":0,"modal_video_border_thickness":0,"modal_video_ratio":"portrait","modal_video_ratio_mobile":"portrait","modal_heading_custom":false,"modal_heading_font":"josefin_sans_n4","modal_heading_size":24,"modal_heading_size_mobile":22,"modal_heading_height":130,"modal_heading_align":"center","modal_heading_align_mobile":"center","modal_text_custom":false,"modal_text_font":"josefin_sans_n4","modal_text_size":16,"modal_text_size_mobile":16,"modal_text_height":150,"modal_text_align":"center","modal_text_align_mobile":"center","modal_text_mt":16,"use_modal_product":false,"modal_image_width":70,"modal_image_width_mobile":66,"modal_image_radius":12,"modal_image_border_thickness":0,"modal_title_custom":false,"modal_title_font":"josefin_sans_n4","modal_title_size":16,"modal_title_size_mobile":16,"modal_title_height":130,"modal_title_uppercase":false,"modal_price_custom":false,"modal_price_font":"josefin_sans_n4","modal_price_size":14,"modal_price_size_mobile":14,"modal_price_height":130,"modal_button":"Add To Cart","modal_button_soldout":"Sold Out","modal_button_custom":false,"modal_button_font":"josefin_sans_n4","modal_button_size":16,"modal_button_size_mobile":16,"modal_button_radius":8,"modal_button_border_thickness":1,"modal_button_mt":16,"modal_button_align":"center","modal_button_align_mobile":"center","card_bg_color":"#ffffff","card_border_color":"#121212","video_overlay_color":"#121212","card_shadow_color":"#121212","title_color":"#121212","price_color":"#121212","image_border_color":"#121212","button_color":"#ffffff","button_hover_color":"#ffffff","button_bg_color":"#121212","button_bg_hover_color":"#121212","arrow_icon_color":"#121212","arrow_bg_color":"#ffffff","arrow_border_color":"#121212","option_color":"#121212","variants_price_color":"#121212","modal_heading_color":"#121212","modal_text_color":"#121212","modal_video_border_color":"#121212","modal_content_bg_color":"#ffffff","modal_border_color":"#121212","close_icon_color":"#ffffff","close_bg_color":"#121212","close_border_color":"#121212","buttons_icon_color":"#121212","buttons_bg_color":"#ffffff","buttons_border_color":"#121212","modal_title_color":"#121212","modal_price_color":"#121212","modal_image_border_color":"#121212","modal_button_color":"#ffffff","modal_button_hover_color":"#121212","modal_button_bg_color":"#121212","modal_button_bg_hover_color":"#ffffff","modal_button_border_color":"#121212","modal_button_border_hover_color":"#121212","heading_color":"#121212","background_color":"#e6f6ff","background_gradient":"","border_color":"#121212","margin_top":0,"margin_bottom":0,"padding_top":36,"padding_bottom":36,"padding_horizontal":0,"padding_horizontal_mobile":1.5,"full_width":true,"content_width":1400,"border_thickness":0,"lazy":true}},"custom_liquid_red":{"type":"custom-liquid","settings":{"custom_liquid":"<div style=\"width:100%;height:340px;background:#e4252a;\"><\/div>","section_width":"max-w-full","color_scheme":"scheme-1","spacing_top":"0","spacing_bottom":"0"}},"personal_note_HKJ6q4":{"type":"personal-note","blocks":{"subheading_RaLc4y":{"type":"subheading","disabled":true,"settings":{"text":"Subheading","text_style":"text-style--caption"}},"richtext_7wDhaR":{"type":"richtext","settings":{"text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.<\/p>","text_style":"text-style--body"}},"richtext_7nBx9f":{"type":"richtext","settings":{"text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.<\/p>","text_style":"text-style--body"}},"richtext_qQrr6b":{"type":"richtext","settings":{"text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.<\/p>","text_style":"text-style--small"}},"spacer_YHhtNc":{"type":"spacer","settings":{"spacing_height":24}},"signature_fpMYHH":{"type":"signature","disabled":true,"settings":{"signature_width":150,"signature_text":"Tori","signature_style":"signature-style--script"}},"floating_image_nWFamK":{"type":"floating_image","settings":{"position_horizontal":85,"position_vertical":75,"image_width":100,"image_rotation":0,"position_horizontal_mobile":80,"position_vertical_mobile":90,"image_width_mobile":60,"image_rotation_mobile":0,"enable_animation":false,"hide_on_mobile":false,"hide_on_desktop":false}}},"block_order":["subheading_RaLc4y","richtext_7wDhaR","richtext_7nBx9f","richtext_qQrr6b","spacer_YHhtNc","signature_fpMYHH","floating_image_nWFamK"],"custom_css":["p,span,div,h1,h2,h3,h4 {color: black;}"],"name":"Personal Note","settings":{"background_image_desktop":"shopify:\/\/shop_images\/Asset_2_1b946456-bec8-4499-8af2-fc2983a614b5.png","background_image_mobile":"shopify:\/\/shop_images\/Asset_2_81ca768b-85bc-4777-8ab8-27d311cae7bf.png","background_overlay":true,"color_scheme":"scheme-2","content_max_width":660,"content_alignment":"center","content_position_horizontal":50,"content_position_vertical":50,"section_width":"container--lg","section_min_height":75,"spacing_top":1,"spacing_bottom":1}},"floating_product_card_m9DNWL":{"type":"floating-product-card","custom_css":[".product-card__variants--info {display: none;}"],"name":"Floating Product Card","settings":{"product":"fanse-potion","show_variants":false,"show_description":true,"background_image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_12.39.03_PM.png","background_video":"","background_overlay":false,"color_scheme":"","heading":"","subheading":"","heading_size":"h2","heading_position":"left","card_position":"center-left","card_position_horizontal":10,"card_position_vertical":50,"card_max_width":320,"card_float_animation":false,"section_width":"container--lg","section_min_height":70,"spacing_top":2,"spacing_bottom":2}},"highlighted_product_J63VJn":{"type":"highlighted-product","blocks":{"title_Ka6Xyt":{"type":"title","settings":{}},"badge_QDNtKn":{"type":"badge","settings":{}},"text_rhHDeD":{"type":"text","settings":{"text":"{{ section.settings.highlighted_product.vendor }}","text_style":"link","link_to_resource":"vendor"}},"price_996ybP":{"type":"price","settings":{"show_price_tax_info":true,"show_price_shipping_info":false,"show_price_custom_info":""}},"divider_7VWz8r":{"type":"divider","settings":{}},"variant_picker_h6FXmi":{"type":"variant_picker","settings":{"title":"Variant picker","variant_picker_type":"buttons","variant_picker_layout":"product-selector--default","variant_options_with_thumbnails":"Color","size_guide_page":"","sizes_option":"Size"}},"buy_buttons_i8xcmy":{"type":"buy_buttons","settings":{"show_quantity":true,"quantity_type":"inline","show_dynamic_checkout":true,"show_gift_card_recipient":false}},"product_link_igx8wk":{"type":"product_link","settings":{}}},"block_order":["title_Ka6Xyt","badge_QDNtKn","text_rhHDeD","price_996ybP","divider_7VWz8r","variant_picker_h6FXmi","buy_buttons_i8xcmy","product_link_igx8wk"],"disabled":true,"settings":{"highlighted_product":"fanse-potion","heading":"<p>FANSĒ POTION<\/p>","product_media_object_fit":"cover","adaptive_ratio_and_auto_height":"default","media_transparent_background":false,"disable_media_zoom":true,"show_media_index":true,"media_gallery_info":"","color_scheme_arrows":"","section_width":"max-w-fluid","color_scheme":"","spacing_top":"0","spacing_bottom":"0"}},"social_media_highlights_3Ng8qc":{"type":"social-media-highlights","blocks":{"image_pffnTF":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/de31cc066b939532cb628a9e657ae9ed.jpg","image_url":"","card_aspect_ratio":"same_as_section"}},"image_CeiniY":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/de31cc066b939532cb628a9e657ae9ed.jpg","image_url":"","card_aspect_ratio":"same_as_section"}},"image_iPTYeP":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/de31cc066b939532cb628a9e657ae9ed.jpg","image_url":"","card_aspect_ratio":"same_as_section"}},"image_Gfaqic":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/de31cc066b939532cb628a9e657ae9ed.jpg","image_url":"","card_aspect_ratio":"same_as_section"}}},"block_order":["image_pffnTF","image_CeiniY","image_iPTYeP","image_Gfaqic"],"disabled":true,"settings":{"layout":"default","remove_desktop_spacing":false,"heading":"SHOP THE FEED","heading_size":"h3","subheading":"","button_label":"Follow us","button_link":"https:\/\/www.instagram.com\/","button_style":"button--outlined","button_icon":"brand-instagram","content_card_color_scheme":"","media_aspect_ratio":"1\/1","autoplay_speed":10,"section_width":"max-w-full","color_scheme":"scheme-1","spacing_top":"4","spacing_bottom":"4"}},"shop_the_feed_hTF4N3":{"type":"shop-the-feed","blocks":{"image_FKR7gK":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.57_PM.png","image_link":"","grid_size":"large","hide_on_mobile":false,"hide_on_desktop":false}},"image_86P47L":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.42_PM.png","image_link":"","grid_size":"small","hide_on_mobile":false,"hide_on_desktop":false}},"image_EQg7eA":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.52_PM.png","image_link":"","grid_size":"small","hide_on_mobile":false,"hide_on_desktop":false}},"image_QB46yT":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.36_PM.png","image_link":"","grid_size":"small","hide_on_mobile":false,"hide_on_desktop":false}},"image_qRn8yz":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.27_PM.png","image_link":"","grid_size":"small","hide_on_mobile":false,"hide_on_desktop":false}},"image_qJDxyy":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.47_PM.png","image_link":"","grid_size":"small","hide_on_mobile":false,"hide_on_desktop":false}},"image_Q3eP6g":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.23_PM.png","image_link":"","grid_size":"small","hide_on_mobile":false,"hide_on_desktop":false}}},"block_order":["image_FKR7gK","image_86P47L","image_EQg7eA","image_QB46yT","image_qRn8yz","image_qJDxyy","image_Q3eP6g"],"disabled":true,"name":"Shop the Feed","settings":{"heading":"SHOP THE FEED","heading_link":"","hashtag":"@FANSEHAIR","hashtag_link":"https:\/\/www.instagram.com\/fansehair","grid_layout":"auto","section_width":"container--full","color_scheme":"scheme-75583496-94ea-45cb-b954-9a0fd7b86dca","spacing_top":2,"spacing_bottom":2}}},"order":["1658995208ad05f95f","featured_products_rdFmR9","ss_shoppable_video_LyrC4K","custom_liquid_red","personal_note_HKJ6q4","floating_product_card_m9DNWL","highlighted_product_J63VJn","social_media_highlights_3Ng8qc","shop_the_feed_hTF4N3"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1658995208ad05f95f": {
+      "type": "hero-banner",
+      "blocks": {
+        "slide_gAjkFT": {
+          "type": "slide",
+          "settings": {
+            "banner_layout": "hero-banner--full",
+            "color_scheme": "scheme-5",
+            "header_menu_text_color": "#ffffff",
+            "heading": "<p>FANSĒ SEEING YOU HERE!</p>",
+            "subheading": "",
+            "subheading_link": "",
+            "text": "<p>Professional-quality haircare and tools, inspired by the salon, designed for your daily routine. Everything you need to feel a little Fansē, every day.</p>",
+            "button_link_1": "/collections/all",
+            "button_link_1_type": "button",
+            "button_label_1": "SHOP FANSĒ",
+            "button_style_1": "button--filled",
+            "button_link_2": "",
+            "button_label_2": "",
+            "button_style_2": "button--outlined",
+            "content_position": "center",
+            "content_alignment": "center",
+            "image": "shopify://shop_images/de31cc066b939532cb628a9e657ae9ed_3522b361-5eee-4805-bf94-5bd13ce8f2ec.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "enable_media_overlay_desktop": false,
+            "content_position_mobile": "center",
+            "content_alignment_mobile": "center",
+            "image_mobile": "shopify://shop_images/de31cc066b939532cb628a9e657ae9ed.jpg",
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "enable_media_overlay_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "slide_gAjkFT"
+      ],
+      "custom_css": [
+        ".hero__entry p {font-size: 1.8rem; color: #000000;}",
+        ".button--filled {font-size: 18px;}"
+      ],
+      "settings": {
+        "enable_transparent_header": true,
+        "slider_height_auto": false,
+        "slider_height": 100,
+        "slideshow_autoplay_interval": 0,
+        "show_slideshow_navigation": false,
+        "slideshow_navigation_position": "hero__swiper-buttons--sides",
+        "color_scheme_arrows": "scheme-6",
+        "show_slideshow_pagination": false,
+        "slideshow_pagination_style": "style-2",
+        "floating_bar": false
+      }
+    },
+    "featured_products_rdFmR9": {
+      "type": "featured-products",
+      "blocks": {
+        "collection_xzXajx": {
+          "type": "collection",
+          "settings": {
+            "title": "BEST SELLERS",
+            "collection": "",
+            "products": [
+              "fanse-potion",
+              "the-sleek-styled-kit"
+            ],
+            "vendor": "",
+            "collection_of_products": "",
+            "show_unavailable_products": true,
+            "show_product_groups": true,
+            "show_short_description": true,
+            "card_text_heading": "",
+            "card_text_button_label": "",
+            "card_text_button_style": "button--filled",
+            "card_text_button_link": "",
+            "content_position": "center",
+            "content_alignment": "center"
+          }
+        },
+        "collection_46h9EQ": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "title": "NEW ARRIVALS",
+            "collection": "",
+            "products": [],
+            "vendor": "",
+            "collection_of_products": "",
+            "show_unavailable_products": false,
+            "show_product_groups": true,
+            "show_short_description": true,
+            "card_text_heading": "",
+            "card_text_button_label": "",
+            "card_text_button_style": "button--filled",
+            "card_text_button_link": "",
+            "content_position": "center",
+            "content_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "collection_xzXajx",
+        "collection_46h9EQ"
+      ],
+      "custom_css": [
+        "div.section-w-swiper {background: #e6f6ff;}",
+        ".product-card__variants--info {display: none;}"
+      ],
+      "settings": {
+        "layout": "layout-1",
+        "heading": "BEST SELLERS",
+        "heading_size": "h5",
+        "subheading": "",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button--text",
+        "max_products": 6,
+        "product_card_width": 500,
+        "enable_slideshow_overflow": false,
+        "show_navigation_arrows": true,
+        "slideshow_autoplay_interval": 0,
+        "tab_button_style": "button button--filled",
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-1",
+        "product_card_title_font": "body",
+        "product_card_title_transform": "uppercase",
+        "spacing_top": "0",
+        "spacing_bottom": "0"
+      }
+    },
+    "ss_shoppable_video_LyrC4K": {
+      "type": "ss-shoppable-video",
+      "blocks": {
+        "item_7wKb3R": {
+          "type": "item",
+          "settings": {
+            "video_url": "",
+            "autoplay": false,
+            "poster": "shopify://shop_images/swatch.png",
+            "product": "fanse-potion",
+            "use_variants": true,
+            "modal_heading": "<h4>Soothe & smooth</h4>",
+            "modal_text": "<p>Cooling finish after a clean shave.</p>"
+          }
+        },
+        "item_AJbPKb": {
+          "type": "item",
+          "settings": {
+            "video_url": "",
+            "autoplay": false,
+            "poster": "shopify://shop_images/swatch.png",
+            "product": "fanse-potion",
+            "use_variants": true,
+            "modal_heading": "<h4>Soothe & smooth</h4>",
+            "modal_text": "<p>Cooling finish after a clean shave.</p>"
+          }
+        },
+        "item_zbPfVY": {
+          "type": "item",
+          "settings": {
+            "video_url": "",
+            "autoplay": false,
+            "poster": "shopify://shop_images/swatch.png",
+            "product": "fanse-potion",
+            "use_variants": true,
+            "modal_heading": "<h4>Soothe & smooth</h4>",
+            "modal_text": "<p>Cooling finish after a clean shave.</p>"
+          }
+        },
+        "item_ediBWh": {
+          "type": "item",
+          "settings": {
+            "video_url": "",
+            "autoplay": false,
+            "poster": "shopify://shop_images/swatch.png",
+            "product": "fanse-potion",
+            "use_variants": true,
+            "modal_heading": "<h4>Soothe & smooth</h4>",
+            "modal_text": "<p>Cooling finish after a clean shave.</p>"
+          }
+        },
+        "item_6U6NWr": {
+          "type": "item",
+          "settings": {
+            "video_url": "",
+            "autoplay": false,
+            "poster": "shopify://shop_images/swatch.png",
+            "product": "fanse-potion",
+            "use_variants": true,
+            "modal_heading": "<h4>Soothe & smooth</h4>",
+            "modal_text": "<p>Cooling finish after a clean shave.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_7wKb3R",
+        "item_AJbPKb",
+        "item_zbPfVY",
+        "item_ediBWh",
+        "item_6U6NWr"
+      ],
+      "name": "SS - Shoppable video",
+      "settings": {
+        "heading": "<h2>REAL RESULTS</h2>",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 26,
+        "heading_size_mobile": 26,
+        "heading_height": 130,
+        "heading_align": "left",
+        "heading_align_mobile": "center",
+        "slider_gap": 12,
+        "slider_gap_mobile": 12,
+        "slider_mt": 20,
+        "card_radius": 10,
+        "card_border_thickness": 0,
+        "card_shadow": true,
+        "video_ratio": "portrait",
+        "video_ratio_mobile": "portrait",
+        "video_overlay": 0.2,
+        "image_width": 44,
+        "image_width_mobile": 44,
+        "image_radius": 6,
+        "image_border_thickness": 0,
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 14,
+        "title_size_mobile": 14,
+        "title_height": 130,
+        "title_uppercase": false,
+        "price_custom": false,
+        "price_font": "josefin_sans_n4",
+        "price_size": 14,
+        "price_size_mobile": 14,
+        "price_height": 130,
+        "button": "Add To Cart",
+        "button_soldout": "Sold Out",
+        "button_custom": false,
+        "button_font": "josefin_sans_n4",
+        "button_size": 16,
+        "button_size_mobile": 16,
+        "button_padding_vertical": 10,
+        "button_padding_vertical_mobile": 10,
+        "button_padding_horizontal": 10,
+        "button_padding_horizontal_mobile": 10,
+        "reload_after_adding": false,
+        "redirect_after_adding": false,
+        "option_custom": false,
+        "option_font": "josefin_sans_n4",
+        "option_size": 12,
+        "option_size_mobile": 12,
+        "option_height": 100,
+        "option_mt": 24,
+        "variants_price_custom": false,
+        "variants_price_font": "josefin_sans_n4",
+        "variants_price_size": 14,
+        "variants_price_size_mobile": 14,
+        "variants_price_height": 130,
+        "variants_price_mt": 10,
+        "variants_price_align": "center",
+        "variants_price_align_mobile": "center",
+        "modal_width": 740,
+        "modal_width_mobile": 100,
+        "modal_radius": 16,
+        "modal_border_thickness": 0,
+        "modal_overlay": 50,
+        "close_size": 42,
+        "close_size_mobile": 42,
+        "close_radius": 8,
+        "close_border_thickness": 0,
+        "buttons_size": 48,
+        "buttons_size_mobile": 48,
+        "buttons_radius": 8,
+        "buttons_border_thickness": 0,
+        "modal_video_radius": 0,
+        "modal_video_border_thickness": 0,
+        "modal_video_ratio": "portrait",
+        "modal_video_ratio_mobile": "portrait",
+        "modal_heading_custom": false,
+        "modal_heading_font": "josefin_sans_n4",
+        "modal_heading_size": 24,
+        "modal_heading_size_mobile": 22,
+        "modal_heading_height": 130,
+        "modal_heading_align": "center",
+        "modal_heading_align_mobile": "center",
+        "modal_text_custom": false,
+        "modal_text_font": "josefin_sans_n4",
+        "modal_text_size": 16,
+        "modal_text_size_mobile": 16,
+        "modal_text_height": 150,
+        "modal_text_align": "center",
+        "modal_text_align_mobile": "center",
+        "modal_text_mt": 16,
+        "use_modal_product": false,
+        "modal_image_width": 70,
+        "modal_image_width_mobile": 66,
+        "modal_image_radius": 12,
+        "modal_image_border_thickness": 0,
+        "modal_title_custom": false,
+        "modal_title_font": "josefin_sans_n4",
+        "modal_title_size": 16,
+        "modal_title_size_mobile": 16,
+        "modal_title_height": 130,
+        "modal_title_uppercase": false,
+        "modal_price_custom": false,
+        "modal_price_font": "josefin_sans_n4",
+        "modal_price_size": 14,
+        "modal_price_size_mobile": 14,
+        "modal_price_height": 130,
+        "modal_button": "Add To Cart",
+        "modal_button_soldout": "Sold Out",
+        "modal_button_custom": false,
+        "modal_button_font": "josefin_sans_n4",
+        "modal_button_size": 16,
+        "modal_button_size_mobile": 16,
+        "modal_button_radius": 8,
+        "modal_button_border_thickness": 1,
+        "modal_button_mt": 16,
+        "modal_button_align": "center",
+        "modal_button_align_mobile": "center",
+        "card_bg_color": "#ffffff",
+        "card_border_color": "#121212",
+        "video_overlay_color": "#121212",
+        "card_shadow_color": "#121212",
+        "title_color": "#121212",
+        "price_color": "#121212",
+        "image_border_color": "#121212",
+        "button_color": "#ffffff",
+        "button_hover_color": "#ffffff",
+        "button_bg_color": "#121212",
+        "button_bg_hover_color": "#121212",
+        "arrow_icon_color": "#121212",
+        "arrow_bg_color": "#ffffff",
+        "arrow_border_color": "#121212",
+        "option_color": "#121212",
+        "variants_price_color": "#121212",
+        "modal_heading_color": "#121212",
+        "modal_text_color": "#121212",
+        "modal_video_border_color": "#121212",
+        "modal_content_bg_color": "#ffffff",
+        "modal_border_color": "#121212",
+        "close_icon_color": "#ffffff",
+        "close_bg_color": "#121212",
+        "close_border_color": "#121212",
+        "buttons_icon_color": "#121212",
+        "buttons_bg_color": "#ffffff",
+        "buttons_border_color": "#121212",
+        "modal_title_color": "#121212",
+        "modal_price_color": "#121212",
+        "modal_image_border_color": "#121212",
+        "modal_button_color": "#ffffff",
+        "modal_button_hover_color": "#121212",
+        "modal_button_bg_color": "#121212",
+        "modal_button_bg_hover_color": "#ffffff",
+        "modal_button_border_color": "#121212",
+        "modal_button_border_hover_color": "#121212",
+        "heading_color": "#121212",
+        "background_color": "#e6f6ff",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 1400,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "custom_liquid_red": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"width:100%;height:340px;background:#e4252a;\"></div>",
+        "section_width": "max-w-full",
+        "color_scheme": "scheme-1",
+        "spacing_top": "0",
+        "spacing_bottom": "0"
+      }
+    },
+    "personal_note_HKJ6q4": {
+      "type": "personal-note",
+      "blocks": {
+        "subheading_RaLc4y": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "Subheading",
+            "text_style": "text-style--caption"
+          }
+        },
+        "richtext_7wDhaR": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>",
+            "text_style": "text-style--body"
+          }
+        },
+        "richtext_7nBx9f": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>",
+            "text_style": "text-style--body"
+          }
+        },
+        "richtext_qQrr6b": {
+          "type": "richtext",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>",
+            "text_style": "text-style--small"
+          }
+        },
+        "spacer_YHhtNc": {
+          "type": "spacer",
+          "settings": {
+            "spacing_height": 24
+          }
+        },
+        "signature_fpMYHH": {
+          "type": "signature",
+          "disabled": true,
+          "settings": {
+            "signature_width": 150,
+            "signature_text": "Tori",
+            "signature_style": "signature-style--script"
+          }
+        },
+        "floating_image_nWFamK": {
+          "type": "floating_image",
+          "settings": {
+            "position_horizontal": 85,
+            "position_vertical": 75,
+            "image_width": 100,
+            "image_rotation": 0,
+            "position_horizontal_mobile": 80,
+            "position_vertical_mobile": 90,
+            "image_width_mobile": 60,
+            "image_rotation_mobile": 0,
+            "enable_animation": false,
+            "hide_on_mobile": false,
+            "hide_on_desktop": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_RaLc4y",
+        "richtext_7wDhaR",
+        "richtext_7nBx9f",
+        "richtext_qQrr6b",
+        "spacer_YHhtNc",
+        "signature_fpMYHH",
+        "floating_image_nWFamK"
+      ],
+      "custom_css": [
+        "p,span,div,h1,h2,h3,h4 {color: black;}"
+      ],
+      "name": "Personal Note",
+      "settings": {
+        "background_image_desktop": "shopify://shop_images/Asset_2_1b946456-bec8-4499-8af2-fc2983a614b5.png",
+        "background_image_mobile": "shopify://shop_images/Asset_2_81ca768b-85bc-4777-8ab8-27d311cae7bf.png",
+        "background_overlay": true,
+        "color_scheme": "scheme-2",
+        "content_max_width": 660,
+        "content_alignment": "center",
+        "content_position_horizontal": 50,
+        "content_position_vertical": 50,
+        "section_width": "container--lg",
+        "section_min_height": 75,
+        "spacing_top": 1,
+        "spacing_bottom": 1
+      }
+    },
+    "floating_product_card_m9DNWL": {
+      "type": "floating-product-card",
+      "custom_css": [
+        ".product-card__variants--info {display: none;}"
+      ],
+      "name": "Floating Product Card",
+      "settings": {
+        "product": "fanse-potion",
+        "show_variants": false,
+        "show_description": true,
+        "background_image": "shopify://shop_images/Screenshot_2025-12-07_at_12.39.03_PM.png",
+        "background_video": "",
+        "background_overlay": false,
+        "color_scheme": "",
+        "heading": "",
+        "subheading": "",
+        "heading_size": "h2",
+        "heading_position": "left",
+        "card_position": "center-left",
+        "card_position_horizontal": 10,
+        "card_position_vertical": 50,
+        "card_max_width": 320,
+        "card_float_animation": false,
+        "section_width": "container--lg",
+        "section_min_height": 70,
+        "spacing_top": 2,
+        "spacing_bottom": 2
+      }
+    },
+    "highlighted_product_J63VJn": {
+      "type": "highlighted-product",
+      "blocks": {
+        "title_Ka6Xyt": {
+          "type": "title",
+          "settings": {}
+        },
+        "badge_QDNtKn": {
+          "type": "badge",
+          "settings": {}
+        },
+        "text_rhHDeD": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.highlighted_product.vendor }}",
+            "text_style": "link",
+            "link_to_resource": "vendor"
+          }
+        },
+        "price_996ybP": {
+          "type": "price",
+          "settings": {
+            "show_price_tax_info": true,
+            "show_price_shipping_info": false,
+            "show_price_custom_info": ""
+          }
+        },
+        "divider_7VWz8r": {
+          "type": "divider",
+          "settings": {}
+        },
+        "variant_picker_h6FXmi": {
+          "type": "variant_picker",
+          "settings": {
+            "title": "Variant picker",
+            "variant_picker_type": "buttons",
+            "variant_picker_layout": "product-selector--default",
+            "variant_options_with_thumbnails": "Color",
+            "size_guide_page": "",
+            "sizes_option": "Size"
+          }
+        },
+        "buy_buttons_i8xcmy": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity": true,
+            "quantity_type": "inline",
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "product_link_igx8wk": {
+          "type": "product_link",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title_Ka6Xyt",
+        "badge_QDNtKn",
+        "text_rhHDeD",
+        "price_996ybP",
+        "divider_7VWz8r",
+        "variant_picker_h6FXmi",
+        "buy_buttons_i8xcmy",
+        "product_link_igx8wk"
+      ],
+      "disabled": true,
+      "settings": {
+        "highlighted_product": "fanse-potion",
+        "heading": "<p>FANSĒ POTION</p>",
+        "product_media_object_fit": "cover",
+        "adaptive_ratio_and_auto_height": "default",
+        "media_transparent_background": false,
+        "disable_media_zoom": true,
+        "show_media_index": true,
+        "media_gallery_info": "",
+        "color_scheme_arrows": "",
+        "section_width": "max-w-fluid",
+        "color_scheme": "",
+        "spacing_top": "0",
+        "spacing_bottom": "0"
+      }
+    },
+    "social_media_highlights_3Ng8qc": {
+      "type": "social-media-highlights",
+      "blocks": {
+        "image_pffnTF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/de31cc066b939532cb628a9e657ae9ed.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_CeiniY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/de31cc066b939532cb628a9e657ae9ed.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_iPTYeP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/de31cc066b939532cb628a9e657ae9ed.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        },
+        "image_Gfaqic": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/de31cc066b939532cb628a9e657ae9ed.jpg",
+            "image_url": "",
+            "card_aspect_ratio": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "image_pffnTF",
+        "image_CeiniY",
+        "image_iPTYeP",
+        "image_Gfaqic"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "default",
+        "remove_desktop_spacing": false,
+        "heading": "SHOP THE FEED",
+        "heading_size": "h3",
+        "subheading": "",
+        "button_label": "Follow us",
+        "button_link": "https://www.instagram.com/",
+        "button_style": "button--outlined",
+        "button_icon": "brand-instagram",
+        "content_card_color_scheme": "",
+        "media_aspect_ratio": "1/1",
+        "autoplay_speed": 10,
+        "section_width": "max-w-full",
+        "color_scheme": "scheme-1",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "shop_the_feed_hTF4N3": {
+      "type": "shop-the-feed",
+      "blocks": {
+        "image_FKR7gK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.57_PM.png",
+            "image_link": "",
+            "grid_size": "large",
+            "hide_on_mobile": false,
+            "hide_on_desktop": false
+          }
+        },
+        "image_86P47L": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.42_PM.png",
+            "image_link": "",
+            "grid_size": "small",
+            "hide_on_mobile": false,
+            "hide_on_desktop": false
+          }
+        },
+        "image_EQg7eA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.52_PM.png",
+            "image_link": "",
+            "grid_size": "small",
+            "hide_on_mobile": false,
+            "hide_on_desktop": false
+          }
+        },
+        "image_QB46yT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.36_PM.png",
+            "image_link": "",
+            "grid_size": "small",
+            "hide_on_mobile": false,
+            "hide_on_desktop": false
+          }
+        },
+        "image_qRn8yz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.27_PM.png",
+            "image_link": "",
+            "grid_size": "small",
+            "hide_on_mobile": false,
+            "hide_on_desktop": false
+          }
+        },
+        "image_qJDxyy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.47_PM.png",
+            "image_link": "",
+            "grid_size": "small",
+            "hide_on_mobile": false,
+            "hide_on_desktop": false
+          }
+        },
+        "image_Q3eP6g": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.23_PM.png",
+            "image_link": "",
+            "grid_size": "small",
+            "hide_on_mobile": false,
+            "hide_on_desktop": false
+          }
+        }
+      },
+      "block_order": [
+        "image_FKR7gK",
+        "image_86P47L",
+        "image_EQg7eA",
+        "image_QB46yT",
+        "image_qRn8yz",
+        "image_qJDxyy",
+        "image_Q3eP6g"
+      ],
+      "disabled": true,
+      "name": "Shop the Feed",
+      "settings": {
+        "heading": "SHOP THE FEED",
+        "heading_link": "",
+        "hashtag": "@FANSEHAIR",
+        "hashtag_link": "https://www.instagram.com/fansehair",
+        "grid_layout": "auto",
+        "section_width": "container--full",
+        "color_scheme": "scheme-75583496-94ea-45cb-b954-9a0fd7b86dca",
+        "spacing_top": 2,
+        "spacing_bottom": 2
+      }
+    }
+  },
+  "order": [
+    "1658995208ad05f95f",
+    "featured_products_rdFmR9",
+    "ss_shoppable_video_LyrC4K",
+    "custom_liquid_red",
+    "personal_note_HKJ6q4",
+    "floating_product_card_m9DNWL",
+    "highlighted_product_J63VJn",
+    "social_media_highlights_3Ng8qc",
+    "shop_the_feed_hTF4N3"
+  ]
+}
