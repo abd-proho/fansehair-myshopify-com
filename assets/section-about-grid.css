@@ -72,9 +72,9 @@
    ======================================== */
 
 .about-grid__images {
-  flex: 0 0 65%;
+  flex: 0 0 60%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1.15fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 0.5rem;
   --bento-cols: 4;
@@ -85,23 +85,18 @@
   grid-template-columns: repeat(var(--bento-cols), 1fr);
   grid-template-rows: repeat(var(--bento-rows), 1fr);
   width: 100%;
-  aspect-ratio: var(--bento-cols) / var(--bento-rows);
+  /* aspect-ratio 5/3 → lead col (36.5% w) fills full height → ~3:5 portrait;
+     secondary cells (31.7% w × 50% h) are near-square */
+  aspect-ratio: 5 / 3;
 }
 
-.bento > * {
-  overflow: hidden;
-  position: relative;
-  margin: calc(var(--bento-gap) / 2);
-  border-radius: var(--bento-border-radius);
-}
-
-/* First image - Large, spans 1 column and 2 rows */
+/* First image - tall portrait spanning both rows */
 .about-grid__image-item--1 {
   grid-column: 1;
-  grid-row: 1 / 3;
+  grid-row: 1 / span 2;
 }
 
-/* Remaining 4 images in 2x2 grid on the right */
+/* Remaining 4 images in 2×2 grid on the right */
 .about-grid__image-item--2 {
   grid-column: 2;
   grid-row: 1;
@@ -176,7 +171,8 @@
    ======================================== */
 
 .about-grid__text {
-  flex: 0 0 34.5%;
+  flex: 1 1 0;
+  min-width: 0;
   padding: var(--spacing-3);
   display: flex;
   flex-direction: column;
@@ -217,6 +213,7 @@
   .about-grid__images {
     flex: 0 0 auto;
     width: 100%;
+    aspect-ratio: 3 / 2;
   }
 
   .about-grid__text {
@@ -236,6 +233,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     gap: 0.375rem;
+    aspect-ratio: auto;
   }
 
   /* First image spans full width on mobile */
