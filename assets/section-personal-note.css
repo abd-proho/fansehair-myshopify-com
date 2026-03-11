@@ -4,7 +4,7 @@
 
 .section-personal-note {
   padding: 36px;
-  background-color: rgba(230, 246, 255, 1);
+  background: linear-gradient(180deg, rgba(230, 246, 255, 0) 0%, rgba(230, 246, 255, 1) 20%);
 }
 
 @media screen and (min-width: 750px) {
