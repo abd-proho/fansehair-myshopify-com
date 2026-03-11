@@ -1,1 +1,359 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"breadcrumbs":true,"show_page_title":true,"page_title_alignment":"text-center","info_title":"","info_content":"","section_width":"max-w-narrower","color_scheme":"","spacing_top":"2","spacing_bottom":"2"}},"image_text_signature_QRLdhE":{"type":"image-text-signature","custom_css":[".image-text-signature__heading {}"],"name":"Image + Text Signature","settings":{"main_image":"shopify:\/\/shop_images\/tori.png","image_position":"left","image_width":40,"content_width":60,"content_alignment":"end","heading":"\"First line of a quote from Tori here...","heading_tag":"h2","richtext":"<p>and the rest of the quote will go here. Lorem ipsum dolor sit, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi a minim veniam, quis nostrud exerci tation ullamcorper suscipit lo is nisl ut aliquip ex ea commodo consequat. Duis autem vel.\"<\/p>","signature_name":"","signature_name_size":28,"signature_icon_size":40,"section_width":"container--lg","color_scheme":"scheme-8","spacing_top":0,"spacing_bottom":0}},"about_grid_9mqPey":{"type":"about-grid","blocks":{"image_BT6HdK":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Your_chariot_to_perfect_hair_awaits_The_Fanse_salon_interior_team_and_experience_reflect_our-2.jpg","image_link":""}},"image_VJVweF":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/In_the_Fanse_favorites_We_are_always_overwhelmed_with_gratitude_from_your_support_and_we_c-2.jpg","image_link":""}},"image_6UmcqC":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/What_we_ve_been_up_to_at_Fanse_Do_you_spot_your_stylist_ScottsdaleSalon_springhairinspo_Ha.jpg","image_link":""}},"image_pg4X7R":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Your_chariot_to_perfect_hair_awaits_The_Fanse_salon_interior_team_and_experience_reflect_our.jpg","image_link":""}},"image_idHUGy":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/In_the_Fanse_favorites_We_are_always_overwhelmed_with_gratitude_from_your_support_and_we_c-4.jpg","image_link":""}}},"block_order":["image_BT6HdK","image_VJVweF","image_6UmcqC","image_pg4X7R","image_idHUGy"],"custom_css":[".about-grid__image-item--1 {grid-column: 1 \/ 3; grid-row: 1 \/ 3;}",".about-grid__image-item--2 {grid-column: 3;}",".about-grid__image-item--3 {grid-column: 4;}",".about-grid__image-item--4 {grid-column: 3; grid-row: 2;}",".about-grid__image-item--5 {grid-column: 4; grid-row: 2;}"],"name":"About Grid","settings":{"heading":"ABOUT US","text_content":"<p>Fansē a good story? Ours started in a salon. <br\/><br\/>With a pulse for the finer things in life, we create professional-driven formulas to make you look and feel<br\/>like you just left your favorite stylist’s chair. We’ve captured that “just-got-my-hair-done” confidence and bottled it for everyday use. <br\/><br\/>Because a great hair day shouldn’t always require an appointment, just a few products you’ll actually want<br\/>to reach for.<br\/><\/p>","layout_position":"images-right","section_width":"container--full","color_scheme":"","spacing_top":2,"spacing_bottom":2}},"about_grid_mRBYVE":{"type":"about-grid","blocks":{"image_hAjWBd":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/In_the_Fanse_favorites_We_are_always_overwhelmed_with_gratitude_from_your_support_and_we_c.jpg","image_link":""}},"image_HpFcG7":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.42_PM.png","image_link":""}},"image_wden7y":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.52_PM.png","image_link":""}},"image_RbjHQi":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.27_PM.png","image_link":""}},"image_LfrkbE":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.47_PM.png","image_link":""}}},"block_order":["image_hAjWBd","image_HpFcG7","image_wden7y","image_RbjHQi","image_LfrkbE"],"custom_css":[".about-grid__image-item--1 {grid-column: 3 \/ 5; grid-row: 1 \/ 3;}",".about-grid__image-item--2 {grid-column: 1; grid-row: 1;}",".about-grid__image-item--3 {grid-column: 2; grid-row: 1;}",".about-grid__image-item--4 {grid-column: 1; grid-row: 2;}",".about-grid__image-item--5 {grid-column: 2; grid-row: 2;}"],"name":"About Grid","settings":{"heading":"BEHIND OUR NAME","text_content":"<p>Fansē is more than a name. <br\/><br\/>It’s the luxury of taking time for yourself. <br\/>The confidence in knowing your hair will look great. <br\/>A moment of ease and indulgence. <br\/><br\/>Fansē began as a space where people came to be pampered and left feeling their best. Now it’s also a line <br\/>of products that bring that same experience into your daily routine, so everyone can feel a little fansē, any day<br\/>of the week.<br\/><\/p>","layout_position":"images-left","section_width":"container--full","color_scheme":"","spacing_top":2,"spacing_bottom":2}},"about_grid_bJd3xh":{"type":"about-grid","blocks":{"image_W7LqCJ":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_3.56.12_PM.png","image_link":""}},"image_Mq9Qed":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Image-626.jpg","image_link":""}},"image_pMzfmx":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/487418174_18493772122053533_8232647789844766731_n.jpg","image_link":""}},"image_LHEyVW":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Asset_3.png","image_link":""}},"image_ULzNAR":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Image-629.jpg","image_link":""}}},"block_order":["image_W7LqCJ","image_Mq9Qed","image_pMzfmx","image_LHEyVW","image_ULzNAR"],"custom_css":[".about-grid__image-item--1 {grid-column: 1 \/ 3; grid-row: 1 \/ 3;}",".about-grid__image-item--2 {grid-column: 3;}",".about-grid__image-item--3 {grid-column: 4;}",".about-grid__image-item--4 {grid-column: 3; grid-row: 2;}",".about-grid__image-item--5 {grid-column: 4; grid-row: 2;}","a[href=\"#middle\"],a[href=\"#right\"] {text-decoration: none;}","a[href=\"#middle\"] {padding-left: 12vw;}","a[href=\"#right\"] {padding-left: 20vw; position: absolute;}"],"name":"About Grid","settings":{"heading":"ABOUT OUR FOUNDER","text_content":"<p>With over a decade of experience behind the chair, Tori Elyse has lived and breathed haircare for most of her life. <br\/><br\/>Since founding Fansē Salon, what began as just one chair and one shampoo bowl turned into something much bigger. She’s made a name for herself, not only as our founder, but as an entrepreneur, stylist, educator, and content creator. Simply put, she knows a thing or two about great hair.<br\/><br\/>With natural curls of her own, Tori has always understood the real-life challenges of styling at home, especially when it comes to getting a sleek look without relying on a whole lineup of gels, creams, and sprays. After years of clients asking how to master the perfect slick-back, she set out to find a better way. <br\/><br\/>Her solution? Fansē Potion. <br\/><br\/><a href=\"#middle\" title=\"#middle\">And voilà! <\/a><br\/><br\/><a href=\"#right\" title=\"#right\">The rest was history.<\/a><\/p>","layout_position":"images-right","section_width":"container--full","color_scheme":"","spacing_top":2,"spacing_bottom":2}},"personal_note_iAqC7F":{"type":"personal-note","blocks":{"subheading_aygyVU":{"type":"subheading","settings":{"text":"We'll put a personal note directly from Tori here in this section.","text_style":"text-style--caption"}},"richtext_yFpfgn":{"type":"richtext","settings":{"text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.<\/p>","text_style":"text-style--body"}},"richtext_9aDj6U":{"type":"richtext","settings":{"text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.<\/p>","text_style":"text-style--body"}},"richtext_FWeDjU":{"type":"richtext","settings":{"text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.<\/p>","text_style":"text-style--body"}},"spacer_RWnqrb":{"type":"spacer","settings":{"spacing_height":24}},"signature_ijCrYY":{"type":"signature","settings":{"signature_width":150,"signature_text":"Tori","signature_style":"signature-style--script"}},"floating_image_LBdkyD":{"type":"floating_image","settings":{"position_horizontal":85,"position_vertical":75,"image_width":100,"image_rotation":0,"position_horizontal_mobile":80,"position_vertical_mobile":90,"image_width_mobile":60,"image_rotation_mobile":0,"enable_animation":false,"hide_on_mobile":false,"hide_on_desktop":false}}},"block_order":["subheading_aygyVU","richtext_yFpfgn","richtext_9aDj6U","richtext_FWeDjU","spacer_RWnqrb","signature_ijCrYY","floating_image_LBdkyD"],"name":"Personal Note","settings":{"background_image_desktop":"shopify:\/\/shop_images\/image_2_2.png","background_overlay":false,"color_scheme":"","content_max_width":700,"content_alignment":"center","content_position_horizontal":50,"content_position_vertical":50,"section_width":"container--lg","section_min_height":70,"spacing_top":2,"spacing_bottom":2}},"custom_liquid_964NMc":{"type":"custom-liquid","name":"t:sections.custom-liquid.name","settings":{"custom_liquid":"<style>\n.rte {\n  line-height: 20px;\npadding-top: 2.2em;\n}\n<\/style>","section_width":"max-w-page","color_scheme":"","spacing_top":"0","spacing_bottom":"0"}}},"order":["main","image_text_signature_QRLdhE","about_grid_9mqPey","about_grid_mRBYVE","about_grid_bJd3xh","personal_note_iAqC7F","custom_liquid_964NMc"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "breadcrumbs": true,
+        "show_page_title": true,
+        "page_title_alignment": "text-center",
+        "info_title": "",
+        "info_content": "",
+        "section_width": "max-w-narrower",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    },
+    "image_text_signature_QRLdhE": {
+      "type": "image-text-signature",
+      "custom_css": [
+        ".image-text-signature__heading {}"
+      ],
+      "name": "Image + Text Signature",
+      "settings": {
+        "main_image": "shopify://shop_images/tori.png",
+        "image_position": "left",
+        "image_width": 40,
+        "content_width": 60,
+        "content_alignment": "end",
+        "heading": "\"First line of a quote from Tori here...",
+        "heading_tag": "h2",
+        "richtext": "<p>and the rest of the quote will go here. Lorem ipsum dolor sit, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi a minim veniam, quis nostrud exerci tation ullamcorper suscipit lo is nisl ut aliquip ex ea commodo consequat. Duis autem vel.\"</p>",
+        "signature_name": "",
+        "signature_name_size": 28,
+        "signature_icon_size": 40,
+        "section_width": "container--lg",
+        "color_scheme": "scheme-8",
+        "spacing_top": 0,
+        "spacing_bottom": 0
+      }
+    },
+    "about_grid_9mqPey": {
+      "type": "about-grid",
+      "blocks": {
+        "image_BT6HdK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Your_chariot_to_perfect_hair_awaits_The_Fanse_salon_interior_team_and_experience_reflect_our-2.jpg",
+            "image_link": ""
+          }
+        },
+        "image_VJVweF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/In_the_Fanse_favorites_We_are_always_overwhelmed_with_gratitude_from_your_support_and_we_c-2.jpg",
+            "image_link": ""
+          }
+        },
+        "image_6UmcqC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/What_we_ve_been_up_to_at_Fanse_Do_you_spot_your_stylist_ScottsdaleSalon_springhairinspo_Ha.jpg",
+            "image_link": ""
+          }
+        },
+        "image_pg4X7R": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Your_chariot_to_perfect_hair_awaits_The_Fanse_salon_interior_team_and_experience_reflect_our.jpg",
+            "image_link": ""
+          }
+        },
+        "image_idHUGy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/In_the_Fanse_favorites_We_are_always_overwhelmed_with_gratitude_from_your_support_and_we_c-4.jpg",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_BT6HdK",
+        "image_VJVweF",
+        "image_6UmcqC",
+        "image_pg4X7R",
+        "image_idHUGy"
+      ],
+      "custom_css": [
+        ".about-grid__image-item--1 {grid-column: 1 / 3; grid-row: 1 / 3;}",
+        ".about-grid__image-item--2 {grid-column: 3;}",
+        ".about-grid__image-item--3 {grid-column: 4;}",
+        ".about-grid__image-item--4 {grid-column: 3; grid-row: 2;}",
+        ".about-grid__image-item--5 {grid-column: 4; grid-row: 2;}"
+      ],
+      "name": "About Grid",
+      "settings": {
+        "heading": "ABOUT US",
+        "text_content": "<p>Fansē a good story? Ours started in a salon. <br/><br/>With a pulse for the finer things in life, we create professional-driven formulas to make you look and feel<br/>like you just left your favorite stylist’s chair. We’ve captured that “just-got-my-hair-done” confidence and bottled it for everyday use. <br/><br/>Because a great hair day shouldn’t always require an appointment, just a few products you’ll actually want<br/>to reach for.<br/></p>",
+        "layout_position": "images-right",
+        "section_width": "container--full",
+        "color_scheme": "",
+        "spacing_top": 2,
+        "spacing_bottom": 2
+      }
+    },
+    "about_grid_mRBYVE": {
+      "type": "about-grid",
+      "blocks": {
+        "image_hAjWBd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/In_the_Fanse_favorites_We_are_always_overwhelmed_with_gratitude_from_your_support_and_we_c.jpg",
+            "image_link": ""
+          }
+        },
+        "image_HpFcG7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.42_PM.png",
+            "image_link": ""
+          }
+        },
+        "image_wden7y": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.52_PM.png",
+            "image_link": ""
+          }
+        },
+        "image_RbjHQi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.27_PM.png",
+            "image_link": ""
+          }
+        },
+        "image_LfrkbE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.47_PM.png",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_hAjWBd",
+        "image_HpFcG7",
+        "image_wden7y",
+        "image_RbjHQi",
+        "image_LfrkbE"
+      ],
+      "custom_css": [
+        ".about-grid__image-item--1 {grid-column: 3 / 5; grid-row: 1 / 3;}",
+        ".about-grid__image-item--2 {grid-column: 1; grid-row: 1;}",
+        ".about-grid__image-item--3 {grid-column: 2; grid-row: 1;}",
+        ".about-grid__image-item--4 {grid-column: 1; grid-row: 2;}",
+        ".about-grid__image-item--5 {grid-column: 2; grid-row: 2;}"
+      ],
+      "name": "About Grid",
+      "settings": {
+        "heading": "BEHIND OUR NAME",
+        "text_content": "<p>Fansē is more than a name. <br/><br/>It’s the luxury of taking time for yourself. <br/>The confidence in knowing your hair will look great. <br/>A moment of ease and indulgence. <br/><br/>Fansē began as a space where people came to be pampered and left feeling their best. Now it’s also a line <br/>of products that bring that same experience into your daily routine, so everyone can feel a little fansē, any day<br/>of the week.<br/></p>",
+        "layout_position": "images-left",
+        "section_width": "container--full",
+        "color_scheme": "",
+        "spacing_top": 2,
+        "spacing_bottom": 2
+      }
+    },
+    "about_grid_bJd3xh": {
+      "type": "about-grid",
+      "blocks": {
+        "image_W7LqCJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_3.56.12_PM.png",
+            "image_link": ""
+          }
+        },
+        "image_Mq9Qed": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image-626.jpg",
+            "image_link": ""
+          }
+        },
+        "image_pMzfmx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/487418174_18493772122053533_8232647789844766731_n.jpg",
+            "image_link": ""
+          }
+        },
+        "image_LHEyVW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Asset_3.png",
+            "image_link": ""
+          }
+        },
+        "image_ULzNAR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image-629.jpg",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_W7LqCJ",
+        "image_Mq9Qed",
+        "image_pMzfmx",
+        "image_LHEyVW",
+        "image_ULzNAR"
+      ],
+      "custom_css": [
+        ".about-grid__image-item--1 {grid-column: 1 / 3; grid-row: 1 / 3;}",
+        ".about-grid__image-item--2 {grid-column: 3;}",
+        ".about-grid__image-item--3 {grid-column: 4;}",
+        ".about-grid__image-item--4 {grid-column: 3; grid-row: 2;}",
+        ".about-grid__image-item--5 {grid-column: 4; grid-row: 2;}",
+        "a[href=\"#middle\"],a[href=\"#right\"] {text-decoration: none;}",
+        "a[href=\"#middle\"] {padding-left: 12vw;}",
+        "a[href=\"#right\"] {padding-left: 20vw; position: absolute;}"
+      ],
+      "name": "About Grid",
+      "settings": {
+        "heading": "ABOUT OUR FOUNDER",
+        "text_content": "<p>With over a decade of experience behind the chair, Tori Elyse has lived and breathed haircare for most of her life. <br/><br/>Since founding Fansē Salon, what began as just one chair and one shampoo bowl turned into something much bigger. She’s made a name for herself, not only as our founder, but as an entrepreneur, stylist, educator, and content creator. Simply put, she knows a thing or two about great hair.<br/><br/>With natural curls of her own, Tori has always understood the real-life challenges of styling at home, especially when it comes to getting a sleek look without relying on a whole lineup of gels, creams, and sprays. After years of clients asking how to master the perfect slick-back, she set out to find a better way. <br/><br/>Her solution? Fansē Potion. <br/><br/><a href=\"#middle\" title=\"#middle\">And voilà! </a><br/><br/><a href=\"#right\" title=\"#right\">The rest was history.</a></p>",
+        "layout_position": "images-right",
+        "section_width": "container--full",
+        "color_scheme": "",
+        "spacing_top": 2,
+        "spacing_bottom": 2
+      }
+    },
+    "personal_note_iAqC7F": {
+      "type": "personal-note",
+      "blocks": {
+        "subheading_aygyVU": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "We'll put a personal note directly from Tori here in this section.",
+            "text_style": "text-style--caption"
+          }
+        },
+        "richtext_yFpfgn": {
+          "type": "richtext",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>",
+            "text_style": "text-style--body"
+          }
+        },
+        "richtext_9aDj6U": {
+          "type": "richtext",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>",
+            "text_style": "text-style--body"
+          }
+        },
+        "richtext_FWeDjU": {
+          "type": "richtext",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>",
+            "text_style": "text-style--body"
+          }
+        },
+        "spacer_RWnqrb": {
+          "type": "spacer",
+          "disabled": true,
+          "settings": {
+            "spacing_height": 24
+          }
+        },
+        "signature_ijCrYY": {
+          "type": "signature",
+          "disabled": true,
+          "settings": {
+            "signature_width": 150,
+            "signature_text": "Tori",
+            "signature_style": "signature-style--script"
+          }
+        },
+        "floating_image_LBdkyD": {
+          "type": "floating_image",
+          "settings": {
+            "position_horizontal": 85,
+            "position_vertical": 75,
+            "image_width": 100,
+            "image_rotation": 0,
+            "position_horizontal_mobile": 80,
+            "position_vertical_mobile": 90,
+            "image_width_mobile": 60,
+            "image_rotation_mobile": 0,
+            "enable_animation": false,
+            "hide_on_mobile": false,
+            "hide_on_desktop": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_aygyVU",
+        "richtext_yFpfgn",
+        "richtext_9aDj6U",
+        "richtext_FWeDjU",
+        "spacer_RWnqrb",
+        "signature_ijCrYY",
+        "floating_image_LBdkyD"
+      ],
+      "name": "Personal Note",
+      "settings": {
+        "background_image_desktop": "shopify://shop_images/image_2_2.png",
+        "background_overlay": false,
+        "color_scheme": "",
+        "content_max_width": 700,
+        "content_alignment": "center",
+        "content_position_horizontal": 50,
+        "content_position_vertical": 50,
+        "section_width": "container--lg",
+        "section_min_height": 70,
+        "spacing_top": 2,
+        "spacing_bottom": 2
+      }
+    },
+    "custom_liquid_964NMc": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "custom_liquid": "<style>\n.rte {\n  line-height: 20px;\npadding-top: 2.2em;\n}\n</style>",
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_top": "0",
+        "spacing_bottom": "0"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_text_signature_QRLdhE",
+    "about_grid_9mqPey",
+    "about_grid_mRBYVE",
+    "about_grid_bJd3xh",
+    "personal_note_iAqC7F",
+    "custom_liquid_964NMc"
+  ]
+}
