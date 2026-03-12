@@ -804,7 +804,7 @@
           </div>
         {% endif %}
       {%- else -%}
-        <div class="product__app-block" {{ block.shopify_attributes }}>
+        <div class="product__app-block product__block product__block--gap-{{ block.settings.spacing_bottom | default: '3' }}" {{ block.shopify_attributes }}>
           {%- render block -%}
         </div>
     {%- endcase -%}

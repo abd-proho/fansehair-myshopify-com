@@ -360,7 +360,7 @@
 /* Product title */
 .product__title {
   color: #1b1d20;
-  line-height: var(--line-height-static-sm);
+  line-height: 1;
   font-size: 3.1rem;
   font-weight: 300;
   text-transform: var(--font-heading-text-transform);
@@ -524,10 +524,12 @@ text-truncator:not(.disabled) .truncated-text {
 
 /* Product text */
 .product__text p {
-  display: inline-block;
+  display: block;
   color: rgba(0, 0, 0, 1);
   font-size: 1.7rem;
+  line-height: 1;
   font-weight: 400;
+  margin: 0;
 }
 .container .accordion:not(.product__block) {
   margin-top: 32px;
@@ -1787,15 +1789,15 @@ swiper-product-thumbs,
 
 .main-product__media .swiper-button {
   --swiper-navigation-sides-offset: var(--items-gap);
-  background-color: rgb(var(--color-background));
+  background-color: transparent;
   width: 4rem;
   height: 4rem;
   padding: .8rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 0.1rem solid rgba(var(--color-border), var(--alpha-border));
-  border-radius: var(--button-action-border-radius, 0.6rem);
+  /* border: 0.1rem solid rgba(var(--color-border), var(--alpha-border));
+  border-radius: var(--button-action-border-radius, 0.6rem); */
 }
 
 .main-product__media .swiper-button svg path {
