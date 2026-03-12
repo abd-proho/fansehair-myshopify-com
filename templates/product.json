@@ -315,7 +315,7 @@
         "ss_font_family": "montserrat_n4",
         "text_size": 12,
         "link": "",
-        "animation_duration": 44,
+        "animation_duration": 152,
         "animation_direction": "right",
         "pause_hover": false,
         "text_color": "#ffffff",
@@ -361,7 +361,9 @@
         "video_7F797r",
         "video_e76dXV"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".swiper-horizontal {padding: 0px;}"
+      ],
       "name": "SS - Product videos",
       "settings": {
         "videos_position": "above_description",
@@ -371,15 +373,15 @@
         "heading_font": "josefin_sans_n4",
         "heading_size": 18,
         "heading_size_mobile": 18,
-        "heading_height": 130,
+        "heading_height": 100,
         "heading_align": "center",
         "heading_align_mobile": "center",
         "slider_view": 3,
         "slider_view_mobile": 3,
         "slider_gap": 16,
         "slider_gap_mobile": 16,
-        "slider_mt": 20,
-        "slider_mt_mobile": 16,
+        "slider_mt": 0,
+        "slider_mt_mobile": 52,
         "card_radius": 0,
         "card_border_thickness": 0,
         "video_ratio": "portrait",
@@ -470,7 +472,7 @@
         "border_color": "#000000",
         "margin_top": 0,
         "margin_bottom": 0,
-        "padding_top": 20,
+        "padding_top": 0,
         "padding_bottom": 20,
         "padding_horizontal": 0,
         "padding_horizontal_mobile": 0,
@@ -550,7 +552,19 @@
         "padding_horizontal": 1.5,
         "padding_horizontal_mobile": 1,
         "full_width": false,
-        "content_width": 1400
+        "content_width": 1400,
+        "ba_mt": 16,
+        "ba_gap": 4,
+        "ba_gap_mobile": 4,
+        "ba_border_thickness": 1,
+        "ba_border_color": "#121212",
+        "ba_label_color": "#121212",
+        "ba_before_1": "shopify://shop_images/Asset_5.png",
+        "ba_after_1": "shopify://shop_images/Asset_5.png",
+        "ba_before_2": "shopify://shop_images/Asset_3.png",
+        "ba_after_2": "shopify://shop_images/Asset_3.png",
+        "ba_before_3": "shopify://shop_images/tori5.png",
+        "ba_after_3": "shopify://shop_images/tori5.png"
       }
     },
     "full_width_banner_BJV8nz": {
@@ -790,6 +804,7 @@
     },
     "recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "custom_css": [
         "#swiper-wrapper-template--21083329200346__recommendations {padding-top: 0px;}",
         ".product-feed.layout-2 .section__head {margin-bottom: 0px;}"
