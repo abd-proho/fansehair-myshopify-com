@@ -1,23 +1,32 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-product",
       "blocks": {
         "judge_me_reviews_preview_badge_BA7NkY": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         },
         "1e0c79e9-7de0-4eee-b9c5-f27132635fb8": {
           "type": "title",
           "settings": {
             "heading_size": "h6",
-            "spacing_bottom": "1"
+            "spacing_bottom": "3"
           }
         },
         "badge_hK7aJa": {
           "type": "badge",
           "settings": {
-            "spacing_bottom": "1",
+            "spacing_bottom": "3",
             "show_badges": true,
             "show_badges_discount": true,
             "show_badges_sold": true
@@ -26,14 +35,14 @@
         "richtext_HVf7bC": {
           "type": "richtext",
           "settings": {
-            "spacing_bottom": "1",
+            "spacing_bottom": "3",
             "text": "{{ product.description }}"
           }
         },
         "8effeb43-55b7-4ec4-ab9b-68bcd89b865b": {
           "type": "price",
           "settings": {
-            "spacing_bottom": "1",
+            "spacing_bottom": "3",
             "show_price_tax_info": true,
             "show_price_shipping_info": false,
             "show_price_custom_info": ""
@@ -42,7 +51,7 @@
         "1e939cd6-0958-4135-a9e5-c50faef01437": {
           "type": "variant_picker",
           "settings": {
-            "spacing_bottom": "1",
+            "spacing_bottom": "3",
             "title": "Variant picker",
             "enable_back_in_stock": false,
             "picker_type": "swatch",
@@ -74,7 +83,7 @@
           "type": "custom_liquid",
           "settings": {
             "spacing_bottom": "1",
-            "custom_liquid": "<style>\n .angry-grid  div {\ndisplay:flex;\njustify-content: flex-start;\n}\n.sales-point {\nfont-size:17px;\n}\n.angry-grid {\n   display: grid; \n   grid-template-rows: 1fr 1fr;\n   grid-template-columns: 1fr 1fr;\n   gap: 16px;\n   height: 100%;\n   \n}\n  .angry-grid  div > img {\nmax-width:25px;\nmargin-right: 8px;\nobject-fit:contain;\n}\n#item-0 {\n\n   grid-row-start: 1;\n   grid-column-start: 1;\n   grid-row-end: 2;\n   grid-column-end: 2;\n   \n}\n#item-1 {\n   grid-row-start: 1;\n   grid-column-start: 2;\n   grid-row-end: 2;\n   grid-column-end: 3;\n   \n}\n#item-2 {\n\n   grid-row-start: 2;\n   grid-column-start: 1;\n   grid-row-end: 3;\n   grid-column-end: 2;\n   \n}\n#item-3 {\n\n   grid-row-start: 2;\n   grid-column-start: 2;\n   grid-row-end: 3;\n   grid-column-end: 3;\n   \n}\n<\/style>\n\n<div class=\"angry-grid\">\n  <div id=\"item-0\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0792\/0507\/3114\/files\/d-right.png?v=1768417316\"\/>\n<span class=\"sales-point\">All-Day Hold<\/span>\n<\/div>\n  <div id=\"item-1\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0792\/0507\/3114\/files\/d-left.png?v=1768417312\"\/>\n<span class=\"sales-point\">Adds Shine<\/span>\n<\/div>\n  <div id=\"item-2\"><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0792\/0507\/3114\/files\/d-left.png?v=1768417312\"\/>\n<span class=\"sales-point\">Frizz Control<\/span>\n<\/div>\n  <div id=\"item-3\">\n<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0792\/0507\/3114\/files\/d-right.png?v=1768417316\"\/>\n<span class=\"sales-point\">\nZero Crunch\n<\/span>\n<\/div>\n<\/div>"
+            "custom_liquid": "<style>\n .angry-grid  div {\ndisplay:flex;\njustify-content: flex-start;\n}\n.sales-point {\nfont-size:17px;\n}\n.angry-grid {\n   display: grid; \n   grid-template-rows: 1fr 1fr;\n   grid-template-columns: 1fr 1fr;\n   gap: 16px;\n   height: 100%;\n   \n}\n  .angry-grid  div > img {\nmax-width:25px;\nmargin-right: 8px;\nobject-fit:contain;\n}\n#item-0 {\n\n   grid-row-start: 1;\n   grid-column-start: 1;\n   grid-row-end: 2;\n   grid-column-end: 2;\n   \n}\n#item-1 {\n   grid-row-start: 1;\n   grid-column-start: 2;\n   grid-row-end: 2;\n   grid-column-end: 3;\n   \n}\n#item-2 {\n\n   grid-row-start: 2;\n   grid-column-start: 1;\n   grid-row-end: 3;\n   grid-column-end: 2;\n   \n}\n#item-3 {\n\n   grid-row-start: 2;\n   grid-column-start: 2;\n   grid-row-end: 3;\n   grid-column-end: 3;\n   \n}\n</style>\n\n<div class=\"angry-grid\">\n  <div id=\"item-0\">\n<img src=\"https://cdn.shopify.com/s/files/1/0792/0507/3114/files/d-right.png?v=1768417316\"/>\n<span class=\"sales-point\">All-Day Hold</span>\n</div>\n  <div id=\"item-1\">\n<img src=\"https://cdn.shopify.com/s/files/1/0792/0507/3114/files/d-left.png?v=1768417312\"/>\n<span class=\"sales-point\">Adds Shine</span>\n</div>\n  <div id=\"item-2\"><img src=\"https://cdn.shopify.com/s/files/1/0792/0507/3114/files/d-left.png?v=1768417312\"/>\n<span class=\"sales-point\">Frizz Control</span>\n</div>\n  <div id=\"item-3\">\n<img src=\"https://cdn.shopify.com/s/files/1/0792/0507/3114/files/d-right.png?v=1768417316\"/>\n<span class=\"sales-point\">\nZero Crunch\n</span>\n</div>\n</div>"
           }
         },
         "e6d841d6-2f71-40b3-956a-912df13f9f6e": {
@@ -151,7 +160,7 @@
           "settings": {
             "spacing_bottom": "1",
             "heading": "HOW TO USE",
-            "row_content": "<p>{{ product.metafields.custom.how_to_use.value }}<br\/><\/p>",
+            "row_content": "<p>{{ product.metafields.custom.how_to_use.value }}<br/></p>",
             "icon": "",
             "page": "",
             "metafield_for_product_variant": "",
@@ -163,7 +172,7 @@
           "settings": {
             "spacing_bottom": "1",
             "heading": "INGREDIENTS",
-            "row_content": "<p>{{ product.metafields.custom.ingredients.value }}<\/p>",
+            "row_content": "<p>{{ product.metafields.custom.ingredients.value }}</p>",
             "icon": "",
             "page": "",
             "metafield_for_product_variant": "",
@@ -222,13 +231,13 @@
       "settings": {
         "product_media_layout": "product__media-layout--full",
         "product_media_layout_mobile": "product__media-layout--partial--sm",
-        "product_media_aspect_ratio": "1\/1",
+        "product_media_aspect_ratio": "1/1",
         "product_media_object_fit": "cover",
         "product_slider_auto_height": false,
         "media_transparent_background": true,
         "display_media_zoom": "none",
         "product_media_with_thumbs": "only_desktop",
-        "product_media_thumbs_ratio": "1\/1",
+        "product_media_thumbs_ratio": "1/1",
         "product_media_thumbs_object_fit": "cover",
         "gallery_arrows_show_on": "desktop",
         "display_media_gallery_pagination": "none",
@@ -255,7 +264,7 @@
           "type": "text",
           "settings": {
             "text": "VEGAN FRIENDLY",
-            "custom_icon": "shopify:\/\/shop_images\/Asset_8.svg",
+            "custom_icon": "shopify://shop_images/Asset_8.svg",
             "icon": ""
           }
         },
@@ -263,7 +272,7 @@
           "type": "text",
           "settings": {
             "text": "CRUETY FREE",
-            "custom_icon": "shopify:\/\/shop_images\/Asset_7.svg",
+            "custom_icon": "shopify://shop_images/Asset_7.svg",
             "icon": ""
           }
         },
@@ -271,7 +280,7 @@
           "type": "text",
           "settings": {
             "text": "COLOR SAFE",
-            "custom_icon": "shopify:\/\/shop_images\/Asset_6.svg",
+            "custom_icon": "shopify://shop_images/Asset_6.svg",
             "icon": ""
           }
         },
@@ -279,7 +288,7 @@
           "type": "text",
           "settings": {
             "text": "PARABEN FREE",
-            "custom_icon": "shopify:\/\/shop_images\/Asset_5.svg",
+            "custom_icon": "shopify://shop_images/Asset_5.svg",
             "icon": ""
           }
         },
@@ -287,7 +296,7 @@
           "type": "text",
           "settings": {
             "text": "SULFATE FREE",
-            "custom_icon": "shopify:\/\/shop_images\/Asset_4.svg",
+            "custom_icon": "shopify://shop_images/Asset_4.svg",
             "icon": ""
           }
         }
@@ -323,7 +332,7 @@
           "type": "video",
           "settings": {
             "video_url": "",
-            "poster": "shopify:\/\/shop_images\/swatch.png",
+            "poster": "shopify://shop_images/swatch.png",
             "modal_heading": "",
             "modal_text": ""
           }
@@ -332,7 +341,7 @@
           "type": "video",
           "settings": {
             "video_url": "",
-            "poster": "shopify:\/\/shop_images\/swatch.png",
+            "poster": "shopify://shop_images/swatch.png",
             "modal_heading": "",
             "modal_text": ""
           }
@@ -341,7 +350,7 @@
           "type": "video",
           "settings": {
             "video_url": "",
-            "poster": "shopify:\/\/shop_images\/swatch.png",
+            "poster": "shopify://shop_images/swatch.png",
             "modal_heading": "",
             "modal_text": ""
           }
@@ -475,7 +484,7 @@
         "step_rTgTgT": {
           "type": "step",
           "settings": {
-            "poster": "shopify:\/\/shop_images\/Asset_5.png",
+            "poster": "shopify://shop_images/Asset_5.png",
             "step_label": "Step No. 1",
             "description": "Copy for step 1 goes here. Lorem ipsum doler amet."
           }
@@ -483,7 +492,7 @@
         "step_WgbHA6": {
           "type": "step",
           "settings": {
-            "poster": "shopify:\/\/shop_images\/Asset_5_37b22637-83f4-45c7-8ad4-ac9c1951720d.png",
+            "poster": "shopify://shop_images/Asset_5_37b22637-83f4-45c7-8ad4-ac9c1951720d.png",
             "step_label": "Step No. 2",
             "description": "Copy for step 2 goes here. Lorem ipsum doler amet."
           }
@@ -491,7 +500,7 @@
         "step_RmTmCt": {
           "type": "step",
           "settings": {
-            "poster": "shopify:\/\/shop_images\/Asset_5_376ee72b-489a-4ed1-a90b-83920c970b87.png",
+            "poster": "shopify://shop_images/Asset_5_376ee72b-489a-4ed1-a90b-83920c970b87.png",
             "step_label": "Step No. 3",
             "description": "Copy for step 3 goes here. Lorem ipsum doler amet."
           }
@@ -499,7 +508,7 @@
         "step_fT9QDp": {
           "type": "step",
           "settings": {
-            "poster": "shopify:\/\/shop_images\/Asset_5_7c52a217-7b0c-4375-b13d-f9c94e9fcfff.png",
+            "poster": "shopify://shop_images/Asset_5_7c52a217-7b0c-4375-b13d-f9c94e9fcfff.png",
             "step_label": "Step No. 4",
             "description": "Copy for step 4 goes here. Lorem ipsum doler amet."
           }
@@ -564,12 +573,12 @@
         "buttons_yHHXhF": {
           "type": "buttons",
           "settings": {
-            "button_link_1": "\/",
+            "button_link_1": "/",
             "button_link_1_type": "button",
             "button_label_1": "Discover bestsellers",
             "button_style_1": "button--outlined",
             "color_scheme_first_button": "",
-            "button_link_2": "\/",
+            "button_link_2": "/",
             "button_label_2": "Face care",
             "button_style_2": "button--outlined",
             "color_scheme_second_button": ""
@@ -640,7 +649,7 @@
             "show_on": "desktop",
             "column_factor": 2,
             "row_factor": 1,
-            "media_aspect_ratio": "1\/1",
+            "media_aspect_ratio": "1/1",
             "color_scheme": "scheme-5",
             "gradient_background_color": "",
             "content_position_vertical": "justify-center",
@@ -693,14 +702,14 @@
             "row_factor": 2,
             "color_scheme": "",
             "gradient_background_color": "",
-            "tile_aspect_ratio": "2\/1",
+            "tile_aspect_ratio": "2/1",
             "content_position_vertical": "justify-center",
             "content_alignment": "align-start text-start",
             "content_alignment_for_mobile": "start",
             "media_position": "background",
             "heading": "silk smooth skin",
             "heading_size": "h4",
-            "text": "<p>Enjoy a smooth, close shave with Premium Glide Razor Blades. High-quality stainless steel and advanced coating ensure sharpness and comfort. Compatible with all standard handles. <\/p>",
+            "text": "<p>Enjoy a smooth, close shave with Premium Glide Razor Blades. High-quality stainless steel and advanced coating ensure sharpness and comfort. Compatible with all standard handles. </p>",
             "button_label": "",
             "button_link": "",
             "button_style": "button--filled",
@@ -720,7 +729,7 @@
             "row_factor": 1,
             "color_scheme": "",
             "gradient_background_color": "",
-            "tile_aspect_ratio": "3\/2",
+            "tile_aspect_ratio": "3/2",
             "content_position_vertical": "justify-center",
             "content_alignment": "align-center text-center",
             "content_alignment_for_mobile": "center",
@@ -762,14 +771,14 @@
       "type": "image-text-signature",
       "name": "Image + Text Signature",
       "settings": {
-        "main_image": "shopify:\/\/shop_images\/tori.png",
+        "main_image": "shopify://shop_images/tori.png",
         "image_position": "left",
         "image_width": 45,
         "content_width": 55,
         "content_alignment": "end",
         "heading": "\"First line of a quote from Tori here...",
         "heading_tag": "h2",
-        "richtext": "<p>and the rest of the quote will go here. Lorem ipsum dolor sit, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi a minim veniam, quis nostrud exerci tation ullamcorper suscipit lo is nisl ut aliquip ex ea commodo consequat. Duis autem vel.\"<\/p>",
+        "richtext": "<p>and the rest of the quote will go here. Lorem ipsum dolor sit, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi a minim veniam, quis nostrud exerci tation ullamcorper suscipit lo is nisl ut aliquip ex ea commodo consequat. Duis autem vel.\"</p>",
         "signature_name": "",
         "signature_name_size": 28,
         "signature_icon_size": 40,
@@ -813,7 +822,7 @@
           "settings": {
             "is_open": false,
             "title": "QUESTION #1 WILL GO HERE. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",
-            "text": "<p>Shipping typically takes 3-7 business days, depending on your location. Expedited shipping options are available at checkout.<\/p>",
+            "text": "<p>Shipping typically takes 3-7 business days, depending on your location. Expedited shipping options are available at checkout.</p>",
             "page": ""
           }
         },
@@ -822,7 +831,7 @@
           "settings": {
             "is_open": false,
             "title": "QUESTION #2 WILL GO HERE. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",
-            "text": "<p>Shipping typically takes 3-7 business days, depending on your location. Expedited shipping options are available at checkout.<\/p>",
+            "text": "<p>Shipping typically takes 3-7 business days, depending on your location. Expedited shipping options are available at checkout.</p>",
             "page": ""
           }
         },
@@ -831,7 +840,7 @@
           "settings": {
             "is_open": false,
             "title": "QUESTION #3 WILL GO HERE. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",
-            "text": "<p>Shipping typically takes 3-7 business days, depending on your location. Expedited shipping options are available at checkout.<\/p>",
+            "text": "<p>Shipping typically takes 3-7 business days, depending on your location. Expedited shipping options are available at checkout.</p>",
             "page": ""
           }
         },
@@ -840,7 +849,7 @@
           "settings": {
             "is_open": false,
             "title": "QUESTION #4 WILL GO HERE. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",
-            "text": "<p>Shipping typically takes 3-7 business days, depending on your location. Expedited shipping options are available at checkout.<\/p>",
+            "text": "<p>Shipping typically takes 3-7 business days, depending on your location. Expedited shipping options are available at checkout.</p>",
             "page": ""
           }
         },
@@ -849,7 +858,7 @@
           "settings": {
             "is_open": false,
             "title": "QUESTION #5 WILL GO HERE. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",
-            "text": "<p>Yes, we offer international shipping to most countries. Shipping costs and times vary based on the destination?<\/p>",
+            "text": "<p>Yes, we offer international shipping to most countries. Shipping costs and times vary based on the destination?</p>",
             "page": ""
           }
         },
@@ -858,7 +867,7 @@
           "settings": {
             "is_open": false,
             "title": "QUESTION #6 WILL GO HERE. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",
-            "text": "<p>Once your order is shipped, you’ll receive a tracking number via email to monitor its progress.<\/p>",
+            "text": "<p>Once your order is shipped, you’ll receive a tracking number via email to monitor its progress.</p>",
             "page": ""
           }
         }
@@ -885,7 +894,7 @@
       "type": "apps",
       "blocks": {
         "judge_me_reviews_review_widget_tqPxTG": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "disabled": true,
           "settings": {
             "review_data": "sample_data",
