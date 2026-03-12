@@ -72,7 +72,7 @@
         "8604a6ff-ad0b-44dd-8068-1de4e062f8e8": {
           "type": "buy_buttons",
           "settings": {
-            "spacing_bottom": "2",
+            "spacing_bottom": "3",
             "show_quantity": false,
             "layout": "inline",
             "show_dynamic_checkout": false,
@@ -82,7 +82,7 @@
         "custom_liquid_QNkxf6": {
           "type": "custom_liquid",
           "settings": {
-            "spacing_bottom": "1",
+            "spacing_bottom": "3",
             "custom_liquid": "<style>\n .angry-grid  div {\ndisplay:flex;\njustify-content: flex-start;\n}\n.sales-point {\nfont-size:17px;\n}\n.angry-grid {\n   display: grid; \n   grid-template-rows: 1fr 1fr;\n   grid-template-columns: 1fr 1fr;\n   gap: 16px;\n   height: 100%;\n   \n}\n  .angry-grid  div > img {\nmax-width:25px;\nmargin-right: 8px;\nobject-fit:contain;\n}\n#item-0 {\n\n   grid-row-start: 1;\n   grid-column-start: 1;\n   grid-row-end: 2;\n   grid-column-end: 2;\n   \n}\n#item-1 {\n   grid-row-start: 1;\n   grid-column-start: 2;\n   grid-row-end: 2;\n   grid-column-end: 3;\n   \n}\n#item-2 {\n\n   grid-row-start: 2;\n   grid-column-start: 1;\n   grid-row-end: 3;\n   grid-column-end: 2;\n   \n}\n#item-3 {\n\n   grid-row-start: 2;\n   grid-column-start: 2;\n   grid-row-end: 3;\n   grid-column-end: 3;\n   \n}\n</style>\n\n<div class=\"angry-grid\">\n  <div id=\"item-0\">\n<img src=\"https://cdn.shopify.com/s/files/1/0792/0507/3114/files/d-right.png?v=1768417316\"/>\n<span class=\"sales-point\">All-Day Hold</span>\n</div>\n  <div id=\"item-1\">\n<img src=\"https://cdn.shopify.com/s/files/1/0792/0507/3114/files/d-left.png?v=1768417312\"/>\n<span class=\"sales-point\">Adds Shine</span>\n</div>\n  <div id=\"item-2\"><img src=\"https://cdn.shopify.com/s/files/1/0792/0507/3114/files/d-left.png?v=1768417312\"/>\n<span class=\"sales-point\">Frizz Control</span>\n</div>\n  <div id=\"item-3\">\n<img src=\"https://cdn.shopify.com/s/files/1/0792/0507/3114/files/d-right.png?v=1768417316\"/>\n<span class=\"sales-point\">\nZero Crunch\n</span>\n</div>\n</div>"
           }
         },

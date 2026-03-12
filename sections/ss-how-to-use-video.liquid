@@ -44,6 +44,13 @@
   assign image_radius = section.settings.image_radius
   assign image_border_thickness = section.settings.image_border_thickness
   assign image_border_color = section.settings.image_border_color
+
+  assign ba_mt = section.settings.ba_mt
+  assign ba_gap = section.settings.ba_gap
+  assign ba_gap_mobile = section.settings.ba_gap_mobile
+  assign ba_border_color = section.settings.ba_border_color
+  assign ba_border_thickness = section.settings.ba_border_thickness
+  assign ba_label_color = section.settings.ba_label_color
 -%}
 
 {%- style -%}
@@ -76,7 +83,7 @@
   .how-to-use-header-{{ section.id }} {
     display: flex;
     align-items: baseline;
-    gap: 0.5rem;
+    gap: 1rem;
     margin-bottom: 0;
     flex-wrap: wrap;
   }
@@ -176,6 +183,8 @@
     color: {{ text_color }};
     line-height: 1.4;
     font-weight: 400;
+    width: 60%;
+    margin: auto;
   }
 
   @media(min-width: 768px) {
@@ -183,6 +192,58 @@
       grid-template-columns: repeat(4, 1fr);
       gap: {{ slider_gap }}px;
       margin-top: {{ slider_mt }}px;
+    }
+  }
+
+  /* Before / After grid */
+  .before-after-grid-{{ section.id }} {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: {{ ba_gap_mobile }}px;
+    margin-top: {{ ba_mt | times: 0.75 | round: 0 }}px;
+  }
+
+  .before-after-pair-{{ section.id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: {{ ba_border_thickness }}px solid {{ ba_border_color }};
+    overflow: hidden;
+  }
+
+  .before-after-item-{{ section.id }} {
+    position: relative;
+    aspect-ratio: 1 / 2;
+    overflow: hidden;
+  }
+
+  .before-after-item-{{ section.id }} img,
+  .before-after-item-{{ section.id }} .placeholder-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .before-after-label-{{ section.id }} {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 11px;
+    color: {{ ba_label_color }};
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    z-index: 1;
+    background: rgba(255,255,255,0.7);
+    padding: 2px 5px;
+    border-radius: 2px;
+  }
+
+  @media(min-width: 768px) {
+    .before-after-grid-{{ section.id }} {
+      grid-template-columns: repeat(3, 1fr);
+      gap: {{ ba_gap }}px;
+      margin-top: {{ ba_mt }}px;
     }
   }
 
@@ -272,6 +333,56 @@
         </div>
       {% endfor %}
     </div>
+
+    {%- assign ba_has_content = false -%}
+    {%- if section.settings.ba_before_1 != blank or section.settings.ba_after_1 != blank
+        or section.settings.ba_before_2 != blank or section.settings.ba_after_2 != blank
+        or section.settings.ba_before_3 != blank or section.settings.ba_after_3 != blank -%}
+      {%- assign ba_has_content = true -%}
+    {%- endif -%}
+
+    {%- if ba_has_content -%}
+      <div class="before-after-grid-{{ section.id }}">
+        {%- for i in (1..3) -%}
+          {%- assign ba_before = 'ba_before_' | append: i -%}
+          {%- assign ba_after  = 'ba_after_'  | append: i -%}
+          {%- assign img_before = section.settings[ba_before] -%}
+          {%- assign img_after  = section.settings[ba_after] -%}
+          {%- if img_before != blank or img_after != blank -%}
+            <div class="before-after-pair-{{ section.id }}">
+              <div class="before-after-item-{{ section.id }}">
+                <span class="before-after-label-{{ section.id }}">before</span>
+                {%- if img_before != blank -%}
+                  <img
+                    src="{{ img_before | image_url: width: 800 }}"
+                    alt="{{ img_before.alt | default: 'Before' | escape }}"
+                    loading="lazy"
+                    width="800"
+                    height="800"
+                  >
+                {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </div>
+              <div class="before-after-item-{{ section.id }}">
+                <span class="before-after-label-{{ section.id }}">after</span>
+                {%- if img_after != blank -%}
+                  <img
+                    src="{{ img_after | image_url: width: 800 }}"
+                    alt="{{ img_after.alt | default: 'After' | escape }}"
+                    loading="lazy"
+                    width="800"
+                    height="800"
+                  >
+                {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
   </div>
 </div>
 
@@ -608,6 +719,108 @@
       "label": "Section content width",
       "default": 1400,
       "visible_if": "{{ section.settings.full_width == false }}"
+    },
+    {
+      "type": "header",
+      "content": "Before \/ After images"
+    },
+    {
+      "type": "paragraph",
+      "content": "Upload 3 pairs of before and after images. The grid appears below the steps."
+    },
+    {
+      "type": "range",
+      "id": "ba_mt",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "ba_gap",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap between pairs",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "ba_gap_mobile",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap between pairs - mobile",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "ba_border_thickness",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Border thickness",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "ba_border_color",
+      "label": "Border color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "ba_label_color",
+      "label": "Label text color",
+      "default": "#121212"
+    },
+    {
+      "type": "header",
+      "content": "Pair 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "ba_before_1",
+      "label": "Before image"
+    },
+    {
+      "type": "image_picker",
+      "id": "ba_after_1",
+      "label": "After image"
+    },
+    {
+      "type": "header",
+      "content": "Pair 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "ba_before_2",
+      "label": "Before image"
+    },
+    {
+      "type": "image_picker",
+      "id": "ba_after_2",
+      "label": "After image"
+    },
+    {
+      "type": "header",
+      "content": "Pair 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "ba_before_3",
+      "label": "Before image"
+    },
+    {
+      "type": "image_picker",
+      "id": "ba_after_3",
+      "label": "After image"
     }
   ],
   "blocks": [
