@@ -895,7 +895,6 @@
         "topic_Hpxb7w",
         "topic_qXfqAW"
       ],
-      "disabled": true,
       "settings": {
         "heading": "Frequently asked questions",
         "heading_size": "h5",
@@ -910,7 +909,6 @@
       "blocks": {
         "judge_me_reviews_review_widget_tqPxTG": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "disabled": true,
           "settings": {
             "review_data": "sample_data",
             "max_width": 1200,
