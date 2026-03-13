@@ -428,13 +428,16 @@
         {%- if local_show_short_description and product.metafields.custom.short_description != blank -%}
           <span class="product-card__short-description">{{ product.metafields.custom.short_description }}</span>
         {%- endif -%}
-        <div class="product-card__rating">
+        {% comment %} <div class="product-card__rating">
           {%- render 'icon', icon_name: 'theme-star-filled' -%}
           {%- render 'icon', icon_name: 'theme-star-filled' -%}
           {%- render 'icon', icon_name: 'theme-star-filled' -%}
           {%- render 'icon', icon_name: 'theme-star-filled' -%}
           {%- render 'icon', icon_name: 'theme-star-filled' -%}
           <span class="rating-count">(7)</span>
+        </div> {% endcomment %}
+        <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
+            {{ product.metafields.judgeme.badge }}
         </div>
 </div>
         {% comment %} Rating placeholder to match image {% endcomment %}
