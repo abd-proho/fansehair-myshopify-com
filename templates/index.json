@@ -48,7 +48,7 @@
         "slide_gAjkFT"
       ],
       "custom_css": [
-        ".hero__entry p {font-size: 1.8rem; color: #000000;}",
+        ".hero__entry p {font-size: 2rem; color: #000000;}",
         ".button--filled {font-size: 18px;}"
       ],
       "settings": {
@@ -405,6 +405,7 @@
         },
         "richtext_7wDhaR": {
           "type": "richtext",
+          "disabled": true,
           "settings": {
             "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>",
             "text_style": "text-style--body"
@@ -412,6 +413,7 @@
         },
         "richtext_7nBx9f": {
           "type": "richtext",
+          "disabled": true,
           "settings": {
             "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>",
             "text_style": "text-style--body"
@@ -419,6 +421,7 @@
         },
         "richtext_qQrr6b": {
           "type": "richtext",
+          "disabled": true,
           "settings": {
             "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>",
             "text_style": "text-style--small"
