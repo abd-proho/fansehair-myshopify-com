@@ -79,6 +79,16 @@
   gap: 0.2rem;
 }
 
+.product-card__rating-link {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.product-card__rating-link:hover {
+  opacity: 0.8;
+}
+
 .product-card__rating svg {
   width: 1rem;
   height: 1rem;

@@ -436,9 +436,11 @@
           {%- render 'icon', icon_name: 'theme-star-filled' -%}
           <span class="rating-count">(7)</span>
         </div> {% endcomment %}
-        <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
-            {{ product.metafields.judgeme.badge }}
-        </div>
+        <a href="{{ product_ref.url }}#judgeme_product_reviews" class="product-card__rating-link" tabindex="{% if is_in_drawer == true %}-1{% else %}0{% endif %}">
+          <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
+              {{ product.metafields.judgeme.badge }}
+          </div>
+        </a>
 </div>
         {% comment %} Rating placeholder to match image {% endcomment %}
       </div>

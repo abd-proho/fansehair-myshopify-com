@@ -14,6 +14,10 @@
   transition: background-color var(--duration-default);
 }
 
+body.is-scrolled .header.is-sticky {
+  background-color: #fffaf5;
+}
+
 .header--nav-drawer .header__nav {
   display: none;
 }
