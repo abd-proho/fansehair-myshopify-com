@@ -237,6 +237,7 @@
         "media_transparent_background": true,
         "display_media_zoom": "none",
         "product_media_with_thumbs": "only_desktop",
+        "product_thumbs_horizontal_below": true,
         "product_media_thumbs_ratio": "1/1",
         "product_media_thumbs_object_fit": "cover",
         "gallery_arrows_show_on": "desktop",
