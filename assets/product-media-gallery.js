@@ -202,6 +202,7 @@ class InstanceSwiperProductGallery extends InstanceSwiper {
     if (this.isThumbsActive) this.setThumbsInteraction();
     if (this.isZoomActive) this.photoSwipeLightboxInit();
     this.initModelViewer();
+    this.initGridThumbs();
 
     // Add thumb click handler for model slides
     const thumbSlides = document.querySelectorAll('.swiper-slide[data-media-type="model"]');
@@ -472,6 +473,43 @@ class InstanceSwiperProductGallery extends InstanceSwiper {
     });
   }
 
+  /**
+   * Horizontal below grid thumbs
+   */
+  initGridThumbs() {
+    const mediaContainer = this.closest('.main-product__media');
+    if (!mediaContainer) return;
+    const thumbsGrid = mediaContainer.querySelector('.main-product__media--thumbs-grid');
+    if (!thumbsGrid) return;
+
+    this.gridThumbItems = thumbsGrid.querySelectorAll('.thumbs-grid__item');
+
+    // Click handler for grid thumbnails
+    this.gridThumbItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const index = parseInt(item.dataset.thumbIndex);
+        this.instance.slideTo(index);
+        this.updateGridThumbsActive(index);
+      });
+    });
+
+    // Sync active state on slide change
+    this.instance.on('slideChange', (swiper) => {
+      this.updateGridThumbsActive(swiper.activeIndex);
+    });
+  }
+
+  updateGridThumbsActive(activeIndex) {
+    if (!this.gridThumbItems) return;
+    this.gridThumbItems.forEach(item => {
+      if (parseInt(item.dataset.thumbIndex) === activeIndex) {
+        item.classList.add('is-active');
+      } else {
+        item.classList.remove('is-active');
+      }
+    });
+  }
+
   setActiveMedia(id) {
     const mediaFound = Array.from(
       this.querySelectorAll("[data-media-id]")
@@ -481,7 +519,9 @@ class InstanceSwiperProductGallery extends InstanceSwiper {
 
     if (this.instance && typeof this.instance.slideTo === 'function') {
       if (this.dataset.hideOtherVariantsMedia === 'false') {
-        this.instance.slideTo(Number(mediaFound.dataset.index));
+        const index = Number(mediaFound.dataset.index);
+        this.instance.slideTo(index);
+        this.updateGridThumbsActive(index);
       }
     }
   }

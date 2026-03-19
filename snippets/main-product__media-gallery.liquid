@@ -18,6 +18,7 @@
 
   # feat: hide variants media
   assign hide_variants_media = section.settings.hide_variants | default: false
+  assign thumbs_horizontal_below = section.settings.product_thumbs_horizontal_below | default: false
   comment
     assign hide_variants_media_list = section.settings.variant_list_of_hideable_media
   endcomment
@@ -339,6 +340,7 @@
   {% if section.settings.product_media_layout == 'product__media-layout--grid' %}data-desktop-grid{% endif %}
   {% if topbar_mobile == 'on-top' %}data-mobile-topbar{% endif %}
   {% if product_has_single_media %}data-single-media{% endif %}
+  {% if thumbs_horizontal_below %}data-thumbs-horizontal-below{% endif %}
   data-hide-other-variants-media="{% if hide_variants_media %}true{% else %}false{% endif %}"
 >
   {% unless product_has_single_media %}
@@ -357,7 +359,7 @@
         <swiper-product-gallery
           handle="product-gallery"
           class="color-{{- section.settings.color_scheme_gallery -}}"
-          {% unless section.settings.product_media_with_thumbs == 'none' %}thumbs="product-thumbs"{% endunless %}
+          {% unless section.settings.product_media_with_thumbs == 'none' or thumbs_horizontal_below %}thumbs="product-thumbs"{% endunless %}
           {% unless zoom_modal == 'none' %}zoom="{{- zoom_modal -}}"{% endunless %}
           data-hide-other-variants-media="{% if hide_variants_media %}true{% else %}false{% endif %}"
         >
@@ -442,7 +444,35 @@
       </div>
     </div>
 
-    {% unless section.settings.product_media_with_thumbs == 'none' %}
+    {% if thumbs_horizontal_below %}
+      {% comment %} HORIZONTAL BELOW THUMBS GRID {% endcomment %}
+      <div class="main-product__media--thumbs-grid">
+        {%- if product_media.size > 0 -%}
+          {%- for media in product_media -%}
+            {%- liquid
+              assign grid_thumb_active = false
+              assign current_variant_media_id = product.selected_or_first_available_variant.featured_media.id
+              if media.id == current_variant_media_id
+                assign grid_thumb_active = true
+              elsif current_variant_media_id == blank and forloop.index0 == 0
+                assign grid_thumb_active = true
+              endif
+            -%}
+            <div
+              class="thumbs-grid__item{% if grid_thumb_active %} is-active{% endif %}"
+              data-thumb-index="{{ forloop.index0 }}"
+              data-media-id="{{ media.id }}"
+            >
+              <div class="media media--thumb">
+                {%- render 'image', image: media.preview_image, section_index: section.index, media_index: forloop.index0, image_url_width: 200, alt: media.alt | escape -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        {%- endif -%}
+      </div>
+    {% endif %}
+
+    {% unless section.settings.product_media_with_thumbs == 'none' or thumbs_horizontal_below %}
       {% comment %} THUMBS - PRODUCT MEDIA {% endcomment %}
       <div class="main-product__media--thumbs-wrapper{% unless thumbs_mobile and thumbs_desktop %}{% if thumbs_mobile %} small-up-hide{% elsif thumbs_desktop %} small-hide{% endif %}{% endunless %}{% if section.settings.product_media_layout == 'product__media-layout--grid' %} small-up-hide{% endif %}">
         <swiper-product-thumbs

@@ -1668,6 +1668,56 @@ swiper-product-thumbs,
 .swiper--product-thumbs .swiper-slide {
   cursor: pointer;
 }
+/* HORIZONTAL BELOW THUMBS GRID */
+[data-thumbs-horizontal-below] {
+  flex-direction: column !important;
+}
+
+[data-thumbs-horizontal-below] .main-product__media--slider-wrapper {
+  width: 100% !important;
+  order: 1 !important;
+}
+
+.main-product__media--thumbs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  width: 100%;
+  order: 3;
+  padding-top: 0.8rem;
+}
+
+.thumbs-grid__item {
+  cursor: pointer;
+  position: relative;
+}
+
+.thumbs-grid__item .media.media--thumb {
+  aspect-ratio: 1/1;
+  border-radius: 0;
+  overflow: hidden;
+  border: 0.2rem solid transparent;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.thumbs-grid__item .media.media--thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbs-grid__item.is-active .media.media--thumb {
+  border-color: rgb(var(--color-foreground));
+}
+
+@media screen and (max-width: 749px) {
+  .main-product__media--thumbs-grid {
+    gap: 0.6rem;
+    padding-top: 0.6rem;
+  }
+}
+
 
 /* MEDIA SIZES // ASPECT-RATIO, OBJ-FIT, ADAPTIVE-HEIGHT ETC */
 /* reset base classes */
