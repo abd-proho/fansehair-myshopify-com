@@ -55,7 +55,6 @@
   font-weight: var(--font-heading-weight);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-medium);
-  text-decoration: underline;
 }
 
 /* ========================================

@@ -821,6 +821,17 @@
   .video-modal-action-{{ section.id }}.active .video-modal-mute-{{ section.id }} {
     display: none;
   }
+  .shoppable-video-section .swiper-buttons{
+      position: unset;
+    }
+  
+  .shoppable-video-section button[class*="swiper-button--prev"] {
+    transform: none;
+  }
+  
+  [dir='rtl'] .shoppable-video-section button[class*="swiper-button--prev"] {
+    transform: none;
+  }
 
   @media(min-width: 1024px) {
 
@@ -851,6 +862,7 @@
       padding-right: 0rem !important;
       margin-top: {{ slider_mt }}px;
     }
+    
 
     .video-add-{{ section.id }} {
       font-size: {{ button_size }}px;
@@ -1336,22 +1348,39 @@
   }
 </style>
 
-<div
-  class="container max-w-fluid section-{{ section.id }} video-{{ section.id }}"
-  style="background-color:{{ background_color }}; background-image: {{ background_gradient }};"
->
-  <div class="section-{{ section.id }}-settings">
-    {% if heading != blank %}
-      <div class="video-heading-{{ section.id }}">{{ heading }}</div>
-    {% endif %}
+<div class="section-w-swiper overflow-hidden shoppable-video-section">
+  <div class="container max-w-fluid section-{{ section.id }} video-{{ section.id }}"
+    style="background-color:{{ background_color }}; background-image: {{ background_gradient }};">
+    <div class="section-{{ section.id }}-settings">
+      {% if heading != blank %}
+        <div class="section__header-wrapper">
+          <div class="section__head" style="margin:0;">
+            <div class="video-heading-{{ section.id }}">{{ heading }}</div>
+          </div>
+          
+          <div class="section__foot" style="margin:0;">
+            <div class="section__head--buttons">
+              {%- assign arrow_type = settings.arrow_type -%}
+              <div class="swiper-buttons small-hide card-slider__buttons no-js-hidden">
+                <button class="swiper-button {% if arrow_type == 'plain' %}swiper-button--plain{% endif %} swiper-button--prev-{{ section.id }}" aria-label="Previous">
+                  {%- render 'icon', icon_name: 'chevron-left-black' -%}
+                </button>
+                <button class="swiper-button {% if arrow_type == 'plain' %}swiper-button--plain{% endif %} swiper-button--next-{{ section.id }}" aria-label="Next">
+                  {%- render 'icon', icon_name: 'chevron-right-black' -%}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
 
-    <div
-      class="video-slider-{{ section.id }} swiper preview border-gray-05"
-      data-gap="{{ slider_gap }}"
-      data-gap-mobile="{{ slider_gap_mobile }}"
-      data-view="4"
-      data-view-mobile="2"
-    >
+      <div
+        class="video-slider-{{ section.id }} swiper preview border-gray-05"
+        data-gap="{{ slider_gap }}"
+        data-gap-mobile="{{ slider_gap_mobile }}"
+        data-view="4"
+        data-view-mobile="2"
+      >
       <div class="swiper-wrapper">
         {% for block in section.blocks %}
           <div class="video-slide-{{ section.id }} swiper-slide">
@@ -1555,7 +1584,6 @@
     </div>
   </div>
 </div>
-
 <div class="video-modal-{{ section.id }}">
   <div class="video-modal-inner-{{ section.id }}">
     <div class="video-modal-slider-{{ section.id }} swiper">
@@ -1878,8 +1906,8 @@
       speed: 300,
       initialSlide: 0,
       navigation: {
-        nextEl: `.video-btn-next-${sectionId}`,
-        prevEl: `.video-btn-prev-${sectionId}`
+        nextEl: `.swiper-button--next-${sectionId}`,
+        prevEl: `.swiper-button--prev-${sectionId}`
       },
       pagination: {
         el: `.video-pagination-${sectionId}`,
