@@ -296,6 +296,7 @@
         },
         "floating_image_LBdkyD": {
           "type": "floating_image",
+          "disabled": true,
           "settings": {
             "position_horizontal": 85,
             "position_vertical": 75,

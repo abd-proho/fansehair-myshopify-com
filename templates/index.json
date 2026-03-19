@@ -429,6 +429,7 @@
         },
         "spacer_YHhtNc": {
           "type": "spacer",
+          "disabled": true,
           "settings": {
             "spacing_height": 24
           }
@@ -444,6 +445,7 @@
         },
         "floating_image_nWFamK": {
           "type": "floating_image",
+          "disabled": true,
           "settings": {
             "position_horizontal": 85,
             "position_vertical": 75,
