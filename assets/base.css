@@ -3295,7 +3295,7 @@ fieldset.product__product-group {
 
 .gradient {
   background: rgb(var(--color-background));
-  background: var(--gradient-background);
+  /* background: var(--gradient-background); */
   /* background-attachment: fixed; this code is not supported by many browsers. */
 }
 
