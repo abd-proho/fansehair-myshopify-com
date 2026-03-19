@@ -1,1 +1,455 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"shop_the_feed_jTE3d9":{"type":"shop-the-feed","blocks":{"image_FKR7gK":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.57_PM.png","image_link":"","grid_size":"large","hide_on_mobile":false,"hide_on_desktop":false}},"image_86P47L":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.42_PM.png","image_link":"","grid_size":"small","hide_on_mobile":false,"hide_on_desktop":false}},"image_EQg7eA":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.52_PM.png","image_link":"","grid_size":"small","hide_on_mobile":false,"hide_on_desktop":false}},"image_QB46yT":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.36_PM.png","image_link":"","grid_size":"small","hide_on_mobile":false,"hide_on_desktop":false}},"image_qRn8yz":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.27_PM.png","image_link":"","grid_size":"small","hide_on_mobile":false,"hide_on_desktop":false}},"image_qJDxyy":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.47_PM.png","image_link":"","grid_size":"small","hide_on_mobile":false,"hide_on_desktop":false}},"image_Q3eP6g":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Screenshot_2025-12-07_at_1.32.23_PM.png","image_link":"","grid_size":"small","hide_on_mobile":false,"hide_on_desktop":false}}},"block_order":["image_FKR7gK","image_86P47L","image_EQg7eA","image_QB46yT","image_qRn8yz","image_qJDxyy","image_Q3eP6g"],"name":"Shop the Feed","settings":{"heading":"SHOP THE FEED","heading_link":"","hashtag":"@FANSEHAIR","hashtag_link":"https:\/\/www.instagram.com\/fansehair","grid_layout":"auto","section_width":"container--full","color_scheme":"scheme-75583496-94ea-45cb-b954-9a0fd7b86dca","spacing_top":2,"spacing_bottom":2}},"ss_scrolling_announcement_bar_QxmDan":{"type":"ss-scrolling-announcement-bar","blocks":{"text_jrjeLQ":{"type":"text","settings":{"text":"VEGAN FRIENDLY","custom_icon":"shopify:\/\/shop_images\/Asset_8.svg","icon":""}},"text_NTghwJ":{"type":"text","settings":{"text":"CRUELTY FREE","custom_icon":"shopify:\/\/shop_images\/Asset_7.svg","icon":""}},"text_MBw7dp":{"type":"text","settings":{"text":"COLOR SAFE","custom_icon":"shopify:\/\/shop_images\/Asset_6.svg","icon":""}},"text_AcwYcK":{"type":"text","settings":{"text":"PARABEN FREE","custom_icon":"shopify:\/\/shop_images\/Asset_5.svg","icon":""}},"text_faRG3E":{"type":"text","settings":{"text":"SULFATE FREE","custom_icon":"shopify:\/\/shop_images\/Asset_4.svg","icon":""}}},"block_order":["text_jrjeLQ","text_NTghwJ","text_MBw7dp","text_AcwYcK","text_faRG3E"],"name":"SS - Scrolling announcement bar","settings":{"insert_css_class_target":"","text_custom":false,"ss_font_family":"montserrat_n4","text_size":12,"link":"","animation_duration":152,"animation_direction":"right","pause_hover":false,"text_color":"#ffffff","bg":"#000000","hover_opacity":90,"padding_vertical":1.5,"padding_horizontal":0}},"ss_footer_3_i49RxA":{"type":"ss-footer-3","custom_css":["input {border-radius: 0px; max-width: 335px;}"],"name":"SS - Footer #3","settings":{"logo":"shopify:\/\/shop_images\/fanse-logo.svg","logo_width":200,"logo_width_mobile":200,"first_menu_title":"Customer","first_menu":"footer-customer","second_menu_title":"Brand","second_menu":"footer-brand","third_menu_title":"Navigation","third_menu":"footer-navigation","title_custom":false,"title_font":"josefin_sans_n4","title_size":17,"title_size_mobile":16,"title_height":130,"link_custom":false,"link_font":"josefin_sans_n4","link_size":14,"link_size_mobile":16,"link_height":200,"social_text":"<h3>Let's Get Social<\/h3>","social_text_custom":false,"social_text_font":"josefin_sans_n4","social_text_size":36,"social_text_size_mobile":20,"social_text_height":130,"twitter":"","facebook":"","linkedin":"","instagram":"#","youtube":"","pinterest":"","whatsapp":"","tiktok":"#","social_icon":25,"social_icon_mobile":25,"title":"","main_title_custom":false,"main_title_font":"josefin_sans_n4","main_title_size":16,"main_title_size_mobile":16,"main_title_height":130,"text":"<p><a href=\"#\">Privacy Policy<\/a><\/p><p><a href=\"#\">Terms of Service<\/a><\/p>","text_custom":false,"text_font":"josefin_sans_n4","text_size":12,"text_size_mobile":12,"text_height":200,"use_payments":true,"copy":"<p>©2026, Fansē Hair LLC<\/p>","copy_custom":false,"copy_font":"josefin_sans_n4","copy_size":13,"copy_size_mobile":13,"copy_height":130,"use_newsletter":true,"use_redirect":true,"redirect_url":"","input_padding_vertical":14,"input_padding_horizontal":16,"input_radius":6,"input_border_thickness":1,"input_placeholder":"Email","input_custom":false,"input_font":"josefin_sans_n4","input_size":16,"input_size_mobile":16,"input_height":100,"thanks_text":"Thanks for subscribing!","thanks_text_custom":false,"thanks_text_font":"josefin_sans_n4","thanks_text_size":14,"thanks_text_size_mobile":14,"thanks_text_height":150,"thanks_text_mt":24,"thanks_text_mt_mobile":20,"submit":"Join Our Mailing List","submit_custom":false,"submit_font":"josefin_sans_n4","submit_size":16,"submit_size_mobile":16,"submit_height":100,"submit_padding_vertical":16,"submit_padding_horizontal":16,"submit_radius":6,"submit_border_thickness":0,"input_color":"#121212","input_placeholder_color":"#505152","input_border_color":"#121212","thanks_text_color":"#121212","submit_color":"#ffffff","submit_hover_color":"#ffffff","submit_bg_color":"#121212","submit_bg_hover_color":"#121212","submit_border_color":"#121212","submit_border_hover_color":"#121212","social_text_color":"#121212","social_icon_color":"#121212","title_color":"#121212","link_color":"#121212","link_hover_color":"#121212","main_title_color":"#121212","text_color":"#121212","copy_color":"#121212","footer_border_color":"#fafafa","background_style":"solid","background_color":"#fafafa","background_gradient":"linear-gradient(180deg, #FFFFFF 0%, #F2F2F2 100%)","border_color":"#121212","margin_top":0,"margin_bottom":0,"padding_top":36,"padding_bottom":36,"padding_horizontal":2,"padding_horizontal_mobile":1.5,"full_width":true,"content_width":1300,"border_thickness":0,"lazy":true}},"footer":{"type":"footer","blocks":{"brand_XhYPKE":{"type":"brand","settings":{"column_factor":2,"row_factor":1,"logo_svg_code":"","logo_width":400,"logo_width_mobile":340,"text":"<p>Where grooming transcends routine to become a refined ritual, offering a complete experience of luxury and sophistication inspired by the timeless elegance of Grasse.<\/p>","content_position_vertical":"start","content_alignment":"start","content_alignment_for_mobile":"start"}},"link_list_6FaNjd":{"type":"link_list","settings":{"column_factor":1,"row_factor":1,"menu_layout":"vertical","menu":"footer","title":"Shop","title_url":"","menu_link_opacity":100,"show_first_menu_on_mobile":false}},"link_list_6rYiaa":{"type":"link_list","settings":{"column_factor":1,"row_factor":1,"menu_layout":"vertical","menu":"","title":"Information","title_url":"","menu_link_opacity":100,"show_first_menu_on_mobile":false}},"link_list_XgpfCC":{"type":"link_list","settings":{"column_factor":1,"row_factor":1,"menu_layout":"vertical","menu":"","title":"","title_url":"","menu_link_opacity":100,"show_first_menu_on_mobile":true}}},"block_order":["brand_XhYPKE","link_list_6FaNjd","link_list_6rYiaa","link_list_XgpfCC"],"disabled":true,"settings":{"spacing_grid":"6","show_border_top":false,"section_width":"max-w-fluid","color_scheme":"scheme-6","spacing_top":"4","spacing_bottom":"4"}},"footer_xGa3ry":{"type":"footer","blocks":{"social_media_6EDXRV":{"type":"social_media","settings":{"column_factor":2,"row_factor":1,"icons":true,"social_links_in_new_tab":true,"heading":"","content_position_vertical":"end","content_alignment":"start","content_alignment_for_mobile":"center"}},"newsletter_3W9nXU":{"type":"newsletter","settings":{"column_factor":2,"row_factor":1,"heading":"Newsletter","text":"<h5>SIGN UP AND GET 10% OFF<\/h5>","content_position_vertical":"start","content_alignment":"start","content_alignment_for_mobile":"center"}},"payment_icons_zwNLgB":{"type":"payment_icons","settings":{"column_factor":2,"row_factor":1,"custom_payment_types":"visa,paypal,google,payco","payment_icons_color":false,"content_position_vertical":"end","content_alignment":"end","content_alignment_for_mobile":"center"}},"richtext_B3kJpE":{"type":"richtext","settings":{"column_factor":3,"row_factor":1,"heading":"","text":"<p>Copyright © [year] DigiFist. All rights reserved. Powered by Shopify.<\/p>","content_position_vertical":"start","content_alignment":"start","content_alignment_for_mobile":"start"}}},"block_order":["social_media_6EDXRV","newsletter_3W9nXU","payment_icons_zwNLgB","richtext_B3kJpE"],"disabled":true,"settings":{"spacing_grid":"2","show_border_top":true,"section_width":"max-w-fluid","color_scheme":"scheme-6","spacing_top":"2","spacing_bottom":"2"}}},"order":["shop_the_feed_jTE3d9","ss_scrolling_announcement_bar_QxmDan","ss_footer_3_i49RxA","footer","footer_xGa3ry"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "shop_the_feed_jTE3d9": {
+      "type": "shop-the-feed",
+      "blocks": {
+        "image_FKR7gK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.57_PM.png",
+            "image_link": "",
+            "grid_size": "large",
+            "hide_on_mobile": false,
+            "hide_on_desktop": false
+          }
+        },
+        "image_86P47L": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.42_PM.png",
+            "image_link": "",
+            "grid_size": "small",
+            "hide_on_mobile": false,
+            "hide_on_desktop": false
+          }
+        },
+        "image_EQg7eA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.52_PM.png",
+            "image_link": "",
+            "grid_size": "small",
+            "hide_on_mobile": false,
+            "hide_on_desktop": false
+          }
+        },
+        "image_QB46yT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.36_PM.png",
+            "image_link": "",
+            "grid_size": "small",
+            "hide_on_mobile": false,
+            "hide_on_desktop": false
+          }
+        },
+        "image_qRn8yz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.27_PM.png",
+            "image_link": "",
+            "grid_size": "small",
+            "hide_on_mobile": false,
+            "hide_on_desktop": false
+          }
+        },
+        "image_qJDxyy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.47_PM.png",
+            "image_link": "",
+            "grid_size": "small",
+            "hide_on_mobile": false,
+            "hide_on_desktop": false
+          }
+        },
+        "image_Q3eP6g": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.23_PM.png",
+            "image_link": "",
+            "grid_size": "small",
+            "hide_on_mobile": false,
+            "hide_on_desktop": false
+          }
+        }
+      },
+      "block_order": [
+        "image_FKR7gK",
+        "image_86P47L",
+        "image_EQg7eA",
+        "image_QB46yT",
+        "image_qRn8yz",
+        "image_qJDxyy",
+        "image_Q3eP6g"
+      ],
+      "name": "Shop the Feed",
+      "settings": {
+        "heading": "SHOP THE FEED",
+        "heading_link": "",
+        "hashtag": "@FANSEHAIR",
+        "hashtag_link": "https://www.instagram.com/fansehair",
+        "grid_layout": "auto",
+        "section_width": "container--full",
+        "color_scheme": "scheme-75583496-94ea-45cb-b954-9a0fd7b86dca",
+        "spacing_top": 2,
+        "spacing_bottom": 2
+      }
+    },
+    "ss_scrolling_announcement_bar_QxmDan": {
+      "type": "ss-scrolling-announcement-bar",
+      "blocks": {
+        "text_jrjeLQ": {
+          "type": "text",
+          "settings": {
+            "text": "VEGAN FRIENDLY",
+            "custom_icon": "shopify://shop_images/Asset_8.svg",
+            "icon": ""
+          }
+        },
+        "text_NTghwJ": {
+          "type": "text",
+          "settings": {
+            "text": "CRUELTY FREE",
+            "custom_icon": "shopify://shop_images/Asset_7.svg",
+            "icon": ""
+          }
+        },
+        "text_MBw7dp": {
+          "type": "text",
+          "settings": {
+            "text": "COLOR SAFE",
+            "custom_icon": "shopify://shop_images/Asset_6.svg",
+            "icon": ""
+          }
+        },
+        "text_AcwYcK": {
+          "type": "text",
+          "settings": {
+            "text": "PARABEN FREE",
+            "custom_icon": "shopify://shop_images/Asset_5.svg",
+            "icon": ""
+          }
+        },
+        "text_faRG3E": {
+          "type": "text",
+          "settings": {
+            "text": "SULFATE FREE",
+            "custom_icon": "shopify://shop_images/Asset_4.svg",
+            "icon": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_jrjeLQ",
+        "text_NTghwJ",
+        "text_MBw7dp",
+        "text_AcwYcK",
+        "text_faRG3E"
+      ],
+      "name": "SS - Scrolling announcement bar",
+      "settings": {
+        "insert_css_class_target": "",
+        "text_custom": false,
+        "ss_font_family": "montserrat_n4",
+        "text_size": 12,
+        "link": "",
+        "animation_duration": 152,
+        "animation_direction": "right",
+        "pause_hover": false,
+        "text_color": "#ffffff",
+        "bg": "#000000",
+        "hover_opacity": 90,
+        "padding_vertical": 1.5,
+        "padding_horizontal": 0
+      }
+    },
+    "ss_footer_3_i49RxA": {
+      "type": "ss-footer-3",
+      "custom_css": [
+        "input {border-radius: 0px; max-width: 335px;}"
+      ],
+      "name": "SS - Footer #3",
+      "settings": {
+        "logo": "shopify://shop_images/fanse-logo.svg",
+        "logo_width": 200,
+        "logo_width_mobile": 200,
+        "first_menu_title": "Customer",
+        "first_menu": "footer-customer",
+        "second_menu_title": "Brand",
+        "second_menu": "footer-brand",
+        "third_menu_title": "Navigation",
+        "third_menu": "footer-navigation",
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 17,
+        "title_size_mobile": 16,
+        "title_height": 130,
+        "link_custom": false,
+        "link_font": "josefin_sans_n4",
+        "link_size": 14,
+        "link_size_mobile": 16,
+        "link_height": 200,
+        "social_text": "<h3>Let's Get Social</h3>",
+        "social_text_custom": false,
+        "social_text_font": "josefin_sans_n4",
+        "social_text_size": 36,
+        "social_text_size_mobile": 20,
+        "social_text_height": 130,
+        "twitter": "",
+        "facebook": "",
+        "linkedin": "",
+        "instagram": "#",
+        "youtube": "",
+        "pinterest": "",
+        "whatsapp": "",
+        "tiktok": "#",
+        "social_icon": 25,
+        "social_icon_mobile": 25,
+        "title": "",
+        "main_title_custom": false,
+        "main_title_font": "josefin_sans_n4",
+        "main_title_size": 16,
+        "main_title_size_mobile": 16,
+        "main_title_height": 130,
+        "text": "<p><a href=\"#\">Privacy Policy</a></p><p><a href=\"#\">Terms of Service</a></p>",
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 12,
+        "text_size_mobile": 12,
+        "text_height": 200,
+        "use_payments": true,
+        "copy": "<p>©2026, Fansē Hair LLC</p>",
+        "copy_custom": false,
+        "copy_font": "josefin_sans_n4",
+        "copy_size": 13,
+        "copy_size_mobile": 13,
+        "copy_height": 130,
+        "use_newsletter": true,
+        "use_redirect": true,
+        "redirect_url": "",
+        "input_padding_vertical": 14,
+        "input_padding_horizontal": 16,
+        "input_radius": 6,
+        "input_border_thickness": 1,
+        "input_placeholder": "Email",
+        "input_custom": false,
+        "input_font": "josefin_sans_n4",
+        "input_size": 16,
+        "input_size_mobile": 16,
+        "input_height": 100,
+        "thanks_text": "Thanks for subscribing!",
+        "thanks_text_custom": false,
+        "thanks_text_font": "josefin_sans_n4",
+        "thanks_text_size": 14,
+        "thanks_text_size_mobile": 14,
+        "thanks_text_height": 150,
+        "thanks_text_mt": 24,
+        "thanks_text_mt_mobile": 20,
+        "submit": "Join Our Mailing List",
+        "submit_custom": false,
+        "submit_font": "josefin_sans_n4",
+        "submit_size": 16,
+        "submit_size_mobile": 16,
+        "submit_height": 100,
+        "submit_padding_vertical": 16,
+        "submit_padding_horizontal": 16,
+        "submit_radius": 6,
+        "submit_border_thickness": 0,
+        "input_color": "#121212",
+        "input_placeholder_color": "#505152",
+        "input_border_color": "#121212",
+        "thanks_text_color": "#121212",
+        "submit_color": "#ffffff",
+        "submit_hover_color": "#ffffff",
+        "submit_bg_color": "#121212",
+        "submit_bg_hover_color": "#121212",
+        "submit_border_color": "#121212",
+        "submit_border_hover_color": "#121212",
+        "social_text_color": "#121212",
+        "social_icon_color": "#121212",
+        "title_color": "#121212",
+        "link_color": "#121212",
+        "link_hover_color": "#121212",
+        "main_title_color": "#121212",
+        "text_color": "#121212",
+        "copy_color": "#121212",
+        "footer_border_color": "#fafafa",
+        "background_style": "solid",
+        "background_color": "#fffaf5",
+        "background_gradient": "linear-gradient(180deg, #FFFFFF 0%, #F2F2F2 100%)",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 2,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 1300,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "brand_XhYPKE": {
+          "type": "brand",
+          "settings": {
+            "column_factor": 2,
+            "row_factor": 1,
+            "logo_svg_code": "",
+            "logo_width": 400,
+            "logo_width_mobile": 340,
+            "text": "<p>Where grooming transcends routine to become a refined ritual, offering a complete experience of luxury and sophistication inspired by the timeless elegance of Grasse.</p>",
+            "content_position_vertical": "start",
+            "content_alignment": "start",
+            "content_alignment_for_mobile": "start"
+          }
+        },
+        "link_list_6FaNjd": {
+          "type": "link_list",
+          "settings": {
+            "column_factor": 1,
+            "row_factor": 1,
+            "menu_layout": "vertical",
+            "menu": "footer",
+            "title": "Shop",
+            "title_url": "",
+            "menu_link_opacity": 100,
+            "show_first_menu_on_mobile": false
+          }
+        },
+        "link_list_6rYiaa": {
+          "type": "link_list",
+          "settings": {
+            "column_factor": 1,
+            "row_factor": 1,
+            "menu_layout": "vertical",
+            "menu": "",
+            "title": "Information",
+            "title_url": "",
+            "menu_link_opacity": 100,
+            "show_first_menu_on_mobile": false
+          }
+        },
+        "link_list_XgpfCC": {
+          "type": "link_list",
+          "settings": {
+            "column_factor": 1,
+            "row_factor": 1,
+            "menu_layout": "vertical",
+            "menu": "",
+            "title": "",
+            "title_url": "",
+            "menu_link_opacity": 100,
+            "show_first_menu_on_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "brand_XhYPKE",
+        "link_list_6FaNjd",
+        "link_list_6rYiaa",
+        "link_list_XgpfCC"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacing_grid": "6",
+        "show_border_top": false,
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-6",
+        "spacing_top": "4",
+        "spacing_bottom": "4"
+      }
+    },
+    "footer_xGa3ry": {
+      "type": "footer",
+      "blocks": {
+        "social_media_6EDXRV": {
+          "type": "social_media",
+          "settings": {
+            "column_factor": 2,
+            "row_factor": 1,
+            "icons": true,
+            "social_links_in_new_tab": true,
+            "heading": "",
+            "content_position_vertical": "end",
+            "content_alignment": "start",
+            "content_alignment_for_mobile": "center"
+          }
+        },
+        "newsletter_3W9nXU": {
+          "type": "newsletter",
+          "settings": {
+            "column_factor": 2,
+            "row_factor": 1,
+            "heading": "Newsletter",
+            "text": "<h5>SIGN UP AND GET 10% OFF</h5>",
+            "content_position_vertical": "start",
+            "content_alignment": "start",
+            "content_alignment_for_mobile": "center"
+          }
+        },
+        "payment_icons_zwNLgB": {
+          "type": "payment_icons",
+          "settings": {
+            "column_factor": 2,
+            "row_factor": 1,
+            "custom_payment_types": "visa,paypal,google,payco",
+            "payment_icons_color": false,
+            "content_position_vertical": "end",
+            "content_alignment": "end",
+            "content_alignment_for_mobile": "center"
+          }
+        },
+        "richtext_B3kJpE": {
+          "type": "richtext",
+          "settings": {
+            "column_factor": 3,
+            "row_factor": 1,
+            "heading": "",
+            "text": "<p>Copyright © [year] DigiFist. All rights reserved. Powered by Shopify.</p>",
+            "content_position_vertical": "start",
+            "content_alignment": "start",
+            "content_alignment_for_mobile": "start"
+          }
+        }
+      },
+      "block_order": [
+        "social_media_6EDXRV",
+        "newsletter_3W9nXU",
+        "payment_icons_zwNLgB",
+        "richtext_B3kJpE"
+      ],
+      "disabled": true,
+      "settings": {
+        "spacing_grid": "2",
+        "show_border_top": true,
+        "section_width": "max-w-fluid",
+        "color_scheme": "scheme-6",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
+    }
+  },
+  "order": [
+    "shop_the_feed_jTE3d9",
+    "ss_scrolling_announcement_bar_QxmDan",
+    "ss_footer_3_i49RxA",
+    "footer",
+    "footer_xGa3ry"
+  ]
+}
