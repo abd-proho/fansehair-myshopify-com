@@ -2207,6 +2207,7 @@
           if (submitBtn) { submitBtn.removeAttribute('disabled'); submitBtn.textContent = label; }
         });
     }
+    {% endunless %}
 
     sectionEl.addEventListener('submit', function(e) {
       var form = e.target;
@@ -2216,10 +2217,13 @@
       if (!idInput) return;
       e.preventDefault();
       e.stopPropagation();
+      {% if reload_after_adding %}
+      form.submit();
+      {% else %}
       var submitBtn = form.querySelector('button[type="submit"]');
       shoppableAddToCart(form, submitBtn);
+      {% endif %}
     });
-    {% endunless %}
 
     const toggles = document.querySelectorAll(`.video-top-${sectionId}`);
     const modal = document.querySelector(`.video-modal-${sectionId}`);
