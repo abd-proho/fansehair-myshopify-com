@@ -64,17 +64,25 @@
     font-display: swap;
   }
 
+  @font-face {
+    font-family: 'CitadelScript';
+    src: url('{{ "CitadelScriptStd.otf" | asset_url }}') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
   .section-{{ section.id }} {
     margin-top: {{ margin_top | times: 0.75 | round: 0 }}px;
     margin-bottom: {{ margin_bottom | times: 0.75 | round: 0 }}px;
-    background-color: {{ background_color }};
+    background: linear-gradient(to bottom, #d4e8f2 30%, #ffffff 90%);
   }
 
   .section-{{ section.id }}-settings {
     margin: 0 auto;
     width: 100%;
     height: 100%;
-    padding-top: {{ padding_top | times: 0.75 | round: 0 }}px;
+    padding-top: 0;
     padding-bottom: {{ padding_bottom | times: 0.75 | round: 0 }}px;
     padding-left: {{ padding_horizontal_mobile }}rem;
     padding-right: {{ padding_horizontal_mobile }}rem;
@@ -83,9 +91,29 @@
   .how-to-use-header-{{ section.id }} {
     display: flex;
     align-items: baseline;
-    gap: 1rem;
+    gap: 0.5rem;
     margin-bottom: 0;
     flex-wrap: wrap;
+    border-bottom: 0.4px solid #00000033;
+  }
+
+  .how-to-use-header-inner-{{ section.id }} {
+    position: relative;
+    padding-bottom: 0.4rem;
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .how-to-use-header-inner-{{ section.id }}::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: {{ heading_color }};
   }
 
   .how-to-use-heading-{{ section.id }} {
@@ -94,7 +122,6 @@
     color: {{ heading_color }};
     line-height: 1.2;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
     font-weight: 400;
     position: relative;
     padding-bottom: 0.25rem;
@@ -102,7 +129,7 @@
 
   .how-to-use-subheading-{{ section.id }} {
     margin: 0;
-    font-family: 'Thursday Morning', cursive;
+    font-family: 'CitadelScript', 'Citadel Script Std', 'Brush Script MT', cursive;
     font-size: {{ subheading_size_mobile }}px;
     color: {{ subheading_color }};
     line-height: 1.2;
@@ -128,13 +155,13 @@
   .how-to-use-card-{{ section.id }} {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
 
   .how-to-use-media-{{ section.id }} {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 0 / 1;
     overflow: hidden;
     border-radius: {{ image_radius }}px;
     border: {{ image_border_thickness }}px solid {{ image_border_color }};
@@ -145,7 +172,7 @@
   .how-to-use-media-{{ section.id }} video {
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
   }
 
@@ -168,12 +195,15 @@
 
   .how-to-use-step-{{ section.id }} {
     margin: 0;
-    margin-top: 12px;
+    margin-top: 24px;
     font-family: 'Thursday Morning', cursive;
     font-size: {{ step_size_mobile }}px;
     color: {{ step_color }};
     line-height: 1.3;
     font-weight: normal;
+    text-decoration: underline;
+    text-underline-offset: 1px;
+    text-align: center;
   }
 
   .how-to-use-text-{{ section.id }} {
@@ -183,8 +213,9 @@
     color: {{ text_color }};
     line-height: 1.4;
     font-weight: 400;
-    width: 60%;
+    max-width: 60%;
     margin: auto;
+    margin-bottom: 24px;
   }
 
   @media(min-width: 768px) {
@@ -274,6 +305,7 @@
 
     .how-to-use-text-{{ section.id }} {
       font-size: {{ text_size }}px;
+      max-width: 50%;
     }
   }
 {%- endstyle -%}
@@ -289,12 +321,14 @@
 <div class="container max-w-fluid section-{{ section.id }}">
   <div class="section-{{ section.id }}-settings">
     <div class="how-to-use-header-{{ section.id }}">
-      {% if heading != blank %}
-        <h2 class="how-to-use-heading-{{ section.id }}">{{ heading }}</h2>
-      {% endif %}
-      {% if subheading != blank %}
-        <span class="how-to-use-subheading-{{ section.id }}">{{ subheading }}</span>
-      {% endif %}
+      <div class="how-to-use-header-inner-{{ section.id }}">
+        {% if heading != blank %}
+          <h2 class="how-to-use-heading-{{ section.id }} section-heading">{{ heading }}</h2>
+        {% endif %}
+        {% if subheading != blank %}
+          <span class="how-to-use-subheading-{{ section.id }}">{{ subheading }}</span>
+        {% endif %}
+      </div>
     </div>
     <div class="how-to-use-underline-{{ section.id }}"></div>
 
