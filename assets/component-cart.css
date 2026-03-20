@@ -56,7 +56,8 @@
 .cart__summary {
   padding: var(--spacing-6);
   margin-block-start: var(--spacing-6);
-  background-color: rgba(var(--color-filled-button), 0.05);
+  /* background-color: rgba(var(--color-filled-button), 0.05); */
+  background-color: white;
   border-radius: var(--card-corner-radius);
   line-height: var(--line-height-static-sm);
 }
