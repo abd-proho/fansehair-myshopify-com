@@ -10,6 +10,14 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Amoret Sans CaraMak";
+  src:
+    url("AmoretSans-CaraMak-Version.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* Switzer family */
 @font-face {
@@ -62,7 +70,7 @@
 
 :root {
   /* Display font tokens */
-  --font-amoret-family: "Switzer", "Times New Roman", serif;
+  --font-amoret-family: "Amoret Sans", "Times New Roman", serif;
   --font-amoret-line-height: 1.4;
   --font-amoret-letter-spacing: 0.1em;
   --font-amoret-word-spacing: -0.25em;
