@@ -127,9 +127,27 @@
     --content-padding: calc(var(--section-spacing-unit-size) * 1.5);
     height: 100%;
   }
+  #shopify-section-{{ section.id }} .collection-header {
+    color: #000000;
+  }
 {%- endstyle -%}
-
+{% if template.name == 'collection' or template.suffix == 'about-2' %}
+  <style>
+    body.is-at-top:has(.shopify-section:first-child .header-is-transparent):not(:has(.section-header ~ .shopify-section-group-header-group)) .header:not(.is-megamenu-open) .header__logo-image {
+    visibility: visible;opacity: 1;
+  }
+  body.is-at-top:has(.shopify-section:first-child .header-is-transparent):not(:has(.section-header ~ .shopify-section-group-header-group)) .header:not(.is-megamenu-open) .header__logo-image-transparent {
+    visibility: hidden;opacity: 0;
+  }
+  .section-announcement-bar > div {
+    box-shadow: 0px 20px 15px 20px #FFFFFF;
+  
+  }
+  </style>
+<div id="header" class="header js-header{{ header_classes }} section-{{ section.id }} collection-header color-{{ section.settings.color_scheme }} gradient">
+{% else %}
 <div id="header" class="header js-header{{ header_classes }} section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
+{% endif %}
   <div class="container {{ section.settings.section_width }}">
 
     <div class="header__inner">
