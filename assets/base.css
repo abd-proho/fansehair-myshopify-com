@@ -3312,7 +3312,7 @@ fieldset.product__product-group {
 /* Section */
 
 .section {
-  padding: calc(var(--section-spacing-unit-size) * 2) 0;
+  /* padding: calc(var(--section-spacing-unit-size) * 2) 0; */
   background-color: rgb(var(--color-background));
 }
 
