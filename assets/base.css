@@ -2261,7 +2261,7 @@ quantity-input {
 .quantity__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 0 0.4rem;
+  /* padding: 0 0.4rem; */
   border: 0.1rem solid rgba(var(--color-border), var(--alpha-border));
   border-radius: var(--badge-border-radius);
 }
@@ -2293,7 +2293,7 @@ quantity-input {
   flex-shrink: 0;
   opacity: 0.5;
   border: 0;
-  background-color: transparent;
+  background-color: white;
   cursor: pointer;
   display: flex;
   align-items: center;

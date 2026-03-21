@@ -199,6 +199,9 @@
 .cart-drawer__action-buttons>* {
   flex: 1 1 50%;
 }
+.cart-drawer__action-buttons .button--outlined{
+  background-color: white;
+}
 
 .cart-drawer__summary-content span {
   display: block;
