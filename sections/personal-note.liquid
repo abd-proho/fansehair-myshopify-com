@@ -8,6 +8,8 @@
     --content-max-width: {{ section.settings.content_max_width }}px;
     --content-position-x: {{ section.settings.content_position_horizontal }}%;
     --content-position-y: {{ section.settings.content_position_vertical }}%;
+    --gradient-direction: {{ section.settings.gradient_direction | default: '180deg' }};
+    --overlay-gradient-direction: {{ section.settings.overlay_gradient_direction | default: '180deg' }};
   }
 
   {%- for block in section.blocks -%}
@@ -24,6 +26,10 @@
       }
     {%- endif -%}
   {%- endfor -%}
+
+  .section-personal-note {
+    background: linear-gradient({{ section.settings.gradient_direction | default: '180deg' }}, rgba(230, 246, 255, 1) 0%, rgba(230, 246, 255, 0) 100%);
+  }
 {%- endstyle -%}
 
 <div class="container max-w-fluid personal-note color-{{ section.settings.color_scheme }} gradient">
@@ -185,10 +191,71 @@
       "info": "Adds a light overlay to improve text readability"
     },
     {
+      "type": "select",
+      "id": "overlay_gradient_direction",
+      "label": "Overlay gradient direction",
+      "options": [
+        {
+          "value": "0deg",
+          "label": "Bottom to Top"
+        },
+        {
+          "value": "180deg",
+          "label": "Top to Bottom"
+        },
+        {
+          "value": "90deg",
+          "label": "Left to Right"
+        },
+        {
+          "value": "270deg",
+          "label": "Right to Left"
+        }
+      ],
+      "default": "180deg"
+    },
+    {
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:sections.global.color_scheme.label",
       "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section Background Gradient"
+    },
+    {
+      "type": "select",
+      "id": "gradient_direction",
+      "label": "Background gradient direction",
+      "options": [
+        {
+          "value": "0deg",
+          "label": "Bottom to Top"
+        },
+        {
+          "value": "180deg",
+          "label": "Top to Bottom"
+        },
+        {
+          "value": "90deg",
+          "label": "Left to Right"
+        },
+        {
+          "value": "270deg",
+          "label": "Right to Left"
+        },
+        {
+          "value": "135deg",
+          "label": "Diagonal (Top-Left to Bottom-Right)"
+        },
+        {
+          "value": "45deg",
+          "label": "Diagonal (Bottom-Left to Top-Right)"
+        }
+      ],
+      "default": "180deg",
+      "info": "Controls the direction of the section wrapper gradient"
     },
     {
       "type": "header",

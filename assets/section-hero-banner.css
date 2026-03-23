@@ -245,6 +245,7 @@ html.no-js .hero__swiper-slide {
   color: rgb(var(--color-heading-text));
   margin-block-end: 1.6rem;
   padding-block: 0;
+  margin: auto;
 }
 
 .hero__heading p {
