@@ -286,7 +286,7 @@ html.no-js .hero__swiper-slide {
 .hero__entry {
   max-width: 100%;
   align-self: flex-start;
-  margin-block-end: 2.4rem;
+  margin-block-end: 4.4rem;
 }
 
 .hero__heading {
@@ -370,7 +370,7 @@ html.no-js .hero__swiper-slide {
     margin-block-end: 2.8rem;
   }
   .hero-banner .hero__heading {
-    margin-block-end: 2rem;
+    margin-block-end: 4rem;
     margin-block-start: 2rem;
     text-align: center;
   }
