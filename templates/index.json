@@ -151,8 +151,8 @@
             "poster": "shopify://shop_images/swatch.png",
             "product": "polishing-brush",
             "use_variants": true,
-            "modal_heading": "<h4>Sofia Jamora uses the Polishing Brush.</h4>",
-            "modal_text": "<p>test</p>"
+            "modal_heading": "",
+            "modal_text": ""
           }
         },
         "item_AJbPKb": {
@@ -163,8 +163,8 @@
             "poster": "shopify://shop_images/swatch.png",
             "product": "fanse-potion",
             "use_variants": true,
-            "modal_heading": "<h4>Freya Tidy and Bree Colter use Fansē Potion</h4>",
-            "modal_text": "<p>Cooling finish after a clean shave.</p>"
+            "modal_heading": "",
+            "modal_text": ""
           }
         },
         "item_zbPfVY": {
@@ -175,7 +175,7 @@
             "poster": "shopify://shop_images/swatch.png",
             "product": "fanse-potion",
             "use_variants": true,
-            "modal_heading": "<h4>Freya Tidy uses Fansē Potion</h4>",
+            "modal_heading": "",
             "modal_text": ""
           }
         },
@@ -187,20 +187,20 @@
             "poster": "shopify://shop_images/swatch.png",
             "product": "polishing-brush",
             "use_variants": true,
-            "modal_heading": "<h4>Bree Colter uses the Polishing Brush</h4>",
-            "modal_text": "<p>{{ block.settings.product.metafields.custom.short_description.value }}</p>"
+            "modal_heading": "",
+            "modal_text": ""
           }
         },
         "item_6U6NWr": {
           "type": "item",
           "settings": {
-            "video_url": "",
-            "autoplay": false,
+            "video_url": "https://vimeo.com/1180323818?share=copy&fl=sv&fe=ci",
+            "autoplay": true,
             "poster": "shopify://shop_images/swatch.png",
-            "product": "fanse-potion",
+            "product": "defining-comb",
             "use_variants": true,
-            "modal_heading": "<h4>Soothe & smooth</h4>",
-            "modal_text": "<p>Cooling finish after a clean shave.</p>"
+            "modal_heading": "",
+            "modal_text": ""
           }
         }
       },
@@ -382,16 +382,6 @@
         "content_width": 1400,
         "border_thickness": 0,
         "lazy": true
-      }
-    },
-    "custom_liquid_red": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div style=\"width:100%;height:340px;background:#e4252a;\"></div>",
-        "section_width": "max-w-full",
-        "color_scheme": "scheme-1",
-        "spacing_top": "0",
-        "spacing_bottom": "0"
       }
     },
     "personal_note_HKJ6q4": {
@@ -769,7 +759,6 @@
     "1658995208ad05f95f",
     "featured_products_rdFmR9",
     "ss_shoppable_video_LyrC4K",
-    "custom_liquid_red",
     "personal_note_HKJ6q4",
     "floating_product_card_m9DNWL",
     "highlighted_product_J63VJn",
