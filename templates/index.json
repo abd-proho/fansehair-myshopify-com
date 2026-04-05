@@ -510,10 +510,10 @@
         "card_position": "center",
         "card_position_horizontal": 38,
         "card_position_vertical": 50,
-        "card_max_width": 320,
+        "card_max_width": 390,
         "card_float_animation": false,
         "section_width": "container--sm",
-        "section_min_height": 40,
+        "section_min_height": 30,
         "spacing_top": 2,
         "spacing_bottom": 2
       }
