@@ -833,39 +833,48 @@
     "accordions_b7F7Rh": {
       "type": "accordions",
       "blocks": {
-        "topic_mfJJ7U": {
+        "topic_H9jRKV": {
           "type": "topic",
           "settings": {
             "is_open": false,
-            "title": "QUESTION #1 WILL GO HERE. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",
-            "text": "<p>Shipping typically takes 3-7 business days, depending on your location. Expedited shipping options are available at checkout.</p>",
+            "title": "What hair types do your products work for?",
+            "text": "<p>Fansē Hair is designed to cater to all hair types - everyone deserves great hair!</p>",
             "page": ""
           }
         },
-        "topic_AGjVky": {
+        "topic_ME8aEF": {
           "type": "topic",
           "settings": {
             "is_open": false,
-            "title": "QUESTION #2 WILL GO HERE. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",
-            "text": "<p>Shipping typically takes 3-7 business days, depending on your location. Expedited shipping options are available at checkout.</p>",
+            "title": "How do I care for my hair products?",
+            "text": "<p>Store your Fansē Hair products in a cool, dry place to keep them in the best condition.</p>",
             "page": ""
           }
         },
-        "topic_3DteAm": {
+        "topic_Gyirkw": {
           "type": "topic",
           "settings": {
             "is_open": false,
-            "title": "QUESTION #3 WILL GO HERE. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",
-            "text": "<p>Shipping typically takes 3-7 business days, depending on your location. Expedited shipping options are available at checkout.</p>",
+            "title": "How can I track my order?",
+            "text": "<p>You will receive a shipping confirmation email within 5 business days of placing your order, which will include tracking information.</p>",
             "page": ""
           }
         },
-        "topic_6eCKAA": {
+        "topic_8ncWLt": {
           "type": "topic",
           "settings": {
             "is_open": false,
-            "title": "QUESTION #4 WILL GO HERE. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",
-            "text": "<p>Shipping typically takes 3-7 business days, depending on your location. Expedited shipping options are available at checkout.</p>",
+            "title": "How long does shipping take?",
+            "text": "<p>Please allow 5–7 business days from the time your order ships for delivery.</p>",
+            "page": ""
+          }
+        },
+        "topic_hTRRCh": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "Do you ship internationally?",
+            "text": "<p>We currently only ship within the US, but international shipping is on the horizon — stay tuned!</p>",
             "page": ""
           }
         },
@@ -873,8 +882,8 @@
           "type": "topic",
           "settings": {
             "is_open": false,
-            "title": "QUESTION #5 WILL GO HERE. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",
-            "text": "<p>Yes, we offer international shipping to most countries. Shipping costs and times vary based on the destination?</p>",
+            "title": "Can I modify or cancel my order after placing it?",
+            "text": "<p>Unfortunately we are unable to modify or cancel orders at this time. If you'd like to return your order once it arrives, please see our return policy above.</p>",
             "page": ""
           }
         },
@@ -882,19 +891,60 @@
           "type": "topic",
           "settings": {
             "is_open": false,
-            "title": "QUESTION #6 WILL GO HERE. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh",
-            "text": "<p>Once your order is shipped, you’ll receive a tracking number via email to monitor its progress.</p>",
+            "title": "Are there any shipping costs?",
+            "text": "<p>We offer free shipping on all orders over $80. Orders under $80 will have a shipping fee applied at checkout.</p>",
+            "page": ""
+          }
+        },
+        "topic_AGjVky": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "Can I return my order?",
+            "text": "<p>Yes! We accept returns within 14 days of delivery. Once we receive the returned item, your refund will be processed within 14 business days.</p>",
+            "page": ""
+          }
+        },
+        "topic_mfJJ7U": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "How do I return my order?",
+            "text": "<p>To start a return, email us at <a href=\"mailto:hello@fansehair.com\">hello@fansehair.com</a> within 2 weeks of your delivery date. Please note that return shipping is the responsibility of the customer and is not covered by Fanse Hair.</p>",
+            "page": ""
+          }
+        },
+        "topic_3DteAm": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "Are there any return requirements?",
+            "text": "<p>Yes - items must be returned in like-new condition to be eligible for a refund. Products that show signs of use or damage may not be accepted.</p>",
+            "page": ""
+          }
+        },
+        "topic_6eCKAA": {
+          "type": "topic",
+          "settings": {
+            "is_open": false,
+            "title": "What if my order arrives damaged or incorrect?",
+            "text": "<p>Please email us at <a href=\"mailto:hello@fansehair.com\">hello@fansehair.com</a> as soon as possible and we'll make it right!</p>",
             "page": ""
           }
         }
       },
       "block_order": [
-        "topic_mfJJ7U",
-        "topic_AGjVky",
-        "topic_3DteAm",
-        "topic_6eCKAA",
+        "topic_H9jRKV",
+        "topic_ME8aEF",
+        "topic_Gyirkw",
+        "topic_8ncWLt",
+        "topic_hTRRCh",
         "topic_Hpxb7w",
-        "topic_qXfqAW"
+        "topic_qXfqAW",
+        "topic_AGjVky",
+        "topic_mfJJ7U",
+        "topic_3DteAm",
+        "topic_6eCKAA"
       ],
       "settings": {
         "heading": "Frequently asked questions",
