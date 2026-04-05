@@ -143,6 +143,19 @@
     "ss_shoppable_video_LyrC4K": {
       "type": "ss-shoppable-video",
       "blocks": {
+        "item_AJbPKb": {
+          "type": "item",
+          "settings": {
+            "video": "shopify://files/videos/Trio.mp4",
+            "video_url": "",
+            "autoplay": true,
+            "poster": "shopify://shop_images/swatch.png",
+            "product": "fanse-potion",
+            "use_variants": true,
+            "modal_heading": "",
+            "modal_text": ""
+          }
+        },
         "item_7wKb3R": {
           "type": "item",
           "settings": {
@@ -156,14 +169,14 @@
             "modal_text": ""
           }
         },
-        "item_AJbPKb": {
+        "item_6U6NWr": {
           "type": "item",
           "settings": {
-            "video": "shopify://files/videos/Trio.mp4",
+            "video": "shopify://files/videos/Sofia Comb.mp4",
             "video_url": "",
             "autoplay": true,
             "poster": "shopify://shop_images/swatch.png",
-            "product": "fanse-potion",
+            "product": "defining-comb",
             "use_variants": true,
             "modal_heading": "",
             "modal_text": ""
@@ -194,27 +207,14 @@
             "modal_heading": "",
             "modal_text": ""
           }
-        },
-        "item_6U6NWr": {
-          "type": "item",
-          "settings": {
-            "video": "shopify://files/videos/Sofia Comb.mp4",
-            "video_url": "",
-            "autoplay": true,
-            "poster": "shopify://shop_images/swatch.png",
-            "product": "defining-comb",
-            "use_variants": true,
-            "modal_heading": "",
-            "modal_text": ""
-          }
         }
       },
       "block_order": [
-        "item_7wKb3R",
         "item_AJbPKb",
+        "item_7wKb3R",
+        "item_6U6NWr",
         "item_zbPfVY",
-        "item_ediBWh",
-        "item_6U6NWr"
+        "item_ediBWh"
       ],
       "name": "SS - Shoppable video",
       "settings": {
@@ -467,6 +467,7 @@
         "signature_fpMYHH",
         "floating_image_nWFamK"
       ],
+      "disabled": true,
       "custom_css": [
         "p,span,div,h1,h2,h3,h4 {color: black;}"
       ],
@@ -498,7 +499,7 @@
         "product": "fanse-potion",
         "show_variants": false,
         "show_description": true,
-        "background_image": "shopify://shop_images/Screenshot_2025-12-07_at_12.39.03_PM.png",
+        "background_image": "shopify://shop_images/fanse-potion-13.jpg",
         "background_video": "",
         "background_overlay": false,
         "color_scheme": "",
@@ -506,12 +507,12 @@
         "subheading": "",
         "heading_size": "h2",
         "heading_position": "left",
-        "card_position": "center-left",
+        "card_position": "center",
         "card_position_horizontal": 10,
         "card_position_vertical": 50,
         "card_max_width": 320,
         "card_float_animation": false,
-        "section_width": "container--lg",
+        "section_width": "container--md",
         "section_min_height": 70,
         "spacing_top": 2,
         "spacing_bottom": 2
