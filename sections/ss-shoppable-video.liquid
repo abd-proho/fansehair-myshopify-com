@@ -35,8 +35,8 @@
   assign heading_align = section.settings.heading_align
   assign heading_align_mobile = section.settings.heading_align_mobile
 
-  assign slider_view = 4
-  assign slider_view_mobile = 2
+  assign slider_view = section.settings.slider_view
+  assign slider_view_mobile = section.settings.slider_view_mobile
   assign slider_gap = section.settings.slider_gap
   assign slider_gap_mobile = section.settings.slider_gap_mobile
   assign slider_mt = section.settings.slider_mt
@@ -230,82 +230,23 @@
 
   .section-{{ section.id }}-settings {
     margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    padding-top: 0px;
+    padding-top: {{ padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ padding_bottom | times: 0.75 | round: 0 }}px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: {{ padding_horizontal_mobile }}rem;
+    padding-right: {{ padding_horizontal_mobile }}rem;
   }
 
   .video-heading-{{ section.id }} {
     text-align: {{ heading_align_mobile }};
-    margin-bottom: 0;
-    align-items: flex-end;
-    border-bottom: 0.7087px solid rgba(102, 102, 102, 0.5);
-    padding-bottom:0px;
   }
 
   .video-heading-{{ section.id }} * {
     margin: 0;
+    font-size: {{ heading_size_mobile }}px;
     color: {{ heading_color }};
     line-height: {{ heading_height }}%;
     text-transform: unset;
   }
-
-  .video-heading-{{ section.id }} h2 {
-    position: relative;
-    padding-bottom: 0;
-    width: fit-content;
-    margin-bottom: 0;
-    font-size: 26px
-  }
-
-  .video-heading-{{ section.id }} h2::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0.75px;
-    background-color: rgb(var(--color-foreground));
-  }
-
-  /* Navigation arrows in heading */
-  .video-nav-buttons-{{ section.id }} {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    margin-inline-start: auto;
-    flex-shrink: 0;
-    position: relative;
-  }
-  .video-nav-buttons-{{ section.id }} .swiper-button {
-    width: 2.4rem;
-    height: 2.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    color: inherit;
-  }
-  .video-nav-buttons-{{ section.id }} .swiper-button .icon {
-    width: 1.6rem;
-    height: 1.6rem;
-  }
-  .video-nav-buttons-{{ section.id }} button[class*="video-btn-prev"] {
-    margin-inline-end: 1.6rem;
-    transform: rotate(0deg);
-  }
-  .video-nav-buttons-{{ section.id }} .swiper-button:disabled,
-  .video-nav-buttons-{{ section.id }} .swiper-button.swiper-button-disabled {
-    opacity: 0.5;
-    pointer-events: none;
-  }
-  /* JS handles hiding arrows when all slides fit via hideVideoArrowsIfAllFit() */
 
   .video-slider-{{ section.id }} {
     margin-left: -{{ padding_horizontal_mobile }}rem !important;
@@ -323,7 +264,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 0;
+    border-radius: {{ card_radius }}px;
     border: {{ card_border_thickness }}px solid {{ card_border_color }};
     background-color: {{ card_bg_color }};
     box-sizing: border-box !important;
@@ -380,8 +321,6 @@
 
   .video-bottom-{{ section.id }} .form {
     flex: 1 1 auto;
-    min-width: 0;
-    width: 100%;
   }
 
   .video-add-{{ section.id }} {
@@ -397,7 +336,7 @@
     text-transform: unset;
     text-decoration: none;
     padding: {{ button_padding_vertical_mobile }}px {{ button_padding_horizontal_mobile }}px;
-    background-color: rgba(18, 18, 18, 1);
+    background-color: {{ button_bg_color }};
     border: 0px;
     transition: all 0.25s ease 0s;
     position: relative;
@@ -409,6 +348,30 @@
     color: {{ button_hover_color }};
     background-color: {{ button_bg_hover_color }};
     transition: all 0.25s ease 0s;
+  }
+
+  .video-arrow-{{ section.id }} {
+    flex: 0 0 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: {{arrow_bg_color}};
+    border-radius: 0px;
+    border: 0px;
+    box-shadow: none;
+    cursor: pointer;
+    border-left: 1px solid {{ arrow_border_color }};
+  }
+
+  .video-arrow-{{ section.id }} svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  .video-arrow-{{ section.id }} svg path {
+    fill: {{ arrow_icon_color }};
   }
 
   .video-product-{{ section.id }} {
@@ -427,7 +390,7 @@
   .video-product-image-{{ section.id }} {
     flex: 0 0 {{ image_width_mobile }}px;
     height: {{ image_width_mobile }}px;
-    border-radius: 0;
+    border-radius: {{ image_radius }}px;
     border: {{ image_border_thickness }}px solid {{ image_border_color }};
     overflow: hidden;
   }
@@ -442,22 +405,20 @@
   .video-product-title-{{ section.id }} {
     margin: 0px;
     font-size: {{ title_size_mobile }}px;
-    color: #ffffff;
+    color: {{ title_color }};
     line-height: {{ title_height }}%;
     text-transform: unset;
     will-change: transform;
-    font-family: "Switzer", "Helvetica Neue", Arial, sans-serif;
   }
 
   .video-product-price-{{ section.id }} {
     margin: 0px;
     font-size: {{ price_size_mobile }}px;
-    color: #ffffff;
+    color: {{ price_color }};
     line-height: {{ price_height }}%;
     text-transform: uppercase;
     margin-top: 3px;
     will-change: transform;
-    font-family: "Switzer", "Helvetica Neue", Arial, sans-serif;
   }
 
   .video-variants-{{ section.id }} {
@@ -544,23 +505,6 @@
     color: {{ variants_price_color }};
     line-height: {{ variants_price_height }}%;
     text-transform: uppercase;
-  }
-
-  .video-quantity-input-{{ section.id }} {
-    display: block;
-    margin-top: 6px;
-    width: 100%;
-    height: 45px;
-    font-size: 14px;
-    line-height: 100%;
-    color: #646464;
-    font-weight: 500;
-    border: 1px solid #efefef;
-    border-radius: 6px;
-    background: #fafafa;
-    padding: 10px;
-    box-sizing: border-box;
-    outline: none;
   }
 
   .video-modal-{{ section.id }} {
@@ -857,10 +801,11 @@
     }
 
     .section-{{ section.id }}-settings {
-      padding-top: 0px;
+      padding: 0 5rem;
+      padding-top: {{ padding_top }}px;
       padding-bottom: {{ padding_bottom }}px;
-      padding-left: 0px;
-      padding-right: 0px;
+      padding-left: {{ padding_horizontal }}rem;
+      padding-right: {{ padding_horizontal }}rem;
     }
 
     .video-heading-{{ section.id }} {
@@ -868,10 +813,8 @@
     }
 
     .video-heading-{{ section.id }} * {
-      /* font-size: {{ heading_size }}px; */
+      font-size: {{ heading_size }}px;
     }
-
-    /* JS handles responsive arrow visibility via hideVideoArrowsIfAllFit() */
 
     .video-slider-{{ section.id }} {
       margin-left: 0rem !important;
@@ -884,6 +827,16 @@
     .video-add-{{ section.id }} {
       font-size: {{ button_size }}px;
       padding: {{ button_padding_vertical }}px {{ button_padding_horizontal }}px;
+    }
+
+    .video-arrow-{{ section.id }} svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .video-arrow-{{ section.id }} {
+      flex: 0 0 46px;
+      height: 46px;
     }
 
     .video-product-image-{{ section.id }} {
@@ -924,7 +877,6 @@
     .video-modal-inner-{{ section.id }} {
       max-width: {{ modal_width }}px;
     }
-
 
     .video-modal-slide-{{ section.id }} {
       grid-template-columns: repeat(2, 1fr);
@@ -995,16 +947,11 @@
       font-size: {{ modal_price_size }}px;
     }
   }
-  
-  .video-slider-{{ section.id }} {
-      padding-top: 0 !important;
-    }
 {%- endstyle -%}
 
 {% unless full_width %}
   <style>
     .section-{{ section.id }}-settings {
-      width: 100%;
       max-width: {{ content_width }}px;
     }
   </style>
@@ -1137,7 +1084,7 @@
     }
 
     .video-slider-{{ section.id }} {
-      padding: 10px 0px !important;
+      padding: 10px  !important;
     }
   </style>
 {% endif %}
@@ -1324,34 +1271,21 @@
 
 {% comment %}PREVIEW{% endcomment %}
 <style>
-  .video-slider-{{ section.id }}.preview {
-    width: 100% !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-    height: 100% !important;
-    border-top: 0.7087px solid rgba(102, 102, 102, 0.5);
-    margin-top: 0;
-  }
-
   .video-slider-{{ section.id }}.preview .swiper-wrapper {
     display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 1px;
-    overflow: visible;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    gap: {{ slider_gap }}px;
   }
 
   .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }} {
     width: 100%;
-    border-width: 0px !important;
-    border-color: rgba(0, 0, 0, 0) !important;
   }
 
   @media(min-width: 1024px) {
    .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }} {
-      width: calc(25% - {{ slider_gap }}px);
+      width: calc(20% - {{ slider_gap }}px);
     }
 
     .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }}:not(:first-child) {
@@ -1360,37 +1294,21 @@
   }
 </style>
 
-<div class="container max-w-fluid"
+<div
   class="section-{{ section.id }} video-{{ section.id }}"
   style="background-color:{{ background_color }}; background-image: {{ background_gradient }};"
 >
   <div class="section-{{ section.id }}-settings">
     {% if heading != blank %}
-      <div class="video-heading-{{ section.id }}" style="display:flex;align-items:flex-end;justify-content:space-between;">
-        {{ heading }}
-        {% if section.blocks.size > 0 %}
-          <div
-            class="swiper-buttons video-nav-buttons-{{ section.id }} card-slider__buttons no-js-hidden"
-            data-video-nav-section="{{ section.id }}"
-            data-slides-count="{{ section.blocks.size }}"
-          >
-            <button class="swiper-button video-btn-prev-{{ section.id }}" aria-label="{{ 'theme.actions.previous' | t | default: 'Previous' }}">
-              {%- render 'icon', icon_name: 'chevron-left-black' -%}
-            </button>
-            <button class="swiper-button video-btn-next-{{ section.id }}" aria-label="{{ 'theme.actions.next' | t | default: 'Next' }}">
-              {%- render 'icon', icon_name: 'chevron-right-black' -%}
-            </button>
-          </div>
-        {% endif %}
-      </div>
+      <div class="video-heading-{{ section.id }}">{{ heading }}</div>
     {% endif %}
 
     <div
       class="video-slider-{{ section.id }} swiper preview"
       data-gap="{{ slider_gap }}"
       data-gap-mobile="{{ slider_gap_mobile }}"
-      data-view="4"
-      data-view-mobile="2"
+      data-view="{{ slider_view }}"
+      data-view-mobile="{{ slider_view_mobile }}"
     >
       <div class="swiper-wrapper">
         {% for block in section.blocks %}
@@ -1451,7 +1369,7 @@
 
               {% if block.settings.product != blank %}
                 <div class="video-product-{{ section.id }}">
-                  <a href="{{ block.settings.product.handle | prepend: '/products/' }}" class="video-product-image-{{ section.id }}" style="text-decoration:none;display:block;">
+                  <div class="video-product-image-{{ section.id }}">
                     {% if block.product.selected_or_first_available_variant.featured_image != blank %}
                       <img
                         src="{{ block.settings.product.selected_or_first_available_variant.featured_image | image_url }}"
@@ -1471,9 +1389,9 @@
                         data-shoppable-image--{{ forloop.index }}
                       >
                     {% endif %}
-                  </a>
+                  </div>
                   <div clas="video-product-info-{{ section.id }}">
-                    <a href="{{ block.settings.product.handle | prepend: '/products/' }}" class="video-product-title-{{ section.id }}" style="text-decoration:none;color:rgba(255, 255, 255, 1);display:block;">{{ block.settings.product.title }}</a>
+                    <p class="video-product-title-{{ section.id }}">{{ block.settings.product.title }}</p>
                     <p class="video-product-price-{{ section.id }}" data-shoppable-price--{{ forloop.index }}>
                       {{ block.settings.product.price | money }}
                     </p>
@@ -1483,83 +1401,88 @@
 
               {% if block.settings.use_variants %}
                 <div class="video-variants-{{ section.id }}">
-                  <label class="video-option-name-{{ section.id }}" for="shoppable-qty-{{ section.id }}-{{ forloop.index }}">Quantity:</label>
-                  <input
-                    type="number"
-                    id="shoppable-qty-{{ section.id }}-{{ forloop.index }}"
-                    class="video-quantity-input-{{ section.id }}"
-                    min="1"
-                    value="1"
-                    data-shoppable-quantity--{{ forloop.index }}
-                    aria-label="Quantity"
-                  >
+                  {%- unless block.settings.product.has_only_default_variant -%}
+                    {%- for option in block.settings.product.options_with_values -%}
+                      <div class="video-option-{{ section.id }}">
+                        <p class="video-option-name-{{ section.id }}">{{ option.name }}:</p>
+                        <div class="video-options-{{ section.id }}">
+                          <select
+                            class="video-select-{{ section.id }}"
+                            data-shoppable-select--{{ block.id | replace: '-', '' }}
+                          >
+                            {%- for value in option.values -%}
+                              <option value="{{ value }}">{{ value }}</option>
+                            {% endfor %}
+                          </select>
+                          <span>
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokelinejoin="2"
+                              strokelinecap="round"
+                              class="feather feather-chevron-down"
+                            >
+                              <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                          </span>
+                        </div>
+                      </div>
+                    {%- endfor -%}
+                  {% endunless %}
+
+                  <p class="video-option-price-{{ section.id }}" data-shoppable-option-price--{{ forloop.index }}>
+                    {{ block.settings.product.price | money }}
+                  </p>
                 </div>
               {% endif %}
             </div>
             <div class="video-bottom-{{ section.id }}">
               {%- assign product_form_id = 'product-form-' | append: block.id -%}
               {% if block.settings.product != blank %}
-                {%- if block.settings.product.variants.size > 1 -%}
-                  {% comment %} Multiple variants - open quick cart drawer {% endcomment %}
+                {%- form 'product',
+                  block.settings.product,
+                  id: product_form_id,
+                  class: 'form',
+                  novalidate: 'novalidate',
+                  data-type: 'add-to-cart-form'
+                -%}
+                  <input
+                    type="hidden"
+                    name="id"
+                    value="{{ block.settings.product.selected_or_first_available_variant.id }}"
+                    data-shoppable-input--{{ forloop.index }}
+                  >
+
                   <button
-                    type="button"
-                    class="quick-cart-drawer__trigger video-add-{{ section.id }}"
-                    tabindex="0"
-                    aria-expanded="false"
-                    aria-controls="quick-cart-drawer"
-                    data-product-url="{{- block.settings.product.handle | prepend: '/products/'  -}}"
+                    type="submit"
+                    class="video-add-{{ section.id }}"
                     data-shoppable-button--{{ forloop.index }}
-                    {% unless block.settings.product.available %}
+                    {% unless block.settings.product.selected_or_first_available_variant.available %}
                       disabled
                     {% endunless %}
                   >
-                    {% if block.settings.product.available -%}
+                    {% if block.settings.product.selected_or_first_available_variant.available -%}
                       {{- button -}}
                     {%- else -%}
                       {{- button_soldout -}}
                     {%- endif %}
                   </button>
-                {%- else -%}
-                  {% comment %} Single variant - use form with JavaScript handler {% endcomment %}
-                  {%- form 'product',
-                    block.settings.product,
-                    id: product_form_id,
-                    class: 'form',
-                    novalidate: 'novalidate',
-                    data-type: 'add-to-cart-form'
-                  -%}
-                    <input
-                      type="hidden"
-                      name="id"
-                      value="{{ block.settings.product.selected_or_first_available_variant.id }}"
-                      data-shoppable-input--{{ forloop.index }}
-                    >
-                    <input
-                      type="hidden"
-                      name="quantity"
-                      value="1"
-                      data-shoppable-quantity-hidden--{{ forloop.index }}
-                    >
-                    <button
-                      type="submit"
-                      class="video-add-{{ section.id }}"
-                      data-shoppable-button--{{ forloop.index }}
-                      {% unless block.settings.product.selected_or_first_available_variant.available %}
-                        disabled
-                      {% endunless %}
-                    >
-                      {% if block.settings.product.selected_or_first_available_variant.available -%}
-                        {{- button -}}
-                      {%- else -%}
-                        {{- button_soldout -}}
-                      {%- endif %}
-                    </button>
-                  {%- endform -%}
-                {%- endif -%}
+                {%- endform -%}
               {% else %}
                 <div class="form">
                   <button class="video-add-{{ section.id }}">{{ button }}</button>
                 </div>
+              {% endif %}
+
+              {% if block.settings.use_variants %}
+                <button class="video-arrow-{{ section.id }}">
+                  <svg viewBox="0 0 32 32">
+                    <rect width="32" height="32" fill="#fff" opacity="0"></rect><path fill="rgba(255, 255, 255, 1)" d="M16.7,20.67l0,0,7-7.71a1.2,1.2,0,0,0,0-1.57h0A1,1,0,0,0,23,11H9a.91.91,0,0,0-.72.35h0a1.2,1.2,0,0,0,0,1.57l7,7.75a.93.93,0,0,0,1.31.11A.52.52,0,0,0,16.7,20.67Z"></path>
+                  </svg>
+                </button>
               {% endif %}
             </div>
           </div>
@@ -1664,7 +1587,7 @@
                 <div class="video-modal-right-bottom-{{ section.id }}">
                   {% if block.settings.product != blank %}
                     <div class="video-modal-product-{{ section.id }}">
-                      <a href="{{ block.settings.product.handle | prepend: '/products/' }}" class="video-modal-product-image-{{ section.id }}" style="text-decoration:none;display:block;">
+                      <div class="video-modal-product-image-{{ section.id }}">
                         {% if block.product.selected_or_first_available_variant.featured_image != blank %}
                           <img
                             src="{{ block.settings.product.selected_or_first_available_variant.featured_image | image_url }}"
@@ -1684,9 +1607,9 @@
                             data-shoppable-modal-image--{{ forloop.index }}
                           >
                         {% endif %}
-                      </a>
+                      </div>
                       <div clas="video-modal-product-info-{{ section.id }}">
-                        <a href="{{ block.settings.product.handle | prepend: '/products/' }}" class="video-modal-product-title-{{ section.id }}" style="text-decoration:none;color:inherit;display:block;">{{ block.settings.product.title }}</a>
+                        <p class="video-modal-product-title-{{ section.id }}">{{ block.settings.product.title }}</p>
                         <p
                           class="video-modal-product-price-{{ section.id }}"
                           data-shoppable-modal-price--{{ forloop.index }}
@@ -1730,69 +1653,46 @@
                     {% endunless %}
                   {% endif %}
                   {% if block.settings.product != blank %}
-                    {%- if block.settings.product.variants.size > 1 -%}
-                      {% comment %} Multiple variants - open quick cart drawer {% endcomment %}
+                    {%- assign product_modal_form_id = 'product-modal-form-' | append: block.id -%}
+                    {%- form 'product',
+                      block.settings.product,
+                      id: product_modal_form_id,
+                      class: 'form',
+                      novalidate: 'novalidate',
+                      data-type: 'add-to-cart-form'
+                    -%}
+                      <input
+                        type="hidden"
+                        name="id"
+                        value="{{ block.settings.product.selected_or_first_available_variant.id }}"
+                        data-shoppable-modal-input--{{ forloop.index }}
+                      >
+
+                      {%- liquid
+                        assign check_against_inventory = true
+                        if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
+                          assign check_against_inventory = false
+                        endif
+                        if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+                          assign quantity_rule_soldout = true
+                        endif
+                      -%}
+
                       <button
-                        type="button"
-                        class="quick-cart-drawer__trigger video-modal-add-{{ section.id }}"
-                        tabindex="0"
-                        aria-expanded="false"
-                        aria-controls="quick-cart-drawer"
-                        data-product-url="{{- block.settings.product.handle | prepend: '/products/'  -}}"
+                        type="submit"
+                        class="video-modal-add-{{ section.id }}"
                         data-shoppable-modal-button--{{ forloop.index }}
-                        {% unless block.settings.product.available %}
+                        {% unless block.settings.product.selected_or_first_available_variant.available %}
                           disabled
                         {% endunless %}
                       >
-                        {% if block.settings.product.available -%}
+                        {% if block.settings.product.selected_or_first_available_variant.available -%}
                           {{- modal_button -}}
                         {%- else -%}
                           {{- modal_button_soldout -}}
                         {%- endif %}
                       </button>
-                    {%- else -%}
-                      {% comment %} Single variant - use form with JavaScript handler {% endcomment %}
-                      {%- assign product_modal_form_id = 'product-modal-form-' | append: block.id -%}
-                      {%- form 'product',
-                        block.settings.product,
-                        id: product_modal_form_id,
-                        class: 'form',
-                        novalidate: 'novalidate',
-                        data-type: 'add-to-cart-form'
-                      -%}
-                        <input
-                          type="hidden"
-                          name="id"
-                          value="{{ block.settings.product.selected_or_first_available_variant.id }}"
-                          data-shoppable-modal-input--{{ forloop.index }}
-                        >
-
-                        {%- liquid
-                          assign check_against_inventory = true
-                          if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
-                            assign check_against_inventory = false
-                          endif
-                          if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
-                            assign quantity_rule_soldout = true
-                          endif
-                        -%}
-
-                        <button
-                          type="submit"
-                          class="video-modal-add-{{ section.id }}"
-                          data-shoppable-modal-button--{{ forloop.index }}
-                          {% unless block.settings.product.selected_or_first_available_variant.available %}
-                            disabled
-                          {% endunless %}
-                        >
-                          {% if block.settings.product.selected_or_first_available_variant.available -%}
-                            {{- modal_button -}}
-                          {%- else -%}
-                            {{- modal_button_soldout -}}
-                          {%- endif %}
-                        </button>
-                      {%- endform -%}
-                    {%- endif -%}
+                    {%- endform -%}
                   {% endif %}
                 </div>
               {% endif %}
@@ -1883,68 +1783,36 @@
     return formatString.replace(placeholderRegex, value);
   };
   
-  function initShoppableVideo(sectionId, sectionEl) {
-    const sliderEl = sectionEl ? sectionEl.querySelector('[class*="video-slider-"]') : document.querySelector(`.video-slider-${sectionId}`);
-    if (!sliderEl) return;
-
-    sliderEl.classList.remove('preview');
-
-    const nextBtnEl = sectionEl ? sectionEl.querySelector('[class*="video-btn-next"]') : document.querySelector(`.video-btn-next-${sectionId}`);
-    const prevBtnEl = sectionEl ? sectionEl.querySelector('[class*="video-btn-prev"]') : document.querySelector(`.video-btn-prev-${sectionId}`);
-
-    const slider = new Swiper(sliderEl, {
+  function initShoppableVideo(sectionId) {
+    
+    document.querySelector(`.video-slider-${sectionId}`).classList.remove('preview');
+    
+    const slider = new Swiper(`.video-slider-${sectionId}`, {
       speed: 300,
-      initialSlide: 0,
-      slidesPerGroup: 1,
-      watchSlidesProgress: true,
       navigation: {
-        nextEl: nextBtnEl,
-        prevEl: prevBtnEl
+        nextEl: `.video-btn-next-${sectionId}`,
+        prevEl: `.video-btn-prev-${sectionId}`
       },
-      pagination: (function () {
-        const pagEl = sectionEl ? sectionEl.querySelector('[class*="video-pagination-"]') : document.querySelector(`.video-pagination-${sectionId}`);
-        return pagEl ? { el: pagEl, draggable: true, clickable: true } : false;
-      })(),
+      pagination: {
+        el: `.video-pagination-${sectionId}`,
+        draggable: true,
+        clickable: true
+      },
       breakpoints: {
         320: {
-          spaceBetween: parseInt(sliderEl.dataset.gapMobile || 0),
-          slidesPerView: 2,
-          slidesPerGroup: 1
+           spaceBetween: parseInt(document.querySelector(`.video-slider-${sectionId}`).dataset.gapMobile || 0),
+          slidesPerView: parseFloat(document.querySelector(`.video-slider-${sectionId}`).dataset.viewMobile),
         },
         768: {
-          spaceBetween: parseInt(sliderEl.dataset.gapMobile || 0),
-          slidesPerView: 2,
-          slidesPerGroup: 1
+          spaceBetween: parseInt(document.querySelector(`.video-slider-${sectionId}`).dataset.gapMobile || 0),
+          slidesPerView: parseFloat(document.querySelector(`.video-slider-${sectionId}`).dataset.viewMobile),
         },
         1024: {
-          spaceBetween: parseInt(sliderEl.dataset.gap || 0),
-          slidesPerView: 4,
-          slidesPerGroup: 1
+           spaceBetween: parseInt(document.querySelector(`.video-slider-${sectionId}`).dataset.gap || 0),
+          slidesPerView: parseFloat(document.querySelector(`.video-slider-${sectionId}`).dataset.view ),
         }
       }
     });
-
-    /* Explicit click bind so buttons always swipe */
-    if (nextBtnEl) {
-      nextBtnEl.addEventListener('click', function (e) { e.preventDefault(); slider.slideNext(); });
-    }
-    if (prevBtnEl) {
-      prevBtnEl.addEventListener('click', function (e) { e.preventDefault(); slider.slidePrev(); });
-    }
-
-    /* Hide navigation arrows only when there is a single slide */
-    function hideVideoArrowsIfAllFit() {
-      const navContainer = sectionEl.querySelector(`[class*="video-nav-buttons-"]`);
-      if (!navContainer) return;
-      const slidesCount = parseInt(navContainer.dataset.slidesCount || '1', 10);
-      if (slidesCount <= 1) {
-        navContainer.style.display = 'none';
-      } else {
-        navContainer.style.display = '';
-      }
-    }
-    hideVideoArrowsIfAllFit();
-    slider.on('resize', hideVideoArrowsIfAllFit);
 
     const slider2 = new Swiper(`.video-modal-slider-${sectionId}`, {
       speed: 300,
@@ -2013,20 +1881,20 @@
       {% for block in section.blocks %}
 
         let product{{ forloop.index }} = {{ all_products[block.settings.product] | json }};
-        let selects{{ block.id | replace: '-', '' }} = sectionEl.querySelectorAll('[data-shoppable-select--{{ block.id | replace: '-', '' }}]');
-        let input{{ forloop.index }} = sectionEl.querySelector('[data-shoppable-input--{{ forloop.index }}]');
-        let image{{ forloop.index }} = sectionEl.querySelector('[data-shoppable-image--{{ forloop.index }}]');
-        let priceElement{{ forloop.index }} = sectionEl.querySelector('[data-shoppable-price--{{ forloop.index }}]');
-        let optionPrice{{ forloop.index }} = sectionEl.querySelector('[data-shoppable-option-price--{{ forloop.index }}]');
-        let button{{ forloop.index }} = sectionEl.querySelector('[data-shoppable-button--{{ forloop.index }}]');
-        let form{{ block.id | replace: '-', '' }} = sectionEl.querySelector('#product-form-{{ block.id }}');
+        let selects{{ block.id | replace: '-', '' }} = document.querySelectorAll('[data-shoppable-select--{{ block.id | replace: '-', '' }}]');
+        let input{{ forloop.index }} = document.querySelector('[data-shoppable-input--{{ forloop.index }}]');
+        let image{{ forloop.index }} = document.querySelector('[data-shoppable-image--{{ forloop.index }}]');
+        let priceElement{{ forloop.index }} = document.querySelector('[data-shoppable-price--{{ forloop.index }}]');
+        let optionPrice{{ forloop.index }} = document.querySelector('[data-shoppable-option-price--{{ forloop.index }}]');
+        let button{{ forloop.index }} = document.querySelector('[data-shoppable-button--{{ forloop.index }}]');
+        let form{{ block.id | replace: '-', '' }} = document.querySelector('#product-form-{{ block.id }}');
 
-        let modalSelects{{ block.id | replace: '-', '' }} = sectionEl.querySelectorAll('[data-shoppable-modal-select--{{ block.id | replace: '-', '' }}]');
-        let modalInput{{ forloop.index }} = sectionEl.querySelector('[data-shoppable-modal-input--{{ forloop.index }}]');
-        let modalImage{{ forloop.index }} = sectionEl.querySelector('[data-shoppable-modal-image--{{ forloop.index }}]');
-        let modalPriceElement{{ forloop.index }} = sectionEl.querySelector('[data-shoppable-modal-price--{{ forloop.index }}]');
-        let modalButton{{ forloop.index }} = sectionEl.querySelector('[data-shoppable-modal-button--{{ forloop.index }}]');
-        let modalForm{{ block.id | replace: '-', '' }} = sectionEl.querySelector('#product-modal-form-{{ block.id }}');
+        let modalSelects{{ block.id | replace: '-', '' }} = document.querySelectorAll('[data-shoppable-modal-select--{{ block.id | replace: '-', '' }}]');
+        let modalInput{{ forloop.index }} = document.querySelector('[data-shoppable-modal-input--{{ forloop.index }}]');
+        let modalImage{{ forloop.index }} = document.querySelector('[data-shoppable-modal-image--{{ forloop.index }}]');
+        let modalPriceElement{{ forloop.index }} = document.querySelector('[data-shoppable-modal-price--{{ forloop.index }}]');
+        let modalButton{{ forloop.index }} = document.querySelector('[data-shoppable-modal-button--{{ forloop.index }}]');
+        let modalForm{{ block.id | replace: '-', '' }} = document.querySelector('#product-modal-form-{{ block.id }}');
 
         if(selects{{ block.id | replace: '-', '' }}) {
 
@@ -2053,10 +1921,10 @@
               })
               
               let price{{ forloop.index }} = matchedVariant.price;
-              if (priceElement{{ forloop.index }}) priceElement{{ forloop.index }}.innerHTML = formayMoneyForBuyItWith(price{{ forloop.index }}, '{{ shop.money_format }}');
-              if (optionPrice{{ forloop.index }}) optionPrice{{ forloop.index }}.innerHTML = formayMoneyForBuyItWith(price{{ forloop.index }}, '{{ shop.money_format }}');
+              priceElement{{ forloop.index }}.innerHTML = formayMoneyForBuyItWith(price{{ forloop.index }}, '{{ shop.money_format }}');
+              optionPrice{{ forloop.index }}.innerHTML = formayMoneyForBuyItWith(price{{ forloop.index }}, '{{ shop.money_format }}');
               
-              if (input{{ forloop.index }}) input{{ forloop.index }}.value = matchedVariant.id;
+              input{{ forloop.index }}.value = matchedVariant.id;
   
               if (matchedVariant.featured_image) {
                 image{{ forloop.index }}.src = matchedVariant.featured_image.src;
@@ -2079,27 +1947,57 @@
           
         }
 
-        {% comment %} Sync quantity from dropup input to hidden form field {% endcomment %}
-        (function() {
-          let qtyInput = sectionEl.querySelector('[data-shoppable-quantity--{{ forloop.index }}]');
-          let qtyHidden = sectionEl.querySelector('[data-shoppable-quantity-hidden--{{ forloop.index }}]');
-          if (qtyInput && qtyHidden) {
-            qtyInput.addEventListener('input', function() {
-              let val = parseInt(this.value, 10);
-              if (isNaN(val) || val < 1) val = 1;
-              this.value = val;
-              qtyHidden.value = val;
-            });
-            qtyInput.addEventListener('change', function() {
-              let val = parseInt(this.value, 10);
-              if (isNaN(val) || val < 1) val = 1;
-              this.value = val;
-              qtyHidden.value = val;
-            });
+        {% unless reload_after_adding %}
+          
+          if(form{{ block.id | replace: '-', '' }}) {
+             form{{ block.id | replace: '-', '' }}.addEventListener('submit', async (e) => {
+              console.log(form{{ block.id | replace: '-', '' }});
+              e.preventDefault();
+              await fetch('/cart/add', {
+                method: 'post',
+                body: new FormData(form{{ block.id | replace: '-', '' }})
+              });
+              const res{{ forloop.index }} = await fetch("/cart.json");
+              const cart{{ forloop.index }} = await res{{ forloop.index }}.json();
+    
+              const headerCartCount{{ forloop.index }} = document.querySelector('.cart-count-bubble span');
+              if(headerCartCount{{ forloop.index }}) {
+                headerCartCount{{ forloop.index }}.textContent = cart{{ forloop.index }}.item_count;
+              } else {
+                const headerCart{{ forloop.index }} = document.querySelector('#cart-icon-bubble');
+                const isCartIconValid = headerCart{{ forloop.index }} &&
+                  headerCart{{ forloop.index }}.childElementCount === 2 &&
+                  headerCart{{ forloop.index }}.querySelector('svg') &&
+                  headerCart{{ forloop.index }}.querySelector('span.visually-hidden');
+                
+                if (isCartIconValid) {
+                  const cartCountBubble = document.createElement('div');
+                  cartCountBubble.className = 'cart-count-bubble';
+                  if(cart{{ forloop.index }}.item_count == "1") {
+                    cartCountBubble.innerHTML = `<span aria-hidden="true">${cart{{ forloop.index }}.item_count}</span><span class="visually-hidden">${cart{{ forloop.index }}.item_count} item</span>`;
+                  } else {
+                    cartCountBubble.innerHTML = `<span aria-hidden="true">${cart{{ forloop.index }}.item_count}</span><span class="visually-hidden">${cart{{ forloop.index }}.item_count} items</span>`;
+                  }
+                
+                  headerCart{{ forloop.index }}.appendChild(cartCountBubble);
+                }
+                
+              }
+              setTimeout(function() {
+                button{{ forloop.index }}.innerText = "Added";
+              }, 300);
+              {% if redirect_after_adding %}
+              setTimeout(function() {
+                window.location.href = "{{ shop.url }}/cart";
+              }, 500);
+              {% endif %}
+              setTimeout(function() {
+                button{{ forloop.index }}.innerText = `{{ button }}`;
+              }, 2000);
+              
+            })         
           }
-        })();
-
-        {% comment %} Add-to-cart is handled by delegated submit listener on sectionEl below {% endcomment %}
+      {% endunless %}
 
        if(modalSelects{{ block.id | replace: '-', '' }}) {
 
@@ -2151,79 +2049,35 @@
           
         }
 
-        {% comment %} Modal add-to-cart handled by delegated submit listener on sectionEl {% endcomment %}
+        {% unless reload_after_adding %}
+          if(modalForm{{ block.id | replace: '-', '' }}) {
+             modalForm{{ block.id | replace: '-', '' }}.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              await fetch('/cart/add', {
+                method: 'post',
+                body: new FormData(modalForm{{ block.id | replace: '-', '' }})
+              });
+              const res{{ forloop.index }} = await fetch("/cart.json");
+              const cart{{ forloop.index }} = await res{{ forloop.index }}.json();
+    
+              const headerCartCount{{ forloop.index }} = document.querySelector('.cart-count-bubble span');
+              if(headerCartCount{{ forloop.index }}) {
+                headerCartCount{{ forloop.index }}.textContent = cart{{ forloop.index }}.item_count;
+              }
+              setTimeout(function() {
+                modalButton{{ forloop.index }}.innerText = "Added";
+              }, 300);
+              setTimeout(function() {
+                modalButton{{ forloop.index }}.innerText = `{{ button }}`;
+              }, 2000);
+              
+            })         
+          }
+        {% endunless %}
     
       {% endfor %}
       
     {% endif %}
-
-    {% unless reload_after_adding %}
-    function shoppableAddToCart(form, submitBtn) {
-      if (!form) return;
-      var label = (submitBtn && submitBtn.textContent) ? submitBtn.textContent.trim() : '{{ button }}';
-      if (submitBtn) {
-        submitBtn.setAttribute('disabled', '');
-        submitBtn.dataset.label = label;
-      }
-
-      var cartDrawer = document.querySelector('cart-drawer') || document.querySelector('cart-notification');
-      var formData = new FormData(form);
-      if (cartDrawer && typeof cartDrawer.getSectionsToRender === 'function') {
-        formData.append('sections', cartDrawer.getSectionsToRender().map(function(s) { return s.section; }));
-        formData.append('sections_url', window.location.pathname);
-        if (typeof cartDrawer.setActiveElement === 'function') cartDrawer.setActiveElement(document.activeElement);
-      }
-
-      var config = {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/javascript',
-          'X-Requested-With': 'XMLHttpRequest'
-        },
-        body: formData
-      };
-
-      fetch((window.routes && window.routes.cart_add_url ? window.routes.cart_add_url : '/cart/add') + '.js', config)
-        .then(function(res) { return res.json(); })
-        .then(function(res) {
-          if (res.errors) {
-            if (submitBtn) { submitBtn.removeAttribute('disabled'); submitBtn.textContent = label; }
-            return;
-          }
-          if (cartDrawer && typeof cartDrawer.renderContents === 'function') {
-            cartDrawer.renderContents(res);
-          }
-          if (typeof updateCartCounters === 'function') updateCartCounters();
-          if (submitBtn) submitBtn.textContent = 'Added';
-          {% if redirect_after_adding %}
-          setTimeout(function() { window.location.href = '{{ shop.url }}/cart'; }, 500);
-          {% else %}
-          setTimeout(function() {
-            if (submitBtn) { submitBtn.removeAttribute('disabled'); submitBtn.textContent = label; }
-          }, 2000);
-          {% endif %}
-        })
-        .catch(function() {
-          if (submitBtn) { submitBtn.removeAttribute('disabled'); submitBtn.textContent = label; }
-        });
-    }
-    {% endunless %}
-
-    sectionEl.addEventListener('submit', function(e) {
-      var form = e.target;
-      if (!form || form.tagName !== 'FORM') return;
-      if (!sectionEl.contains(form)) return;
-      var idInput = form.querySelector('input[name="id"]');
-      if (!idInput) return;
-      e.preventDefault();
-      e.stopPropagation();
-      {% if reload_after_adding %}
-      form.submit();
-      {% else %}
-      var submitBtn = form.querySelector('button[type="submit"]');
-      shoppableAddToCart(form, submitBtn);
-      {% endif %}
-    });
 
     const toggles = document.querySelectorAll(`.video-top-${sectionId}`);
     const modal = document.querySelector(`.video-modal-${sectionId}`);
@@ -2356,11 +2210,12 @@
   }
 
   function initializeAllShoppableVideoSections() {
-    document.querySelectorAll('[id^="shopify-section-"]').forEach(sectionEl => {
-      const sliderEl = sectionEl.querySelector('[class*="video-slider-"][class*="swiper"]');
-      if (!sliderEl) return;
-      const sectionId = sectionEl.id.replace('shopify-section-', '');
-      loadSwiper(() => initShoppableVideo(sectionId, sectionEl));
+    const sections = document.querySelectorAll('[id^="shopify-section-"]');
+    sections.forEach(section => {
+      if (section.querySelector('.video-{{ section.id }}')) {
+        const sectionId = section.id.replace('shopify-section-', '');
+        loadSwiper(() => initShoppableVideo(sectionId));
+      }
     });
   }
 
@@ -2374,7 +2229,7 @@
     document.addEventListener('shopify:section:load', (event) => {
       const sectionId = event.detail.sectionId;
       if (event.target.querySelector('.video-{{ section.id }}')) {
-        loadSwiper(() => initShoppableVideo(sectionId, event.target));
+        loadSwiper(() => initShoppableVideo(sectionId));
       }
     });
   }
@@ -2484,6 +2339,24 @@
     {
       "type": "header",
       "content": "Slider"
+    },
+    {
+      "type": "range",
+      "id": "slider_view",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": "Slides per view",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "slider_view_mobile",
+      "min": 1,
+      "max": 3,
+      "step": 0.1,
+      "label": "Slides per view - mobile",
+      "default": 1.3
     },
     {
       "type": "range",
