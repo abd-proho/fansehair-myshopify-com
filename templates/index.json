@@ -146,13 +146,13 @@
         "item_7wKb3R": {
           "type": "item",
           "settings": {
-            "video_url": "",
-            "autoplay": false,
+            "video_url": "https://vimeo.com/1180321509?share=copy&fl=sv&fe=ci",
+            "autoplay": true,
             "poster": "shopify://shop_images/swatch.png",
-            "product": "fanse-potion",
+            "product": "polishing-brush",
             "use_variants": true,
-            "modal_heading": "<h4>Soothe & smooth</h4>",
-            "modal_text": "<p>Cooling finish after a clean shave.</p>"
+            "modal_heading": "<h4>Sofia Jamora uses the Polishing Brush.</h4>",
+            "modal_text": ""
           }
         },
         "item_AJbPKb": {
@@ -221,6 +221,8 @@
         "heading_height": 130,
         "heading_align": "left",
         "heading_align_mobile": "center",
+        "slider_view": 5,
+        "slider_view_mobile": 1.3,
         "slider_gap": 12,
         "slider_gap_mobile": 12,
         "slider_mt": 20,
@@ -478,7 +480,9 @@
         "background_image_desktop": "shopify://shop_images/Asset_2_1b946456-bec8-4499-8af2-fc2983a614b5.png",
         "background_image_mobile": "shopify://shop_images/Asset_2_81ca768b-85bc-4777-8ab8-27d311cae7bf.png",
         "background_overlay": true,
+        "overlay_gradient_direction": "180deg",
         "color_scheme": "scheme-2",
+        "gradient_direction": "180deg",
         "content_max_width": 660,
         "content_alignment": "center",
         "content_position_horizontal": 50,
