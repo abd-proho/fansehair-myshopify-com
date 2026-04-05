@@ -152,31 +152,42 @@
             "product": "polishing-brush",
             "use_variants": true,
             "modal_heading": "<h4>Sofia Jamora uses the Polishing Brush.</h4>",
+            "modal_text": "<p>test</p>"
+          }
+        },
+        "item_cMFyEV": {
+          "type": "item",
+          "settings": {
+            "video_url": "",
+            "autoplay": true,
+            "product": "",
+            "use_variants": true,
+            "modal_heading": "<h4>Modal heading</h4>",
             "modal_text": ""
           }
         },
         "item_AJbPKb": {
           "type": "item",
           "settings": {
-            "video_url": "",
-            "autoplay": false,
+            "video_url": "https://vimeo.com/1180321926?share=copy&fl=sv&fe=ci",
+            "autoplay": true,
             "poster": "shopify://shop_images/swatch.png",
             "product": "fanse-potion",
             "use_variants": true,
-            "modal_heading": "<h4>Soothe & smooth</h4>",
+            "modal_heading": "<h4>Freya Tidy and Bree Colter use Fansē Potion</h4>",
             "modal_text": "<p>Cooling finish after a clean shave.</p>"
           }
         },
         "item_zbPfVY": {
           "type": "item",
           "settings": {
-            "video_url": "",
-            "autoplay": false,
+            "video_url": "https://vimeo.com/1180321938?share=copy&fl=sv&fe=ci",
+            "autoplay": true,
             "poster": "shopify://shop_images/swatch.png",
             "product": "fanse-potion",
             "use_variants": true,
-            "modal_heading": "<h4>Soothe & smooth</h4>",
-            "modal_text": "<p>Cooling finish after a clean shave.</p>"
+            "modal_heading": "<h4>Freya Tidy uses Fansē Potion</h4>",
+            "modal_text": ""
           }
         },
         "item_ediBWh": {
@@ -206,6 +217,7 @@
       },
       "block_order": [
         "item_7wKb3R",
+        "item_cMFyEV",
         "item_AJbPKb",
         "item_zbPfVY",
         "item_ediBWh",
