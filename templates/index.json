@@ -146,7 +146,8 @@
         "item_7wKb3R": {
           "type": "item",
           "settings": {
-            "video_url": "https://vimeo.com/1180324986?fl=tl&fe=ec",
+            "video": "shopify://files/videos/Freya Brush.mp4",
+            "video_url": "",
             "autoplay": true,
             "poster": "shopify://shop_images/swatch.png",
             "product": "polishing-brush",
@@ -158,7 +159,8 @@
         "item_AJbPKb": {
           "type": "item",
           "settings": {
-            "video_url": "https://vimeo.com/1180324980?fl=tl&fe=ec",
+            "video": "shopify://files/videos/Trio.mp4",
+            "video_url": "",
             "autoplay": true,
             "poster": "shopify://shop_images/swatch.png",
             "product": "fanse-potion",
@@ -170,7 +172,8 @@
         "item_zbPfVY": {
           "type": "item",
           "settings": {
-            "video_url": "https://vimeo.com/1180324995?fl=tl&fe=ec",
+            "video": "shopify://files/videos/Freya Potion.mp4",
+            "video_url": "",
             "autoplay": true,
             "poster": "shopify://shop_images/swatch.png",
             "product": "fanse-potion",
@@ -182,7 +185,8 @@
         "item_ediBWh": {
           "type": "item",
           "settings": {
-            "video_url": "https://vimeo.com/1180324960?fl=tl&fe=ec",
+            "video": "shopify://files/videos/Bree Brush.mp4",
+            "video_url": "",
             "autoplay": true,
             "poster": "shopify://shop_images/swatch.png",
             "product": "polishing-brush",
@@ -194,7 +198,8 @@
         "item_6U6NWr": {
           "type": "item",
           "settings": {
-            "video_url": "https://vimeo.com/1180323818?fl=tl&fe=ec",
+            "video": "shopify://files/videos/Sofia Comb.mp4",
+            "video_url": "",
             "autoplay": true,
             "poster": "shopify://shop_images/swatch.png",
             "product": "defining-comb",
@@ -229,8 +234,8 @@
         "card_radius": 10,
         "card_border_thickness": 0,
         "card_shadow": true,
-        "video_ratio": "original",
-        "video_ratio_mobile": "original",
+        "video_ratio": "portrait",
+        "video_ratio_mobile": "portrait",
         "video_overlay": 0.2,
         "image_width": 44,
         "image_width_mobile": 44,
