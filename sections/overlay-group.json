@@ -18,7 +18,7 @@
           "type": "info-bar",
           "settings": {
             "icon": "option-truck",
-            "title": "Free shipping above $150"
+            "title": "Free shipping above $80"
           }
         }
       },
@@ -58,9 +58,9 @@
       "type": "newsletter-popup",
       "settings": {
         "delay": 10,
-        "heading": "Enjoy 10% off your first order",
+        "heading": "FANSĒ JOINING US?",
         "heading_size": "h3",
-        "text": "<p>Elevate your wellbeing with our curated selection, plus enjoy a special discount!</p>",
+        "text": "<p>Sign up to our newsletter to be the first to hear of new products, discounts, and more.</p>",
         "button_close_text": "No thanks",
         "show_popup_on_customizer": false,
         "color_scheme": ""

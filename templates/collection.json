@@ -143,7 +143,8 @@
             "collection": "",
             "products": [
               "fanse-potion",
-              "the-sleek-styled-kit"
+              "polishing-brush",
+              "defining-comb"
             ],
             "vendor": "",
             "collection_of_products": "",
@@ -252,87 +253,94 @@
         "spacing_bottom": "6"
       }
     },
-    "ss_shoppable_video_LyrC4K": {
+    "ss_shoppable_video_VLEhWU": {
       "type": "ss-shoppable-video",
       "blocks": {
-        "item_7wKb3R": {
+        "item_HFknwM": {
           "type": "item",
           "settings": {
+            "video": "shopify://files/videos/Trio.mp4",
             "video_url": "",
-            "autoplay": false,
+            "autoplay": true,
             "poster": "shopify://shop_images/swatch.png",
             "product": "fanse-potion",
             "use_variants": true,
-            "modal_heading": "<h4>Soothe & smooth</h4>",
-            "modal_text": "<p>Cooling finish after a clean shave.</p>"
+            "modal_heading": "",
+            "modal_text": ""
           }
         },
-        "item_zbPfVY": {
+        "item_aMHcr9": {
           "type": "item",
           "settings": {
+            "video": "shopify://files/videos/Freya Brush.mp4",
             "video_url": "",
-            "autoplay": false,
+            "autoplay": true,
             "poster": "shopify://shop_images/swatch.png",
-            "product": "fanse-potion",
+            "product": "polishing-brush",
             "use_variants": true,
-            "modal_heading": "<h4>Soothe & smooth</h4>",
-            "modal_text": "<p>Cooling finish after a clean shave.</p>"
+            "modal_heading": "",
+            "modal_text": ""
           }
         },
-        "item_ediBWh": {
+        "item_EipEQP": {
           "type": "item",
           "settings": {
+            "video": "shopify://files/videos/Sofia Comb.mp4",
             "video_url": "",
-            "autoplay": false,
+            "autoplay": true,
             "poster": "shopify://shop_images/swatch.png",
-            "product": "fanse-potion",
+            "product": "defining-comb",
             "use_variants": true,
-            "modal_heading": "<h4>Soothe & smooth</h4>",
-            "modal_text": "<p>Cooling finish after a clean shave.</p>"
+            "modal_heading": "",
+            "modal_text": ""
           }
         },
-        "item_6U6NWr": {
+        "item_njK8mm": {
           "type": "item",
           "settings": {
+            "video": "shopify://files/videos/Freya Potion.mp4",
             "video_url": "",
-            "autoplay": false,
+            "autoplay": true,
             "poster": "shopify://shop_images/swatch.png",
             "product": "fanse-potion",
             "use_variants": true,
-            "modal_heading": "<h4>Soothe & smooth</h4>",
-            "modal_text": "<p>Cooling finish after a clean shave.</p>"
+            "modal_heading": "",
+            "modal_text": ""
           }
         },
-        "item_9ajWbA": {
+        "item_R4zEGM": {
           "type": "item",
           "settings": {
+            "video": "shopify://files/videos/Bree Brush.mp4",
             "video_url": "",
-            "autoplay": false,
+            "autoplay": true,
             "poster": "shopify://shop_images/swatch.png",
-            "product": "fanse-potion",
+            "product": "polishing-brush",
             "use_variants": true,
-            "modal_heading": "<h4>Soothe & smooth</h4>",
-            "modal_text": "<p>Cooling finish after a clean shave.</p>"
+            "modal_heading": "",
+            "modal_text": ""
           }
         }
       },
       "block_order": [
-        "item_7wKb3R",
-        "item_zbPfVY",
-        "item_ediBWh",
-        "item_6U6NWr",
-        "item_9ajWbA"
+        "item_HFknwM",
+        "item_aMHcr9",
+        "item_EipEQP",
+        "item_njK8mm",
+        "item_R4zEGM"
       ],
       "name": "SS - Shoppable video",
       "settings": {
-        "heading": "<h2>REAL RESULTS</h2>",
+        "heading": "<h1>REAL RESULTS, FOR ALL HAIR TYPES</h1>",
         "heading_custom": false,
         "heading_font": "josefin_sans_n4",
         "heading_size": 26,
         "heading_size_mobile": 26,
         "heading_height": 130,
         "heading_align": "left",
-        "heading_align_mobile": "center",
+        "heading_align_mobile": "left",
+        "slider_view": 5,
+        "slider_view_mobile": 1.3,
         "slider_gap": 12,
         "slider_gap_mobile": 12,
         "slider_mt": 20,
@@ -415,7 +423,7 @@
         "modal_text_align": "center",
         "modal_text_align_mobile": "center",
         "modal_text_mt": 16,
-        "use_modal_product": true,
+        "use_modal_product": false,
         "modal_image_width": 70,
         "modal_image_width_mobile": 66,
         "modal_image_radius": 12,
@@ -486,9 +494,9 @@
         "margin_bottom": 0,
         "padding_top": 36,
         "padding_bottom": 36,
-        "padding_horizontal": 5,
+        "padding_horizontal": 0,
         "padding_horizontal_mobile": 1.5,
-        "full_width": false,
+        "full_width": true,
         "content_width": 1400,
         "border_thickness": 0,
         "lazy": true
@@ -512,7 +520,7 @@
     "featured_collections_bmfjgk",
     "featured_products_rdFmR9",
     "main",
-    "ss_shoppable_video_LyrC4K",
+    "ss_shoppable_video_VLEhWU",
     "custom_liquid_gAyTh9"
   ]
 }

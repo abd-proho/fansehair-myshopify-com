@@ -96,7 +96,11 @@
           "settings": {
             "title": "NEW ARRIVALS",
             "collection": "",
-            "products": [],
+            "products": [
+              "fanse-potion",
+              "polishing-brush",
+              "defining-comb"
+            ],
             "vendor": "",
             "collection_of_products": "",
             "show_unavailable_products": false,
@@ -219,7 +223,7 @@
       ],
       "name": "SS - Shoppable video",
       "settings": {
-        "heading": "<h1>FANSĒ FACES</h1>",
+        "heading": "<h1>REAL RESULTS, FOR ALL HAIR TYPES</h1>",
         "heading_custom": false,
         "heading_font": "josefin_sans_n4",
         "heading_size": 26,
