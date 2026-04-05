@@ -508,11 +508,11 @@
         "heading_size": "h2",
         "heading_position": "left",
         "card_position": "center",
-        "card_position_horizontal": 10,
+        "card_position_horizontal": 38,
         "card_position_vertical": 50,
         "card_max_width": 320,
         "card_float_animation": false,
-        "section_width": "container--md",
+        "section_width": "container--sm",
         "section_min_height": 70,
         "spacing_top": 2,
         "spacing_bottom": 2
