@@ -206,14 +206,14 @@
     margin-top: 2.2rem;
   }
 
-  /* ADD THIS HERE */
-  #shopify-section-{{ section.id }} .hero__content::before {
-    width: min(94vw, 52rem);
-    height: min(72vw, 34rem);
-    filter: blur(22px);
+    #shopify-section-{{ section.id }} .hero__content::before {
+    width: min(96vw, 58rem);
+    height: min(86vw, 40rem);
+    top: 54%;
+    filter: blur(26px);
   }
 }
-  #shopify-section-{{ section.id }} .hero__content {
+ #shopify-section-{{ section.id }} .hero__content {
   position: relative;
   z-index: 3;
 }
@@ -222,18 +222,19 @@
   content: '';
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 52%;
   transform: translate(-50%, -50%);
-  width: min(92vw, 92rem);
-  height: min(60vw, 42rem);
+  width: min(96vw, 104rem);
+  height: min(68vw, 50rem);
   background: radial-gradient(
     ellipse at center,
-    rgba(255, 255, 255, 0.22) 0%,
-    rgba(255, 255, 255, 0.12) 35%,
-    rgba(255, 255, 255, 0.06) 55%,
-    rgba(255, 255, 255, 0) 75%
+    rgba(255, 255, 255, 0.34) 0%,
+    rgba(255, 255, 255, 0.22) 28%,
+    rgba(255, 255, 255, 0.12) 48%,
+    rgba(255, 255, 255, 0.05) 64%,
+    rgba(255, 255, 255, 0) 80%
   );
-  filter: blur(28px);
+  filter: blur(34px);
   pointer-events: none;
   z-index: -1;
 }
@@ -243,7 +244,6 @@
 #shopify-section-{{ section.id }} .hero__button {
   position: relative;
   z-index: 2;
-}
 }
 {% endstyle %}
 
