@@ -275,12 +275,13 @@
   }
 
   .video-top-{{ section.id }} {
-    overflow: hidden;
+   overflow: hidden;
     position: relative;
     z-index: 0;
-    cursor: pointer;
+    cursor: default;
     background-image: linear-gradient(to top, #121212, #252525, #444444, #676767, #8b8b8b, #9e9e9e, #b1b1b1, #c5c5c5, #cbcbcb, #d0d0d0, #d6d6d6, #dcdcdc);
     animation: pulse 0.5s infinite alternate;
+}
   }
 
   @keyframes pulse {
@@ -293,15 +294,15 @@
   }
 
   .video-top-{{ section.id }}::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    cursor: pointer;
-    background-color: {{ video_overlay_color | hex_to_rgba: video_overlay }};
-  }
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  cursor: default;
+  background-color: {{ video_overlay_color | hex_to_rgba: video_overlay }};
+}
 
   .video-top-{{ section.id }} video,
   .video-top-{{ section.id }} iframe {
@@ -1351,20 +1352,21 @@
                 {% assign poster_url = block.settings.poster | image_url %}
                 {% assign placeholder_video = 'https://cdn.shopify.com/videos/c/o/v/fbb140fd46e3429eba459e1549dbbe38.mp4' %}
                 <video
-                  {% if lazy %}
-                    data-
-                  {% endif -%}
-                  src="{% if block.settings.video != blank %}{{ block.settings.video.sources[1].url }}{% else %}{{ placeholder_video }}{% endif %}"
-                  muted
+                {% if lazy %}
+                  data-
+                {% endif -%}
+                src="{% if block.settings.video != blank %}{{ block.settings.video.sources[1].url }}{% else %}{{ placeholder_video }}{% endif %}"
+                 muted
+                 defaultMuted
                   playsinline
-                  {% if block.settings.autoplay %}
-                    autoplay
-                  {% endif %}
-                  preload="none"
-                  class="lazy"
-                  loop
-                  poster="{{ poster_url }}"
-                ></video>
+               {% if block.settings.autoplay %}
+                 autoplay
+              {% endif %}
+                preload="none"
+                class="lazy"
+                loop
+                poster="{{ poster_url }}"
+              ></video>
               {% endif %}
 
               {% if block.settings.product != blank %}
@@ -1548,18 +1550,20 @@
                 {% assign poster_url = block.settings.poster | image_url %}
                 {% assign placeholder_video = 'https://cdn.shopify.com/videos/c/o/v/fbb140fd46e3429eba459e1549dbbe38.mp4' %}
                 <video
-                  {% if lazy %}
-                    data-
-                  {% endif -%}
-                  src="{% if block.settings.video != blank %}{{ block.settings.video.sources[1].url }}{% else %}{{ placeholder_video }}{% endif %}"
-                  muted
-                  playsinline
-                  autoplay
-                  preload="none"
-                  loop
-                  class="lazy"
-                  poster="{{ poster_url }}"
-                ></video>
+                  <video
+  {% if lazy %}
+    data-
+  {% endif -%}
+  src="{% if block.settings.video != blank %}{{ block.settings.video.sources[1].url }}{% else %}{{ placeholder_video }}{% endif %}"
+  muted
+  defaultMuted
+  playsinline
+  autoplay
+  preload="none"
+  loop
+  class="lazy"
+  poster="{{ poster_url }}"
+></video>
               {% endif %}
               <div class="video-modal-action-{{ section.id }}">
                 <svg class="video-modal-mute-{{ section.id }}" viewBox="0 0 24 24" width="24" height="24">
