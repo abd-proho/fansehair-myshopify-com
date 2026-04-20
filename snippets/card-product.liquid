@@ -118,43 +118,46 @@
   grid-row: 1;
   justify-self: end;
   align-self: start;
-  display: inline-flex;
-  align-items: center;
-  gap: 2px;
-  white-space: nowrap;
   text-decoration: none;
 }
 
-.product-card__rating--custom svg {
-  width: 16px;
-  height: 16px;
+.product-card__rating-link.product-card__rating--custom {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 2px !important;
+  white-space: nowrap !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+.product-card__rating-link.product-card__rating--custom .star-icon {
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 0 !important;
+}
+
+.product-card__rating-link.product-card__rating--custom svg,
+.product-card__rating-link.product-card__rating--custom .icon,
+.product-card__rating-link.product-card__rating--custom [class*="star"] {
+  color: #1d39ff !important;
+  fill: #1d39ff !important;
+  stroke: #1d39ff !important;
+}
+
+.product-card__rating-link.product-card__rating--custom svg {
+  width: 16px !important;
+  height: 16px !important;
+  display: block !important;
 }
 
 .product-card__title-row-container {
   min-height: 0 !important;
 }
-
-  .product-card__rating-link.product-card__rating--custom .star-icon {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0 auto;
-    line-height: 0;
-  }
-
-  .product-card__rating-link.product-card__rating--custom svg,
-  .product-card__rating-link.product-card__rating--custom .icon,
-  .product-card__rating-link.product-card__rating--custom [class*="star"] {
-    color: #1d39ff !important;
-    fill: #1d39ff !important;
-    stroke: #1d39ff !important;
-  }
-
-  .product-card__rating-link.product-card__rating--custom svg {
-    width: 16px;
-    height: 16px;
-    display: block;
-  }
 </style>
   {% comment %} Render | Product Media {% endcomment %}
     <div
@@ -541,14 +544,14 @@
     </div>
 
     {% if force_five_stars %}
-      <a href="{{ product_link_with_variant }}#judgeme_product_reviews" class="product-card__rating-link product-card__rating--custom" tabindex="{% if is_in_drawer == true %}-1{% else %}0{% endif %}">
-        {%- render 'icon', icon_name: 'theme-star-filled' -%}
-        {%- render 'icon', icon_name: 'theme-star-filled' -%}
-        {%- render 'icon', icon_name: 'theme-star-filled' -%}
-        {%- render 'icon', icon_name: 'theme-star-filled' -%}
-        {%- render 'icon', icon_name: 'theme-star-filled' -%}
-      </a>
-    {% else %}
+  <a href="{{ product_link_with_variant }}#judgeme_product_reviews" class="product-card__rating-link product-card__rating--custom" tabindex="{% if is_in_drawer == true %}-1{% else %}0{% endif %}">
+    <span class="star-icon">{%- render 'icon', icon_name: 'theme-star-filled' -%}</span>
+    <span class="star-icon">{%- render 'icon', icon_name: 'theme-star-filled' -%}</span>
+    <span class="star-icon">{%- render 'icon', icon_name: 'theme-star-filled' -%}</span>
+    <span class="star-icon">{%- render 'icon', icon_name: 'theme-star-filled' -%}</span>
+    <span class="star-icon">{%- render 'icon', icon_name: 'theme-star-filled' -%}</span>
+  </a>
+{% else %}
       <a href="{{ product_link_with_variant }}#judgeme_product_reviews" class="product-card__rating-link" tabindex="{% if is_in_drawer == true %}-1{% else %}0{% endif %}">
         <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
           {{ product.metafields.judgeme.badge }}
