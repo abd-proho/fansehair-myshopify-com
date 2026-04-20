@@ -138,7 +138,7 @@
 }
 
   .video-slider-{{ section.id }} .swiper-wrapper {
-  align-items: flex-start !important;
+  align-items: stretch !important;
 }
 
   .video-slide-{{ section.id }} {
@@ -184,11 +184,11 @@
 .video-bottom-{{ section.id }} {
   display: flex;
   align-items: stretch;
-  flex: 0 0 auto;
+  flex: 1 1 0;
 }
 
   .video-bottom-{{ section.id }} .form {
-  flex: 0 0 100%;
+  flex: 1 1 100%;
 }
 
   .video-add-{{ section.id }} {
@@ -328,39 +328,6 @@
       font-size: {{ price_size }}px;
     }
   }
-@media(min-width: 1024px) {
-  .video-slider-{{ section.id }} {
-    overflow: hidden !important;
-    width: 100%;
-  }
-
-  .video-slider-{{ section.id }} .swiper-slide,
-  .video-slide-{{ section.id }} {
-    width: auto !important;
-    min-width: 0 !important;
-    max-width: none !important;
-    flex: 0 0 auto !important;
-  }
-
-  .video-top-{{ section.id }} {
-    aspect-ratio: 9.6 / 16 !important;
-    height: auto !important;
-    max-height: none !important;
-  }
-}.video-slider-{{ section.id }},
-.video-slider-{{ section.id }} .swiper-wrapper,
-.video-slider-{{ section.id }} .swiper-slide {
-  height: auto !important;
-}
-
-.video-slider-{{ section.id }} .swiper-wrapper {
-  align-items: flex-start !important;
-}
-
-.video-slide-{{ section.id }} {
-  height: auto !important;
-  align-self: flex-start !important;
-}
 {%- endstyle -%}
 
 {% unless full_width %}
@@ -462,19 +429,64 @@
     }
   </style>
 {% endif %}
-
 {% comment %} PREVIEW {% endcomment %}
 <style>
   .video-slider-{{ section.id }}.preview .swiper-wrapper {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: stretch;
+  justify-content: space-between;
   overflow: hidden;
   gap: {{ slider_gap }}px;
 }
 
- .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }} {
-  width: auto;
+  .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }} {
+    width: 100%;
+  }
+
+  @media(min-width: 1024px) and (max-width: 1399px) {
+    .video-slider-{{ section.id }}.preview {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .video-slider-{{ section.id }}.preview .swiper-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }} {
+      width: 280px;
+      min-width: 280px;
+      max-width: 280px;
+      flex: 0 0 280px;
+    }
+
+    .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }}:not(:first-child) {
+      margin-left: {{ slider_gap }}px;
+    }
+  }
+
+  @media(min-width: 1400px) {
+  .video-slider-{{ section.id }}.preview {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .video-slider-{{ section.id }}.preview .swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }} {
+    width: calc((100% - ({{ slider_gap }}px * 4)) / 5);
+    min-width: calc((100% - ({{ slider_gap }}px * 4)) / 5);
+    max-width: calc((100% - ({{ slider_gap }}px * 4)) / 5);
+    flex: 0 0 calc((100% - ({{ slider_gap }}px * 4)) / 5);
+  }
+
+  .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }}:not(:first-child) {
+    margin-left: {{ slider_gap }}px;
+  }
 }
 </style>
 
@@ -703,22 +715,22 @@
     releaseOnEdges: true
   },
   breakpoints: {
-    320: {
-      spaceBetween: parseInt(sliderEl.dataset.gapMobile || 0, 10),
-      slidesPerView: parseFloat(sliderEl.dataset.viewMobile)
-    },
-    768: {
-      spaceBetween: parseInt(sliderEl.dataset.gapMobile || 0, 10),
-      slidesPerView: parseFloat(sliderEl.dataset.viewMobile)
-    },
-    1024: {
-  spaceBetween: parseInt(sliderEl.dataset.gap || 0, 10),
-  slidesPerView: 4.2
-},
-1400: {
-  spaceBetween: parseInt(sliderEl.dataset.gap || 0, 10),
-  slidesPerView: 5
-}
+  320: {
+    spaceBetween: parseInt(sliderEl.dataset.gapMobile || 0, 10),
+    slidesPerView: parseFloat(sliderEl.dataset.viewMobile)
+  },
+  768: {
+    spaceBetween: parseInt(sliderEl.dataset.gapMobile || 0, 10),
+    slidesPerView: parseFloat(sliderEl.dataset.viewMobile)
+  },
+  1024: {
+    spaceBetween: parseInt(sliderEl.dataset.gap || 0, 10),
+    slidesPerView: 'auto'
+  },
+  1600: {
+    spaceBetween: parseInt(sliderEl.dataset.gap || 0, 10),
+    slidesPerView: 5
+  }
 }
 });
 
