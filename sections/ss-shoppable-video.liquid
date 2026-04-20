@@ -1,12 +1,3 @@
-{% comment %}
-  ---------------------------------------------------------
-  Copyright © 2023 Section Store. All rights reserved.
-  Unauthorized copying, modification, distribution, or use
-  of this code or any portion of it, is strictly prohibited.
-  Violators will be prosecuted to the fullest extent of the law.
-  For inquiries or permissions, contact daniel@section.store
-  ---------------------------------------------------------
-{% endcomment %}
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
@@ -53,10 +44,6 @@
   assign video_overlay = section.settings.video_overlay
   assign video_overlay_color = section.settings.video_overlay_color
 
-  assign arrow_bg_color = section.settings.arrow_bg_color
-  assign arrow_border_color = section.settings.arrow_border_color
-  assign arrow_icon_color = section.settings.arrow_icon_color
-
   assign button = section.settings.button
   assign button_soldout = section.settings.button_soldout
   assign button_size = section.settings.button_size
@@ -73,7 +60,6 @@
   assign button_bg_color = section.settings.button_bg_color
   assign button_bg_hover_color = section.settings.button_bg_hover_color
 
-  assign reload_after_adding = section.settings.reload_after_adding
   assign redirect_after_adding = section.settings.redirect_after_adding
 
   assign image_border_color = section.settings.image_border_color
@@ -96,115 +82,6 @@
   assign price_custom = section.settings.price_custom
   assign price_font = section.settings.price_font
   assign price_height = section.settings.price_height
-
-  assign option_size = section.settings.option_size
-  assign option_size_mobile = section.settings.option_size_mobile
-  assign option_color = section.settings.option_color
-  assign option_custom = section.settings.option_custom
-  assign option_font = section.settings.option_font
-  assign option_height = section.settings.option_height
-  assign option_mt = section.settings.option_mt
-
-  assign variants_price_size = section.settings.variants_price_size
-  assign variants_price_size_mobile = section.settings.variants_price_size_mobile
-  assign variants_price_color = section.settings.variants_price_color
-  assign variants_price_custom = section.settings.variants_price_custom
-  assign variants_price_font = section.settings.variants_price_font
-  assign variants_price_height = section.settings.variants_price_height
-  assign variants_price_mt = section.settings.variants_price_mt
-  assign variants_price_align = section.settings.variants_price_align
-  assign variants_price_align_mobile = section.settings.variants_price_align_mobile
-
-  assign modal_radius = section.settings.modal_radius
-  assign modal_border_thickness = section.settings.modal_border_thickness
-  assign modal_width = section.settings.modal_width
-  assign modal_width_mobile = section.settings.modal_width_mobile
-  assign modal_overlay = section.settings.modal_overlay
-  assign modal_border_color = section.settings.modal_border_color
-
-  assign close_size = section.settings.close_size
-  assign close_size_mobile = section.settings.close_size_mobile
-  assign close_radius = section.settings.close_radius
-  assign close_border_thickness = section.settings.close_border_thickness
-  assign close_bg_color = section.settings.close_bg_color
-  assign close_border_color = section.settings.close_border_color
-  assign close_icon_color = section.settings.close_icon_color
-
-  assign buttons_size = section.settings.buttons_size
-  assign buttons_size_mobile = section.settings.buttons_size_mobile
-  assign buttons_radius = section.settings.buttons_radius
-  assign buttons_border_thickness = section.settings.buttons_border_thickness
-  assign buttons_bg_color = section.settings.buttons_bg_color
-  assign buttons_border_color = section.settings.buttons_border_color
-  assign buttons_icon_color = section.settings.buttons_icon_color
-
-  assign modal_video_radius = section.settings.modal_video_radius
-  assign modal_video_border_thickness = section.settings.modal_video_border_thickness
-  assign modal_video_border_color = section.settings.modal_video_border_color
-  assign modal_video_ratio = section.settings.modal_video_ratio
-  assign modal_video_ratio_mobile = section.settings.modal_video_ratio_mobile
-
-  assign modal_heading_size = section.settings.modal_heading_size
-  assign modal_heading_size_mobile = section.settings.modal_heading_size_mobile
-  assign modal_heading_color = section.settings.modal_heading_color
-  assign modal_heading_custom = section.settings.modal_heading_custom
-  assign modal_heading_font = section.settings.modal_heading_font
-  assign modal_heading_height = section.settings.modal_heading_height
-  assign modal_heading_align = section.settings.modal_heading_align
-  assign modal_heading_align_mobile = section.settings.modal_heading_align_mobile
-
-  assign modal_text_size = section.settings.modal_text_size
-  assign modal_text_size_mobile = section.settings.modal_text_size_mobile
-  assign modal_text_color = section.settings.modal_text_color
-  assign modal_text_custom = section.settings.modal_text_custom
-  assign modal_text_font = section.settings.modal_text_font
-  assign modal_text_height = section.settings.modal_text_height
-  assign modal_text_align = section.settings.modal_text_align
-  assign modal_text_align_mobile = section.settings.modal_text_align_mobile
-  assign modal_text_mt = section.settings.modal_text_mt
-
-  assign modal_content_bg_color = section.settings.modal_content_bg_color
-
-  assign use_modal_product = section.settings.use_modal_product
-
-  assign modal_button = section.settings.modal_button
-  assign modal_button_soldout = section.settings.modal_button_soldout
-  assign modal_button_size = section.settings.modal_button_size
-  assign modal_button_size_mobile = section.settings.modal_button_size_mobile
-  assign modal_button_color = section.settings.modal_button_color
-  assign modal_button_hover_color = section.settings.modal_button_hover_color
-  assign modal_button_custom = section.settings.modal_button_custom
-  assign modal_button_font = section.settings.modal_button_font
-  assign modal_button_radius = section.settings.modal_button_radius
-  assign modal_button_border_thickness = section.settings.modal_button_border_thickness
-  assign modal_button_border_color = section.settings.modal_button_border_color
-  assign modal_button_border_hover_color = section.settings.modal_button_border_hover_color
-  assign modal_button_bg_color = section.settings.modal_button_bg_color
-  assign modal_button_bg_hover_color = section.settings.modal_button_bg_hover_color
-  assign modal_button_align_mobile = section.settings.modal_button_align_mobile
-  assign modal_button_align = section.settings.modal_button_align
-  assign modal_button_mt = section.settings.modal_button_mt
-
-  assign modal_image_radius = section.settings.modal_image_radius
-  assign modal_image_border_thickness = section.settings.modal_image_border_thickness
-  assign modal_image_border_color = section.settings.modal_image_border_color
-  assign modal_image_width = section.settings.modal_image_width
-  assign modal_image_width_mobile = section.settings.modal_image_width_mobile
-
-  assign modal_title_size = section.settings.modal_title_size
-  assign modal_title_size_mobile = section.settings.modal_title_size_mobile
-  assign modal_title_color = section.settings.modal_title_color
-  assign modal_title_custom = section.settings.modal_title_custom
-  assign modal_title_font = section.settings.modal_title_font
-  assign modal_title_height = section.settings.modal_title_height
-  assign modal_title_uppercase = section.settings.modal_title_uppercase
-
-  assign modal_price_size = section.settings.modal_price_size
-  assign modal_price_size_mobile = section.settings.modal_price_size_mobile
-  assign modal_price_color = section.settings.modal_price_color
-  assign modal_price_custom = section.settings.modal_price_custom
-  assign modal_price_font = section.settings.modal_price_font
-  assign modal_price_height = section.settings.modal_price_height
 -%}
 
 {%- style -%}
@@ -212,14 +89,6 @@
   {{ button_font | font_face: font_display: 'swap' }}
   {{ title_font | font_face: font_display: 'swap' }}
   {{ price_font | font_face: font_display: 'swap' }}
-  {{ option_font | font_face: font_display: 'swap' }}
-  {{ select_font | font_face: font_display: 'swap' }}
-  {{ variants_price_font | font_face: font_display: 'swap' }}
-  {{ modal_heading_font | font_face: font_display: 'swap' }}
-  {{ modal_text_font | font_face: font_display: 'swap' }}
-  {{ modal_button_font | font_face: font_display: 'swap' }}
-  {{ modal_title_font | font_face: font_display: 'swap' }}
-  {{ modal_price_font | font_face: font_display: 'swap' }}
 
   .section-{{ section.id }} {
     border-top: solid {{ border_color }} {{ border_thickness }}px;
@@ -271,28 +140,23 @@
     height: auto !important;
     text-decoration: none;
     overflow: hidden;
-    will-change: transform;
   }
 
   .video-top-{{ section.id }} {
-  overflow: hidden;
-  position: relative;
-  z-index: 0;
-  cursor: default;
-  background-color: #dcdcdc;
-}
-
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    cursor: default;
+    background-color: #dcdcdc;
+  }
 
   .video-top-{{ section.id }}::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  cursor: default;
-  background-color: {{ video_overlay_color | hex_to_rgba: video_overlay }};
-}
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: {{ video_overlay_color | hex_to_rgba: video_overlay }};
+    pointer-events: none;
+  }
 
   .video-top-{{ section.id }} video,
   .video-top-{{ section.id }} iframe {
@@ -301,7 +165,8 @@
     width: 100%;
     height: 100%;
     box-shadow: none;
-    border: 0px;
+    border: 0;
+    pointer-events: none;
   }
 
   .video-bottom-{{ section.id }} {
@@ -311,12 +176,12 @@
   }
 
   .video-bottom-{{ section.id }} .form {
-    flex: 1 1 auto;
+    flex: 1 1 100%;
   }
 
   .video-add-{{ section.id }} {
     width: 100%;
-    height: 100%;
+    min-height: 46px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -328,41 +193,18 @@
     text-decoration: none;
     padding: {{ button_padding_vertical_mobile }}px {{ button_padding_horizontal_mobile }}px;
     background-color: {{ button_bg_color }};
-    border: 0px;
+    border: 0;
     transition: all 0.25s ease 0s;
     position: relative;
     z-index: 2;
     cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
   }
 
   .video-add-{{ section.id }}:hover {
     color: {{ button_hover_color }};
     background-color: {{ button_bg_hover_color }};
-    transition: all 0.25s ease 0s;
-  }
-
-  .video-arrow-{{ section.id }} {
-    flex: 0 0 46px;
-    height: 46px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: {{arrow_bg_color}};
-    border-radius: 0px;
-    border: 0px;
-    box-shadow: none;
-    cursor: pointer;
-    border-left: 1px solid {{ arrow_border_color }};
-  }
-
-  .video-arrow-{{ section.id }} svg {
-    display: block;
-    width: 24px;
-    height: 24px;
-  }
-
-  .video-arrow-{{ section.id }} svg path {
-    fill: {{ arrow_icon_color }};
   }
 
   .video-product-{{ section.id }} {
@@ -374,8 +216,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 5px;
-    will-change: transform;
+    padding: 8px;
   }
 
   .video-product-image-{{ section.id }} {
@@ -394,393 +235,34 @@
   }
 
   .video-product-title-{{ section.id }} {
-    margin: 0px;
+    margin: 0;
     font-size: {{ title_size_mobile }}px;
-    color: {{ title_color }};
+    color: #ffffff !important;
     line-height: {{ title_height }}%;
     text-transform: unset;
-    will-change: transform;
   }
 
   .video-product-price-{{ section.id }} {
-    margin: 0px;
+    margin: 3px 0 0 0;
     font-size: {{ price_size_mobile }}px;
-    color: {{ price_color }};
+    color: #ffffff !important;
     line-height: {{ price_height }}%;
     text-transform: uppercase;
-    margin-top: 3px;
-    will-change: transform;
   }
 
-  .video-variants-{{ section.id }} {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: -1;
-    padding: 16px 12px;
-    border-radius: 10px;
-    background-color: #FFFFFF;
-    z-index: -1;
-    opacity: 0;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
-
-  .video-variants-{{ section.id }}.active {
-    z-index: 1;
-    opacity: 1;
-  }
-
-  .video-option-{{ section.id }}:not(:first-child) {
-    margin-top: {{ option_mt | times: 0.75 | round: 0 }}px;
-  }
-
-  .video-option-name-{{ section.id }} {
-    margin: 0px;
-    font-size: {{ option_size_mobile }}px;
-    color: {{ option_color }};
-    line-height: {{ option_height }}%;
-    text-transform: uppercase;
-  }
-
-  .video-options-{{ section.id }} {
-    position: relative;
-    margin-top: 6px;
-  }
-
-  .video-options-{{ section.id }} > span {
-    pointer-events: none;
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: calc(100% - 10px);
-  }
-
-  .video-options-{{ section.id }} > span svg {
-    stroke: unset;
-    fill: #121212;
-  }
-
-  .video-select-{{ section.id }} {
-    position: relative;
-    cursor: pointer;
-    height: 45px;
-    font-size: 14px;
-    line-height: 100%;
-    color: #646464;
-    font-weight: 500;
-    border: 1px solid #efefef;
-    border-radius: 6px;
-    background: #fafafa;
-    padding: 10px 30px 10px 10px;
-    width: 100%;
-    appearance: none;
-    outline: none;
-    box-shadow: none;
-    box-sizing: border-box;
-  }
-
-  .video-option-price-{{ section.id }} {
-    display: block;
-    margin: 0px;
-    width: 100%;
-    text-align: {{ variants_price_align_mobile }};
-    margin-top: {{ variants_price_mt | times: 0.75 | round: 0 }}px;
-    font-size: {{ variants_price_size_mobile }}px;
-    color: {{ variants_price_color }};
-    line-height: {{ variants_price_height }}%;
-    text-transform: uppercase;
-  }
-
-.video-modal-{{ section.id }} {
-  display: none !important;
-}
-
-  .video-modal-{{ section.id }}.active {
-    opacity: 1;
-    z-index: 100;
-    pointer-events: all;
-    transition: all 250ms ease-in 0s;
-  }
-
-  .video-modal-inner-{{ section.id }} {
-    position: relative;
-    width: 100%;
-    max-width: {{ modal_width_mobile }}%;
-    max-height: 95vh;
-  }
-
-  .video-modal-slide-{{ section.id }} {
-    display: grid !important;
-    grid-template-columns: repeat(1, 1fr);
-    overflow: hidden;
-    border: {{ modal_border_thickness }}px solid {{ modal_border_color }};
-    border-radius: {{ modal_radius }}px;
-    box-sizing: border-box !important;
-        background-color: {{ modal_content_bg_color }};
-  }
-
-  .video-modal-close-{{ section.id }} {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: {{ close_size_mobile }}px;
-    height: {{ close_size_mobile }}px;
-    top: 10px !important;
-    right: 10px !important;
-    padding: 6px;
-    background-color: {{ close_bg_color | hex_to_rgba: 0.2 }};
-    backdrop-filter: blur(100px);
-    -webkit-backdrop-filter: blur(100px);
-    border-radius: {{ close_radius }}px;
-    border: 0px;
-    box-shadow: none;
-    border: {{ close_border_thickness }}px solid {{ close_border_color }};
-    cursor: pointer;
-    z-index: 99;
-    position: fixed;
-    margin: 0px;
-  }
-
-  .video-modal-close-{{ section.id }} svg {
-    fill: {{ close_icon_color }};
-  }
-
-  .video-modal-prev-{{ section.id }},
-  .video-modal-next-{{ section.id }} {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: {{ buttons_size_mobile }}px;
-    height: {{ buttons_size_mobile }}px;
-    cursor: pointer;
-    z-index: 99;
-    position: fixed;
-    margin: 0px;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 6px;
-    background-color: {{ buttons_bg_color | hex_to_rgba: 0.2 }};
-    backdrop-filter: blur(100px);
-    -webkit-backdrop-filter: blur(100px);
-    border-radius: {{ buttons_radius }}px;
-    border: 0px;
-    box-shadow: none;
-    border: {{ buttons_border_thickness }}px solid {{ buttons_border_color }};
-  }
-
-  .video-modal-prev-{{ section.id }}.swiper-button-disabled,
-  .video-modal-next-{{ section.id }}.swiper-button-disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-  }
-
-  .video-modal-prev-{{ section.id }} {
-    left: 20px;
-  }
-
-  .video-modal-next-{{ section.id }} {
-    right: 20px;
-  }
-
-  .video-modal-prev-{{ section.id }} svg,
-  .video-modal-next-{{ section.id }} svg {
-    width: 75%;
-    height: 75%;
-    fill: {{ buttons_icon_color }};
-  }
-
-  .video-modal-left-{{ section.id }} {
-    width: 100%;
-    border-radius: {{ modal_video_radius }}px;
-    border: {{ modal_video_border_thickness }}px solid {{ modal_video_border_color }};
-    overflow: hidden;
-    max-height: 75vh;
-    position: relative;
-  }
-
-  .video-modal-left-{{ section.id }} video,
-  .video-modal-left-{{ section.id }} iframe {
-    display: block;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    box-shadow: none;
-    border: 0px;
-  }
-
-  .video-modal-left-{{ section.id }}:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    cursor: pointer;
-    z-index: 1;
-  }
-
-  .video-modal-right-{{ section.id }} {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 16px;
-    background-color: {{ modal_content_bg_color }};
-    overflow-y: auto;
-  }
-
-  .video-modal-heading-{{ section.id }} {
-    text-align: {{ modal_heading_align_mobile }};
-  }
-
-  .video-modal-heading-{{ section.id }} * {
-    margin: 0;
-    font-size: {{ modal_heading_size_mobile }}px;
-    color: {{ modal_heading_color }};
-    line-height: {{ modal_heading_height }}%;
-    text-transform: unset;
-  }
-
-  .video-modal-text-{{ section.id }} {
-    text-align: {{ modal_text_align_mobile }};
-    margin-top: {{ modal_text_mt | times: 0.75 | round: 0 }}px;
-  }
-
-  .video-modal-text-{{ section.id }} * {
-    margin: 0;
-    font-size: {{ modal_text_size_mobile }}px;
-    color: {{ modal_text_color }};
-    line-height: {{ modal_text_height }}%;
-    text-transform: unset;
-  }
-
-  .video-modal-add-{{ section.id }} {
-    margin: 0px;
-    margin-top: {{ modal_button_mt | times: 0.75 | round: 0 }}px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: {{ modal_button_size_mobile }}px;
-    color: {{ modal_button_color }};
-    line-height: 100%
-    text-align: center;
-    text-transform: unset;
-    text-decoration: none;
-    padding: 12px;
-    border-radius: {{ modal_button_radius }}px;
-    border: {{ modal_button_border_thickness }}px solid {{ modal_button_border_color }};
-    background-color: {{ modal_button_bg_color }};
-    transition: all 0.25s ease 0s;
-    position: relative;
-    z-index: 2;
-    cursor: pointer;
-  }
-
-  .video-modal-add-{{ section.id }}:hover {
-    transition: all 0.25s ease 0s;
-    border: {{ modal_button_border_thickness }}px solid {{ modal_button_border_hover_color }};
-    background-color: {{ modal_button_bg_hover_color }};
-    color: {{ modal_button_hover_color }};
-  }
-
-  .video-modal-product-{{ section.id }} {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-
-  .video-modal-product-image-{{ section.id }} {
-    flex: 0 0 {{ modal_image_width_mobile }}px;
-    height: {{ modal_image_width_mobile }}px;
-    border-radius: {{ modal_image_radius }}px;
-    border: {{ modal_image_border_thickness }}px solid {{ modal_image_border_color }};
-    overflow: hidden;
-  }
-
-  .video-modal-product-image-{{ section.id }} img {
-    display: block;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-
-  .video-modal-product-title-{{ section.id }} {
-    margin: 0px;
-    font-size: {{ modal_title_size_mobile }}px;
-    color: {{ modal_title_color }};
-    line-height: {{ modal_title_height }}%;
-    text-transform: unset;
-  }
-
-  .video-modal-product-price-{{ section.id }} {
-    margin: 0px;
-    margin-top: 6px;
-    font-size: {{ modal_price_size_mobile }}px;
-    color: {{ modal_price_color }};
-    line-height: {{ modal_price_height }}%;
-    text-transform: uppercase;
-  }
-
-  .video-modal-option-{{ section.id }} {
-    margin-top: {{ modal_option_mt | times: 0.75 | round: 0 }}px;
-  }
-
-  .video-modal-action-{{ section.id }} {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background: rgba(157,157,157,.5);
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    -webkit-appearance: none;
-    transition: all 0.25s ease 0s;
-    z-index: 2;
-  }
-
-  .video-modal-action-{{ section.id }} svg {
-    height: 20px;
-    width: 20px;
-  }
-
-  .video-modal-action-{{ section.id }} svg {
-    fill: #FFFFFF;
-  }
-
-  .video-modal-action-{{ section.id }} .video-modal-unmute-{{ section.id }} {
-    display: none;
-  }
-
-  .video-modal-action-{{ section.id }}.active .video-modal-unmute-{{ section.id }} {
-    display: block;
-  }
-
-  .video-modal-action-{{ section.id }}.active .video-modal-mute-{{ section.id }} {
-    display: none;
+  .video-arrow-{{ section.id }},
+  .video-variants-{{ section.id }},
+  .video-modal-{{ section.id }} {
+    display: none !important;
   }
 
   @media(min-width: 1024px) {
-
     .section-{{ section.id }} {
       margin-top: {{ margin_top }}px;
       margin-bottom: {{ margin_bottom }}px;
     }
 
     .section-{{ section.id }}-settings {
-      padding: 0 5rem;
       padding-top: {{ padding_top }}px;
       padding-bottom: {{ padding_bottom }}px;
       padding-left: {{ padding_horizontal }}rem;
@@ -796,26 +278,16 @@
     }
 
     .video-slider-{{ section.id }} {
-      margin-left: 0rem !important;
-      margin-right: 0rem !important;
-      padding-left: 0rem !important;
-      padding-right: 0rem !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
       margin-top: {{ slider_mt }}px;
     }
 
     .video-add-{{ section.id }} {
       font-size: {{ button_size }}px;
       padding: {{ button_padding_vertical }}px {{ button_padding_horizontal }}px;
-    }
-
-    .video-arrow-{{ section.id }} svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    .video-arrow-{{ section.id }} {
-      flex: 0 0 46px;
-      height: 46px;
     }
 
     .video-product-image-{{ section.id }} {
@@ -829,97 +301,6 @@
 
     .video-product-price-{{ section.id }} {
       font-size: {{ price_size }}px;
-    }
-
-    .video-option-{{ section.id }}:not(:first-child) {
-      margin-top: {{ option_mt }}px;
-    }
-
-    .video-option-name-{{ section.id }} {
-      font-size: {{ option_size }}px;
-    }
-
-    .video-select-{{ section.id }} {
-      font-size: {{ select_size }}px;
-    }
-
-    .video-option-price-{{ section.id }} {
-      text-align: {{ variants_price_align }};
-      margin-top: {{ variants_price_mt }}px;
-      font-size: {{ variants_price_size }}px;
-    }
-
-    .video-modal-inner-{{ section.id }} {
-      max-width: {{ modal_width }}px;
-    }
-
-    .video-modal-slide-{{ section.id }} {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .video-modal-close-{{ section.id }} {
-      width: {{ close_size }}px;
-      height: {{ close_size }}px;
-      top: 20px !important;
-      right: 20px !important;
-    }
-
-    .video-modal-prev-{{ section.id }},
-    .video-modal-next-{{ section.id }} {
-      width: {{ buttons_size }}px;
-      height: {{ buttons_size }}px;
-    }
-
-    .video-modal-left-{{ section.id }} {
-      max-height: calc(95vh - 100px);
-    }
-
-    .video-modal-heading-{{ section.id }} {
-      text-align: {{ modal_heading_align }};
-    }
-
-    .video-modal-heading-{{ section.id }} * {
-      font-size: {{ modal_heading_size }}px;
-    }
-
-    .video-modal-text-{{ section.id }} {
-      text-align: {{ modal_text_align }};
-      margin-top: {{ modal_text_mt }}px;
-    }
-
-    .video-modal-text-{{ section.id }} * {
-      font-size: {{ modal_text_size }}px;
-    }
-
-    .video-modal-product-image-{{ section.id }} {
-      flex: 0 0 {{ modal_image_width }}px;
-      height: {{ modal_image_width }}px;
-    }
-
-    .video-modal-product-title-{{ section.id }} {
-      font-size: {{ title_size }}px;
-    }
-
-    .video-modal-product-price-{{ section.id }} {
-      font-size: {{ price_size }}px;
-    }
-
-    .video-modal-add-{{ section.id }} {
-      margin-top: {{ modal_button_mt }}px;
-      font-size: {{ modal_button_size }}px;
-      padding: 12px;
-    }
-
-    .video-modal-option-{{ section.id }} {
-      margin-top: {{ modal_option_mt }}px;
-    }
-
-    .video-modal-product-title-{{ section.id }} {
-      font-size: {{ modal_title_size }}px;
-    }
-
-    .video-modal-product-price-{{ section.id }} {
-      font-size: {{ modal_price_size }}px;
     }
   }
 {%- endstyle -%}
@@ -972,279 +353,59 @@
   </style>
 {% endif %}
 
-{% if option_custom %}
-  <style>
-    .video-option-name-{{ section.id }} {
-      font-family: {{ option_font.family }}, {{ option_font.fallback_families }};
-      font-weight: {{ option_font.weight }};
-      font-style: {{ option_font.style }};
-    }
-  </style>
-{% endif %}
-
-{% if select_custom %}
-  <style>
-    .video-select-{{ section.id }} {
-      font-family: {{ select_font.family }}, {{ select_font.fallback_families }};
-      font-weight: {{ select_font.weight }};
-      font-style: {{ select_font.style }};
-    }
-  </style>
-{% endif %}
-
-{% if variants_price_custom %}
-  <style>
-    .video-option-price-{{ section.id }} {
-      font-family: {{ variants_price_font.family }}, {{ variants_price_font.fallback_families }};
-      font-weight: {{ variants_price_font.weight }};
-      font-style: {{ variants_price_font.style }};
-    }
-  </style>
-{% endif %}
-
-{% if modal_heading_custom %}
-  <style>
-    .video-modal-heading-{{ section.id }} {
-      font-family: {{ modal_heading_font.family }}, {{ modal_heading_font.fallback_families }};
-      font-weight: {{ modal_heading_font.weight }};
-      font-style: {{ modal_heading_font.style }};
-    }
-  </style>
-{% endif %}
-
-{% if modal_text_custom %}
-  <style>
-    .video-modal-text-{{ section.id }} {
-      font-family: {{ modal_text_font.family }}, {{ modal_text_font.fallback_families }};
-      font-weight: {{ modal_text_font.weight }};
-      font-style: {{ modal_text_font.style }};
-    }
-  </style>
-{% endif %}
-
-{% if modal_button_custom %}
-  <style>
-    .video-modal-add-{{ section.id }} {
-      font-family: {{ modal_button_font.family }}, {{ modal_button_font.fallback_families }};
-      font-weight: {{ modal_button_font.weight }};
-      font-style: {{ modal_button_font.style }};
-    }
-  </style>
-{% endif %}
-
-{% if modal_title_custom %}
-  <style>
-    .video-modal-product-title-{{ section.id }} {
-      font-family: {{ modal_title_font.family }}, {{ modal_title_font.fallback_families }};
-      font-weight: {{ modal_title_font.weight }};
-      font-style: {{ modal_title_font.style }};
-    }
-  </style>
-{% endif %}
-
-{% if modal_price_custom %}
-  <style>
-    .video-modal-product-price-{{ section.id }} {
-      font-family: {{ modal_price_font.family }}, {{ modal_price_font.fallback_families }};
-      font-weight: {{ modal_price_font.weight }};
-      font-style: {{ modal_price_font.style }};
-    }
-  </style>
-{% endif %}
-
 {% if card_shadow %}
   <style>
     .video-slide-{{ section.id }} {
-      box-shadow: 0px 0px 10px {{ card_shadow_color | hex_to_rgba: 0.25 }} !important;
+      box-shadow: 0 0 10px {{ card_shadow_color | hex_to_rgba: 0.25 }} !important;
     }
 
     .video-slider-{{ section.id }} {
-      padding: 10px  !important;
+      padding: 10px !important;
     }
   </style>
 {% endif %}
 
 {% if video_ratio_mobile == 'portrait' %}
   <style>
-    .video-top-{{ section.id }} {
-     aspect-ratio: 9.6/16;
-    }
+    .video-top-{{ section.id }} { aspect-ratio: 9.6/16; }
   </style>
 {% elsif video_ratio_mobile == 'landscape' %}
   <style>
-    .video-top-{{ section.id }} {
-     aspect-ratio: 12/7;
-    }
+    .video-top-{{ section.id }} { aspect-ratio: 12/7; }
   </style>
 {% elsif video_ratio_mobile == 'square' %}
   <style>
-    .video-top-{{ section.id }} {
-     aspect-ratio: 12/12;
-    }
+    .video-top-{{ section.id }} { aspect-ratio: 12/12; }
   </style>
 {% endif %}
 
 {% if video_ratio == 'portrait' %}
   <style>
     @media(min-width: 1024px) {
-     .video-top-{{ section.id }} {
-       aspect-ratio: 9.6/16;
-      }
+      .video-top-{{ section.id }} { aspect-ratio: 9.6/16; }
     }
   </style>
 {% elsif video_ratio == 'landscape' %}
   <style>
     @media(min-width: 1024px) {
-      .video-top-{{ section.id }} {
-       aspect-ratio: 12/7;
-      }
+      .video-top-{{ section.id }} { aspect-ratio: 12/7; }
     }
   </style>
 {% elsif video_ratio == 'square' %}
   <style>
     @media(min-width: 1024px) {
-      .video-top-{{ section.id }} {
-       aspect-ratio: 12/12;
-      }
+      .video-top-{{ section.id }} { aspect-ratio: 12/12; }
     }
   </style>
 {% else %}
   <style>
     @media(min-width: 1024px) {
-      .video-top-{{ section.id }} {
-       aspect-ratio: auto;
-      }
+      .video-top-{{ section.id }} { aspect-ratio: auto; }
     }
   </style>
 {% endif %}
 
-{% if modal_video_ratio_mobile == 'portrait' %}
-  <style>
-    .video-modal-left-{{ section.id }} {
-     aspect-ratio: 9.6/16;
-    }
-  </style>
-{% elsif modal_video_ratio_mobile == 'landscape' %}
-  <style>
-    .video-modal-left-{{ section.id }} {
-     aspect-ratio: 12/7;
-    }
-  </style>
-{% elsif modal_video_ratio_mobile == 'square' %}
-  <style>
-    .video-modal-left-{{ section.id }} {
-     aspect-ratio: 12/12;
-    }
-  </style>
-{% else %}
-  <style>
-    .video-modal-left-{{ section.id }} {
-     aspect-ratio: auto;
-    }
-  </style>
-{% endif %}
-
-{% if modal_video_ratio == 'portrait' %}
-  <style>
-    @media(min-width: 1024px) {
-     .video-modal-left-{{ section.id }} {
-       aspect-ratio: 9.6/16;
-      }
-    }
-  </style>
-{% elsif modal_video_ratio == 'landscape' %}
-  <style>
-    @media(min-width: 1024px) {
-      .video-modal-left-{{ section.id }} {
-       aspect-ratio: 12/7;
-      }
-    }
-  </style>
-{% elsif modal_video_ratio == 'square' %}
-  <style>
-    @media(min-width: 1024px) {
-      .video-modal-left-{{ section.id }} {
-       aspect-ratio: 12/12;
-      }
-    }
-  </style>
-{% else %}
-  <style>
-    @media(min-width: 1024px) {
-      .video-modal-left-{{ section.id }} {
-       aspect-ratio: auto;
-      }
-    }
-  </style>
-{% endif %}
-
-{% if modal_button_align_mobile == 'center' %}
-  <style>
-    .video-modal-add-{{ section.id }} {
-       margin-left: auto;
-       margin-right: auto;
-     }
-  </style>
-{% elsif modal_button_align_mobile == 'right' %}
-  <style>
-    .video-modal-add-{{ section.id }} {
-       margin-left: auto;
-     }
-  </style>
-{% endif %}
-
-{% if modal_button_align == 'center' %}
-  <style>
-    @media(min-width: 1024px) {
-     .video-modal-add-{{ section.id }} {
-        margin-left: auto !important;
-        margin-right: auto !important;
-      }
-    }
-  </style>
-{% elsif modal_button_align == 'right' %}
-  <style>
-    @media(min-width: 1024px) {
-     .video-modal-add-{{ section.id }} {
-        margin-left: auto !important;
-        margin-right: 0px !important;
-      }
-    }
-  </style>
-{% else %}
-  <style>
-    @media(min-width: 1024px) {
-     .video-modal-add-{{ section.id }} {
-        margin-left: 0px !important;
-        margin-right: 0px !important;
-      }
-    }
-  </style>
-{% endif %}
-
-{% if title_uppercase %}
-  <style>
-    .video-product-title-{{ section.id }} {
-      text-transform: uppercase;
-    }
-  </style>
-{% endif %}
-
-{% if modal_title_uppercase %}
-  <style>
-    .video-modal-product-title-{{ section.id }} {
-      text-transform: uppercase;
-    }
-  </style>
-{% endif %}
-
-<style>
-  .video-modal-add-{{ section.id }} {
-    max-width: 100%;
-  }
-</style>
-
-{% comment %}PREVIEW{% endcomment %}
+{% comment %} PREVIEW {% endcomment %}
 <style>
   .video-slider-{{ section.id }}.preview .swiper-wrapper {
     display: flex;
@@ -1259,7 +420,7 @@
   }
 
   @media(min-width: 1024px) {
-   .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }} {
+    .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }} {
       width: calc(20% - {{ slider_gap }}px);
     }
 
@@ -1288,386 +449,111 @@
       <div class="swiper-wrapper">
         {% for block in section.blocks %}
           <div class="video-slide-{{ section.id }} swiper-slide">
-            <div class="video-top-{{ section.id }}" id="{{ section.id }}">
+            <div class="video-top-{{ section.id }}">
               {% assign video_id = block.settings.video.id | default: block.settings.video_url.id %}
+
               {%- if block.settings.video == null and block.settings.video_url != null -%}
                 {% assign loop = '&loop=1&playlist=' | append: video_id %}
 
                 {%- if block.settings.video_url.type == 'youtube' -%}
                   <iframe
-  {% if lazy %}
-    data-
-  {% endif -%}
-  src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&mute=1&playsinline=1&autoplay={% if block.settings.autoplay %}1{% else %}0{% endif %}&controls=0{{ loop }}"
-  class="lazy"
-  allow="autoplay; encrypted-media"
-  allowfullscreen
-  {% if lazy %}
-    loading="lazy"
-  {% endif %}
-  title="Fixed Video"
-></iframe>
-                {%- else -%}
-                  <iframe
-                    {% if lazy %}
-                      data-
-                    {% endif -%}
-src="https://player.vimeo.com/video/{{ video_id }}?enablejsapi=1&mute=1&muted=1&background=1&autoplay={% if block.settings.autoplay %}1{% else %}0{% endif %}&controls=0&showinfo=0{{ loop }}"                    class="lazy"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen
-                    {% if lazy %}
-                      loading="lazy"
-                    {% endif %}
-                    title="Fixed Video"
-                  ></iframe>
-                {% endif %}
-              {% else %}
-                {% assign poster_url = block.settings.poster | image_url %}
-                {% assign placeholder_video = 'https://cdn.shopify.com/videos/c/o/v/fbb140fd46e3429eba459e1549dbbe38.mp4' %}
-            <video
-  {% if lazy %}
-    data-
-  {% endif -%}
-  src="{% if block.settings.video != blank %}{{ block.settings.video.sources[1].url }}{% else %}{{ placeholder_video }}{% endif %}"
-  muted
-  defaultMuted
-  playsinline
-  autoplay
-  preload="none"
-  loop
-  class="lazy"
-  poster="{{ poster_url }}"
-></video>
-              {% endif %}
-
-              {% if block.settings.product != blank %}
-                <div class="video-product-{{ section.id }}">
-                  <div class="video-product-image-{{ section.id }}">
-                    {% if block.product.selected_or_first_available_variant.featured_image != blank %}
-                      <img
-                        src="{{ block.settings.product.selected_or_first_available_variant.featured_image | image_url }}"
-                        alt="{{ block.settings.product.selected_or_first_available_variant.featured_image.alt }}"
-                        {% if lazy %}
-                          lazy="loading"
-                        {% endif %}
-                        data-shoppable-image--{{ forloop.index }}
-                      >
-                    {% else %}
-                      <img
-                        src="{{ block.settings.product.featured_image | image_url }}"
-                        alt="{{ block.settings.product.featured_image.alt }}"
-                        {% if lazy %}
-                          lazy="loading"
-                        {% endif %}
-                        data-shoppable-image--{{ forloop.index }}
-                      >
-                    {% endif %}
-                  </div>
-<div class="video-product-info-{{ section.id }}">
-                      <p class="video-product-title-{{ section.id }}">{{ block.settings.product.title }}</p>
-                    <p class="video-product-price-{{ section.id }}" data-shoppable-price--{{ forloop.index }}>
-                      {{ block.settings.product.price | money }}
-                    </p>
-                  </div>
-                </div>
-              {% endif %}
-
-              {% if block.settings.use_variants %}
-                <div class="video-variants-{{ section.id }}">
-                  {%- unless block.settings.product.has_only_default_variant -%}
-                    {%- for option in block.settings.product.options_with_values -%}
-                      <div class="video-option-{{ section.id }}">
-                        <p class="video-option-name-{{ section.id }}">{{ option.name }}:</p>
-                        <div class="video-options-{{ section.id }}">
-                          <select
-                            class="video-select-{{ section.id }}"
-                            data-shoppable-select--{{ block.id | replace: '-', '' }}
-                          >
-                            {%- for value in option.values -%}
-                              <option value="{{ value }}">{{ value }}</option>
-                            {% endfor %}
-                          </select>
-                          <span>
-                            <svg
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokelinejoin="2"
-                              strokelinecap="round"
-                              class="feather feather-chevron-down"
-                            >
-                              <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                          </span>
-                        </div>
-                      </div>
-                    {%- endfor -%}
-                  {% endunless %}
-
-                  <p class="video-option-price-{{ section.id }}" data-shoppable-option-price--{{ forloop.index }}>
-                    {{ block.settings.product.price | money }}
-                  </p>
-                </div>
-              {% endif %}
-            </div>
-            <div class="video-bottom-{{ section.id }}">
-              {%- assign product_form_id = 'product-form-' | append: block.id -%}
-              {% if block.settings.product != blank %}
-                {%- form 'product',
-                  block.settings.product,
-                  id: product_form_id,
-                  class: 'form',
-                  novalidate: 'novalidate',
-                  data-type: 'add-to-cart-form'
-                -%}
-                  <input
-                    type="hidden"
-                    name="id"
-                    value="{{ block.settings.product.selected_or_first_available_variant.id }}"
-                    data-shoppable-input--{{ forloop.index }}
-                  >
-
-                  <button
-                    type="submit"
-                    class="video-add-{{ section.id }}"
-                    data-shoppable-button--{{ forloop.index }}
-                    {% unless block.settings.product.selected_or_first_available_variant.available %}
-                      disabled
-                    {% endunless %}
-                  >
-                    {% if block.settings.product.selected_or_first_available_variant.available -%}
-                      {{- button -}}
-                    {%- else -%}
-                      {{- button_soldout -}}
-                    {%- endif %}
-                  </button>
-                {%- endform -%}
-              {% else %}
-                <div class="form">
-                  <button class="video-add-{{ section.id }}">{{ button }}</button>
-                </div>
-              {% endif %}
-
-              {% if block.settings.use_variants %}
-                <button class="video-arrow-{{ section.id }}">
-                  <svg viewBox="0 0 32 32">
-                    <rect width="32" height="32" fill="#fff" opacity="0"></rect><path fill="rgba(255, 255, 255, 1)" d="M16.7,20.67l0,0,7-7.71a1.2,1.2,0,0,0,0-1.57h0A1,1,0,0,0,23,11H9a.91.91,0,0,0-.72.35h0a1.2,1.2,0,0,0,0,1.57l7,7.75a.93.93,0,0,0,1.31.11A.52.52,0,0,0,16.7,20.67Z"></path>
-                  </svg>
-                </button>
-              {% endif %}
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="video-modal-{{ section.id }}">
-  <div class="video-modal-inner-{{ section.id }}">
-    <div class="video-modal-slider-{{ section.id }} swiper">
-      <div class="swiper-wrapper">
-        {% for block in section.blocks %}
-          <div class="video-modal-slide-{{ section.id }} swiper-slide">
-            <div
-              class="video-modal-left-{{ section.id }}"
-              {% if block.settings.video != blank %}
-                data-video-src="{{ block.settings.video.sources[0].url }}"
-              {% endif %}
-            >
-              {% assign video_id = block.settings.video.id | default: block.settings.video_url.id %}
-              {%- if block.settings.video == null and block.settings.video_url != null -%}
-                {% assign loop = '&loop=1&playlist=' | append: video_id %}
-                {% assign autoplay = '&mute=1&autoplay=1' %}
-
-                {%- if block.settings.video_url.type == 'youtube' -%}
-                  <iframe
-                    {% if lazy %}
-                      data-
-                    {% endif -%}
-                    src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1{{ loop }}"
-                    data-src1="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&mute=1{{ loop }}"
-                    data-src2="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1{{ loop }}"
-                    data-src3="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1{{ autoplay }}{{ loop }}"
+                    {% if lazy %}data-{% endif -%}
+                    src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&mute=1&playsinline=1&autoplay={% if block.settings.autoplay %}1{% else %}0{% endif %}&controls=0{{ loop }}"
                     class="lazy"
                     allow="autoplay; encrypted-media"
                     allowfullscreen
-                    {% if lazy %}
-                      loading="lazy"
-                    {% endif %}
-                    title="Fixed Video"
+                    {% if lazy %}loading="lazy"{% endif %}
+                    title="Video"
                   ></iframe>
                 {%- else -%}
                   <iframe
-                    {% if lazy %}
-                      data-
-                    {% endif -%}
-                    src="https://player.vimeo.com/video/{{ video_id }}{{ loop }}"
-                    data-src1="https://player.vimeo.com/video/{{ video_id }}?enablejsapi=1&mute=1{{ loop }}"
-                    data-src2="https://player.vimeo.com/video/{{ video_id }}?enablejsapi=1&autoplay=1{{ loop }}"
-                    data-src3="https://player.vimeo.com/video/{{ video_id }}{{ autoplay }}{{ loop }}"
+                    {% if lazy %}data-{% endif -%}
+                    src="https://player.vimeo.com/video/{{ video_id }}?muted=1&background=1&autoplay={% if block.settings.autoplay %}1{% else %}0{% endif %}{{ loop }}"
                     class="lazy"
                     allow="autoplay; encrypted-media"
                     allowfullscreen
-                    {% if lazy %}
-                      loading="lazy"
-                    {% endif %}
-                    title="Fixed Video"
+                    {% if lazy %}loading="lazy"{% endif %}
+                    title="Video"
                   ></iframe>
                 {% endif %}
               {% else %}
                 {% assign poster_url = block.settings.poster | image_url %}
                 {% assign placeholder_video = 'https://cdn.shopify.com/videos/c/o/v/fbb140fd46e3429eba459e1549dbbe38.mp4' %}
                 <video
-  {% if lazy %}
-    data-
-  {% endif -%}
-  src="{% if block.settings.video != blank %}{{ block.settings.video.sources[1].url }}{% else %}{{ placeholder_video }}{% endif %}"
-  muted
-  defaultMuted
-  playsinline
-  autoplay
-  preload="none"
-  loop
-  class="lazy"
-  poster="{{ poster_url }}"
-></video>
+                  {% if lazy %}data-{% endif -%}
+                  src="{% if block.settings.video != blank %}{{ block.settings.video.sources[1].url }}{% else %}{{ placeholder_video }}{% endif %}"
+                  muted
+                  defaultMuted
+                  playsinline
+                  {% if block.settings.autoplay %}autoplay{% endif %}
+                  preload="none"
+                  loop
+                  class="lazy"
+                  poster="{{ poster_url }}"
+                ></video>
               {% endif %}
-              <div class="video-modal-action-{{ section.id }}">
-                <svg class="video-modal-mute-{{ section.id }}" viewBox="0 0 24 24" width="24" height="24">
-                  <path fill="none" d="M0 0h24v24H0z"></path><path d="M5.889 16H2a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h3.889l5.294-4.332a.5.5 0 0 1 .817.387v15.89a.5.5 0 0 1-.817.387L5.89 16zm14.525-4l3.536 3.536-1.414 1.414L19 13.414l-3.536 3.536-1.414-1.414L17.586 12 14.05 8.464l1.414-1.414L19 10.586l3.536-3.536 1.414 1.414L20.414 12z"></path>
-                </svg>
-                <svg class="video-modal-unmute-{{ section.id }}" viewBox="0 0 24 24" width="24" height="24">
-                  <path fill="none" d="M0 0h24v24H0z"></path><path d="M5.889 16H2a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h3.889l5.294-4.332a.5.5 0 0 1 .817.387v15.89a.5.5 0 0 1-.817.387L5.89 16zm13.517 4.134l-1.416-1.416A8.978 8.978 0 0 0 21 12a8.982 8.982 0 0 0-3.304-6.968l1.42-1.42A10.976 10.976 0 0 1 23 12c0 3.223-1.386 6.122-3.594 8.134zm-3.543-3.543l-1.422-1.422A3.993 3.993 0 0 0 16 12c0-1.43-.75-2.685-1.88-3.392l1.439-1.439A5.991 5.991 0 0 1 18 12c0 1.842-.83 3.49-2.137 4.591z"></path>
-                </svg>
-              </div>
+
+              {% if block.settings.product != blank %}
+                <div class="video-product-{{ section.id }}">
+                  <div class="video-product-image-{{ section.id }}">
+                    {% if block.settings.product.selected_or_first_available_variant.featured_image != blank %}
+                      <img
+                        src="{{ block.settings.product.selected_or_first_available_variant.featured_image | image_url }}"
+                        alt="{{ block.settings.product.selected_or_first_available_variant.featured_image.alt }}"
+                        {% if lazy %}loading="lazy"{% endif %}
+                      >
+                    {% else %}
+                      <img
+                        src="{{ block.settings.product.featured_image | image_url }}"
+                        alt="{{ block.settings.product.featured_image.alt }}"
+                        {% if lazy %}loading="lazy"{% endif %}
+                      >
+                    {% endif %}
+                  </div>
+
+                  <div class="video-product-info-{{ section.id }}">
+                    <p class="video-product-title-{{ section.id }}">{{ block.settings.product.title }}</p>
+                    <p class="video-product-price-{{ section.id }}">
+                      {{ block.settings.product.price | money }}
+                    </p>
+                  </div>
+                </div>
+              {% endif %}
             </div>
-            <div class="video-modal-right-{{ section.id }}">
-              <div class="video-modal-right-info">
-                {% if block.settings.modal_heading != blank %}
-                  <div class="video-modal-heading-{{ section.id }}">
-                    {{ block.settings.modal_heading }}
-                  </div>
-                {% endif %}
-                {% if block.settings.modal_text != blank %}
-                  <div class="video-modal-text-{{ section.id }}">
-                    {{ block.settings.modal_text }}
-                  </div>
-                {% endif %}
-              </div>
-              {% if use_modal_product %}
-                <div class="video-modal-right-bottom-{{ section.id }}">
-                  {% if block.settings.product != blank %}
-                    <div class="video-modal-product-{{ section.id }}">
-                      <div class="video-modal-product-image-{{ section.id }}">
-                        {% if block.product.selected_or_first_available_variant.featured_image != blank %}
-                          <img
-                            src="{{ block.settings.product.selected_or_first_available_variant.featured_image | image_url }}"
-                            alt="{{ block.settings.product.selected_or_first_available_variant.featured_image.alt }}"
-                            {% if lazy %}
-                              lazy="loading"
-                            {% endif %}
-                            data-shoppable-modal-image--{{ forloop.index }}
-                          >
-                        {% else %}
-                          <img
-                            src="{{ block.settings.product.featured_image | image_url }}"
-                            alt="{{ block.settings.product.featured_image.alt }}"
-                            {% if lazy %}
-                              lazy="loading"
-                            {% endif %}
-                            data-shoppable-modal-image--{{ forloop.index }}
-                          >
-                        {% endif %}
-                      </div>
-<div class="video-modal-product-info-{{ section.id }}">
-                          <p class="video-modal-product-title-{{ section.id }}">{{ block.settings.product.title }}</p>
-                        <p
-                          class="video-modal-product-price-{{ section.id }}"
-                          data-shoppable-modal-price--{{ forloop.index }}
-                        >
-                          {{ block.settings.product.price | money }}
-                        </p>
-                      </div>
-                    </div>
-                  {% endif %}
-                  {% if block.settings.use_variants %}
-                    {%- unless block.settings.product.has_only_default_variant -%}
-                      {%- for option in block.settings.product.options_with_values -%}
-                        <div class="video-option-{{ section.id }} video-modal-option-{{ section.id }}">
-                          <p class="video-option-name-{{ section.id }}">{{ option.name }}:</p>
-                          <div class="video-options-{{ section.id }}">
-                            <select
-                              class="video-select-{{ section.id }}"
-                              data-shoppable-modal-select--{{ block.id | replace: '-', '' }}
-                            >
-                              {%- for value in option.values -%}
-                                <option value="{{ value }}">{{ value }}</option>
-                              {% endfor %}
-                            </select>
-                            <span>
-                              <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokelinejoin="2"
-                                strokelinecap="round"
-                                class="feather feather-chevron-down"
-                              >
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                              </svg>
-                            </span>
-                          </div>
-                        </div>
-                      {%- endfor -%}
+
+            <div class="video-bottom-{{ section.id }}">
+              {%- assign product_form_id = 'product-form-' | append: block.id -%}
+
+              {% if block.settings.product != blank %}
+                {%- form 'product',
+                  block.settings.product,
+                  id: product_form_id,
+                  class: 'form shoppable-form',
+                  novalidate: 'novalidate'
+                -%}
+                  <input
+                    type="hidden"
+                    name="id"
+                    value="{{ block.settings.product.selected_or_first_available_variant.id }}"
+                  >
+
+                  <button
+                    type="submit"
+                    class="video-add-{{ section.id }}"
+                    {% unless block.settings.product.selected_or_first_available_variant.available %}
+                      disabled
                     {% endunless %}
-                  {% endif %}
-                  {% if block.settings.product != blank %}
-                    {%- assign product_modal_form_id = 'product-modal-form-' | append: block.id -%}
-                    {%- form 'product',
-                      block.settings.product,
-                      id: product_modal_form_id,
-                      class: 'form',
-                      novalidate: 'novalidate',
-                      data-type: 'add-to-cart-form'
-                    -%}
-                      <input
-                        type="hidden"
-                        name="id"
-                        value="{{ block.settings.product.selected_or_first_available_variant.id }}"
-                        data-shoppable-modal-input--{{ forloop.index }}
-                      >
-
-                      {%- liquid
-                        assign check_against_inventory = true
-                        if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
-                          assign check_against_inventory = false
-                        endif
-                        if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
-                          assign quantity_rule_soldout = true
-                        endif
-                      -%}
-
-                      <button
-                        type="submit"
-                        class="video-modal-add-{{ section.id }}"
-                        data-shoppable-modal-button--{{ forloop.index }}
-                        {% unless block.settings.product.selected_or_first_available_variant.available %}
-                          disabled
-                        {% endunless %}
-                      >
-                        {% if block.settings.product.selected_or_first_available_variant.available -%}
-                          {{- modal_button -}}
-                        {%- else -%}
-                          {{- modal_button_soldout -}}
-                        {%- endif %}
-                      </button>
-                    {%- endform -%}
-                  {% endif %}
+                  >
+                    {% if block.settings.product.selected_or_first_available_variant.available %}
+                      {{ button }}
+                    {% else %}
+                      {{ button_soldout }}
+                    {% endif %}
+                  </button>
+                {%- endform -%}
+              {% else %}
+                <div class="form">
+                  <button class="video-add-{{ section.id }}" type="button" disabled>{{ button }}</button>
                 </div>
               {% endif %}
             </div>
@@ -1676,24 +562,6 @@ src="https://player.vimeo.com/video/{{ video_id }}?enablejsapi=1&mute=1&muted=1&
       </div>
     </div>
   </div>
-  <button class="video-modal-close-{{ section.id }}">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0002 10.586L4.70718 3.29297L3.29297 4.70718L10.586 12.0002L3.29297 19.2933L4.70718 20.7075L12.0002 13.4145L19.2933 20.7075L20.7075 19.2933L13.4145 12.0002L20.7075 4.70723L19.2933 3.29302L12.0002 10.586Z" fill="white"></path>
-    </svg>
-  </button>
-  {% if section.blocks.size > 1 %}
-    <button class="video-modal-prev-{{ section.id }}">
-      <svg viewBox="0 0 24 24">
-        <path d="m8.5 12.8 5.7 5.6c.4.4 1 .4 1.4 0 .4-.4.4-1 0-1.4l-4.9-5 4.9-5c.4-.4.4-1 0-1.4-.2-.2-.4-.3-.7-.3-.3 0-.5.1-.7.3l-5.7 5.6c-.4.5-.4 1.1 0 1.6 0-.1 0-.1 0 0z"></path>
-      </svg>
-    </button>
-
-    <button class="video-modal-next-{{ section.id }}">
-      <svg viewBox="0 0 24 24">
-        <path d="M15.54,11.29,9.88,5.64a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l4.95,5L8.46,17a1,1,0,0,0,0,1.41,1,1,0,0,0,.71.3,1,1,0,0,0,.71-.3l5.66-5.65A1,1,0,0,0,15.54,11.29Z"></path>
-      </svg>
-    </button>
-  {% endif %}
 </div>
 
 {% if lazy %}
@@ -1701,416 +569,139 @@ src="https://player.vimeo.com/video/{{ video_id }}?enablejsapi=1&mute=1&muted=1&
 {% endif %}
 
 <script>
-
   function loadSwiper(callback) {
     if (window.Swiper) {
       callback();
     } else {
       const script = document.createElement('script');
-      script.src = "https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js";
+      script.src = 'https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js';
       script.onload = callback;
       document.head.appendChild(script);
     }
   }
 
-  var formayMoneyForBuyItWith = function(cents, format) {
-    if (typeof cents == 'string') { cents = cents.replace('.',''); }
-    var value = '';
-    var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
-    var formatString = (format || this.money_format);
-  
-    function defaultOption(opt, def) {
-       return (typeof opt == 'undefined' ? def : opt);
+  async function addToCart(form) {
+    const response = await fetch('/cart/add.js', {
+      method: 'POST',
+      body: new FormData(form)
+    });
+
+    if (!response.ok) {
+      throw new Error('Add to cart failed');
     }
-  
-    function formatWithDelimiters(number, precision, thousands, decimal) {
-      precision = defaultOption(precision, 2);
-      thousands = defaultOption(thousands, ',');
-      decimal   = defaultOption(decimal, '.');
-  
-      if (isNaN(number) || number == null) { return 0; }
-  
-      number = (number/100.0).toFixed(precision);
-  
-      var parts   = number.split('.'),
-          dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands),
-          cents   = parts[1] ? (decimal + parts[1]) : '';
-  
-      return dollars + cents;
+
+    return response.json();
+  }
+
+  async function getCart() {
+    const response = await fetch('/cart.js');
+    return response.json();
+  }
+
+  function updateCartBubble(itemCount) {
+    const bubbleSpan = document.querySelector('.cart-count-bubble span[aria-hidden="true"]');
+    if (bubbleSpan) {
+      bubbleSpan.textContent = itemCount;
+      return;
     }
-  
-    switch(formatString.match(placeholderRegex)[1]) {
-      case 'amount':
-        value = formatWithDelimiters(cents, 2);
-        break;
-      case 'amount_no_decimals':
-        value = formatWithDelimiters(cents, 0);
-        break;
-      case 'amount_with_comma_separator':
-        value = formatWithDelimiters(cents, 2, '.', ',');
-        break;
-      case 'amount_no_decimals_with_comma_separator':
-        value = formatWithDelimiters(cents, 0, '.', ',');
-        break;
+
+    const headerCart = document.querySelector('#cart-icon-bubble');
+    if (!headerCart) return;
+
+    const existingBubble = headerCart.querySelector('.cart-count-bubble');
+    if (existingBubble) {
+      const span = existingBubble.querySelector('span[aria-hidden="true"]');
+      if (span) span.textContent = itemCount;
+      return;
     }
-  
-    return formatString.replace(placeholderRegex, value);
-  };
-  
-  .video-arrow-{{ section.id }},
-.video-variants-{{ section.id }} {
-  display: none !important;
-}
 
-.video-bottom-{{ section.id }} .form {
-  flex: 1 1 100%;
-}
+    const cartCountBubble = document.createElement('div');
+    cartCountBubble.className = 'cart-count-bubble';
+    cartCountBubble.innerHTML = '<span aria-hidden="true">' + itemCount + '</span><span class="visually-hidden">' + itemCount + ' items</span>';
+    headerCart.appendChild(cartCountBubble);
+  }
 
-.video-product-title-{{ section.id }},
-.video-product-price-{{ section.id }},
-.video-option-price-{{ section.id }} {
-  color: #ffffff !important;
-}
-.video-arrow-{{ section.id }},
-.video-variants-{{ section.id }} {
-  display: none !important;
-}
+  function initShoppableVideo(sectionId) {
+    const section = document.querySelector('.video-' + sectionId);
+    if (!section) return;
 
-.video-bottom-{{ section.id }} .form {
-  flex: 1 1 100%;
-}
+    const sliderEl = section.querySelector('.video-slider-' + sectionId);
+    if (!sliderEl) return;
 
-.video-product-title-{{ section.id }},
-.video-product-price-{{ section.id }},
-.video-option-price-{{ section.id }} {
-  color: #ffffff !important;
-}
+    section.querySelectorAll('video').forEach((video) => {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.volume = 0;
+      video.setAttribute('muted', '');
+    });
 
-function initShoppableVideo(sectionId) {
-  document.querySelectorAll(`.video-${sectionId} video`).forEach((video) => {
-    video.muted = true;
-    video.defaultMuted = true;
-    video.volume = 0;
-    video.setAttribute('muted', '');
-  });
+    sliderEl.classList.remove('preview');
 
-  document.querySelector(`.video-slider-${sectionId}`).classList.remove('preview');
-    
-    const slider = new Swiper(`.video-slider-${sectionId}`, {
+    new Swiper('.video-slider-' + sectionId, {
       speed: 300,
-      navigation: {
-        nextEl: `.video-btn-next-${sectionId}`,
-        prevEl: `.video-btn-prev-${sectionId}`
-      },
-      pagination: {
-        el: `.video-pagination-${sectionId}`,
-        draggable: true,
-        clickable: true
-      },
       breakpoints: {
         320: {
-           spaceBetween: parseInt(document.querySelector(`.video-slider-${sectionId}`).dataset.gapMobile || 0),
-          slidesPerView: parseFloat(document.querySelector(`.video-slider-${sectionId}`).dataset.viewMobile),
+          spaceBetween: parseInt(sliderEl.dataset.gapMobile || 0, 10),
+          slidesPerView: parseFloat(sliderEl.dataset.viewMobile)
         },
         768: {
-          spaceBetween: parseInt(document.querySelector(`.video-slider-${sectionId}`).dataset.gapMobile || 0),
-          slidesPerView: parseFloat(document.querySelector(`.video-slider-${sectionId}`).dataset.viewMobile),
+          spaceBetween: parseInt(sliderEl.dataset.gapMobile || 0, 10),
+          slidesPerView: parseFloat(sliderEl.dataset.viewMobile)
         },
         1024: {
-           spaceBetween: parseInt(document.querySelector(`.video-slider-${sectionId}`).dataset.gap || 0),
-          slidesPerView: parseFloat(document.querySelector(`.video-slider-${sectionId}`).dataset.view ),
+          spaceBetween: parseInt(sliderEl.dataset.gap || 0, 10),
+          slidesPerView: parseFloat(sliderEl.dataset.view)
         }
       }
     });
 
-    const slider2 = new Swiper(`.video-modal-slider-${sectionId}`, {
-      speed: 300,
-      slidesPerView: 1,
-      spaceBetween: 20,
-      allowTouchMove: false,
-      navigation: {
-        nextEl: `.video-modal-next-${sectionId}`,
-        prevEl: `.video-modal-prev-${sectionId}`
-      },
-      on: {
-        slideChange: function () {
-          const slides = this.slides;
-    
-          for (let i = 0; i < slides.length; i++) {
-            let video = slides[i].querySelector('video');
-            let frame = slides[i].querySelector('iframe');
-            let btn = slides[i].querySelector(`.video-modal-action-${sectionId}`);
-            let src;
-            let src1;
-            let src2;
-            if(frame) {
-              src1 = frame.getAttribute('data-src');
-              src2 = frame.getAttribute('data-src2');
-            }
-    
-            if (i === this.activeIndex) {
-  if (video) {
-    video.play();
-    video.muted = false;
-  }
+    section.querySelectorAll('.shoppable-form').forEach((form) => {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-  if(frame) {
-    frame.src = src2;
-  }
+        const button = form.querySelector('button[type="submit"]');
+        if (!button || button.disabled) return;
 
-  if(btn) {
-    btn.classList.add('active');
-  }
-} else {
-              if (video) {
-                video.pause();
-              }
+        const originalText = button.textContent;
+        button.disabled = true;
 
-              if(frame) {
-                frame.src = src1;
-              }
-            }
-          }
-        },
-      },
-    });
+        try {
+          await addToCart(form);
+          const cart = await getCart();
+          updateCartBubble(cart.item_count);
+          button.textContent = 'Added';
 
-    document.querySelectorAll(`.video-slide-${sectionId}`).forEach(el => {
-      let arrowToggle = el.querySelector(`.video-arrow-${sectionId}`);
-      let variangsContainer = el.querySelector(`.video-variants-${sectionId}`);
-      if(arrowToggle) { 
-        arrowToggle.addEventListener('click', () => {
-          variangsContainer.classList.toggle('active');
-        })
-      }
-    })
+          {% if redirect_after_adding %}
+            window.location.href = '{{ shop.url }}/cart';
+            return;
+          {% endif %}
 
-    {% if section.blocks.size > 0 %}
-      
-      {% for block in section.blocks %}
-
-        let product{{ forloop.index }} = {{ all_products[block.settings.product] | json }};
-        let selects{{ block.id | replace: '-', '' }} = document.querySelectorAll('[data-shoppable-select--{{ block.id | replace: '-', '' }}]');
-        let input{{ forloop.index }} = document.querySelector('[data-shoppable-input--{{ forloop.index }}]');
-        let image{{ forloop.index }} = document.querySelector('[data-shoppable-image--{{ forloop.index }}]');
-        let priceElement{{ forloop.index }} = document.querySelector('[data-shoppable-price--{{ forloop.index }}]');
-        let optionPrice{{ forloop.index }} = document.querySelector('[data-shoppable-option-price--{{ forloop.index }}]');
-        let button{{ forloop.index }} = document.querySelector('[data-shoppable-button--{{ forloop.index }}]');
-        let form{{ block.id | replace: '-', '' }} = document.querySelector('#product-form-{{ block.id }}');
-
-        let modalSelects{{ block.id | replace: '-', '' }} = document.querySelectorAll('[data-shoppable-modal-select--{{ block.id | replace: '-', '' }}]');
-        let modalInput{{ forloop.index }} = document.querySelector('[data-shoppable-modal-input--{{ forloop.index }}]');
-        let modalImage{{ forloop.index }} = document.querySelector('[data-shoppable-modal-image--{{ forloop.index }}]');
-        let modalPriceElement{{ forloop.index }} = document.querySelector('[data-shoppable-modal-price--{{ forloop.index }}]');
-        let modalButton{{ forloop.index }} = document.querySelector('[data-shoppable-modal-button--{{ forloop.index }}]');
-        let modalForm{{ block.id | replace: '-', '' }} = document.querySelector('#product-modal-form-{{ block.id }}');
-
-        if(selects{{ block.id | replace: '-', '' }}) {
-
-          selects{{ block.id | replace: '-', '' }}.forEach(el => {
-            el.addEventListener('change', () => {
-  
-              var selectedOptions = [];
-  
-              selects{{ block.id | replace: '-', '' }}.forEach(element => {
-                selectedOptions.push(element.value);
-              })
-  
-              var matchedVariant = product{{ forloop.index }}.variants.find(variant => {
-                var pass = true;
-                
-                for( var i = 0; i < selectedOptions.length; i++ ) {
-                  if(selectedOptions.indexOf(variant.options[i]) === -1) {
-                    pass = false;
-                    break;
-                  }
-                }
-  
-                return pass;
-              })
-              
-              let price{{ forloop.index }} = matchedVariant.price;
-              priceElement{{ forloop.index }}.innerHTML = formayMoneyForBuyItWith(price{{ forloop.index }}, '{{ shop.money_format }}');
-              optionPrice{{ forloop.index }}.innerHTML = formayMoneyForBuyItWith(price{{ forloop.index }}, '{{ shop.money_format }}');
-              
-              input{{ forloop.index }}.value = matchedVariant.id;
-  
-              if (matchedVariant.featured_image) {
-                image{{ forloop.index }}.src = matchedVariant.featured_image.src;
-              } else {
-                image{{ forloop.index }}.src = product{{ forloop.index }}.featured_image;
-              }
-  
-              if (!matchedVariant.available) {
-                button{{ forloop.index }}.setAttribute('disabled', "");
-                button{{ forloop.index }}.innerText = `{{ button_soldout }}`;
-                button{{ forloop.index }}.style.cursor = "not-allowed";
-              } else {
-                button{{ forloop.index }}.removeAttribute('disabled');
-                button{{ forloop.index }}.innerText = `{{ button }}`;
-                button{{ forloop.index }}.style.cursor = "pointer";
-              }
-              
-            })
-          })
-          
+          setTimeout(() => {
+            button.textContent = originalText;
+            button.disabled = false;
+          }, 1500);
+        } catch (error) {
+          console.error(error);
+          button.textContent = originalText;
+          button.disabled = false;
         }
-
-       if(modalSelects{{ block.id | replace: '-', '' }}) {
-
-          modalSelects{{ block.id | replace: '-', '' }}.forEach(el => {
-            el.addEventListener('change', () => {
-  
-              var selectedOptions = [];
-  
-              modalSelects{{ block.id | replace: '-', '' }}.forEach(element => {
-                selectedOptions.push(element.value);
-              })
-  
-              var matchedVariant = product{{ forloop.index }}.variants.find(variant => {
-                var pass = true;
-                
-                for( var i = 0; i < selectedOptions.length; i++ ) {
-                  if(selectedOptions.indexOf(variant.options[i]) === -1) {
-                    pass = false;
-                    break;
-                  }
-                }
-  
-                return pass;
-              })
-              
-              let price{{ forloop.index }} = matchedVariant.price;
-              modalPriceElement{{ forloop.index }}.innerHTML = formayMoneyForBuyItWith(price{{ forloop.index }}, '{{ shop.money_format }}');
-              
-              modalInput{{ forloop.index }}.value = matchedVariant.id;
-  
-              if (matchedVariant.featured_image) {
-                modalImage{{ forloop.index }}.src = matchedVariant.featured_image.src;
-              } else {
-                modalImage{{ forloop.index }}.src = product{{ forloop.index }}.featured_image;
-              }
-  
-              if (!matchedVariant.available) {
-                modalButton{{ forloop.index }}.setAttribute('disabled', "");
-                modalButton{{ forloop.index }}.innerText = `{{ modal_button_soldout }}`;
-                modalButton{{ forloop.index }}.style.cursor = "not-allowed";
-              } else {
-                modalButton{{ forloop.index }}.removeAttribute('disabled');
-                modalButton{{ forloop.index }}.innerText = `{{ modal_button }}`;
-                modalButton{{ forloop.index }}.style.cursor = "pointer";
-              }
-              
-            })
-          })
-          
-        }
-
-        {% unless reload_after_adding %}
-          if(modalForm{{ block.id | replace: '-', '' }}) {
-             modalForm{{ block.id | replace: '-', '' }}.addEventListener('submit', async (e) => {
-              e.preventDefault();
-              await fetch('/cart/add', {
-                method: 'post',
-                body: new FormData(modalForm{{ block.id | replace: '-', '' }})
-              });
-              const res{{ forloop.index }} = await fetch("/cart.json");
-              const cart{{ forloop.index }} = await res{{ forloop.index }}.json();
-    
-              const headerCartCount{{ forloop.index }} = document.querySelector('.cart-count-bubble span');
-              if(headerCartCount{{ forloop.index }}) {
-                headerCartCount{{ forloop.index }}.textContent = cart{{ forloop.index }}.item_count;
-              }
-              setTimeout(function() {
-                modalButton{{ forloop.index }}.innerText = "Added";
-              }, 300);
-              setTimeout(function() {
-                modalButton{{ forloop.index }}.innerText = `{{ button }}`;
-              }, 2000);
-              
-            })         
-          }
-        {% endunless %}
-    
-      {% endfor %}
-      
-    {% endif %}
-
-    const toggles = document.querySelectorAll(`.video-top-${sectionId}`);
-const modal = document.querySelector(`.video-modal-${sectionId}`);
-const close = document.querySelector(`.video-modal-close-${sectionId}`);
-let activeSlideIndex = 0;
-
-toggles.forEach((el) => {
-  el.style.cursor = 'default';
-});
-    
-if (close) close.addEventListener('click', () => {
-          document.body.style.overflow = '';
-        modal.classList.remove('active');
-        let frames = modal.querySelectorAll('iframe');
-        let videos = modal.querySelectorAll('video');
-        if(frames){
-          frames.forEach(el => {
-            let src1 = el.getAttribute('data-src');
-            el.src = src1;
-            
-          });
-        }
-        if(videos){
-          videos.forEach(el => {
-            el.pause();
-            
-          });
-        }
-    });
-    
-    document.addEventListener('click', (e) => {
-        if (e.target == modal) {
-          document.body.style.overflow = '';
-          modal.classList.remove('active');
-          let frames = modal.querySelectorAll('iframe');
-          let videos = modal.querySelectorAll('video');
-          if(frames){
-            frames.forEach(el => {
-              let src1 = el.getAttribute('data-src');
-              el.src = src1;
-              
-            });
-          }
-          if(videos){
-            videos.forEach(el => {
-              el.pause();
-              
-            });
-          }
-        }
-    });
-    
-    slider2.on('slideChange', () => {
-        activeSlideIndex = slider2.realIndex !== undefined ? slider2.realIndex : slider2.activeIndex;
+      });
     });
 
     {% if lazy %}
-      var lazyLoadInstance = new LazyLoad();
-
-      window.addEventListener(
-        "LazyLoad::Initialized",
-        function (event) {
-          window.lazyLoadInstance = event.detail.instance;
-        },
-        false
-      );
+      new LazyLoad();
     {% endif %}
   }
 
   function initializeAllShoppableVideoSections() {
     const sections = document.querySelectorAll('[id^="shopify-section-"]');
-    sections.forEach(section => {
-      if (section.querySelector('.video-{{ section.id }}')) {
-        const sectionId = section.id.replace('shopify-section-', '');
-        loadSwiper(() => initShoppableVideo(sectionId));
-      }
+
+    sections.forEach((section) => {
+      const shoppable = section.querySelector('[class*="video-"]');
+      if (!shoppable) return;
+
+      const sectionId = section.id.replace('shopify-section-', '');
+      loadSwiper(() => initShoppableVideo(sectionId));
     });
   }
 
@@ -2120,12 +711,10 @@ if (close) close.addEventListener('click', () => {
     initializeAllShoppableVideoSections();
   }
 
-  if (Shopify.designMode) {
+  if (window.Shopify && Shopify.designMode) {
     document.addEventListener('shopify:section:load', (event) => {
       const sectionId = event.detail.sectionId;
-      if (event.target.querySelector('.video-{{ section.id }}')) {
-        loadSwiper(() => initShoppableVideo(sectionId));
-      }
+      loadSwiper(() => initShoppableVideo(sectionId));
     });
   }
 </script>
