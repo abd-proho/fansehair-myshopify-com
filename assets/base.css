@@ -4802,6 +4802,15 @@ back-to-top.hide {
 .template--cart .header__utils-item--cart {
   pointer-events: none;
 }
-#template--21566028939482__1658995208ad05f95f .hero__entry {
-  max-width: 200px;
+#shopify-section-template--21566028939482__1658995208ad05f95f .banner__content > * + * {
+  margin-top: 0.5rem;
 }
+
+#shopify-section-template--21566028939482__1658995208ad05f95f .banner__heading {
+  margin-bottom: 0.5rem;
+}
+
+#shopify-section-template--21566028939482__1658995208ad05f95f .banner__text {
+  margin-bottom: 0.5rem;
+}
+
