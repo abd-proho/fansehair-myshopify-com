@@ -119,6 +119,20 @@
       z-index: 2;
     }
   {%- endif -%}
+
+  /* faint white overlay on all hero media, desktop + mobile */
+#shopify-section-{{ section.id }} .hero__media {
+  position: relative;
+}
+
+#shopify-section-{{ section.id }} .hero__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.10);
+  pointer-events: none;
+  z-index: 2;
+}
 /* HERO COPY / HEADLINE / CTA */
 
 #shopify-section-{{ section.id }} .hero__copy {
