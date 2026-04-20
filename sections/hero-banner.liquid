@@ -119,12 +119,16 @@
       z-index: 2;
     }
   {%- endif -%}
-    /* HERO COPY TIGHTENING */
-  #shopify-section-{{ section.id }} .hero__copy {
+    #shopify-section-{{ section.id }} .hero__copy {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.4rem;
+    overflow: visible;
+  }
+
+  #shopify-section-{{ section.id }} .hero__animation--copy {
+    overflow: visible;
   }
 
   #shopify-section-{{ section.id }} .hero__heading,
@@ -134,35 +138,37 @@
     margin: 0;
   }
 
+  #shopify-section-{{ section.id }} .hero__heading,
+  #shopify-section-{{ section.id }} .hero__heading p {
+    overflow: visible;
+    line-height: 1.15;
+    padding-top: 0.12em;
+    padding-bottom: 0.08em;
+  }
+
   #shopify-section-{{ section.id }} .hero__button {
     margin-top: 0.8rem;
   }
 
-  /* keep body copy from getting too wide */
   #shopify-section-{{ section.id }} .hero__entry {
     max-width: 52rem;
     width: 100%;
     margin-inline: auto;
   }
 
-  /* desktop headline: one line, but smaller and safer */
   @media screen and (min-width: 990px) {
     #shopify-section-{{ section.id }} .hero__heading,
     #shopify-section-{{ section.id }} .hero__heading p {
       white-space: nowrap;
       font-size: clamp(2.8rem, 4.8vw, 5.6rem);
-      line-height: 1;
-      max-width: 100%;
     }
   }
 
-  /* tablet and down: allow wrapping */
   @media screen and (max-width: 989px) {
     #shopify-section-{{ section.id }} .hero__heading,
     #shopify-section-{{ section.id }} .hero__heading p {
       white-space: normal;
       font-size: clamp(2.6rem, 8vw, 4.4rem);
-      line-height: 1;
       text-wrap: balance;
     }
 
