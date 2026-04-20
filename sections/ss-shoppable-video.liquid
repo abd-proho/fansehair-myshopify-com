@@ -144,7 +144,7 @@
   .video-slide-{{ section.id }} {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     border-radius: {{ card_radius }}px;
     border: {{ card_border_thickness }}px solid {{ card_border_color }};
     background-color: {{ card_bg_color }};
@@ -462,7 +462,6 @@
 
   .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }} {
     width: 100%;
-  }
 }
 </style>
 
