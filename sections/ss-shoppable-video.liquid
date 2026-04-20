@@ -1324,8 +1324,7 @@
                     {% if lazy %}
                       data-
                     {% endif -%}
-                    src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&mute={% if block.settings.autoplay %}1{% else %}0{% endif %}&autoplay={% if block.settings.autoplay %}1{% else %}0{% endif %}&controls=0{{ loop }}"
-                    class="lazy"
+src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&mute={% if block.settings.autoplay %}1{% else %}0{% endif %}&autoplay={% if block.settings.autoplay %}1{% else %}0{% endif %}&controls=0{{ loop }}"                    class="lazy"
                     allow="autoplay; encrypted-media"
                     allowfullscreen
                     {% if lazy %}
@@ -1338,8 +1337,7 @@
                     {% if lazy %}
                       data-
                     {% endif -%}
-                    src="https://player.vimeo.com/video/{{ video_id }}?enablejsapi=1&mute=1&muted=1&autoplay={% if block.settings.autoplay %}1{% else %}0{% endif %}&controls=0&showinfo=0{{ loop }}"
-                    class="lazy"
+src="https://player.vimeo.com/video/{{ video_id }}?enablejsapi=1&mute=1&muted=1&background=1&autoplay={% if block.settings.autoplay %}1{% else %}0{% endif %}&controls=0&showinfo=0{{ loop }}"                    class="lazy"
                     allow="autoplay; encrypted-media"
                     allowfullscreen
                     {% if lazy %}
@@ -1787,8 +1785,16 @@
     return formatString.replace(placeholderRegex, value);
   };
   
-  function initShoppableVideo(sectionId) {
-    
+function initShoppableVideo(sectionId) {
+
+  document.querySelectorAll(`.video-${sectionId} video`).forEach((video) => {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.volume = 0;
+    video.setAttribute('muted', '');
+  });
+
+  document.querySelector(`.video-slider-${sectionId}`).classList.remove('preview');    
     document.querySelector(`.video-slider-${sectionId}`).classList.remove('preview');
     
     const slider = new Swiper(`.video-slider-${sectionId}`, {
@@ -1845,13 +1851,15 @@
     
             if (i === this.activeIndex) {
               if (video) {
-                video.play();
-                video.muted = false;
-              }
+  video.play();
+  video.muted = true;
+  video.defaultMuted = true;
+  video.volume = 0;
+}
 
               if(frame) {
-                frame.src = src2;
-              }
+  frame.src = src1;
+}
 
               if(btn) {
                 btn.classList.add('active');
@@ -2084,43 +2092,28 @@
     {% endif %}
 
     const toggles = document.querySelectorAll(`.video-top-${sectionId}`);
-    const modal = document.querySelector(`.video-modal-${sectionId}`);
-    const close = document.querySelector(`.video-modal-close-${sectionId}`);
-    let activeSlideIndex = 0;
-    
-    toggles.forEach((el, index) => {
-        el.addEventListener('click', (e) => {
-            if(e.target.id == `${sectionId}`) {
-              slider2.slideTo(index);
-              activeSlideIndex = index;
-              const activeSlide = slider2.slides[activeSlideIndex];
-              const video = activeSlide.querySelector('video');
-              const frame = activeSlide.querySelector('iframe');
-              let src;
-              let src1;
-              let src2;
-              if(frame) {
-                src1 = frame.src.replace("&mute=1", "");
-                src2 = frame.getAttribute('data-src2');
-              }
-              const btn = activeSlide.querySelector(`.video-modal-action-${sectionId}`);
-              setTimeout(() => {
-                  document.body.style.overflow = 'hidden';
-                  modal.classList.add('active');
-                  if (video) {
-                    video.play();
-                    video.muted = false;
-                  }
-                  if(btn) {
-                    btn.classList.add('active');
-                  }
-                  if(frame) {
-                    frame.src = src2;
-                  }
-              }, 200); 
-            }
-        });
-    });
+const modal = document.querySelector(`.video-modal-${sectionId}`);
+const close = document.querySelector(`.video-modal-close-${sectionId}`);
+let activeSlideIndex = 0;
+
+toggles.forEach((el) => {
+  el.style.cursor = 'default';
+
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  });
+
+  el.addEventListener('pointerdown', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  });
+});
+
+if (modal) {
+  modal.classList.remove('active');
+}
     
     close.addEventListener('click', () => {
         document.body.style.overflow = '';
@@ -2165,36 +2158,26 @@
     });
 
     document.querySelectorAll(`.video-modal-slide-${sectionId}`).forEach(el => {
-      let btn = el.querySelector(`.video-modal-action-${sectionId}`);
-      let frame = el.querySelector('iframe');
-      let src;
-      if(frame) {
-        src = frame.getAttribute("data-src2");
-      }
-      let video = el.querySelector('video');
-      if(btn) {
-         btn.addEventListener('click', () => {
-          btn.classList.toggle('active');
-          if(btn.classList.contains('active')) {
-            if(frame) {
-              frame.src = src;
-            }
-            if(video) {
-              video.muted = false;
-              video.setAttribute("mute", "false"); 
-            }
-          } else {
-            if(frame) {
-              frame.src += "&mute=1&muted=1";
-            }
-            if(video) {
-              video.muted = true;
-              video.setAttribute("mute", "true"); 
-            }
-          }
-        }) 
-      }
-    })
+  let btn = el.querySelector(`.video-modal-action-${sectionId}`);
+  let video = el.querySelector('video');
+  let frame = el.querySelector('iframe');
+
+  if (btn) {
+    btn.style.display = 'none';
+  }
+
+  if (video) {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.volume = 0;
+    video.setAttribute('muted', '');
+  }
+
+  if (frame) {
+    const mutedSrc = frame.getAttribute('data-src1') || frame.src;
+    frame.src = mutedSrc;
+  }
+});
     
     slider2.on('slideChange', () => {
         activeSlideIndex = slider2.realIndex !== undefined ? slider2.realIndex : slider2.activeIndex;
