@@ -776,14 +776,14 @@
       slidesPerView: parseFloat(sliderEl.dataset.viewMobile)
     },
     1024: {
-      spaceBetween: parseInt(sliderEl.dataset.gap || 0, 10),
-      slidesPerView: 'auto'
-    },
-    1400: {
-      spaceBetween: parseInt(sliderEl.dataset.gap || 0, 10),
-      slidesPerView: 5
-    }
-  }
+  spaceBetween: parseInt(sliderEl.dataset.gap || 0, 10),
+  slidesPerView: 'auto'
+},
+1600: {
+  spaceBetween: parseInt(sliderEl.dataset.gap || 0, 10),
+  slidesPerView: 5
+}
+}
 });
 
     section.querySelectorAll('.shoppable-form').forEach((form) => {
