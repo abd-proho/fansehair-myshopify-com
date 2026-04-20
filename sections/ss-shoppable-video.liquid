@@ -446,9 +446,10 @@
     width: 100%;
   }
 
-     .video-slider-{{ section.id }}.preview {
-  overflow: visible;
-}
+      @media(min-width: 1024px) and (max-width: 1399px) {
+    .video-slider-{{ section.id }}.preview {
+      overflow: visible;
+    }
 
     .video-slider-{{ section.id }}.preview .swiper-wrapper {
       display: flex;
