@@ -117,12 +117,13 @@
   }
 
   .video-slider-{{ section.id }} {
-    margin-left: -{{ padding_horizontal_mobile }}rem !important;
-    margin-right: -{{ padding_horizontal_mobile }}rem !important;
-    padding-left: {{ padding_horizontal_mobile }}rem !important;
-    padding-right: {{ padding_horizontal_mobile }}rem !important;
-    margin-top: {{ slider_mt | times: 0.75 | round: 0 }}px;
-  }
+  margin-left: -{{ padding_horizontal_mobile }}rem !important;
+  margin-right: -{{ padding_horizontal_mobile }}rem !important;
+  padding-left: {{ padding_horizontal_mobile }}rem !important;
+  padding-right: {{ padding_horizontal_mobile }}rem !important;
+  margin-top: {{ slider_mt | times: 0.75 | round: 0 }}px;
+  touch-action: pan-y;
+}
 
   .video-slider-{{ section.id }} .swiper-wrapper {
     align-items: stretch !important;
@@ -304,9 +305,9 @@
   }
 
      .video-slider-{{ section.id }} {
-  overflow: visible !important;
-
-    }
+  overflow: hidden !important;
+  width: 100%;
+}
 
     .video-slider-{{ section.id }} .swiper-wrapper {
       display: flex !important;
@@ -448,8 +449,9 @@
 
       @media(min-width: 1024px) and (max-width: 1399px) {
     .video-slider-{{ section.id }}.preview {
-      overflow: visible;
-    }
+  overflow: hidden;
+  width: 100%;
+}
 
     .video-slider-{{ section.id }}.preview .swiper-wrapper {
       display: flex;
@@ -689,31 +691,33 @@
 
     sliderEl.classList.remove('preview');
 
-        new Swiper('.video-slider-' + sectionId, {
-      speed: 300,
-      watchOverflow: true,
-      freeMode: true,
-      centeredSlides: false,
-      loop: false,
-      breakpoints: {
-        320: {
-          spaceBetween: parseInt(sliderEl.dataset.gapMobile || 0, 10),
-          slidesPerView: parseFloat(sliderEl.dataset.viewMobile)
-        },
-        768: {
-          spaceBetween: parseInt(sliderEl.dataset.gapMobile || 0, 10),
-          slidesPerView: parseFloat(sliderEl.dataset.viewMobile)
-        },
-                1024: {
-          spaceBetween: parseInt(sliderEl.dataset.gap || 0, 10),
-          slidesPerView: 'auto'
-        },
-        1400: {
-          spaceBetween: parseInt(sliderEl.dataset.gap || 0, 10),
-          slidesPerView: 5
-        }
-      }
-    });
+       new Swiper('.video-slider-' + sectionId, {
+  speed: 300,
+  watchOverflow: true,
+  watchSlidesProgress: true,
+  freeMode: true,
+  centeredSlides: false,
+  loop: false,
+  grabCursor: true,
+  breakpoints: {
+    320: {
+      spaceBetween: parseInt(sliderEl.dataset.gapMobile || 0, 10),
+      slidesPerView: parseFloat(sliderEl.dataset.viewMobile)
+    },
+    768: {
+      spaceBetween: parseInt(sliderEl.dataset.gapMobile || 0, 10),
+      slidesPerView: parseFloat(sliderEl.dataset.viewMobile)
+    },
+    1024: {
+      spaceBetween: parseInt(sliderEl.dataset.gap || 0, 10),
+      slidesPerView: 'auto'
+    },
+    1400: {
+      spaceBetween: parseInt(sliderEl.dataset.gap || 0, 10),
+      slidesPerView: 5
+    }
+  }
+});
 
     section.querySelectorAll('.shoppable-form').forEach((form) => {
       form.addEventListener('submit', async (e) => {
