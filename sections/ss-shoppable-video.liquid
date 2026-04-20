@@ -104,17 +104,27 @@
     padding-right: {{ padding_horizontal_mobile }}rem;
   }
 
-  .video-heading-{{ section.id }} {
-    text-align: {{ heading_align_mobile }};
-  }
+  .video-heading-wrap-{{ section.id }} {
+  width: 100%;
+  border-bottom: 1px solid rgba(18, 18, 18, 0.18);
+  margin-bottom: 28px;
+}
 
-  .video-heading-{{ section.id }} * {
-    margin: 0;
-    font-size: {{ heading_size_mobile }}px;
-    color: {{ heading_color }};
-    line-height: {{ heading_height }}%;
-    text-transform: unset;
-  }
+.video-heading-{{ section.id }} {
+  display: inline-block;
+  text-align: {{ heading_align_mobile }};
+  border-bottom: 2px solid {{ heading_color }};
+  margin-bottom: -1px;
+  padding-bottom: 10px;
+}
+
+.video-heading-{{ section.id }} * {
+  margin: 0;
+  font-size: {{ heading_size_mobile }}px;
+  color: {{ heading_color }};
+  line-height: {{ heading_height }}%;
+  text-transform: unset;
+}
 
   .video-slider-{{ section.id }} {
   margin-left: -{{ padding_horizontal_mobile }}rem !important;
@@ -275,12 +285,16 @@
     }
 
     .video-heading-{{ section.id }} {
-      text-align: {{ heading_align }};
-    }
+  text-align: {{ heading_align }};
+}
 
-    .video-heading-{{ section.id }} * {
-      font-size: {{ heading_size }}px;
-    }
+.video-heading-{{ section.id }} * {
+  font-size: {{ heading_size }}px;
+}
+
+.video-heading-wrap-{{ section.id }} {
+  margin-bottom: 36px;
+}
 
     .video-slider-{{ section.id }} {
       margin-left: 0 !important;
@@ -495,8 +509,10 @@
 >
   <div class="section-{{ section.id }}-settings">
     {% if heading != blank %}
-      <div class="video-heading-{{ section.id }}">{{ heading }}</div>
-    {% endif %}
+  <div class="video-heading-wrap-{{ section.id }}">
+    <div class="video-heading-{{ section.id }}">{{ heading }}</div>
+  </div>
+{% endif %}
 
     <div
       class="video-slider-{{ section.id }} swiper preview"
