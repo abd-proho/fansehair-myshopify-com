@@ -275,23 +275,13 @@
   }
 
   .video-top-{{ section.id }} {
-   overflow: hidden;
-    position: relative;
-    z-index: 0;
-    cursor: default;
-    background-image: linear-gradient(to top, #121212, #252525, #444444, #676767, #8b8b8b, #9e9e9e, #b1b1b1, #c5c5c5, #cbcbcb, #d0d0d0, #d6d6d6, #dcdcdc);
-    animation: pulse 0.5s infinite alternate;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  cursor: default;
+  background-color: #dcdcdc;
 }
-  }
 
-  @keyframes pulse {
-      0% {
-          background-size: 100% 100%;
-      }
-      100% {
-          background-size: 120% 120%;
-      }
-  }
 
   .video-top-{{ section.id }}::after {
   content: '';
@@ -508,8 +498,9 @@
     text-transform: uppercase;
   }
 
-  .video-modal-{{ section.id }} {
-    width: 100vw;
+.video-modal-{{ section.id }} {
+  display: none !important;
+}    width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
@@ -871,8 +862,9 @@
       font-size: {{ variants_price_size }}px;
     }
 
-    .video-modal-{{ section.id }} {
-      padding: 100px;
+.video-modal-{{ section.id }} {
+  display: none !important;
+}      padding: 100px;
     }
 
     .video-modal-inner-{{ section.id }} {
@@ -1324,8 +1316,7 @@
                     {% if lazy %}
                       data-
                     {% endif -%}
-src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&mute={% if block.settings.autoplay %}1{% else %}0{% endif %}&autoplay={% if block.settings.autoplay %}1{% else %}0{% endif %}&controls=0{{ loop }}"                    class="lazy"
-                    allow="autoplay; encrypted-media"
+src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&mute=1&playsinline=1&autoplay={% if block.settings.autoplay %}1{% else %}0{% endif %}&controls=0{{ loop }}"                    allow="autoplay; encrypted-media"
                     allowfullscreen
                     {% if lazy %}
                       loading="lazy"
@@ -1349,22 +1340,20 @@ src="https://player.vimeo.com/video/{{ video_id }}?enablejsapi=1&mute=1&muted=1&
               {% else %}
                 {% assign poster_url = block.settings.poster | image_url %}
                 {% assign placeholder_video = 'https://cdn.shopify.com/videos/c/o/v/fbb140fd46e3429eba459e1549dbbe38.mp4' %}
-                <video
-                {% if lazy %}
-                  data-
-                {% endif -%}
-                src="{% if block.settings.video != blank %}{{ block.settings.video.sources[1].url }}{% else %}{{ placeholder_video }}{% endif %}"
-                 muted
-                 defaultMuted
-                  playsinline
-               {% if block.settings.autoplay %}
-                 autoplay
-              {% endif %}
-                preload="none"
-                class="lazy"
-                loop
-                poster="{{ poster_url }}"
-              ></video>
+            <video
+  {% if lazy %}
+    data-
+  {% endif -%}
+  src="{% if block.settings.video != blank %}{{ block.settings.video.sources[1].url }}{% else %}{{ placeholder_video }}{% endif %}"
+  muted
+  defaultMuted
+  playsinline
+  autoplay
+  preload="none"
+  loop
+  class="lazy"
+  poster="{{ poster_url }}"
+></video>
               {% endif %}
 
               {% if block.settings.product != blank %}
@@ -1390,8 +1379,8 @@ src="https://player.vimeo.com/video/{{ video_id }}?enablejsapi=1&mute=1&muted=1&
                       >
                     {% endif %}
                   </div>
-                  <div clas="video-product-info-{{ section.id }}">
-                    <p class="video-product-title-{{ section.id }}">{{ block.settings.product.title }}</p>
+<div class="video-product-info-{{ section.id }}">
+                      <p class="video-product-title-{{ section.id }}">{{ block.settings.product.title }}</p>
                     <p class="video-product-price-{{ section.id }}" data-shoppable-price--{{ forloop.index }}>
                       {{ block.settings.product.price | money }}
                     </p>
@@ -1610,8 +1599,8 @@ src="https://player.vimeo.com/video/{{ video_id }}?enablejsapi=1&mute=1&muted=1&
                           >
                         {% endif %}
                       </div>
-                      <div clas="video-modal-product-info-{{ section.id }}">
-                        <p class="video-modal-product-title-{{ section.id }}">{{ block.settings.product.title }}</p>
+<div class="video-modal-product-info-{{ section.id }}">
+                          <p class="video-modal-product-title-{{ section.id }}">{{ block.settings.product.title }}</p>
                         <p
                           class="video-modal-product-price-{{ section.id }}"
                           data-shoppable-modal-price--{{ forloop.index }}
@@ -1794,6 +1783,14 @@ function initShoppableVideo(sectionId) {
     video.setAttribute('muted', '');
   });
 
+  document.querySelector(`.video-slider-${sectionId}`).classList.remove('preview');
+  document.querySelectorAll(`.video-${sectionId} video`).forEach((video) => {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.volume = 0;
+    video.setAttribute('muted', '');
+  });
+
   document.querySelector(`.video-slider-${sectionId}`).classList.remove('preview');    
     document.querySelector(`.video-slider-${sectionId}`).classList.remove('preview');
     
@@ -1850,21 +1847,19 @@ function initShoppableVideo(sectionId) {
             }
     
             if (i === this.activeIndex) {
-              if (video) {
-  video.play();
-  video.muted = true;
-  video.defaultMuted = true;
-  video.volume = 0;
-}
+  if (video) {
+    video.play();
+    video.muted = false;
+  }
 
-              if(frame) {
-  frame.src = src1;
-}
+  if(frame) {
+    frame.src = src2;
+  }
 
-              if(btn) {
-                btn.classList.add('active');
-              }
-            } else {
+  if(btn) {
+    btn.classList.add('active');
+  }
+} else {
               if (video) {
                 video.pause();
               }
@@ -2098,25 +2093,10 @@ let activeSlideIndex = 0;
 
 toggles.forEach((el) => {
   el.style.cursor = 'default';
-
-  el.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    return false;
-  });
-
-  el.addEventListener('pointerdown', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-  });
 });
-
-if (modal) {
-  modal.classList.remove('active');
-}
     
-    close.addEventListener('click', () => {
-        document.body.style.overflow = '';
+if (close) close.addEventListener('click', () => {
+          document.body.style.overflow = '';
         modal.classList.remove('active');
         let frames = modal.querySelectorAll('iframe');
         let videos = modal.querySelectorAll('video');
@@ -2156,28 +2136,6 @@ if (modal) {
           }
         }
     });
-
-    document.querySelectorAll(`.video-modal-slide-${sectionId}`).forEach(el => {
-  let btn = el.querySelector(`.video-modal-action-${sectionId}`);
-  let video = el.querySelector('video');
-  let frame = el.querySelector('iframe');
-
-  if (btn) {
-    btn.style.display = 'none';
-  }
-
-  if (video) {
-    video.muted = true;
-    video.defaultMuted = true;
-    video.volume = 0;
-    video.setAttribute('muted', '');
-  }
-
-  if (frame) {
-    const mutedSrc = frame.getAttribute('data-src1') || frame.src;
-    frame.src = mutedSrc;
-  }
-});
     
     slider2.on('slideChange', () => {
         activeSlideIndex = slider2.realIndex !== undefined ? slider2.realIndex : slider2.activeIndex;
