@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
 {%- liquid
@@ -302,19 +301,24 @@
     .video-product-price-{{ section.id }} {
       font-size: {{ price_size }}px;
     }
-      .video-slider-{{ section.id }} .swiper-slide {
-    width: clamp(190px, 18vw, 280px) !important;
   }
 
+  @media(min-width: 1024px) and (max-width: 1399px) {
+  .video-slider-{{ section.id }} .swiper-slide,
   .video-slide-{{ section.id }} {
-    width: clamp(190px, 18vw, 280px) !important;
+    width: clamp(180px, 17vw, 235px) !important;
   }
 
   .video-top-{{ section.id }} {
-    aspect-ratio: auto !important;
-    height: min(62vh, 520px);
+    aspect-ratio: 9.6 / 16 !important;
+    height: auto !important;
+    max-height: 420px;
   }
+
+  .video-slide-{{ section.id }} {
+    height: auto !important;
   }
+}
 {%- endstyle -%}
 
 {% unless full_width %}
@@ -393,25 +397,25 @@
 
 {% if video_ratio == 'portrait' %}
   <style>
-    @media(min-width: 1024px) {
+    @media(min-width: 1400px) {
       .video-top-{{ section.id }} { aspect-ratio: 9.6/16; }
     }
   </style>
 {% elsif video_ratio == 'landscape' %}
   <style>
-    @media(min-width: 1024px) {
+    @media(min-width: 1400px) {
       .video-top-{{ section.id }} { aspect-ratio: 12/7; }
     }
   </style>
 {% elsif video_ratio == 'square' %}
   <style>
-    @media(min-width: 1024px) {
+    @media(min-width: 1400px) {
       .video-top-{{ section.id }} { aspect-ratio: 12/12; }
     }
   </style>
 {% else %}
   <style>
-    @media(min-width: 1024px) {
+    @media(min-width: 1400px) {
       .video-top-{{ section.id }} { aspect-ratio: auto; }
     }
   </style>
@@ -431,14 +435,20 @@
     width: 100%;
   }
 
-  @media(min-width: 1024px) {
-  .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }} {
-    width: clamp(190px, 18vw, 280px);
+    @media(min-width: 1024px) {
+    .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }} {
+      width: clamp(180px, 17vw, 235px);
+    }
+
+    .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }}:not(:first-child) {
+      margin-left: {{ slider_gap }}px;
+    }
   }
 
-  .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }}:not(:first-child) {
-    margin-left: {{ slider_gap }}px;
-  }
+  @media(min-width: 1400px) {
+    .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }} {
+      width: calc(20% - {{ slider_gap }}px);
+    }
   }
 </style>
 
@@ -660,10 +670,14 @@
           spaceBetween: parseInt(sliderEl.dataset.gapMobile || 0, 10),
           slidesPerView: parseFloat(sliderEl.dataset.viewMobile)
         },
-        1024: {
-  spaceBetween: parseInt(sliderEl.dataset.gap || 0, 10),
-  slidesPerView: 'auto'
-}
+                1024: {
+          spaceBetween: parseInt(sliderEl.dataset.gap || 0, 10),
+          slidesPerView: 'auto'
+        },
+        1400: {
+          spaceBetween: parseInt(sliderEl.dataset.gap || 0, 10),
+          slidesPerView: parseFloat(sliderEl.dataset.view)
+        }
       }
     });
 
@@ -1314,7 +1328,7 @@
       "unit": "px",
       "label": "Font size - mobile",
       "default": 14
-    },
+        },
     {
       "type": "range",
       "id": "variants_price_height",
@@ -1466,50 +1480,6 @@
     {
       "type": "range",
       "id": "close_border_thickness",
-      "min": 0,
-      "max": 10,
-      "step": 1,
-      "unit": "px",
-      "label": "Border thickness",
-      "default": 0
-    },
-    {
-      "type": "header",
-      "content": "Modal navigation arrows"
-    },
-    {
-      "type": "range",
-      "id": "buttons_size",
-      "min": 20,
-      "max": 120,
-      "step": 2,
-      "unit": "px",
-      "label": "Size",
-      "default": 48
-    },
-    {
-      "type": "range",
-      "id": "buttons_size_mobile",
-      "min": 20,
-      "max": 120,
-      "step": 2,
-      "unit": "px",
-      "label": "Size - mobile",
-      "default": 48
-    },
-    {
-      "type": "range",
-      "id": "buttons_radius",
-      "min": 0,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "label": "Roundness",
-      "default": 8
-    },
-    {
-      "type": "range",
-      "id": "buttons_border_thickness",
       "min": 0,
       "max": 10,
       "step": 1,
