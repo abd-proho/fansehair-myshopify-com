@@ -10,14 +10,14 @@
     text-transform: {{ section.settings.product_card_title_transform }};
   }
 
-  /* restore normal desktop sizing */
-  #shopify-section-{{ section.id }} .product-card {
-    width: calc(var(--page-width) / 3 - 52px);
-  }
+/* keep desktop cards elegant + capped */
+#shopify-section-{{ section.id }} .product-card {
+  width: min(calc(var(--page-width) / 3 - 52px), 460px);
+}
 
-  #shopify-section-{{ section.id }} .swiper-slide {
-    width: calc(var(--page-width) / 3 - 52px) !important;
-  }
+#shopify-section-{{ section.id }} .swiper-slide {
+  width: min(calc(var(--page-width) / 3 - 52px), 460px) !important;
+}
 
   @media screen and (max-width: 1500px) {
     #shopify-section-{{ section.id }} .product-card {
