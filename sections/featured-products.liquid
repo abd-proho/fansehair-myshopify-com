@@ -10,14 +10,14 @@
     text-transform: {{ section.settings.product_card_title_transform }};
   }
 
-  /* KEEP CARD SIZE CONSISTENT ON LARGE SCREENS */
+  /* lock cards to a normal size */
   #shopify-section-{{ section.id }} .product-card,
   #shopify-section-{{ section.id }} .swiper-slide {
-    width: {{ section.settings.product_card_width }}px !important;
+    width: min(100%, {{ section.settings.product_card_width }}px) !important;
     max-width: {{ section.settings.product_card_width }}px !important;
   }
 
-  /* prevent giant/cropped looking cards */
+  /* prevent giant image crop */
   #shopify-section-{{ section.id }} .product-card__media {
     aspect-ratio: 1 / 1;
     overflow: hidden;
@@ -25,10 +25,12 @@
 
   #shopify-section-{{ section.id }} .product-card__media img,
   #shopify-section-{{ section.id }} .product-card__media .image img {
+    width: 100%;
+    height: 100%;
     object-fit: contain !important;
   }
 
-  /* top-left NEW badge positioning */
+  /* top-left badge */
   #shopify-section-{{ section.id }} .product-card__actions {
     position: relative;
   }
@@ -40,25 +42,33 @@
     z-index: 5;
   }
 
-  /* keep stars on right */
-  #shopify-section-{{ section.id }} .product-card__meta-row {
+  /* keep title left / stars right */
+  #shopify-section-{{ section.id }} .product-card__title-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    gap: 12px;
+    gap: 16px;
   }
 
-  #shopify-section-{{ section.id }} .product-card__rating-link {
+  #shopify-section-{{ section.id }} .product-card__title-wrap {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  #shopify-section-{{ section.id }} .product-card__rating-link,
+  #shopify-section-{{ section.id }} .product-card__rating--custom {
     margin-left: auto;
+    flex: 0 0 auto;
     display: inline-flex;
     align-items: center;
+    gap: 2px;
   }
 
   /* mobile */
   @media screen and (max-width: 749px) {
     #shopify-section-{{ section.id }} .product-card,
     #shopify-section-{{ section.id }} .swiper-slide {
-      width: {{ section.settings.product_card_width | times: 0.8 | round: 0 }}px !important;
+      width: min(100%, {{ section.settings.product_card_width | times: 0.8 | round: 0 }}px) !important;
       max-width: {{ section.settings.product_card_width | times: 0.8 | round: 0 }}px !important;
     }
   }
