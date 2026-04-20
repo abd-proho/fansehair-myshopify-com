@@ -119,6 +119,62 @@
       z-index: 2;
     }
   {%- endif -%}
+    /* HERO COPY SPACING + WIDTH + HEADING WRAP CONTROL */
+  #shopify-section-{{ section.id }} .hero__animation--copy {
+    margin-bottom: 1.2rem;
+  }
+
+  #shopify-section-{{ section.id }} .hero__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  #shopify-section-{{ section.id }} .hero__heading,
+  #shopify-section-{{ section.id }} .hero__heading p {
+    margin: 0;
+  }
+
+  #shopify-section-{{ section.id }} .hero__entry,
+  #shopify-section-{{ section.id }} .hero__entry p {
+    margin: 0;
+  }
+
+  #shopify-section-{{ section.id }} .hero__button {
+    margin-top: 0.8rem;
+  }
+
+  /* keep body copy from running too wide */
+  #shopify-section-{{ section.id }} .hero__entry {
+    max-width: 68rem;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  /* desktop: keep heading to one line by scaling down instead of wrapping */
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} .hero__heading,
+    #shopify-section-{{ section.id }} .hero__heading p {
+      white-space: nowrap;
+      font-size: clamp(3.6rem, 5vw, 7.2rem);
+      line-height: 0.95;
+    }
+  }
+
+  /* mobile: allow two lines */
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .hero__heading,
+    #shopify-section-{{ section.id }} .hero__heading p {
+      white-space: normal;
+      font-size: clamp(3.2rem, 9vw, 4.8rem);
+      line-height: 0.95;
+    }
+
+    #shopify-section-{{ section.id }} .hero__entry {
+      max-width: 32rem;
+    }
+  }
 {% endstyle %}
 
 {%- capture hero_slides -%}
