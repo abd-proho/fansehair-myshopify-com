@@ -303,23 +303,34 @@
     }
   }
 
-   @media(min-width: 1024px) and (max-width: 1399px) {
+      @media(min-width: 1024px) and (max-width: 1399px) {
+    .video-slider-{{ section.id }} {
+      overflow: hidden !important;
+    }
+
+    .video-slider-{{ section.id }} .swiper-wrapper {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+    }
+
     .video-slider-{{ section.id }} .swiper-slide,
     .video-slide-{{ section.id }} {
-      width: 285px !important;
-      flex: 0 0 285px !important;
+      width: 280px !important;
+      min-width: 280px !important;
+      max-width: 280px !important;
+      flex: 0 0 280px !important;
     }
 
     .video-top-{{ section.id }} {
       aspect-ratio: 9.6 / 16 !important;
       height: auto !important;
+      max-height: none !important;
     }
 
     .video-slide-{{ section.id }} {
       height: auto !important;
     }
-
-}
+  }
 {%- endstyle -%}
 
 {% unless full_width %}
@@ -436,10 +447,21 @@
     width: 100%;
   }
 
-    @media(min-width: 1024px) and (max-width: 1399px) {
+      @media(min-width: 1024px) and (max-width: 1399px) {
+    .video-slider-{{ section.id }}.preview {
+      overflow: hidden;
+    }
+
+    .video-slider-{{ section.id }}.preview .swiper-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
     .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }} {
-      width: 285px;
-      flex: 0 0 285px;
+      width: 280px;
+      min-width: 280px;
+      max-width: 280px;
+      flex: 0 0 280px;
     }
 
     .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }}:not(:first-child) {
@@ -450,6 +472,9 @@
   @media(min-width: 1400px) {
     .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }} {
       width: calc(20% - {{ slider_gap }}px);
+      min-width: 0;
+      max-width: none;
+      flex: 0 0 calc(20% - {{ slider_gap }}px);
     }
 
     .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }}:not(:first-child) {
@@ -665,8 +690,12 @@
 
     sliderEl.classList.remove('preview');
 
-    new Swiper('.video-slider-' + sectionId, {
+        new Swiper('.video-slider-' + sectionId, {
       speed: 300,
+      watchOverflow: true,
+      freeMode: false,
+      centeredSlides: false,
+      loop: false,
       breakpoints: {
         320: {
           spaceBetween: parseInt(sliderEl.dataset.gapMobile || 0, 10),
