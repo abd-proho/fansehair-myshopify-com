@@ -254,7 +254,13 @@
   .video-modal-{{ section.id }} {
     display: none !important;
   }
+.video-slider-{{ section.id }} {
+  cursor: grab;
+}
 
+.video-slider-{{ section.id }} .swiper-wrapper {
+  will-change: transform;
+}
   @media(min-width: 1024px) {
     .section-{{ section.id }} {
       margin-top: {{ margin_top }}px;
@@ -698,6 +704,13 @@
   centeredSlides: false,
   loop: false,
   grabCursor: true,
+  simulateTouch: true,
+  touchStartPreventDefault: false,
+  nested: true,
+  mousewheel: {
+    forceToAxis: true,
+    releaseOnEdges: true
+  },
   breakpoints: {
     320: {
       spaceBetween: parseInt(sliderEl.dataset.gapMobile || 0, 10),
