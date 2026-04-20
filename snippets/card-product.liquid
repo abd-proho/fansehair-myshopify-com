@@ -63,6 +63,31 @@
     }
   </style>
 <style>
+  .product-card__actions {
+    position: relative;
+  }
+
+  .product-card__badge-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  .product-card__custom-badge-new {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    background: #d8a23a;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
   .product-card__title-row {
     display: flex;
     align-items: flex-start;
@@ -87,6 +112,7 @@
     margin-left: auto;
     flex: 0 0 auto;
     white-space: nowrap;
+    text-decoration: none;
   }
 
   .product-card__rating--custom svg,
@@ -107,9 +133,11 @@
     class="{{ media_classes }}"
     data-update-media="{% if product_ref.first_available_variant == product_ref.selected_variant %}true{% else %}false{% endif %}"
   >
-    <div class="product-card__badge-overlay">
-      {% render 'product-badges', product: product_ref %}
-    </div>
+        {% if force_new_badge %}
+      <div class="product-card__badge-overlay">
+        <span class="product-card__custom-badge-new">NEW</span>
+      </div>
+    {% endif %}
     {% liquid
       assign hover_media = product_ref.media[1]
 
@@ -470,43 +498,43 @@
       {%- endif -%}
       <div class="product-card__divider">&nbsp;</div>
             <div class="product-card__title-row-container">
-        <div class="product-card__title-row">
-          <div class="product-card__title-wrap">
-                      <h3 class="product-card__title">
-            <a href="{{ product_link_with_variant }}" class="product-card__link" tabindex="{% if is_in_drawer == true %}-1{% else %}0{% endif %}" data-product-link title="{{ 'product.go_to_title' | t : title: product_ref.title }}">
-              <span>{{ product_ref.title | default: product_title_placeholder }}</span>
-            </a>
-          </h3>
+  <div class="product-card__title-row">
+    <div class="product-card__title-wrap">
+      <h3 class="product-card__title">
+        <a href="{{ product_link_with_variant }}" class="product-card__link" tabindex="{% if is_in_drawer == true %}-1{% else %}0{% endif %}" data-product-link title="{{ 'product.go_to_title' | t : title: product_ref.title }}">
+          <span>{{ product_ref.title | default: product_title_placeholder }}</span>
+        </a>
+      </h3>
 
-                     {%- assign local_show_short_description = show_short_description -%}
-            {%- if show_short_description == nil -%}
-              {%- assign local_show_short_description = true -%}
-            {%- endif -%}
+      {%- assign local_show_short_description = show_short_description -%}
+      {%- if show_short_description == nil -%}
+        {%- assign local_show_short_description = true -%}
+      {%- endif -%}
 
-            {% if custom_subtitle != blank %}
-              <div class="product-card__short-description">{{ custom_subtitle }}</div>
-            {%- elsif local_show_short_description and product.metafields.custom.short_description != blank -%}
-              <div class="product-card__short-description">{{ product.metafields.custom.short_description }}</div>
-            {% endif %}
-          </div>
+      {% if custom_subtitle != blank %}
+        <div class="product-card__short-description">{{ custom_subtitle }}</div>
+      {%- elsif local_show_short_description and product.metafields.custom.short_description != blank -%}
+        <div class="product-card__short-description">{{ product.metafields.custom.short_description }}</div>
+      {% endif %}
+    </div>
 
-                    {% if force_five_stars %}
-            <a href="{{ product_link_with_variant }}#judgeme_product_reviews" class="product-card__rating-link product-card__rating--custom" tabindex="{% if is_in_drawer == true %}-1{% else %}0{% endif %}">
-              {%- render 'icon', icon_name: 'theme-star-filled' -%}
-              {%- render 'icon', icon_name: 'theme-star-filled' -%}
-              {%- render 'icon', icon_name: 'theme-star-filled' -%}
-              {%- render 'icon', icon_name: 'theme-star-filled' -%}
-              {%- render 'icon', icon_name: 'theme-star-filled' -%}
-            </a>
-          {% else %}
-            <a href="{{ product_link_with_variant }}#judgeme_product_reviews" class="product-card__rating-link" tabindex="{% if is_in_drawer == true %}-1{% else %}0{% endif %}">
-              <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
-                {{ product.metafields.judgeme.badge }}
-              </div>
-            </a>
-          {% endif %}
+    {% if force_five_stars %}
+      <a href="{{ product_link_with_variant }}#judgeme_product_reviews" class="product-card__rating-link product-card__rating--custom" tabindex="{% if is_in_drawer == true %}-1{% else %}0{% endif %}">
+        {%- render 'icon', icon_name: 'theme-star-filled' -%}
+        {%- render 'icon', icon_name: 'theme-star-filled' -%}
+        {%- render 'icon', icon_name: 'theme-star-filled' -%}
+        {%- render 'icon', icon_name: 'theme-star-filled' -%}
+        {%- render 'icon', icon_name: 'theme-star-filled' -%}
+      </a>
+    {% else %}
+      <a href="{{ product_link_with_variant }}#judgeme_product_reviews" class="product-card__rating-link" tabindex="{% if is_in_drawer == true %}-1{% else %}0{% endif %}">
+        <div style='{{ jm_style }}' class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
+          {{ product.metafields.judgeme.badge }}
         </div>
-      </div>
+      </a>
+    {% endif %}
+  </div>
+</div>
 
       <div class="product-card__divider">&nbsp;</div>
 
