@@ -330,7 +330,6 @@
     .video-slide-{{ section.id }} {
       height: auto !important;
     }
-  }
 {%- endstyle -%}
 
 {% unless full_width %}
@@ -692,7 +691,7 @@
         new Swiper('.video-slider-' + sectionId, {
       speed: 300,
       watchOverflow: true,
-      freeMode: false,
+      freeMode: true,
       centeredSlides: false,
       loop: false,
       breakpoints: {
