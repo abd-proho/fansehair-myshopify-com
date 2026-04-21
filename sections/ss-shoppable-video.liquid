@@ -327,24 +327,6 @@
     .video-product-price-{{ section.id }} {
       font-size: {{ price_size }}px;
     }
-    @media(min-width: 1024px) and (max-width: 1599px) {
-  .video-slider-{{ section.id }} .swiper-slide,
-  .video-slider-{{ section.id }} .video-slide-{{ section.id }} {
-    width: 280px !important;
-    min-width: 280px !important;
-    max-width: 280px !important;
-    flex: 0 0 280px !important;
-  }
-}
-
-@media(min-width: 1600px) {
-  .video-slider-{{ section.id }} .swiper-slide,
-  .video-slider-{{ section.id }} .video-slide-{{ section.id }} {
-    width: calc((100% - ({{ slider_gap }}px * 4)) / 5) !important;
-    min-width: calc((100% - ({{ slider_gap }}px * 4)) / 5) !important;
-    max-width: calc((100% - ({{ slider_gap }}px * 4)) / 5) !important;
-    flex: 0 0 calc((100% - ({{ slider_gap }}px * 4)) / 5) !important;
-  }
   }
 {%- endstyle -%}
 
@@ -450,12 +432,12 @@
 {% comment %} PREVIEW {% endcomment %}
 <style>
   .video-slider-{{ section.id }}.preview .swiper-wrapper {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  overflow: hidden;
-  gap: {{ slider_gap }}px;
-}
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    gap: {{ slider_gap }}px;
+  }
 
   .video-slider-{{ section.id }}.preview .video-slide-{{ section.id }} {
     width: 100%;
@@ -749,7 +731,6 @@
     spaceBetween: parseInt(sliderEl.dataset.gap || 0, 10),
     slidesPerView: 5
   }
-}
 }
 });
 
