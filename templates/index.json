@@ -17,7 +17,7 @@
           "settings": {
             "banner_layout": "hero-banner--full",
             "color_scheme": "scheme-5",
-            "header_menu_text_color": "#ffffff",
+            "header_menu_text_color": "#fffaf5",
             "heading": "<p>FANSĒ SEEING YOU HERE!</p>",
             "subheading": "",
             "subheading_link": "",
@@ -48,13 +48,13 @@
         "slide_gAjkFT"
       ],
       "custom_css": [
-        ".hero__entry p {font-size: 2rem; color: #000000;}",
+        ".hero__entry p {font-size: 1.5rem; color: #000000;}",
         ".button--filled {font-size: 18px;}"
       ],
       "settings": {
         "enable_transparent_header": true,
         "slider_height_auto": false,
-        "slider_height": 100,
+        "slider_height": 75,
         "slideshow_autoplay_interval": 0,
         "show_slideshow_navigation": false,
         "slideshow_navigation_position": "hero__swiper-buttons--sides",
@@ -292,10 +292,6 @@
         "close_size_mobile": 42,
         "close_radius": 8,
         "close_border_thickness": 0,
-        "buttons_size": 48,
-        "buttons_size_mobile": 48,
-        "buttons_radius": 8,
-        "buttons_border_thickness": 0,
         "modal_video_radius": 0,
         "modal_video_border_thickness": 0,
         "modal_video_ratio": "portrait",
@@ -764,6 +760,69 @@
         "spacing_top": 2,
         "spacing_bottom": 2
       }
+    },
+    "17767033513a9b0a2d": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "1776703594eed3cfe9": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_3e8a500_D9ETFD": {
+          "type": "ai_gen_block_3e8a500",
+          "settings": {
+            "custom_css": "",
+            "desktop_width_percent": 100,
+            "show_note": false,
+            "note_text": "Custom CSS applied",
+            "note_background_color": "#f4f4f4",
+            "note_text_color": "#151515"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_3e8a500_D9ETFD"
+      ],
+      "settings": {}
+    },
+    "17767037660d3c853f": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_8e99592_ky4YXt": {
+          "type": "ai_gen_block_8e99592",
+          "settings": {
+            "target_selector": "*:contains('professional-quality')",
+            "font_size": 14,
+            "mobile_font_size": 12,
+            "desktop_width_percent": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_8e99592_ky4YXt"
+      ],
+      "settings": {}
+    },
+    "177670548692f0e283": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "1776705504a7a2ae18": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "1778446526542b858f": {
+      "type": "apps",
+      "settings": {
+        "section_layout": "normal",
+        "spacing_inner": "2",
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
+      }
     }
   },
   "order": [
@@ -774,6 +833,12 @@
     "floating_product_card_m9DNWL",
     "highlighted_product_J63VJn",
     "social_media_highlights_3Ng8qc",
-    "shop_the_feed_hTF4N3"
+    "shop_the_feed_hTF4N3",
+    "17767033513a9b0a2d",
+    "1776703594eed3cfe9",
+    "17767037660d3c853f",
+    "177670548692f0e283",
+    "1776705504a7a2ae18",
+    "1778446526542b858f"
   ]
 }
