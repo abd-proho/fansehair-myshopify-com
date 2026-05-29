@@ -13,8 +13,24 @@
   "sections": {
     "shop_the_feed_jTE3d9": {
       "type": "shop-the-feed",
+      "custom_css": [],
+      "name": "Shop the Feed",
+      "settings": {
+        "heading": "SHOP THE FEED",
+        "heading_link": "",
+        "hashtag": "@FANSEHAIR",
+        "hashtag_link": "https://www.instagram.com/fansehair",
+        "grid_layout": "auto",
+        "section_width": "container--full",
+        "color_scheme": "scheme-75583496-94ea-45cb-b954-9a0fd7b86dca",
+        "spacing_top": 2,
+        "spacing_bottom": 2
+      }
+    },
+    "shop_the_feed_WnFFzK": {
+      "type": "shop-the-feed",
       "blocks": {
-        "image_FKR7gK": {
+        "image_jMaxDw": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.57_PM.png",
@@ -24,7 +40,7 @@
             "hide_on_desktop": false
           }
         },
-        "image_86P47L": {
+        "image_UhzNYV": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.42_PM.png",
@@ -34,7 +50,7 @@
             "hide_on_desktop": false
           }
         },
-        "image_EQg7eA": {
+        "image_4tg6Ph": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.52_PM.png",
@@ -44,7 +60,7 @@
             "hide_on_desktop": false
           }
         },
-        "image_QB46yT": {
+        "image_edU6gJ": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.36_PM.png",
@@ -54,7 +70,7 @@
             "hide_on_desktop": false
           }
         },
-        "image_qRn8yz": {
+        "image_YNcFdG": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.27_PM.png",
@@ -64,7 +80,7 @@
             "hide_on_desktop": false
           }
         },
-        "image_qJDxyy": {
+        "image_JjimAn": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.47_PM.png",
@@ -74,7 +90,7 @@
             "hide_on_desktop": false
           }
         },
-        "image_Q3eP6g": {
+        "image_iWhAcM": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Screenshot_2025-12-07_at_1.32.23_PM.png",
@@ -86,14 +102,15 @@
         }
       },
       "block_order": [
-        "image_FKR7gK",
-        "image_86P47L",
-        "image_EQg7eA",
-        "image_QB46yT",
-        "image_qRn8yz",
-        "image_qJDxyy",
-        "image_Q3eP6g"
+        "image_jMaxDw",
+        "image_UhzNYV",
+        "image_4tg6Ph",
+        "image_edU6gJ",
+        "image_YNcFdG",
+        "image_JjimAn",
+        "image_iWhAcM"
       ],
+      "disabled": true,
       "name": "Shop the Feed",
       "settings": {
         "heading": "SHOP THE FEED",
@@ -132,11 +149,15 @@
       "block_order": [
         "instafeed_app_block_K4RjjX"
       ],
+      "custom_css": [
+        ".apps {margin-top: -30px;}",
+        ".apps-wrapper,.shopify-app-block {margin-top: -0 !important; padding-top: 0 !important;}"
+      ],
       "settings": {
         "section_layout": "normal",
         "spacing_inner": "2",
         "section_width": "max-w-page",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "spacing_top": "2",
         "spacing_bottom": "2"
       }
@@ -481,6 +502,7 @@
   },
   "order": [
     "shop_the_feed_jTE3d9",
+    "shop_the_feed_WnFFzK",
     "17784466282d9cf044",
     "ss_scrolling_announcement_bar_QxmDan",
     "ss_footer_3_i49RxA",
