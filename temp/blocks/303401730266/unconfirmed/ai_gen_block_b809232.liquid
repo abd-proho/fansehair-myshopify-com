@@ -1,6 +1,122 @@
+{% doc %}
+  @prompt
+    Add custom CSS to limit the max-height of video elements inside the section with ID "template--21566028939482__ss_shoppable_video_LyrC4K" to around 300px. Target the video and video container elements within that specific section only, without affecting the headline or its width.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-custom-css-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+  }
+
+  #template--21566028939482__ss_shoppable_video_LyrC4K video,
+  #template--21566028939482__ss_shoppable_video_LyrC4K .video-container,
+  #template--21566028939482__ss_shoppable_video_LyrC4K [class*="video"] {
+    max-height: {{ block.settings.max_height }}px !important;
+    object-fit: {{ block.settings.object_fit }};
+  }
+
+  {% if block.settings.center_video %}
+    #template--21566028939482__ss_shoppable_video_LyrC4K video,
+    #template--21566028939482__ss_shoppable_video_LyrC4K .video-container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  {% endif %}
+{% endstyle %}
+
+<div class="ai-custom-css-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <p style="text-align: center; color: {{ block.settings.text_color }}; font-size: 14px; padding: 20px;">
+    {% if block.settings.show_message %}
+      {{ block.settings.custom_message }}
+    {% else %}
+      Custom CSS applied to section: template--21566028939482__ss_shoppable_video_LyrC4K
+    {% endif %}
+  </p>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Custom video CSS",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Video height"
+    },
+    {
+      "type": "range",
+      "id": "max_height",
+      "label": "Max height",
+      "min": 200,
+      "max": 600,
+      "step": 50,
+      "unit": "px",
+      "default": 300
+    },
+    {
+      "type": "select",
+      "id": "object_fit",
+      "label": "Video fit",
+      "options": [
+        {
+          "value": "cover",
+          "label": "Cover"
+        },
+        {
+          "value": "contain",
+          "label": "Contain"
+        },
+        {
+          "value": "fill",
+          "label": "Fill"
+        }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "checkbox",
+      "id": "center_video",
+      "label": "Center video",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Display message"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_message",
+      "label": "Show custom message",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "custom_message",
+      "label": "Custom message",
+      "default": "Video height limited to 300px"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#151515"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom video CSS"
+    }
+  ]
+}
 {% endschema %}
