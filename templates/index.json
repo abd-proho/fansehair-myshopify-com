@@ -49,12 +49,13 @@
       ],
       "custom_css": [
         ".hero__entry p {font-size: 1.5rem; color: #000000;}",
-        ".button--filled {font-size: 18px;}"
+        ".button--filled {font-size: 18px;}",
+        "@media screen and (min-width: 990px) {.hero__content {transform: translateY(-25px); }}"
       ],
       "settings": {
         "enable_transparent_header": true,
         "slider_height_auto": false,
-        "slider_height": 75,
+        "slider_height": 90,
         "slideshow_autoplay_interval": 0,
         "show_slideshow_navigation": false,
         "slideshow_navigation_position": "hero__swiper-buttons--sides",
@@ -771,7 +772,7 @@
         "ai_gen_block_3e8a500_D9ETFD": {
           "type": "ai_gen_block_3e8a500",
           "settings": {
-            "custom_css": "",
+            "custom_css": "@media (min-width: 990px) {\n  #template--21566028939482__1658995208ad05f95f .hero-banner__slide-content {\n    transform: translateY(-70px);\n  }\n}",
             "desktop_width_percent": 100,
             "show_note": false,
             "note_text": "Custom CSS applied",
