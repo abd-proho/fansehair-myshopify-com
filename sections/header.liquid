@@ -130,6 +130,30 @@
   #shopify-section-{{ section.id }} .collection-header {
     color: #000000;
   }
+  {% if template.suffix == 'about-2' %}
+  body.is-at-top #shopify-section-{{ section.id }} .header:not(.is-megamenu-open) {
+    --transparent-header-menu-text-color: 0, 0, 0;
+    color: #000000;
+  }
+
+  body.is-at-top #shopify-section-{{ section.id }} .header:not(.is-megamenu-open) .header__nav-link,
+  body.is-at-top #shopify-section-{{ section.id }} .header:not(.is-megamenu-open) .header__utils-link,
+  body.is-at-top #shopify-section-{{ section.id }} .header:not(.is-megamenu-open) .text--link,
+  body.is-at-top #shopify-section-{{ section.id }} .header:not(.is-megamenu-open) svg {
+    color: #000000 !important;
+    stroke: #000000 !important;
+  }
+
+  body.is-at-top #shopify-section-{{ section.id }} .header:not(.is-megamenu-open) .header__logo-image {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  body.is-at-top #shopify-section-{{ section.id }} .header:not(.is-megamenu-open) .header__logo-image-transparent {
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+{% endif %}
 {%- endstyle -%}
 {% if template.name == 'collection' %}
     <style>
