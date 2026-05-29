@@ -4814,3 +4814,8 @@ back-to-top.hide {
   margin-bottom: 0.5rem;
 }
 
+#template--21566028939482__ss_shoppable_video_LyrC4K video,
+#template--21566028939482__ss_shoppable_video_LyrC4K iframe {
+  max-height: 300px;
+  object-fit: cover;
+}

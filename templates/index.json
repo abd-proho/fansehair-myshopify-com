@@ -222,6 +222,9 @@
         "item_zbPfVY",
         "item_ediBWh"
       ],
+      "custom_css": [
+        "#template--21566028939482__ss_shoppable_video_LyrC4K video,#template--21566028939482__ss_shoppable_video_LyrC4K iframe {max-height: 300px; object-fit: cover;}"
+      ],
       "name": "SS - Shoppable video",
       "settings": {
         "heading": "<h1>REAL RESULTS, FOR ALL HAIR TYPES</h1>",
@@ -232,7 +235,7 @@
         "heading_height": 130,
         "heading_align": "left",
         "heading_align_mobile": "left",
-        "slider_view": 5,
+        "slider_view": 6,
         "slider_view_mobile": 1.3,
         "slider_gap": 12,
         "slider_gap_mobile": 12,
@@ -243,7 +246,7 @@
         "video_ratio": "portrait",
         "video_ratio_mobile": "portrait",
         "video_overlay": 0.2,
-        "image_width": 44,
+        "image_width": 58,
         "image_width_mobile": 44,
         "image_radius": 6,
         "image_border_thickness": 0,
@@ -386,7 +389,7 @@
         "padding_horizontal": 0,
         "padding_horizontal_mobile": 1.5,
         "full_width": false,
-        "content_width": 800,
+        "content_width": 1400,
         "border_thickness": 0,
         "lazy": true
       }
@@ -824,6 +827,22 @@
         "spacing_top": "2",
         "spacing_bottom": "2"
       }
+    },
+    "17800916234052a5ed": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_10c39f7_MJyC7i": {
+          "type": "ai_gen_block_10c39f7",
+          "settings": {
+            "max_height": 300
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_10c39f7_MJyC7i"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -840,6 +859,7 @@
     "17767037660d3c853f",
     "177670548692f0e283",
     "1776705504a7a2ae18",
-    "1778446526542b858f"
+    "1778446526542b858f",
+    "17800916234052a5ed"
   ]
 }
