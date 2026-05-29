@@ -1,0 +1,47 @@
+{% doc %}
+  @prompt
+    Add a custom CSS block that sets max-height: 300px and overflow: hidden on only the video player elements (such as video, iframe, or .video-wrapper) inside the section with ID "template--21566028939482__ss_shoppable_video_LyrC4K". Do NOT hide or affect the section itself, its container, or the headline. Only constrain the height of the actual video media elements within that section.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  #template--21566028939482__ss_shoppable_video_LyrC4K video,
+  #template--21566028939482__ss_shoppable_video_LyrC4K iframe,
+  #template--21566028939482__ss_shoppable_video_LyrC4K .video-wrapper {
+    max-height: {{ block.settings.max_height }}px;
+    overflow: hidden;
+  }
+{% endstyle %}
+
+<div class="ai-custom-css-{{ ai_gen_id }}" {{ block.shopify_attributes }}></div>
+
+{% schema %}
+{
+  "name": "Custom video height CSS",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Video height constraint"
+    },
+    {
+      "type": "range",
+      "id": "max_height",
+      "label": "Max height",
+      "min": 100,
+      "max": 800,
+      "step": 50,
+      "unit": "px",
+      "default": 300
+    },
+    {
+      "type": "paragraph",
+      "content": "This block applies max-height and overflow hidden to video elements in section template--21566028939482__ss_shoppable_video_LyrC4K only."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom video height CSS"
+    }
+  ]
+}
+{% endschema %}
