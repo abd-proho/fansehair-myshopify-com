@@ -131,8 +131,8 @@
     color: #000000;
   }
 {%- endstyle -%}
-{% if template.name == 'collection' or template.suffix == 'about-2' %}
-  <style>
+{% if template.name == 'collection' %}
+    <style>
     body.is-at-top:has(.shopify-section:first-child .header-is-transparent):not(:has(.section-header ~ .shopify-section-group-header-group)) .header:not(.is-megamenu-open) .header__logo-image {
     visibility: visible;opacity: 1;
   }
