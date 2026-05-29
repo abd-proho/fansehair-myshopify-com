@@ -112,7 +112,6 @@
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.10)),
       linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
     pointer-events: none;
     z-index: 2;
@@ -216,7 +215,27 @@
  #shopify-section-{{ section.id }} .hero__content {
   position: relative;
   z-index: 3;
+}
 
+#shopify-section-{{ section.id }} .hero__content::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+  width: min(96vw, 104rem);
+  height: min(68vw, 50rem);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.34) 0%,
+    rgba(255, 255, 255, 0.22) 28%,
+    rgba(255, 255, 255, 0.12) 48%,
+    rgba(255, 255, 255, 0.05) 64%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  filter: blur(34px);
+  pointer-events: none;
+  z-index: -1;
 }
 
 #shopify-section-{{ section.id }} .hero__heading,
