@@ -42,9 +42,9 @@
         "media_position": "background",
         "page_menu": "",
         "enable_breadcrumbs": false,
-        "section_height": "auto",
+        "section_height": "50svh",
         "content_width": "44.5rem",
-        "image": "shopify://shop_images/Asset_2_4d2bf15c-47e7-4bef-9be5-4aaecd8b2039.png",
+        "image": "shopify://shop_images/FANSE1204002008_copy_ad08860d-6224-410d-8aea-712955bd9935.jpg",
         "video_external": "",
         "show_controls_on_video": false,
         "section_height_mobile": "50svh",
@@ -138,7 +138,7 @@
       "name": "About Grid",
       "settings": {
         "heading": "ABOUT US",
-        "text_content": "<p>Fansē a good story? Ours started in a salon. <br/><br/>With a pulse for the finer things in life, we create professional-driven formulas to make you look and feel<br/>like you just left your favorite stylist’s chair. We’ve captured that “just-got-my-hair-done” confidence and bottled it for everyday use. <br/><br/>Because a great hair day shouldn’t always require an appointment, just a few products you’ll actually want<br/>to reach for.<br/></p>",
+        "text_content": "<p>Fansē a good story? Ours started in a salon. </p><p></p><p>With a pulse for the finer things in life, we create professional-driven formulas to make you look and feel like you just left your favorite stylist’s chair. </p><p></p><p>We’ve captured that “just-got-my-hair-done” confidence and bottled it for everyday use. </p><p></p><p>Because a great hair day shouldn’t always require an appointment, just a few products you’ll actually want<br/>to reach for.<br/></p>",
         "layout_position": "images-right",
         "section_width": "container--full",
         "color_scheme": "",
@@ -202,7 +202,7 @@
       "name": "About Grid",
       "settings": {
         "heading": "BEHIND OUR NAME",
-        "text_content": "<p>Fansē is more than a name. <br/><br/>It’s the luxury of taking time for yourself. <br/>The confidence in knowing your hair will look great. <br/>A moment of ease and indulgence. <br/><br/>Fansē began as a space where people came to be pampered and left feeling their best. Now it’s also a line <br/>of products that bring that same experience into your daily routine, so everyone can feel a little fansē, any day<br/>of the week.<br/></p>",
+        "text_content": "<p>Fansē is more than a name. </p><p></p><p>It’s the luxury of taking time for yourself.  The confidence in knowing your hair will look great. A moment of ease and indulgence. </p><p></p><p>Fansē began as a space where people came to be pampered and left feeling their best.</p><p></p><p>Now it’s also a line of products that bring that same experience into your daily routine, so everyone can feel a little fansē, any day of the week.<br/></p>",
         "layout_position": "images-left",
         "section_width": "container--full",
         "color_scheme": "",
@@ -269,7 +269,7 @@
       "name": "About Grid",
       "settings": {
         "heading": "ABOUT OUR FOUNDER",
-        "text_content": "<p>With over a decade of experience behind the chair, Tori Elyse has lived and breathed haircare for most of her life. <br/><br/>Since founding Fansē Salon, what began as just one chair and one shampoo bowl turned into something much bigger. She’s made a name for herself, not only as our founder, but as an entrepreneur, stylist, educator, and content creator. Simply put, she knows a thing or two about great hair.<br/><br/>With natural curls of her own, Tori has always understood the real-life challenges of styling at home, especially when it comes to getting a sleek look without relying on a whole lineup of gels, creams, and sprays. After years of clients asking how to master the perfect slick-back, she set out to find a better way. <br/><br/>Her solution? Fansē Potion. <br/><br/><a href=\"#middle\" title=\"#middle\">And voilà! </a><br/><br/><a href=\"#right\" title=\"#right\">The rest was history.</a></p>",
+        "text_content": "<p>With over a decade of experience behind the chair, Tori Elyse has lived and breathed haircare for most of her life. Since founding Fansē Salon, what began as just one chair and one shampoo bowl turned into something much bigger. She’s made a name for herself, not only as our founder, but as an entrepreneur, stylist, educator, and content creator. Simply put, she knows a thing or two about great hair.<br/><br/>With natural curls of her own, Tori has always understood the real-life challenges of styling at home, especially when it comes to getting a sleek look without relying on a whole lineup of gels, creams, and sprays. After years of clients asking how to master the perfect slick-back, she set out to find a better way. <br/><br/>Her solution? Fansē Potion. <br/><br/><a href=\"#middle\" title=\"#middle\">And voilà! </a><br/><br/><a href=\"#right\" title=\"#right\">The rest was history.</a></p>",
         "layout_position": "images-right",
         "section_width": "container--full",
         "color_scheme": "",
