@@ -1394,13 +1394,15 @@ nav.slide-out-menu ul li + li.menu-card-group {
   margin-block-start: 3.6rem;
 }
 /* About page - transparent header, no gradient, no tan on scroll */
-.template-page-about-2 .header.collection-header {
+.template--about .header {
   --header-background-alpha: 0;
   background-image: none !important;
+  background-color: transparent !important;
 }
 
-.template-page-about-2 body.is-scrolled .header.is-sticky,
-.template-page-about-2 .header.is-sticky {
+.template--about body.is-scrolled .header.is-sticky,
+.template--about .header.is-sticky {
   background-color: transparent !important;
   background-image: none !important;
 }
+
