@@ -222,9 +222,7 @@
         "item_zbPfVY",
         "item_ediBWh"
       ],
-      "custom_css": [
-        "#template--21566028939482__ss_shoppable_video_LyrC4K video,#template--21566028939482__ss_shoppable_video_LyrC4K iframe {max-height: 300px; object-fit: cover;}"
-      ],
+      "custom_css": [],
       "name": "SS - Shoppable video",
       "settings": {
         "heading": "<h1>REAL RESULTS, FOR ALL HAIR TYPES</h1>",
