@@ -1401,6 +1401,12 @@ nav.slide-out-menu ul li + li.menu-card-group {
   background-image: none !important;
 }
 
+.template--about .header::before,
+.template--about .header::after {
+  display: none !important;
+  background: none !important;
+}
+
 body.is-scrolled.template--about .header.is-sticky {
   background-color: transparent !important;
   background-image: none !important;
