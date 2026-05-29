@@ -1393,3 +1393,13 @@ nav.slide-out-menu ul li + li.menu-card-group {
 nav.slide-out-menu ul li + li.menu-card-group {
   margin-block-start: 3.6rem;
 }
+/* About page - transparent header, no gradient */
+.template-page-about-2 .header.collection-header {
+  --header-background-alpha: 0;
+  background-image: none !important;
+}
+
+.template-page-about-2 body.is-scrolled .header.is-sticky {
+  background-color: transparent !important;
+  background-image: none !important;
+}

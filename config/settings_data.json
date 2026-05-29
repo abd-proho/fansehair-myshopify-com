@@ -10,7 +10,7 @@
 {
   "current": {
     "type_heading_font": "poppins_n7",
-    "heading_font_scale": 100,
+    "heading_font_scale": 75,
     "heading_letter_spacing": "-0.02em",
     "heading_text_transform": "uppercase",
     "type_body_font": "bricolage_grotesque_n4",
@@ -24,6 +24,7 @@
     "icons_stroke_width": "1.5",
     "icons_corner_shape": "square",
     "page_width": 1680,
+    "section_spacing_unit_size": 1.6,
     "spacing_desktop": 1.2,
     "spacing_mobile": 1.2,
     "card_corner_radius": 0,
@@ -77,6 +78,11 @@
     "blocks": {
       "14060646107696862457": {
         "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "1232542678405107163": {
+        "type": "shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5",
         "disabled": false,
         "settings": {}
       }
@@ -278,6 +284,26 @@
           "tag_label": "#ffffff",
           "progress_bar": "#151515",
           "placeholder": "#1c0184",
+          "shadow": "#000000",
+          "rating_stars": "#000000"
+        }
+      },
+      "scheme-nav-black": {
+        "settings": {
+          "background": "#fffaf5",
+          "background_gradient": "linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.05) 100%)",
+          "primary_text": "#000000",
+          "secondary_text": "#000000",
+          "header_text": "#000000",
+          "primary_button": "#000000",
+          "primary_button_label": "#ffffff",
+          "secondary_button_label": "#000000",
+          "link": "#000000",
+          "border": "#ebebeb",
+          "tag": "#000000",
+          "tag_label": "#ffffff",
+          "progress_bar": "#000000",
+          "placeholder": "#f4f4f4",
           "shadow": "#000000",
           "rating_stars": "#000000"
         }
