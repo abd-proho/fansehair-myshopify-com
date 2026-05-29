@@ -815,17 +815,6 @@
       "type": "_blocks",
       "settings": {}
     },
-    "1778446526542b858f": {
-      "type": "apps",
-      "settings": {
-        "section_layout": "normal",
-        "spacing_inner": "2",
-        "section_width": "max-w-page",
-        "color_scheme": "",
-        "spacing_top": "2",
-        "spacing_bottom": "2"
-      }
-    },
     "17800916234052a5ed": {
       "type": "_blocks",
       "blocks": {
@@ -857,7 +846,6 @@
     "17767037660d3c853f",
     "177670548692f0e283",
     "1776705504a7a2ae18",
-    "1778446526542b858f",
     "17800916234052a5ed"
   ]
 }

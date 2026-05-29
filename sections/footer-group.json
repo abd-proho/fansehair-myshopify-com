@@ -11,40 +11,6 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "17784466282d9cf044": {
-      "type": "apps",
-      "blocks": {
-        "instafeed_app_block_K4RjjX": {
-          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
-          "settings": {
-            "title": "",
-            "title_color": "",
-            "title_size_v2": 0,
-            "alignment": "center",
-            "instafeed_margin_top": 0,
-            "instafeed_margin_bottom": 0,
-            "instafeed_margin_sides": 0,
-            "show_instagram_link": false,
-            "link_alignment": "left",
-            "link_color": "#000000",
-            "background_color": "",
-            "feed_id": "",
-            "html_area": ""
-          }
-        }
-      },
-      "block_order": [
-        "instafeed_app_block_K4RjjX"
-      ],
-      "settings": {
-        "section_layout": "normal",
-        "spacing_inner": "2",
-        "section_width": "max-w-page",
-        "color_scheme": "",
-        "spacing_top": "2",
-        "spacing_bottom": "2"
-      }
-    },
     "shop_the_feed_jTE3d9": {
       "type": "shop-the-feed",
       "blocks": {
@@ -139,6 +105,40 @@
         "color_scheme": "scheme-75583496-94ea-45cb-b954-9a0fd7b86dca",
         "spacing_top": 2,
         "spacing_bottom": 2
+      }
+    },
+    "17784466282d9cf044": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_K4RjjX": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_K4RjjX"
+      ],
+      "settings": {
+        "section_layout": "normal",
+        "spacing_inner": "2",
+        "section_width": "max-w-page",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2"
       }
     },
     "ss_scrolling_announcement_bar_QxmDan": {
